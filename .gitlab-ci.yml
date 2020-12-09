@@ -37,7 +37,9 @@ cache:
 build:
   stage: build
   script:
+    - 'ls -al'
     - 'mvn package'
+    - 'ls -al'
   only:
     - master
   
