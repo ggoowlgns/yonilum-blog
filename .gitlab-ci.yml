@@ -39,6 +39,7 @@ build:
   script:
     - 'ls -al'
     - 'mvn package'
+    - 'cd target'
     - 'ls -al'
   only:
     - master
@@ -47,10 +48,13 @@ build:
 deploy:
   stage: deploy
   script:
-    - if [ ! -f ci_settings.xml ];
-        then echo "CI settings missing\! If deploying to GitLab Maven Repository, please see https://docs.gitlab.com/ee/user/project/packages/maven_repository.html#creating-maven-packages-with-gitlab-cicd for instructions.";
-      fi
-    - 'mvn $MAVEN_CLI_OPTS deploy -s ci_settings.xml'
+    # - if [ ! -f ci_settings.xml ];
+    #     then echo "CI settings missing\! If deploying to GitLab Maven Repository, please see https://docs.gitlab.com/ee/user/project/packages/maven_repository.html#creating-maven-packages-with-gitlab-cicd for instructions.";
+    #   fi
+    # - 'mvn $MAVEN_CLI_OPTS deploy -s ci_settings.xml'
+    - 'ls -al'
+    - 'cd target'
+    - 'ls -al'
     
   when: manual
   only:
