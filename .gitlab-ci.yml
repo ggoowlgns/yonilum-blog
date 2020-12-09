@@ -4,6 +4,10 @@
 #
 # For general lifecycle information see https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html
 
+stages:
+  - build
+  - deploy
+
 # This template will build and test your projects
 # * Caches downloaded dependencies and plugins between invocation.
 # * Verify but don't deploy merge requests.
@@ -26,24 +30,18 @@ image: maven:3.3.9-jdk-8
 cache:
   paths:
     - .m2/repository
-
-# For merge requests do not `deploy` but only run `verify`.
-# See https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html
-.verify: &verify
-  stage: test
-  script:
-    - 'mvn $MAVEN_CLI_OPTS verify'
-  except:
-    - master
-
-# Verify merge requests using JDK8
-verify:jdk8:
-  <<: *verify
-
 # To deploy packages from CI, create a ci_settings.xml file
 # For deploying packages to GitLab's Maven Repository: See https://docs.gitlab.com/ee/user/project/packages/maven_repository.html#creating-maven-packages-with-gitlab-cicd for more details.
 # Please note: The GitLab Maven Repository is currently only available in GitLab Premium / Ultimate.
 # For `master` branch run `mvn deploy` automatically.
+build:
+  stage: build
+  script:
+    - 'mvn package'
+  only:
+    - master
+  
+
 deploy:jdk8:
   stage: deploy
   script:
@@ -53,3 +51,6 @@ deploy:jdk8:
     - 'mvn $MAVEN_CLI_OPTS deploy -s ci_settings.xml'
   only:
     - master
+  when:
+    - manual
+  
