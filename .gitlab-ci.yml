@@ -5,10 +5,10 @@ stages:
 build:
   stage: build
   script:
-    - 'ls -al'
+    - 'ls'
     - 'mvn package'
     - 'cd target'
-    - 'ls -al'
+    - 'ls'
   only:
     - master
   tags:
