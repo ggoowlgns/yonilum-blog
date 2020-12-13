@@ -44,7 +44,9 @@ build:
     - 'ls -al'
   only:
     - master
-  
+  tags:
+    - JHPARK
+    - WINDOWS
 
 deploy:
   stage: deploy
