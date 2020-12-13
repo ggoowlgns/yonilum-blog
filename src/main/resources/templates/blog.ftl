@@ -108,7 +108,7 @@
 			<ul class="list-items-container blog-wrapper">
 
 				<li class="list-item" data-groups="all design">
-					<a href="blog-detail.html" class="blogList wow fadeInUp">
+					<a href="blog-detail.ftl" class="blogList wow fadeInUp">
 						<div class="blogList-img">
 							<img src="assets/images/blog1.jpg" alt="Blog Desc">
 							<span>Design</span>
@@ -121,7 +121,7 @@
 				</li>
 
 				<li class="list-item" data-groups="all travel">
-					<a href="blog-detail.html" class="blogList wow fadeInUp">
+					<a href="blog-detail.ftl" class="blogList wow fadeInUp">
 						<div class="blogList-img">
 							<img src="assets/images/blog2.jpg" alt="Blog Desc">
 							<span>Travel</span>
@@ -134,7 +134,7 @@
 				</li>
 
 				<li class="list-item" data-groups="all passion">
-					<a href="blog-detail.html" class="blogList wow fadeInUp">
+					<a href="blog-detail.ftl" class="blogList wow fadeInUp">
 						<div class="blogList-img">
 							<img src="assets/images/blog3.jpg" alt="Blog Desc">
 							<span>Passion</span>
@@ -147,7 +147,7 @@
 				</li>
 
 				<li class="list-item" data-groups="all design">
-					<a href="blog-detail.html" class="blogList wow fadeInUp">
+					<a href="blog-detail.ftl" class="blogList wow fadeInUp">
 						<div class="blogList-img">
 							<img src="assets/images/p2-2.jpg" alt="Blog Desc">
 							<span>design</span>
@@ -160,7 +160,7 @@
 				</li>
 
 				<li class="list-item" data-groups="all travel">
-					<a href="blog-detail.html" class="blogList wow fadeInUp">
+					<a href="blog-detail.ftl" class="blogList wow fadeInUp">
 						<div class="blogList-img">
 							<img src="assets/images/p3-3.jpg" alt="Blog Desc">
 							<span>Travel</span>
@@ -173,7 +173,7 @@
 				</li>
 
 				<li class="list-item" data-groups="all passion">
-					<a href="blog-detail.html" class="blogList wow fadeInUp">
+					<a href="blog-detail.ftl" class="blogList wow fadeInUp">
 						<div class="blogList-img">
 							<img src="assets/images/p4-4.jpg" alt="Blog Desc">
 							<span>Passion</span>
@@ -186,7 +186,7 @@
 				</li>
 
 				<li class="list-item" data-groups="all travel">
-					<a href="blog-detail.html" class="blogList wow fadeInUp">
+					<a href="blog-detail.ftl" class="blogList wow fadeInUp">
 						<div class="blogList-img">
 							<img src="assets/images/p5-5.jpg" alt="Blog Desc">
 							<span>Travel</span>
@@ -199,7 +199,7 @@
 				</li>
 
 				<li class="list-item" data-groups="all passion">
-					<a href="blog-detail.html" class="blogList wow fadeInUp">
+					<a href="blog-detail.ftl" class="blogList wow fadeInUp">
 						<div class="blogList-img">
 							<img src="assets/images/blog3.jpg" alt="Blog Desc">
 							<span>Passion</span>
@@ -212,7 +212,7 @@
 				</li>
 				
 				<li class="list-item" data-groups="all design">
-					<a href="blog-detail.html" class="blogList wow fadeInUp">
+					<a href="blog-detail.ftl" class="blogList wow fadeInUp">
 						<div class="blogList-img">
 							<img src="assets/images/p6-6.jpg" alt="Blog Desc">
 							<span>design</span>

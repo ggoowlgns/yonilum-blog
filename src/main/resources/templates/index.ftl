@@ -112,7 +112,7 @@
     			<div class="row">
 
     				<div class="col-sm-6">
-    					<a href="blog-detail.html" class="blogList wow fadeInUp">
+    					<a href="blog-detail.ftl" class="blogList wow fadeInUp">
     						<div class="blogList-img">
     							<img src="assets/images/blog1.jpg" alt="Blog Desc">
     							<span>Design</span>
@@ -125,7 +125,7 @@
     				</div>
 
     				<div class="col-sm-6">
-    					<a href="blog-detail.html" class="blogList wow fadeInUp">
+    					<a href="blog-detail.ftl" class="blogList wow fadeInUp">
     						<div class="blogList-img">
     							<img src="assets/images/blog2.jpg" alt="Blog Desc">
     							<span>Travel</span>
