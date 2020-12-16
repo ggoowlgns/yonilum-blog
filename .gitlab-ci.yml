@@ -7,8 +7,7 @@ stages:
 
 build:
   stage: build_deploy
-  before_script:
-    - CHCP 65001
+
   script:
     - 'ssh -i "C:/Users/user/Desktop/PJH/marketing blog/keys/ssh_key_openssh" biyajunior@34.64.238.235 "sudo service marketing-blog stop"'
     - 'mvn package -Dmaven.test.skip=true'
