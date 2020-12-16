@@ -1,3 +1,6 @@
+variables:
+  SSH_PATH: 'C:\Windows\System32\OpenSSH\ssh.exe'
+  SCP_PATH: 'C:\Windows\System32\OpenSSH\scp.exe'
 stages:
   - build_deploy
   - deploy
@@ -7,10 +10,10 @@ build:
   before_script:
     - CHCP 65001
   script:
-    - 'ssh -i "C:/Users/user/Desktop/PJH/marketing blog/keys/ssh_key_openssh" biyajunior@34.64.238.235 "sudo service marketing-blog stop"'
+    - '"$env:SSH_PATH" -i "C:/Users/user/Desktop/PJH/marketing blog/keys/ssh_key_openssh" biyajunior@34.64.238.235 "sudo service marketing-blog stop"'
     - 'mvn package -Dmaven.test.skip=true'
     - 'scp -i "C:/Users/user/Desktop/PJH/marketing blog/keys/ssh_key_openssh" marketing-blog.jar biyajunior@34.64.238.235:/home/biyajunior/marketing-blog/app/marketing-blog.jar'
-    - 'ssh -i "C:/Users/user/Desktop/PJH/marketing blog/keys/ssh_key_openssh" biyajunior@34.64.238.235 "sudo service marketing-blog start"'
+    - '"$env:SSH_PATH" -i "C:/Users/user/Desktop/PJH/marketing blog/keys/ssh_key_openssh" biyajunior@34.64.238.235 "sudo service marketing-blog start"'
   only:
     - master
   tags:
