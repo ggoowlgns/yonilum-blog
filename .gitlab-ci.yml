@@ -10,10 +10,10 @@ build:
 
   script:
     - 'ls '
-    - 'cmd /c "../ssh.exe" -n -i "C:/Users/user/Desktop/PJH/marketing blog/keys/ssh_key_openssh" biyajunior@34.64.238.235 "sudo service marketing-blog stop"'
+    - 'cmd /c "C:\Windows\System32\OpenSSH\ssh.exe" -n -i "C:/Users/user/Desktop/PJH/marketing blog/keys/ssh_key_openssh" biyajunior@34.64.238.235 "sudo service marketing-blog stop"'
     - 'mvn package -Dmaven.test.skip=true'
-    - 'cmd /c "../scp.exe" -n -i "C:/Users/user/Desktop/PJH/marketing blog/keys/ssh_key_openssh" marketing-blog.jar biyajunior@34.64.238.235:/home/biyajunior/marketing-blog/app/marketing-blog.jar'
-    - 'cmd /c "../ssh.exe" -n -i "C:/Users/user/Desktop/PJH/marketing blog/keys/ssh_key_openssh" biyajunior@34.64.238.235 "sudo service marketing-blog start"'
+    - 'cmd /c "C:\Windows\System32\OpenSSH\scp.exe" -n -i "C:/Users/user/Desktop/PJH/marketing blog/keys/ssh_key_openssh" marketing-blog.jar biyajunior@34.64.238.235:/home/biyajunior/marketing-blog/app/marketing-blog.jar'
+    - 'cmd /c "C:\Windows\System32\OpenSSH\ssh.exe" -n -i "C:/Users/user/Desktop/PJH/marketing blog/keys/ssh_key_openssh" biyajunior@34.64.238.235 "sudo service marketing-blog start"'
   only:
     - master
   tags:
