@@ -11,6 +11,7 @@ build:
   script:
     - 'ls'
     - 'ssh -i /home/biyajunior/keys/ssh_key_openssh biyajunior@34.64.238.235 "sudo service marketing-blog stop"'
+    - sleep 5
     - 'mvn package -Dmaven.test.skip=true'
     - 'scp -i /home/biyajunior/keys/ssh_key_openssh target/marketing-blog.jar biyajunior@34.64.238.235:/home/biyajunior/marketing-blog/app/marketing-blog.jar'
     - sleep 5
