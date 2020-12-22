@@ -85,7 +85,7 @@
 					</div>
 					<div class="hero-banner-right d-table-cell w-40 v-align-middle">
 						<div class="hero-right"  id="scene">
-							<img  data-depth="0.5" src="assets/images/about.jpg" alt="side-image">
+							<img  data-depth="0.5" src="assets/images/jiyeon/jiyeon.jpg" alt="side-image">
 							<span data-depth="1"></span>
 						</div>
 					</div>
