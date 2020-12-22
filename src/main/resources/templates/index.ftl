@@ -9,24 +9,17 @@
 	<meta name="theme-color" content="#1f1f20">
 
 	<title>Tigris - Personal Portfolio Template</title>
-
 	<!-- CSS -->
-	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-
+	<link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
 	<!-- Font Awesome CSS -->
-	<link href="assets/css/all.css" rel="stylesheet" media="screen">
-
+	<link href="/assets/css/all.css" rel="stylesheet" media="screen">
 	<!--[if lte IE 7]> 
-		<script src="assets/js/icons-lte-ie7.js"></script>
+		<script src="/assets/js/icons-lte-ie7.js"></script>
 	<![endif]-->
-
-	<link href="assets/css/vendor.css" rel="stylesheet">
-
+	<link href="/assets/css/vendor.css" rel="stylesheet">
 	<!-- Tigris styles CSS -->
-	<link href="assets/css/Tigris.css" rel="stylesheet" media="screen">
-
-
-	<link href="assets/css/custom.css" rel="stylesheet" media="screen">
+	<link href="/assets/css/Tigris.css" rel="stylesheet" media="screen">
+	<link href="/assets/css/custom.css" rel="stylesheet" media="screen">
 </head>
 <body>
 
@@ -85,7 +78,7 @@
 					</div>
 					<div class="hero-banner-right d-table-cell w-40 v-align-middle">
 						<div class="hero-right"  id="scene">
-							<img  data-depth="0.5" src="assets/images/jiyeon/jiyeon.jpg" alt="side-image">
+							<img  data-depth="0.5" src="/assets/images/jiyeon/jiyeon.jpg" alt="side-image">
 							<span data-depth="1"></span>
 						</div>
 					</div>
@@ -112,9 +105,9 @@
     			<div class="row">
 
     				<div class="col-sm-6">
-    					<a href="blog-detail.ftl" class="blogList wow fadeInUp">
+    					<a href="/blog/detail" class="blogList wow fadeInUp">
     						<div class="blogList-img">
-    							<img src="assets/images/blog1.jpg" alt="Blog Desc">
+    							<img src="/assets/images/blog1.jpg" alt="Blog Desc">
     							<span>Design</span>
     						</div>
     						<div class="blogList-desc">
@@ -125,9 +118,9 @@
     				</div>
 
     				<div class="col-sm-6">
-    					<a href="blog-detail.ftl" class="blogList wow fadeInUp">
+    					<a href="/blog/detail" class="blogList wow fadeInUp">
     						<div class="blogList-img">
-    							<img src="assets/images/blog2.jpg" alt="Blog Desc">
+    							<img src="/assets/images/blog2.jpg" alt="Blog Desc">
     							<span>Travel</span>
     						</div>
     						<div class="blogList-desc">
@@ -138,7 +131,7 @@
     				</div>
 
     				<div class="col-sm-12">
-    					<a class="custom-btn blog-viewMore" href="blog.ftl">VIEW MORE</a>
+    					<a class="custom-btn blog-viewMore" href="/blog">VIEW MORE</a>
     				</div>
 
     			</div>
@@ -182,9 +175,9 @@
 
 				<li class="list-item" data-groups="all slideshow">
 					<figure>
-						<img src="assets/images/p1-1.jpg" alt="p1">
+						<img src="/assets/images/p1-1.jpg" alt="p1">
 						<figcaption>
-							<a href="assets/images/p1-1.jpg" class="simple-ajax-popup"></a>
+							<a href="/assets/images/p1-1.jpg" class="simple-ajax-popup"></a>
 							<div class="caption-inner">
 								<h3 class="portfolio-item-title">Some work</h3>
 								<div class="portfolio-item-desc">Slideshow</div>
@@ -195,9 +188,9 @@
 
 				<li class="list-item" data-groups="all video">
 					<figure>
-						<img src="assets/images/p2-2.jpg" alt="p2">
+						<img src="/assets/images/p2-2.jpg" alt="p2">
 						<figcaption>
-							<a href="assets/images/p2-2.jpg" class="simple-ajax-popup"></a>
+							<a href="/assets/images/p2-2.jpg" class="simple-ajax-popup"></a>
 							<div class="caption-inner">
 								<h3 class="portfolio-item-title">Some work</h3>
 								<div class="portfolio-item-desc">Video</div>
@@ -208,9 +201,9 @@
 
 				<li class="list-item" data-groups="all image">
 					<figure>
-						<img src="assets/images/p3-3.jpg" alt="p3">
+						<img src="/assets/images/p3-3.jpg" alt="p3">
 						<figcaption>
-							<a href="assets/images/p3-3.jpg" class="simple-ajax-popup"></a>
+							<a href="/assets/images/p3-3.jpg" class="simple-ajax-popup"></a>
 							<div class="caption-inner">
 								<h3 class="portfolio-item-title">Some work</h3>
 								<div class="portfolio-item-desc">Image</div>
@@ -221,9 +214,9 @@
 
 				<li class="list-item" data-groups="all slideshow">
 					<figure>
-						<img src="assets/images/p4-4.jpg" alt="p4">
+						<img src="/assets/images/p4-4.jpg" alt="p4">
 						<figcaption>
-							<a href="assets/images/p4-4.jpg" class="simple-ajax-popup"></a>
+							<a href="/assets/images/p4-4.jpg" class="simple-ajax-popup"></a>
 							<div class="caption-inner">
 								<h3 class="portfolio-item-title">Some work</h3>
 								<div class="portfolio-item-desc">Slideshow</div>
@@ -234,9 +227,9 @@
 
 				<li class="list-item" data-groups="all video">
 					<figure>
-						<img src="assets/images/p5-5.jpg" alt="p5">
+						<img src="/assets/images/p5-5.jpg" alt="p5">
 						<figcaption>
-							<a href="assets/images/p5-5.jpg" class="simple-ajax-popup"></a>
+							<a href="/assets/images/p5-5.jpg" class="simple-ajax-popup"></a>
 							<div class="caption-inner">
 								<h3 class="portfolio-item-title">Some work</h3>
 								<div class="portfolio-item-desc">Video</div>
@@ -247,9 +240,9 @@
 
 				<li class="list-item" data-groups="all image">
 					<figure>
-						<img src="assets/images/p6-6.jpg" alt="p6">
+						<img src="/assets/images/p6-6.jpg" alt="p6">
 						<figcaption>
-							<a href="assets/images/p6-6.jpg" class="simple-ajax-popup"></a>
+							<a href="/assets/images/p6-6.jpg" class="simple-ajax-popup"></a>
 							<div class="caption-inner">
 								<h3 class="portfolio-item-title">Some work</h3>
 								<div class="portfolio-item-desc">Image</div>
@@ -260,9 +253,9 @@
 
 				<li class="list-item" data-groups="all image">
 					<figure>
-						<img src="assets/images/p7-7.jpg" alt="p6">
+						<img src="/assets/images/p7-7.jpg" alt="p6">
 						<figcaption>
-							<a href="assets/images/p7-7.jpg" class="simple-ajax-popup"></a>
+							<a href="/assets/images/p7-7.jpg" class="simple-ajax-popup"></a>
 							<div class="caption-inner">
 								<h3 class="portfolio-item-title">Some work</h3>
 								<div class="portfolio-item-desc">Image</div>
@@ -273,9 +266,9 @@
 
 				<li class="list-item" data-groups="all image">
 					<figure>
-						<img src="assets/images/p8-8.jpg" alt="p6">
+						<img src="/assets/images/p8-8.jpg" alt="p6">
 						<figcaption>
-							<a href="assets/images/p8-8.jpg" class="simple-ajax-popup"></a>
+							<a href="/assets/images/p8-8.jpg" class="simple-ajax-popup"></a>
 							<div class="caption-inner">
 								<h3 class="portfolio-item-title">Some work</h3>
 								<div class="portfolio-item-desc">Image</div>
@@ -286,9 +279,9 @@
 
 				<li class="list-item" data-groups="all image">
 					<figure>
-						<img src="assets/images/p9-9.jpg" alt="p6">
+						<img src="/assets/images/p9-9.jpg" alt="p6">
 						<figcaption>
-							<a href="assets/images/p9-9.jpg" class="simple-ajax-popup"></a>
+							<a href="/assets/images/p9-9.jpg" class="simple-ajax-popup"></a>
 							<div class="caption-inner">
 								<h3 class="portfolio-item-title">Some work</h3>
 								<div class="portfolio-item-desc">Image</div>
@@ -551,20 +544,20 @@
 
 	<!-- Javascript files -->
 
-	<script src="assets/js/vendor.js"></script>
+	<script src="/assets/js/vendor.js"></script>
 	
 	<!-- Popper JS -->
-	<script src="assets/bootstrap/js/popper.js"></script>
+	<script src="/assets/bootstrap/js/popper.js"></script>
 
 	<!-- Latest compiled JavaScript -->
-	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/assets/bootstrap/js/bootstrap.min.js"></script>
 
 	<!-- Contact scripts -->
-	<script src="assets/js/contact.js"></script>
+	<script src="/assets/js/contact.js"></script>
 
 	<!-- Custom scripts -->
-	<script src="assets/js/custom.js"></script>
-	<script src="assets/js/custom-shuffle-init.js"></script>
+	<script src="/assets/js/custom.js"></script>
+	<script src="/assets/js/custom-shuffle-init.js"></script>
 
 </body>
 </html>

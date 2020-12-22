@@ -11,22 +11,16 @@
 	<title>Tigris - Personal Portfolio Template</title>
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-
+	<link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
 	<!-- Font Awesome CSS -->
-	<link href="assets/css/all.css" rel="stylesheet" media="screen">
-
+	<link href="/assets/css/all.css" rel="stylesheet" media="screen">
 	<!--[if lte IE 7]> 
-		<script src="assets/js/icons-lte-ie7.js"></script>
+	<script src="/assets/js/icons-lte-ie7.js"></script>
 	<![endif]-->
-
-	<link href="assets/css/vendor.css" rel="stylesheet">
-
+	<link href="/assets/css/vendor.css" rel="stylesheet">
 	<!-- Tigris styles CSS -->
-	<link href="assets/css/Tigris.css" rel="stylesheet" media="screen">
-
-
-	<link href="assets/css/custom.css" rel="stylesheet" media="screen">
+	<link href="/assets/css/Tigris.css" rel="stylesheet" media="screen">
+	<link href="/assets/css/custom.css" rel="stylesheet" media="screen">
 </head>
 <body>
 
@@ -52,19 +46,19 @@
 		<div class="Menu ham-tilt">
 			<ul class="Menu-list" >
 				<li class="Menu-list-item">
-					<a href="index.ftl#home">Home</a>
+					<a href="/#home">Home</a>
 				</li>
 				<li class="Menu-list-item">
-					<a href="index.ftl#portfolio">Work</a>
+					<a href="/#portfolio">Work</a>
 				</li>
 				<li class="Menu-list-item">
-					<a href="index.ftl#services">Services</a>
+					<a href="/#services">Services</a>
 				</li>
 				<li class="Menu-list-item">
-					<a href="index.ftl#blog">Blog</a>
+					<a href="/#blog">Blog</a>
 				</li>
 				<li class="Menu-list-item">
-					<a href="index.ftl#contact">Contact</a>
+					<a href="/#contact">Contact</a>
 				</li>
 			</ul>
 		</div>
@@ -76,14 +70,14 @@
 
 	<section class="blog-detail module-gray">
 		<div class="blog-detail-banner wow fadeIn">
-			<img src="assets/images/blog-banner.jpg" alt="Blog Desc">
+			<img src="/assets/images/blog-banner.jpg" alt="Blog Desc">
 		</div>
 		<div class="blog-detail-contents wow fadeInUp">
 			<h2>The single greatest gift to get your friend who always travels</h2>
 			<div class="blog-detail-about clearfix">
 				<div class="media float-left align-items-center">
 					<div class="media-left mr-3">
-						<img src="assets/images/avatar.jpg" class="media-object" alt="avatar">
+						<img src="/assets/images/avatar.jpg" class="media-object" alt="avatar">
 					</div>
 					<div class="media-body">
 						<h4 class="media-heading">Ellen Doe</h4>
@@ -101,7 +95,7 @@
 
 				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
 
-				<img src="assets/images/blog-detail.jpg" alt="Blog Desc">
+				<img src="/assets/images/blog-detail.jpg" alt="Blog Desc">
 
 				<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
 
@@ -135,9 +129,9 @@
 			<div class="row">
 
 				<div class="col-sm-6">
-					<a href="blog-detail.ftl" class="blogList wow fadeInUp">
+					<a href="/blog/detail" class="blogList wow fadeInUp">
 						<div class="blogList-img">
-							<img src="assets/images/blog1.jpg" alt="Blog Desc">
+							<img src="/assets/images/blog1.jpg" alt="Blog Desc">
 							<span>Design</span>
 						</div>
 						<div class="blogList-desc">
@@ -148,9 +142,9 @@
 				</div>
 
 				<div class="col-sm-6">
-					<a href="blog-detail.ftl" class="blogList wow fadeInUp">
+					<a href="/blog/detail" class="blogList wow fadeInUp">
 						<div class="blogList-img">
-							<img src="assets/images/blog2.jpg" alt="Blog Desc">
+							<img src="/assets/images/blog2.jpg" alt="Blog Desc">
 							<span>Travel</span>
 						</div>
 						<div class="blogList-desc">
@@ -161,7 +155,7 @@
 				</div>
 
 				<div class="col-sm-12">
-					<a class="custom-btn blog-viewMore" href="blog.ftl">VIEW MORE</a>
+					<a class="custom-btn blog-viewMore" href="/blog">VIEW MORE</a>
 				</div>
 
 			</div><!-- .row -->
@@ -209,17 +203,17 @@
 
 	<!-- Javascript files -->
 
-	<script src="assets/js/vendor.js"></script>
+	<script src="/assets/js/vendor.js"></script>
 	
 	<!-- Popper JS -->
-	<script src="assets/bootstrap/js/popper.js"></script>
+	<script src="/assets/bootstrap/js/popper.js"></script>
 
 	<!-- Latest compiled JavaScript -->
-	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/assets/bootstrap/js/bootstrap.min.js"></script>
 
 	<!-- Custom scripts -->
-	<script src="assets/js/custom.js"></script>
-	<script src="assets/js/custom-shuffle-init.js"></script>
+	<script src="/assets/js/custom.js"></script>
+	<script src="/assets/js/custom-shuffle-init.js"></script>
 
 </body>
 </html>

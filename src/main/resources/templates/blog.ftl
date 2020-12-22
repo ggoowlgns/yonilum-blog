@@ -11,22 +11,16 @@
 	<title>Tigris - Personal Portfolio Template</title>
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-
+	<link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
 	<!-- Font Awesome CSS -->
-	<link href="assets/css/all.css" rel="stylesheet" media="screen">
-
+	<link href="/assets/css/all.css" rel="stylesheet" media="screen">
 	<!--[if lte IE 7]> 
-		<script src="assets/js/icons-lte-ie7.js"></script>
+		<script src="/assets/js/icons-lte-ie7.js"></script>
 	<![endif]-->
-
-	<link href="assets/css/vendor.css" rel="stylesheet">
-
+	<link href="/assets/css/vendor.css" rel="stylesheet">
 	<!-- Tigris styles CSS -->
-	<link href="assets/css/Tigris.css" rel="stylesheet" media="screen">
-
-
-	<link href="assets/css/custom.css" rel="stylesheet" media="screen">
+	<link href="/assets/css/Tigris.css" rel="stylesheet" media="screen">
+	<link href="/assets/css/custom.css" rel="stylesheet" media="screen">
 </head>
 <body>
 
@@ -52,19 +46,19 @@
 		<div class="Menu ham-tilt">
 			<ul class="Menu-list" >
 				<li class="Menu-list-item">
-					<a href="index.ftl#home">Home</a>
+					<a href="/#home">Home</a>
 				</li>
 				<li class="Menu-list-item">
-					<a href="index.ftl#portfolio">Work</a>
+					<a href="/#portfolio">Work</a>
 				</li>
 				<li class="Menu-list-item">
-					<a href="index.ftl#services">Services</a>
+					<a href="/#services">Services</a>
 				</li>
 				<li class="Menu-list-item">
-					<a href="index.ftl#blog">Blog</a>
+					<a href="/#blog">Blog</a>
 				</li>
 				<li class="Menu-list-item">
-					<a href="index.ftl#contact">Contact</a>
+					<a href="/#contact">Contact</a>
 				</li>
 			</ul>
 		</div>
@@ -108,7 +102,7 @@
 			<ul class="list-items-container blog-wrapper">
 
 				<li class="list-item" data-groups="all design">
-					<a href="blog-detail.ftl" class="blogList wow fadeInUp">
+					<a href="/blog/detail" class="blogList wow fadeInUp">
 						<div class="blogList-img">
 							<img src="assets/images/blog1.jpg" alt="Blog Desc">
 							<span>Design</span>
@@ -121,7 +115,7 @@
 				</li>
 
 				<li class="list-item" data-groups="all travel">
-					<a href="blog-detail.ftl" class="blogList wow fadeInUp">
+					<a href="/blog/detail" class="blogList wow fadeInUp">
 						<div class="blogList-img">
 							<img src="assets/images/blog2.jpg" alt="Blog Desc">
 							<span>Travel</span>
@@ -134,7 +128,7 @@
 				</li>
 
 				<li class="list-item" data-groups="all passion">
-					<a href="blog-detail.ftl" class="blogList wow fadeInUp">
+					<a href="/blog/detail" class="blogList wow fadeInUp">
 						<div class="blogList-img">
 							<img src="assets/images/blog3.jpg" alt="Blog Desc">
 							<span>Passion</span>
@@ -147,7 +141,7 @@
 				</li>
 
 				<li class="list-item" data-groups="all design">
-					<a href="blog-detail.ftl" class="blogList wow fadeInUp">
+					<a href="/blog/detail" class="blogList wow fadeInUp">
 						<div class="blogList-img">
 							<img src="assets/images/p2-2.jpg" alt="Blog Desc">
 							<span>design</span>
@@ -160,7 +154,7 @@
 				</li>
 
 				<li class="list-item" data-groups="all travel">
-					<a href="blog-detail.ftl" class="blogList wow fadeInUp">
+					<a href="/blog/detail" class="blogList wow fadeInUp">
 						<div class="blogList-img">
 							<img src="assets/images/p3-3.jpg" alt="Blog Desc">
 							<span>Travel</span>
@@ -173,7 +167,7 @@
 				</li>
 
 				<li class="list-item" data-groups="all passion">
-					<a href="blog-detail.ftl" class="blogList wow fadeInUp">
+					<a href="/blog/detail" class="blogList wow fadeInUp">
 						<div class="blogList-img">
 							<img src="assets/images/p4-4.jpg" alt="Blog Desc">
 							<span>Passion</span>
@@ -186,7 +180,7 @@
 				</li>
 
 				<li class="list-item" data-groups="all travel">
-					<a href="blog-detail.ftl" class="blogList wow fadeInUp">
+					<a href="/blog/detail" class="blogList wow fadeInUp">
 						<div class="blogList-img">
 							<img src="assets/images/p5-5.jpg" alt="Blog Desc">
 							<span>Travel</span>
@@ -199,7 +193,7 @@
 				</li>
 
 				<li class="list-item" data-groups="all passion">
-					<a href="blog-detail.ftl" class="blogList wow fadeInUp">
+					<a href="/blog/detail" class="blogList wow fadeInUp">
 						<div class="blogList-img">
 							<img src="assets/images/blog3.jpg" alt="Blog Desc">
 							<span>Passion</span>
@@ -212,7 +206,7 @@
 				</li>
 				
 				<li class="list-item" data-groups="all design">
-					<a href="blog-detail.ftl" class="blogList wow fadeInUp">
+					<a href="/blog/detail" class="blogList wow fadeInUp">
 						<div class="blogList-img">
 							<img src="assets/images/p6-6.jpg" alt="Blog Desc">
 							<span>design</span>
