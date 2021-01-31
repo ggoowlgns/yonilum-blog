@@ -313,7 +313,7 @@
 				<div class="col-md-6 col-lg-4">
 					<div class="iconbox wow fadeInUp">
 						<div class="iconbox-icon">
-							<i class="fas fa-desktop"></i>
+							<i class="fas fa-ad"></i>
 						</div>
 						<div class="iconbox-text">
 							<h3 class="iconbox-title">Web Design</h3>
