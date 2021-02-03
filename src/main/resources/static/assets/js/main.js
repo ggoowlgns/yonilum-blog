@@ -109,9 +109,9 @@ function categoryGenerator() {
     if (currentCategoryLayout === "grid") {
       DUMMY_DATA.forEach((item, index) => {
         content += `
-          <div class="post-card -center"><a class="card__cover" href="post_standard.html"><img src="${item.image}" alt="${item.title}"></a>
+          <div class="post-card -center"><a class="card__cover" href="post_standard.ftl"><img src="${item.image}" alt="${item.title}"></a>
             <div class="card__content">
-            <h5 class="card__content-category">${item.category}</h5><a class="card__content-title" href="post_standard.html">${item.title}</a>
+            <h5 class="card__content-category">${item.category}</h5><a class="card__content-title" href="post_standard.ftl">${item.title}</a>
             <div class="card__content-info">
               <div class="info__time"><i class="far fa-clock"></i>
                 <p>${item.date}</p>
@@ -142,9 +142,9 @@ function categoryGenerator() {
       DUMMY_DATA.forEach((item, index) => {
         content += `
         <div class="col-12">
-          <div class="post-card -small -horizontal"><a class="card__cover" href="post_standard.html" tabindex="0"><img src="${item.image}" alt="${item.title}"></a>
+          <div class="post-card -small -horizontal"><a class="card__cover" href="post_standard.ftl" tabindex="0"><img src="${item.image}" alt="${item.title}"></a>
             <div class="card__content">
-              <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.html" tabindex="0">${item.title}</a>
+              <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl" tabindex="0">${item.title}</a>
               <div class="card__content-info">
                 <div class="info__time"><i class="far fa-clock"></i>
                   <p>Clock  Wed 02, 2019</p>

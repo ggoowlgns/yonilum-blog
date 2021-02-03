@@ -1,6 +1,7 @@
 package com.jhpark.marketing.blog.controller.view;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -12,4 +13,11 @@ public class HomeViewController {
   public String home() {
     return "index";
   }
+
+  @RequestMapping(value = "/{file}.ftl")
+  public String forwardRequests(@PathVariable String file) {
+
+    return file;
+  }
+
 }
