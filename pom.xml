@@ -10,12 +10,14 @@
 	</parent>
 	<groupId>com.jhpark.marketing</groupId>
 	<artifactId>marketing-blog</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>blog</name>
 	<description>Marketing Blog</description>
 
 	<properties>
 		<java.version>1.8</java.version>
+		<jar.unpack.app.dir>${project.build.directory}/unpack-app</jar.unpack.app.dir>
+		<jar.unpack.lib.dir>${project.build.directory}/unpack-lib</jar.unpack.lib.dir>
 	</properties>
 
 	<dependencies>
@@ -44,15 +46,61 @@
 	</dependencies>
 
 	<build>
-		<finalName>${project.artifactId}</finalName>
+		<finalName>${project.artifactId}-${project.version}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<executable>true</executable>
-				</configuration>
+<!--				<configuration>-->
+<!--					<executable>true</executable>-->
+<!--				</configuration>-->
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>3.1.1</version>
+				<executions>
+					<execution>
+						<id>unpack</id>
+						<phase>package</phase>
+						<goals>
+							<goal>unpack</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>${project.groupId}</groupId>
+									<artifactId>${project.artifactId}</artifactId>
+									<version>${project.version}</version>
+									<destFileName>${project.build.finalName}</destFileName>
+								</artifactItem>
+							</artifactItems>
+							<outputDirectory>${jar.unpack.app.dir}</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>move-lib</id>
+						<phase>package</phase>
+						<configuration>
+							<target>
+								<move todir="${jar.unpack.lib.dir}">
+									<fileset dir="${jar.unpack.app.dir}/BOOT-INF/lib"/>
+								</move>
+							</target>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
 		</plugins>
 	</build>
 </project>
