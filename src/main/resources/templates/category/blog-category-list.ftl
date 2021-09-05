@@ -20,16 +20,16 @@
                   <div class="center-line-title"> 
                     <h5>Categories</h5>
                   </div><a class="category -bar " href="../blog_category_grid.ftl">
-                                  <div class="category__background" style="background-image: url(assets/images/backgrounds/category-1.png)"></div>
+                                  <div class="category__background" style="background-image: url(/assets/images/backgrounds/category-1.png)"></div>
                                   <h5 class="title">Design</h5>
                                   <h5 class="quantity">12</h5></a><a class="category -bar " href="../blog_category_grid.ftl">
-                                  <div class="category__background" style="background-image: url(assets/images/backgrounds/category-2.png)"></div>
+                                  <div class="category__background" style="background-image: url(/assets/images/backgrounds/category-2.png)"></div>
                                   <h5 class="title">Graphic</h5>
                                   <h5 class="quantity">6</h5></a><a class="category -bar " href="../blog_category_grid.ftl">
-                                  <div class="category__background" style="background-image: url(assets/images/backgrounds/category-3.png)"></div>
+                                  <div class="category__background" style="background-image: url(/assets/images/backgrounds/category-3.png)"></div>
                                   <h5 class="title">Illustrator</h5>
                                   <h5 class="quantity">15</h5></a><a class="category -bar " href="../blog_category_grid.ftl">
-                                  <div class="category__background" style="background-image: url(assets/images/backgrounds/category-4.png)"></div>
+                                  <div class="category__background" style="background-image: url(/assets/images/backgrounds/category-4.png)"></div>
                                   <h5 class="title">Typography</h5>
                                   <h5 class="quantity">8</h5></a>
                 </div>
@@ -39,7 +39,7 @@
                   </div>
                                 <div class="trending-post">
                                   <div class="trending-post_image">
-                                    <div class="rank">1</div><img src="assets/images/backgrounds/trending-post-1.png" alt="Shifting to Vegan Diets May Cause Brain Nutrient..."/>
+                                    <div class="rank">1</div><img src="/assets/images/backgrounds/trending-post-1.png" alt="Shifting to Vegan Diets May Cause Brain Nutrient..."/>
                                   </div>
                                   <div class="trending-post_content">
                                     <h5>Illustrator</h5><a href="../deprecated/post_standard.ftl">Shifting to Vegan Diets May Cause Brain Nutrient...</a>
@@ -50,7 +50,7 @@
                                 </div>
                                 <div class="trending-post">
                                   <div class="trending-post_image">
-                                    <div class="rank">2</div><img src="assets/images/backgrounds/trending-post-2.png" alt="The GQ Men Of The Year Awards 2019: Hrithik..."/>
+                                    <div class="rank">2</div><img src="/assets/images/backgrounds/trending-post-2.png" alt="The GQ Men Of The Year Awards 2019: Hrithik..."/>
                                   </div>
                                   <div class="trending-post_content">
                                     <h5>Design</h5><a href="../deprecated/post_standard.ftl">The GQ Men Of The Year Awards 2019: Hrithik...</a>
@@ -61,7 +61,7 @@
                                 </div>
                                 <div class="trending-post">
                                   <div class="trending-post_image">
-                                    <div class="rank">3</div><img src="assets/images/backgrounds/trending-post-3.png" alt="Here's How Your Diet Can Help Yo Excel in Exams"/>
+                                    <div class="rank">3</div><img src="/assets/images/backgrounds/trending-post-3.png" alt="Here's How Your Diet Can Help Yo Excel in Exams"/>
                                   </div>
                                   <div class="trending-post_content">
                                     <h5>Illustrator</h5><a href="../deprecated/post_standard.ftl">Here's How Your Diet Can Help Yo Excel in Exams</a>
@@ -72,7 +72,7 @@
                                 </div>
                                 <div class="trending-post">
                                   <div class="trending-post_image">
-                                    <div class="rank">4</div><img src="assets/images/backgrounds/trending-post-4.png" alt="why others accept while AudioJungle..."/>
+                                    <div class="rank">4</div><img src="/assets/images/backgrounds/trending-post-4.png" alt="why others accept while AudioJungle..."/>
                                   </div>
                                   <div class="trending-post_content">
                                     <h5>Graphic</h5><a href="../deprecated/post_standard.ftl">why others accept while AudioJungle...</a>
@@ -83,7 +83,7 @@
                                 </div>
                                 <div class="trending-post">
                                   <div class="trending-post_image">
-                                    <div class="rank">5</div><img src="assets/images/backgrounds/trending-post-5.png" alt="Podcast audio episode with YouTube license question"/>
+                                    <div class="rank">5</div><img src="/assets/images/backgrounds/trending-post-5.png" alt="Podcast audio episode with YouTube license question"/>
                                   </div>
                                   <div class="trending-post_content">
                                     <h5>Typography</h5><a href="../deprecated/post_standard.ftl">Podcast audio episode with YouTube license question</a>
@@ -119,126 +119,8 @@
             </div>
           </div>
         </div>
-        <div class="instagrams">
-          <div class="instagrams-container"><a class="instagrams-item" href="https://www.instagram.com/"><img src="assets/images/instagram/1.png" alt="Instagram image"/>
-              <div class="instagrams-item__content"><i class="fab fa-instagram"></i>
-                <p>@ Gtute_News</p>
-              </div></a><a class="instagrams-item" href="https://www.instagram.com/"><img src="assets/images/instagram/2.png" alt="Instagram image"/>
-              <div class="instagrams-item__content"><i class="fab fa-instagram"></i>
-                <p>@ Gtute_News</p>
-              </div></a><a class="instagrams-item" href="https://www.instagram.com/"><img src="assets/images/instagram/3.png" alt="Instagram image"/>
-              <div class="instagrams-item__content"><i class="fab fa-instagram"></i>
-                <p>@ Gtute_News</p>
-              </div></a><a class="instagrams-item" href="https://www.instagram.com/"><img src="assets/images/instagram/4.png" alt="Instagram image"/>
-              <div class="instagrams-item__content"><i class="fab fa-instagram"></i>
-                <p>@ Gtute_News</p>
-              </div></a><a class="instagrams-item" href="https://www.instagram.com/"><img src="assets/images/instagram/5.png" alt="Instagram image"/>
-              <div class="instagrams-item__content"><i class="fab fa-instagram"></i>
-                <p>@ Gtute_News</p>
-              </div></a><a class="instagrams-item" href="https://www.instagram.com/"><img src="assets/images/instagram/1.png" alt="Instagram image"/>
-              <div class="instagrams-item__content"><i class="fab fa-instagram"></i>
-                <p>@ Gtute_News</p>
-              </div></a><a class="instagrams-item" href="https://www.instagram.com/"><img src="assets/images/instagram/3.png" alt="Instagram image"/>
-              <div class="instagrams-item__content"><i class="fab fa-instagram"></i>
-                <p>@ Gtute_News</p>
-              </div></a><a class="instagrams-item" href="https://www.instagram.com/"><img src="assets/images/instagram/4.png" alt="Instagram image"/>
-              <div class="instagrams-item__content"><i class="fab fa-instagram"></i>
-                <p>@ Gtute_News</p>
-              </div></a>
-          </div>
-        </div>
       </div>
     </div>
-    <footer>
-      <div class="container">
-        <div class="footer-content">
-          <div class="row">
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="footer-col -about">
-                <div class="center-line-title"> 
-                  <h5>About us</h5>
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida lacus vel facilisis. </p>
-                <div class="contact-method">
-                  <p> <i class="fas fa-map-marker-alt"></i>5 South Main Street Los Angeles, ZZ-96110 USA</p>
-                  <p> <i class="far fa-mobile-android"></i>125-711-811   |   125-668-886</p>
-                  <p> <i class="fas fa-headphones-alt"></i>Support.hosting@gmail.com</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="footer-col -feature-post">
-                <div class="center-line-title"> 
-                  <h5>Feature posts</h5>
-                </div>
-                <div class="feature-post-block">
-                      <div class="post-card -tiny"><a class="card__cover" href="../deprecated/post_standard.ftl"><img src="assets/images/posts/1.png" alt="Looking for some feedback for this rejected track"/></a>
-                        <div class="card__content">
-                          <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../deprecated/post_standard.ftl">Looking for some feedback for this rejected track</a>
-                          <div class="card__content-info">
-                            <div class="info__time"><i class="far fa-clock"></i>
-                              <p>Clock  Wed 02, 2019</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="post-card -tiny"><a class="card__cover" href="../deprecated/post_standard.ftl"><img src="assets/images/posts/2.png" alt="How to name, save and export a finish template"/></a>
-                        <div class="card__content">
-                          <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="../deprecated/post_standard.ftl">How to name, save and export a finish template</a>
-                          <div class="card__content-info">
-                            <div class="info__time"><i class="far fa-clock"></i>
-                              <p>Clock  Wed 02, 2019</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="post-card -tiny"><a class="card__cover" href="../deprecated/post_standard.ftl"><img src="assets/images/posts/3.png" alt="I want to create a logo with illustrator hacker"/></a>
-                        <div class="card__content">
-                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../deprecated/post_standard.ftl">I want to create a logo with illustrator hacker</a>
-                          <div class="card__content-info">
-                            <div class="info__time"><i class="far fa-clock"></i>
-                              <p>Clock  Wed 02, 2019</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-md-12 col-lg-4">
-              <div class="footer-col -util">
-                <div class="row">
-                  <div class="col-12 col-md-6 col-lg-12">
-                    <div class="center-line-title"> 
-                      <h5>Tag clouds</h5>
-                    </div>
-                    <div class="tags-group"><a class="tag-btn" href="../blog_category_grid.ftl">Gutenews</a><a class="tag-btn" href="../blog_category_grid.ftl">Lifestyle</a><a class="tag-btn" href="../blog_category_grid.ftl">Fashion</a><a class="tag-btn" href="../blog_category_grid.ftl">Technology</a><a class="tag-btn" href="../blog_category_grid.ftl">Food</a><a class="tag-btn" href="../blog_category_grid.ftl">Travel</a>
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-6 col-lg-12">
-                    <div class="center-line-title"> 
-                      <h5>Follow us</h5>
-                    </div>
-                    <div class="social-block"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-dribbble"></i></a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="copyright">
-          <p>© 2019, GuteNews - News Magazine WordPress Theme. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
-    <!--build:js assets/js/main.min.js-->
-    <script rel="script/javascript" src="assets/js/jquery.min.js"></script>
-    <script rel="script/javascript" src="assets/js/slick.min.js"></script>
-    <script rel="script/javascript" src="assets/js/plyr.min.js"></script>
-    <script rel="script/javascript" src="assets/js/masonry.pkgd.min.js"></script>
-    <script rel="script/javascript" src="assets/js/imagesloaded.pkgd.min.js"></script>
-    <script rel="script/javascript" src="assets/js/vimeo.player.min.js"></script>
-    <script rel="script/javascript" src="assets/js/main.js"></script>
-    <!--endbuild-->
+    <#include "/footer/default.ftl">
   </body>
 </html>

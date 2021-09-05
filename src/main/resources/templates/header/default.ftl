@@ -1,6 +1,6 @@
 <div id="load">
     <div class="load__content">
-        <div class="load__icon"><img src="assets/images/icons/load.gif" alt="Loading icon"/></div>
+        <div class="load__icon"><img src="/assets/images/icons/load.gif" alt="Loading icon"/></div>
     </div>
 </div>
 <header class="theme-default">
@@ -13,11 +13,22 @@
         </div>
     </div>
     <div class="container">
-        <div class="header-wrapper"><a class="header__logo" href="/"><img src="./assets/images/logo.png" alt="Logo"/></a>
+        <div class="header-wrapper"><a class="header__logo" href="/"><img src="/assets/images/logo.png" alt="Logo"/></a>
             <nav>
                 <ul>
-                    <li class="nav-item active"><a href="/">Home</a></li>
-                    <li class="nav-item"><a href="/category">Category</a></li>
+                    <#if springMacroRequestContext.requestUri?contains("/category")>
+                        <li class="nav-item"><a href="/">Home</a></li>
+                        <li class="nav-item active"><a href="/category">Category</a></li>
+                        <li class="nav-item"><a href="/about">About</a></li>
+                    <#elseif springMacroRequestContext.requestUri?contains("/about")>
+                        <li class="nav-item"><a href="/">Home</a></li>
+                        <li class="nav-item"><a href="/category">Category</a></li>
+                        <li class="nav-item active"><a href="/about">About</a></li>
+                    <#else>
+                        <li class="nav-item active"><a href="/">Home</a></li>
+                        <li class="nav-item"><a href="/category">Category</a></li>
+                        <li class="nav-item"><a href="/about">About</a></li>
+                    </#if>
 
 <#--                    <li class="nav-item"><a href="#">Pages</a>
                         <ul class="dropdown-menu">
@@ -31,7 +42,6 @@
                             <li><a href="error_404.ftl">ERROR</a></li>
                         </ul>
                     </li>-->
-                    <li class="nav-item"><a href="/about">About</a></li>
                 </ul>
             </nav>
             <div class="header__icon-group"><a href="#" id="search"><i class="fas fa-search"></i></a>
