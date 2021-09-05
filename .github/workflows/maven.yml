@@ -29,13 +29,13 @@ jobs:
 
     - name: Build with Maven
       run: mvn -DskipTests=true package --file pom.xml
-
-    - name: [CD] Copy Output
-      run: scp -i .github/workflows/key/jhpark-seoul.pem target/marketing-blog.jar ec2-user@ec2-3-38-88-54.ap-northeast-2.compute.amazonaws.com:blog/app/marketing-blog.jar
-
-    - name: [CD] Stop App
-      run: ssh -i .github/workflows/key/jhpark-seoul.pem ec2-user@ec2-3-38-88-54.ap-northeast-2.compute.amazonaws.com sudo service blog stop
-
-    - name: [CD] Start App
-      run: ssh -i .github/workflows/key/jhpark-seoul.pem ec2-user@ec2-3-38-88-54.ap-northeast-2.compute.amazonaws.com sudo service blog start
+#
+#    - name: [CD] Copy Output
+#      run: scp -i .github/workflows/key/jhpark-seoul.pem target/marketing-blog.jar ec2-user@ec2-3-38-88-54.ap-northeast-2.compute.amazonaws.com:blog/app/marketing-blog.jar
+#
+#    - name: [CD] Stop App
+#      run: ssh -i .github/workflows/key/jhpark-seoul.pem ec2-user@ec2-3-38-88-54.ap-northeast-2.compute.amazonaws.com sudo service blog stop
+#
+#    - name: [CD] Start App
+#      run: ssh -i .github/workflows/key/jhpark-seoul.pem ec2-user@ec2-3-38-88-54.ap-northeast-2.compute.amazonaws.com sudo service blog start
 

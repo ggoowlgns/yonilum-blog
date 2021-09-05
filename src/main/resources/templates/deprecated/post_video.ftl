@@ -40,7 +40,7 @@
                   <li><a href="index.ftl">HOMEPAGE1</a></li>
                   <li><a href="homepage2.ftl">HOMEPAGE2</a></li>
                   <li><a href="homepage3.ftl">HOMEPAGE3</a></li>
-                  <li><a href="homepage4.ftl">HOMEPAGE4</a></li>
+                  <li><a href="../homepage4.ftl">HOMEPAGE4</a></li>
                   <li><a href="homepage5.ftl">HOMEPAGE5</a></li>
                   <li><a href="homepage6.ftl">HOMEPAGE6</a></li>
                   <li><a href="homepage7.ftl">HOMEPAGE7</a></li>
@@ -50,12 +50,12 @@
               </li>
               <li class="nav-item active"><a>Blog</a>
                 <ul class="dropdown-menu">
-                  <li><a href="blog_category_grid.ftl">BLOG CATEGORY GRID</a></li>
-                  <li><a href="blog_category_list.ftl">BLOG CATEGORY LIST</a></li>
+                  <li><a href="../blog_category_grid.ftl">BLOG CATEGORY GRID</a></li>
+                  <li><a href="../blog_category_list.ftl">BLOG CATEGORY LIST</a></li>
                   <li><a href="post_standard.ftl">POST STANDARD</a></li>
                   <li><a href="post_standard_image_full.ftl">POST STANDARD IMAGE FULLWIDTH</a></li>
                   <li><a href="post_standard_sidebar.ftl">POST STANDARD SIDEBAR</a></li>
-                  <li><a href="post_gallery.ftl">POST GALLERY</a></li>
+                  <li><a href="../detail/post_gallery.ftl">POST GALLERY</a></li>
                   <li><a href="post_video.ftl">POST VIDEO</a></li>
                   <li><a href="post_audio.ftl">POST AUDIO</a></li>
                   <li><a href="post_quote.ftl">POST QUOTE</a></li>
@@ -63,18 +63,18 @@
               </li>
               <li class="nav-item"><a href="#">Pages</a>
                 <ul class="dropdown-menu">
-                  <li><a href="author.ftl">AUTHOR</a></li>
-                  <li><a href="about.ftl">ABOUT</a></li>
-                  <li><a href="contact.ftl">CONTACT</a></li>
-                  <li><a href="shop.ftl">SHOP</a></li>
-                  <li><a href="product_detail.ftl">PRODUCT DETAIL</a></li>
-                  <li><a href="cart.ftl">CART</a></li>
-                  <li><a href="checkout.ftl">CHECKOUT</a></li>
-                  <li><a href="error_404.ftl">ERROR</a></li>
+                  <li><a href="../author.ftl">AUTHOR</a></li>
+                  <li><a href="../about.ftl">ABOUT</a></li>
+                  <li><a href="../contact.ftl">CONTACT</a></li>
+                  <li><a href="../shop.ftl">SHOP</a></li>
+                  <li><a href="../product_detail.ftl">PRODUCT DETAIL</a></li>
+                  <li><a href="../cart.ftl">CART</a></li>
+                  <li><a href="../checkout.ftl">CHECKOUT</a></li>
+                  <li><a href="../error_404.ftl">ERROR</a></li>
                 </ul>
               </li>
-              <li class="nav-item"><a href="about.ftl">About</a></li>
-              <li class="nav-item"><a href="contact.ftl">Contact</a></li>
+              <li class="nav-item"><a href="../about.ftl">About</a></li>
+              <li class="nav-item"><a href="../contact.ftl">Contact</a></li>
             </ul>
           </nav>
           <div class="header__icon-group"><a href="#" id="search"><i class="fas fa-search"></i></a>
@@ -86,23 +86,23 @@
     <div id="content">
       <div class="post">
         <div class="container">
-          <div class="post-standard -slide">
+          <div class="post-standard -video">
             <div class="row">
               <div class="col-12 col-md-4 order-md-2">
                 <div class="blog-sidebar">
                   <div class="blog-sidebar-section -category">
                     <div class="center-line-title"> 
                       <h5>Categories</h5>
-                    </div><a class="category -bar " href="blog_category_grid.ftl">
+                    </div><a class="category -bar " href="../blog_category_grid.ftl">
                                       <div class="category__background" style="background-image: url(assets/images/backgrounds/category-1.png)"></div>
                                       <h5 class="title">Design</h5>
-                                      <h5 class="quantity">12</h5></a><a class="category -bar " href="blog_category_grid.ftl">
+                                      <h5 class="quantity">12</h5></a><a class="category -bar " href="../blog_category_grid.ftl">
                                       <div class="category__background" style="background-image: url(assets/images/backgrounds/category-2.png)"></div>
                                       <h5 class="title">Graphic</h5>
-                                      <h5 class="quantity">6</h5></a><a class="category -bar " href="blog_category_grid.ftl">
+                                      <h5 class="quantity">6</h5></a><a class="category -bar " href="../blog_category_grid.ftl">
                                       <div class="category__background" style="background-image: url(assets/images/backgrounds/category-3.png)"></div>
                                       <h5 class="title">Illustrator</h5>
-                                      <h5 class="quantity">15</h5></a><a class="category -bar " href="blog_category_grid.ftl">
+                                      <h5 class="quantity">15</h5></a><a class="category -bar " href="../blog_category_grid.ftl">
                                       <div class="category__background" style="background-image: url(assets/images/backgrounds/category-4.png)"></div>
                                       <h5 class="title">Typography</h5>
                                       <h5 class="quantity">8</h5></a>
@@ -192,11 +192,9 @@
                         </div>
                       </div>
                     </div>
-                    <div class="post-card -center">
-                      <div class="card__cover -slide">
-                        <div class="card__cover__slide-item"><img src="assets/images/posts/hi-res-1.png" alt="How to name, save and export a finish template"/></div>
-                        <div class="card__cover__slide-item"><img src="assets/images/posts/hi-res-2.png" alt="How to name, save and export a finish template"/></div>
-                        <div class="card__cover__slide-item"><img src="assets/images/posts/hi-res-3.png" alt="How to name, save and export a finish template"/></div>
+                    <div class="post-card -center post-video">
+                      <div class="plyr__video-embed video" id="video-player">
+                        <iframe src="https://player.vimeo.com/video/76979871?loop=false&amp;byline=false&amp;portrait=false&amp;title=false&amp;speed=true&amp;transparent=0&amp;gesture=media" allowfullscreen=""></iframe>
                       </div>
                     </div>
                 <div class="post-standard__content">
@@ -218,7 +216,7 @@
                   <p class="paragraph">Non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
                   <div class="post-footer">
                     <div class="post-footer__tags center">
-                      <div class="tags-group"><a class="tag-btn" href="blog_category_grid.ftl">Gutenews</a><a class="tag-btn" href="blog_category_grid.ftl">Lifestyle</a><a class="tag-btn" href="blog_category_grid.ftl">Fashion</a><a class="tag-btn" href="blog_category_grid.ftl">Technology</a><a class="tag-btn" href="blog_category_grid.ftl">Food</a>
+                      <div class="tags-group"><a class="tag-btn" href="../blog_category_grid.ftl">Gutenews</a><a class="tag-btn" href="../blog_category_grid.ftl">Lifestyle</a><a class="tag-btn" href="../blog_category_grid.ftl">Fashion</a><a class="tag-btn" href="../blog_category_grid.ftl">Technology</a><a class="tag-btn" href="../blog_category_grid.ftl">Food</a>
                       </div>
                     </div>
                     <div class="post-footer__author">
@@ -422,7 +420,7 @@
                     <div class="center-line-title"> 
                       <h5>Tag clouds</h5>
                     </div>
-                    <div class="tags-group"><a class="tag-btn" href="blog_category_grid.ftl">Gutenews</a><a class="tag-btn" href="blog_category_grid.ftl">Lifestyle</a><a class="tag-btn" href="blog_category_grid.ftl">Fashion</a><a class="tag-btn" href="blog_category_grid.ftl">Technology</a><a class="tag-btn" href="blog_category_grid.ftl">Food</a><a class="tag-btn" href="blog_category_grid.ftl">Travel</a>
+                    <div class="tags-group"><a class="tag-btn" href="../blog_category_grid.ftl">Gutenews</a><a class="tag-btn" href="../blog_category_grid.ftl">Lifestyle</a><a class="tag-btn" href="../blog_category_grid.ftl">Fashion</a><a class="tag-btn" href="../blog_category_grid.ftl">Technology</a><a class="tag-btn" href="../blog_category_grid.ftl">Food</a><a class="tag-btn" href="../blog_category_grid.ftl">Travel</a>
                     </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-12">

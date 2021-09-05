@@ -40,7 +40,7 @@
                   <li><a href="index.ftl">HOMEPAGE1</a></li>
                   <li><a href="homepage2.ftl">HOMEPAGE2</a></li>
                   <li><a href="homepage3.ftl">HOMEPAGE3</a></li>
-                  <li><a href="homepage4.ftl">HOMEPAGE4</a></li>
+                  <li><a href="../homepage4.ftl">HOMEPAGE4</a></li>
                   <li><a href="homepage5.ftl">HOMEPAGE5</a></li>
                   <li><a href="homepage6.ftl">HOMEPAGE6</a></li>
                   <li><a href="homepage7.ftl">HOMEPAGE7</a></li>
@@ -50,12 +50,12 @@
               </li>
               <li class="nav-item active"><a>Blog</a>
                 <ul class="dropdown-menu">
-                  <li><a href="blog_category_grid.ftl">BLOG CATEGORY GRID</a></li>
-                  <li><a href="blog_category_list.ftl">BLOG CATEGORY LIST</a></li>
+                  <li><a href="../blog_category_grid.ftl">BLOG CATEGORY GRID</a></li>
+                  <li><a href="../blog_category_list.ftl">BLOG CATEGORY LIST</a></li>
                   <li><a href="post_standard.ftl">POST STANDARD</a></li>
                   <li><a href="post_standard_image_full.ftl">POST STANDARD IMAGE FULLWIDTH</a></li>
                   <li><a href="post_standard_sidebar.ftl">POST STANDARD SIDEBAR</a></li>
-                  <li><a href="post_gallery.ftl">POST GALLERY</a></li>
+                  <li><a href="../detail/post_gallery.ftl">POST GALLERY</a></li>
                   <li><a href="post_video.ftl">POST VIDEO</a></li>
                   <li><a href="post_audio.ftl">POST AUDIO</a></li>
                   <li><a href="post_quote.ftl">POST QUOTE</a></li>
@@ -63,18 +63,18 @@
               </li>
               <li class="nav-item"><a href="#">Pages</a>
                 <ul class="dropdown-menu">
-                  <li><a href="author.ftl">AUTHOR</a></li>
-                  <li><a href="about.ftl">ABOUT</a></li>
-                  <li><a href="contact.ftl">CONTACT</a></li>
-                  <li><a href="shop.ftl">SHOP</a></li>
-                  <li><a href="product_detail.ftl">PRODUCT DETAIL</a></li>
-                  <li><a href="cart.ftl">CART</a></li>
-                  <li><a href="checkout.ftl">CHECKOUT</a></li>
-                  <li><a href="error_404.ftl">ERROR</a></li>
+                  <li><a href="../author.ftl">AUTHOR</a></li>
+                  <li><a href="../about.ftl">ABOUT</a></li>
+                  <li><a href="../contact.ftl">CONTACT</a></li>
+                  <li><a href="../shop.ftl">SHOP</a></li>
+                  <li><a href="../product_detail.ftl">PRODUCT DETAIL</a></li>
+                  <li><a href="../cart.ftl">CART</a></li>
+                  <li><a href="../checkout.ftl">CHECKOUT</a></li>
+                  <li><a href="../error_404.ftl">ERROR</a></li>
                 </ul>
               </li>
-              <li class="nav-item"><a href="about.ftl">About</a></li>
-              <li class="nav-item"><a href="contact.ftl">Contact</a></li>
+              <li class="nav-item"><a href="../about.ftl">About</a></li>
+              <li class="nav-item"><a href="../contact.ftl">Contact</a></li>
             </ul>
           </nav>
           <div class="header__icon-group"><a href="#" id="search"><i class="fas fa-search"></i></a>
@@ -86,23 +86,23 @@
     <div id="content">
       <div class="post">
         <div class="container">
-          <div class="post-standard -audio">
+          <div class="post-standard -quote">
             <div class="row">
               <div class="col-12 col-md-4 order-md-2">
                 <div class="blog-sidebar">
                   <div class="blog-sidebar-section -category">
                     <div class="center-line-title"> 
                       <h5>Categories</h5>
-                    </div><a class="category -bar " href="blog_category_grid.ftl">
+                    </div><a class="category -bar " href="../blog_category_grid.ftl">
                                       <div class="category__background" style="background-image: url(assets/images/backgrounds/category-1.png)"></div>
                                       <h5 class="title">Design</h5>
-                                      <h5 class="quantity">12</h5></a><a class="category -bar " href="blog_category_grid.ftl">
+                                      <h5 class="quantity">12</h5></a><a class="category -bar " href="../blog_category_grid.ftl">
                                       <div class="category__background" style="background-image: url(assets/images/backgrounds/category-2.png)"></div>
                                       <h5 class="title">Graphic</h5>
-                                      <h5 class="quantity">6</h5></a><a class="category -bar " href="blog_category_grid.ftl">
+                                      <h5 class="quantity">6</h5></a><a class="category -bar " href="../blog_category_grid.ftl">
                                       <div class="category__background" style="background-image: url(assets/images/backgrounds/category-3.png)"></div>
                                       <h5 class="title">Illustrator</h5>
-                                      <h5 class="quantity">15</h5></a><a class="category -bar " href="blog_category_grid.ftl">
+                                      <h5 class="quantity">15</h5></a><a class="category -bar " href="../blog_category_grid.ftl">
                                       <div class="category__background" style="background-image: url(assets/images/backgrounds/category-4.png)"></div>
                                       <h5 class="title">Typography</h5>
                                       <h5 class="quantity">8</h5></a>
@@ -192,31 +192,34 @@
                         </div>
                       </div>
                     </div>
-                    <div class="post-card -center post-audio">
-                      <audio class="audio" id="audio-player" controls="">
-                        <source src="assets/media/song.mp3" type="audio/mp3"/>
-                      </audio>
+                <div class="post-quote">
+                  <div class="post-quote-info">
+                    <div class="info__time info__author"><i class="far fa-user"></i>
+                      <p>Jessica Stephens</p>
                     </div>
+                    <div class="info__time"><i class="far fa-clock"></i>
+                      <p>Seb 27, 2019 </p>
+                    </div>
+                    <div class="info__comment"><i class="far fa-comment"></i>
+                      <p>03</p>
+                    </div>
+                  </div>
+                  <h3>I had a dream about you last night. I was writing a ‘Sex for dummies Christians That Secretly What to be Porn Stars- 1st edition.’</h3>
+                  <p>_Crystal Hudson_</p>
+                </div>
                 <div class="post-standard__content">
                   <div id="post-share">
                     <h5>Share:</h5>
                     <div class="social-media"><a href="#" style="background-color: #075ec8"><i class="fab fa-facebook-f"></i></a><a href="#" style="background-color: #40c4ff"><i class="fab fa-twitter"></i></a><a href="#" style="background-image: linear-gradient(to top, #f2a937, #d92e73, #9937b7, #4a66d3), linear-gradient(to top, #af00e1, #ff9e35)"><i class="fab fa-instagram"></i></a><a href="#" style="background-color: #ff0000"><i class="fab fa-youtube"></i></a></div>
                   </div>
-                  <p class="paragraph">Sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqui.paragraphex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
-                  <p class="paragraph">What makes a successful email or email campaign? One of the major elements in the design and layout that draws people in and grows your click-through rate. Today, I’ll be showing you ten examples of winning email design and how to make your own velit esse cillum dolore.</p>
-                      <div class="post-card-quote -border">
-                        <div class="qoute__icon"><i class="fas fa-quote-left"></i></div>
-                        <p class="quote__content">Very little is needed to make a happy life; it is all within yourself, in your way of thinking.</p>
-                        <h5 class="quote__author">_Marcus Aurelius_</h5>
-                      </div>
-                  <p class="paragraph">Occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p><img class="image left" src="assets/images/post_detail/standard/1.png" alt="Post image"/>
+                  <p class="paragraph">Sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqui.paragraphex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p><img class="image left" src="assets/images/post_detail/standard/1.png" alt="Post image"/>
                   <p class="paragraph">If they’re still in the awareness stages of getting to know the brand, then they’ll most likely keep reading more on what Tock has to offer. They’re using one email design to speak to two types of readers both in the first stage of their welcome email.You can also change an email design’s color based on new product, season or to match a marketing campaign’s new look and feel.</p>
                   <p class="paragraph">Design: The email imitates a product marketing funnel system, bringing the reader towards each CTA with “Awareness, Consideration, and Action” as the main stages. Harry’s used a color block design to guide reader through each,</p>
                   <p class="paragraph">Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
                   <p class="paragraph">Non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
                   <div class="post-footer">
                     <div class="post-footer__tags center">
-                      <div class="tags-group"><a class="tag-btn" href="blog_category_grid.ftl">Gutenews</a><a class="tag-btn" href="blog_category_grid.ftl">Lifestyle</a><a class="tag-btn" href="blog_category_grid.ftl">Fashion</a><a class="tag-btn" href="blog_category_grid.ftl">Technology</a><a class="tag-btn" href="blog_category_grid.ftl">Food</a>
+                      <div class="tags-group"><a class="tag-btn" href="../blog_category_grid.ftl">Gutenews</a><a class="tag-btn" href="../blog_category_grid.ftl">Lifestyle</a><a class="tag-btn" href="../blog_category_grid.ftl">Fashion</a><a class="tag-btn" href="../blog_category_grid.ftl">Technology</a><a class="tag-btn" href="../blog_category_grid.ftl">Food</a>
                       </div>
                     </div>
                     <div class="post-footer__author">
@@ -420,7 +423,7 @@
                     <div class="center-line-title"> 
                       <h5>Tag clouds</h5>
                     </div>
-                    <div class="tags-group"><a class="tag-btn" href="blog_category_grid.ftl">Gutenews</a><a class="tag-btn" href="blog_category_grid.ftl">Lifestyle</a><a class="tag-btn" href="blog_category_grid.ftl">Fashion</a><a class="tag-btn" href="blog_category_grid.ftl">Technology</a><a class="tag-btn" href="blog_category_grid.ftl">Food</a><a class="tag-btn" href="blog_category_grid.ftl">Travel</a>
+                    <div class="tags-group"><a class="tag-btn" href="../blog_category_grid.ftl">Gutenews</a><a class="tag-btn" href="../blog_category_grid.ftl">Lifestyle</a><a class="tag-btn" href="../blog_category_grid.ftl">Fashion</a><a class="tag-btn" href="../blog_category_grid.ftl">Technology</a><a class="tag-btn" href="../blog_category_grid.ftl">Food</a><a class="tag-btn" href="../blog_category_grid.ftl">Travel</a>
                     </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-12">

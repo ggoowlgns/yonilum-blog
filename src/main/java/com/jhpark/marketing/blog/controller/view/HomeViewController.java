@@ -14,10 +14,14 @@ public class HomeViewController {
     return "index";
   }
 
-  @RequestMapping(value = "/{file}.ftl")
-  public String forwardRequests(@PathVariable String file) {
+//  @RequestMapping(value = "/{file}.ftl")
+//  public String forwardRequests(@PathVariable String file) {
+//    return file;
+//  }
 
-    return file;
+  @RequestMapping(value = "/about", method = RequestMethod.GET)
+  public String about() {
+    return "about";
   }
 
 }

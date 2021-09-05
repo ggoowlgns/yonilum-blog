@@ -1,93 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Contact us</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap"/>
-    <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.13.0/css/pro.min.css"/>
-    <link rel="shortcut icon" type="image/png" href="./assets/images/fav.png"/>
-    <!--build:css assets/css/styles.min.css-->
-    <link rel="stylesheet" href="assets/css/elegant.css"/>
-    <link rel="stylesheet" href="assets/css/custom_bootstrap.css"/>
-    <link rel="stylesheet" href="assets/css/slick.css"/>
-    <link rel="stylesheet" href="assets/css/plyr.min.css"/>
-    <link rel="stylesheet" href="assets/css/style.css"/>
-    <!--endbuild-->
-  </head>
-  <body>
-    <div id="load">
-      <div class="load__content">
-        <div class="load__icon"><img src="assets/images/icons/load.gif" alt="Loading icon"/></div>
-      </div>
-    </div>
-    <header class="theme-default">
-      <div id="search-box">
-        <div class="container">
-          <form action="/" method="POST">
-            <input type="text" placeholder="Searching for news" name="search"/>
-            <button><i class="fas fa-arrow-right"></i></button>
-          </form>
-        </div>
-      </div>
-      <div class="container">
-        <div class="header-wrapper"><a class="header__logo" href="index.ftl"><img src="./assets/images/logo.png" alt="Logo"/></a>
-          <nav>
-            <ul>
-              <li class="nav-item"><a href="index.ftl">Home</a>
-                <ul class="dropdown-menu">
-                  <li><a href="index.ftl">HOMEPAGE1</a></li>
-                  <li><a href="homepage2.ftl">HOMEPAGE2</a></li>
-                  <li><a href="homepage3.ftl">HOMEPAGE3</a></li>
-                  <li><a href="homepage4.ftl">HOMEPAGE4</a></li>
-                  <li><a href="homepage5.ftl">HOMEPAGE5</a></li>
-                  <li><a href="homepage6.ftl">HOMEPAGE6</a></li>
-                  <li><a href="homepage7.ftl">HOMEPAGE7</a></li>
-                  <li><a href="homepage8.ftl">HOMEPAGE8</a></li>
-                  <li><a href="homepage9.ftl">HOMEPAGE9</a></li>
-                </ul>
-              </li>
-              <li class="nav-item"><a>Blog</a>
-                <ul class="dropdown-menu">
-                  <li><a href="blog_category_grid.ftl">BLOG CATEGORY GRID</a></li>
-                  <li><a href="blog_category_list.ftl">BLOG CATEGORY LIST</a></li>
-                  <li><a href="post_standard.ftl">POST STANDARD</a></li>
-                  <li><a href="post_standard_image_full.ftl">POST STANDARD IMAGE FULLWIDTH</a></li>
-                  <li><a href="post_standard_sidebar.ftl">POST STANDARD SIDEBAR</a></li>
-                  <li><a href="post_gallery.ftl">POST GALLERY</a></li>
-                  <li><a href="post_video.ftl">POST VIDEO</a></li>
-                  <li><a href="post_audio.ftl">POST AUDIO</a></li>
-                  <li><a href="post_quote.ftl">POST QUOTE</a></li>
-                </ul>
-              </li>
-              <li class="nav-item active"><a href="#">Pages</a>
-                <ul class="dropdown-menu">
-                  <li><a href="author.ftl">AUTHOR</a></li>
-                  <li><a href="about.ftl">ABOUT</a></li>
-                  <li><a href="contact.ftl">CONTACT</a></li>
-                  <li><a href="shop.ftl">SHOP</a></li>
-                  <li><a href="product_detail.ftl">PRODUCT DETAIL</a></li>
-                  <li><a href="cart.ftl">CART</a></li>
-                  <li><a href="checkout.ftl">CHECKOUT</a></li>
-                  <li><a href="error_404.ftl">ERROR</a></li>
-                </ul>
-              </li>
-              <li class="nav-item"><a href="about.ftl">About</a></li>
-              <li class="nav-item"><a href="contact.ftl">Contact</a></li>
-            </ul>
-          </nav>
-          <div class="header__icon-group"><a href="#" id="search"><i class="fas fa-search"></i></a>
-            <div class="social"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-dribbble"></i></a><a id="mobile-menu-controller" href="#"><i class="fas fa-bars"></i></a></div>
-          </div>
-        </div>
-      </div>
-    </header>
+<#include "header/default-css.ftl">
+<body>
+<#include "header/default.ftl">
     <div class="no-pd" id="content">
       <div class="container">
             <div class="breadcrumb">
               <ul>
-                <li><a href="index.ftl"> <i class="fas fa-home"></i>Home</a></li>
+                <li><a href="deprecated/index.ftl"> <i class="fas fa-home"></i>Home</a></li>
                 <li><a href="#">Feature</a></li>
                 <li class="active"><a href="#">Contact us</a></li>
               </ul>
@@ -202,9 +122,9 @@
                   <h5>Feature posts</h5>
                 </div>
                 <div class="feature-post-block">
-                      <div class="post-card -tiny"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/1.png" alt="Looking for some feedback for this rejected track"/></a>
+                      <div class="post-card -tiny"><a class="card__cover" href="deprecated/post_standard.ftl"><img src="assets/images/posts/1.png" alt="Looking for some feedback for this rejected track"/></a>
                         <div class="card__content">
-                          <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                          <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="deprecated/post_standard.ftl">Looking for some feedback for this rejected track</a>
                           <div class="card__content-info">
                             <div class="info__time"><i class="far fa-clock"></i>
                               <p>Clock  Wed 02, 2019</p>
@@ -212,9 +132,9 @@
                           </div>
                         </div>
                       </div>
-                      <div class="post-card -tiny"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/2.png" alt="How to name, save and export a finish template"/></a>
+                      <div class="post-card -tiny"><a class="card__cover" href="deprecated/post_standard.ftl"><img src="assets/images/posts/2.png" alt="How to name, save and export a finish template"/></a>
                         <div class="card__content">
-                          <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="post_standard.ftl">How to name, save and export a finish template</a>
+                          <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="deprecated/post_standard.ftl">How to name, save and export a finish template</a>
                           <div class="card__content-info">
                             <div class="info__time"><i class="far fa-clock"></i>
                               <p>Clock  Wed 02, 2019</p>
@@ -222,9 +142,9 @@
                           </div>
                         </div>
                       </div>
-                      <div class="post-card -tiny"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/3.png" alt="I want to create a logo with illustrator hacker"/></a>
+                      <div class="post-card -tiny"><a class="card__cover" href="deprecated/post_standard.ftl"><img src="assets/images/posts/3.png" alt="I want to create a logo with illustrator hacker"/></a>
                         <div class="card__content">
-                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="deprecated/post_standard.ftl">I want to create a logo with illustrator hacker</a>
                           <div class="card__content-info">
                             <div class="info__time"><i class="far fa-clock"></i>
                               <p>Clock  Wed 02, 2019</p>
@@ -242,7 +162,7 @@
                     <div class="center-line-title"> 
                       <h5>Tag clouds</h5>
                     </div>
-                    <div class="tags-group"><a class="tag-btn" href="blog_category_grid.ftl">Gutenews</a><a class="tag-btn" href="blog_category_grid.ftl">Lifestyle</a><a class="tag-btn" href="blog_category_grid.ftl">Fashion</a><a class="tag-btn" href="blog_category_grid.ftl">Technology</a><a class="tag-btn" href="blog_category_grid.ftl">Food</a><a class="tag-btn" href="blog_category_grid.ftl">Travel</a>
+                    <div class="tags-group"><a class="tag-btn" href="deprecated/blog_category_grid.ftl">Gutenews</a><a class="tag-btn" href="deprecated/blog_category_grid.ftl">Lifestyle</a><a class="tag-btn" href="deprecated/blog_category_grid.ftl">Fashion</a><a class="tag-btn" href="deprecated/blog_category_grid.ftl">Technology</a><a class="tag-btn" href="deprecated/blog_category_grid.ftl">Food</a><a class="tag-btn" href="deprecated/blog_category_grid.ftl">Travel</a>
                     </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-12">

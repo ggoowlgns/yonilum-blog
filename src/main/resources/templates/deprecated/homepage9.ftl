@@ -40,7 +40,7 @@
                   <li><a href="index.ftl">HOMEPAGE1</a></li>
                   <li><a href="homepage2.ftl">HOMEPAGE2</a></li>
                   <li><a href="homepage3.ftl">HOMEPAGE3</a></li>
-                  <li><a href="homepage4.ftl">HOMEPAGE4</a></li>
+                  <li><a href="../homepage4.ftl">HOMEPAGE4</a></li>
                   <li><a href="homepage5.ftl">HOMEPAGE5</a></li>
                   <li><a href="homepage6.ftl">HOMEPAGE6</a></li>
                   <li><a href="homepage7.ftl">HOMEPAGE7</a></li>
@@ -50,31 +50,31 @@
               </li>
               <li class="nav-item"><a>Blog</a>
                 <ul class="dropdown-menu">
-                  <li><a href="blog_category_grid.ftl">BLOG CATEGORY GRID</a></li>
-                  <li><a href="blog_category_list.ftl">BLOG CATEGORY LIST</a></li>
-                  <li><a href="post_standard.ftl">POST STANDARD</a></li>
-                  <li><a href="post_standard_image_full.ftl">POST STANDARD IMAGE FULLWIDTH</a></li>
-                  <li><a href="post_standard_sidebar.ftl">POST STANDARD SIDEBAR</a></li>
-                  <li><a href="post_gallery.ftl">POST GALLERY</a></li>
-                  <li><a href="post_video.ftl">POST VIDEO</a></li>
-                  <li><a href="post_audio.ftl">POST AUDIO</a></li>
-                  <li><a href="post_quote.ftl">POST QUOTE</a></li>
+                  <li><a href="../blog_category_grid.ftl">BLOG CATEGORY GRID</a></li>
+                  <li><a href="../blog_category_list.ftl">BLOG CATEGORY LIST</a></li>
+                  <li><a href="../post_standard.ftl">POST STANDARD</a></li>
+                  <li><a href="../post_standard_image_full.ftl">POST STANDARD IMAGE FULLWIDTH</a></li>
+                  <li><a href="../post_standard_sidebar.ftl">POST STANDARD SIDEBAR</a></li>
+                  <li><a href="../post_gallery.ftl">POST GALLERY</a></li>
+                  <li><a href="../post_video.ftl">POST VIDEO</a></li>
+                  <li><a href="../post_audio.ftl">POST AUDIO</a></li>
+                  <li><a href="../post_quote.ftl">POST QUOTE</a></li>
                 </ul>
               </li>
               <li class="nav-item"><a href="#">Pages</a>
                 <ul class="dropdown-menu">
-                  <li><a href="author.ftl">AUTHOR</a></li>
-                  <li><a href="about.ftl">ABOUT</a></li>
-                  <li><a href="contact.ftl">CONTACT</a></li>
-                  <li><a href="shop.ftl">SHOP</a></li>
-                  <li><a href="product_detail.ftl">PRODUCT DETAIL</a></li>
-                  <li><a href="cart.ftl">CART</a></li>
-                  <li><a href="checkout.ftl">CHECKOUT</a></li>
-                  <li><a href="error_404.ftl">ERROR</a></li>
+                  <li><a href="../author.ftl">AUTHOR</a></li>
+                  <li><a href="../about.ftl">ABOUT</a></li>
+                  <li><a href="../contact.ftl">CONTACT</a></li>
+                  <li><a href="../shop.ftl">SHOP</a></li>
+                  <li><a href="../product_detail.ftl">PRODUCT DETAIL</a></li>
+                  <li><a href="../cart.ftl">CART</a></li>
+                  <li><a href="../checkout.ftl">CHECKOUT</a></li>
+                  <li><a href="../error_404.ftl">ERROR</a></li>
                 </ul>
               </li>
-              <li class="nav-item"><a href="about.ftl">About</a></li>
-              <li class="nav-item"><a href="contact.ftl">Contact</a></li>
+              <li class="nav-item"><a href="../about.ftl">About</a></li>
+              <li class="nav-item"><a href="../contact.ftl">Contact</a></li>
             </ul>
           </nav>
           <div class="header__icon-group"><a href="#" id="search"><i class="fas fa-search"></i></a>
@@ -89,9 +89,9 @@
           <div class="blog-flower__slide__wrapper">
             <div class="blog-flower__slide">
               <div class="blog-flower__slide__item">
-                    <div class="post-card -box-text -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/slide/1.png" alt="Looking for some feedback for this rejected track"/></a>
+                    <div class="post-card -box-text -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/slide/1.png" alt="Looking for some feedback for this rejected track"/></a>
                       <div class="card__content">
-                        <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                        <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                         <div class="card__content-info">
                           <div class="info__time info__author"><i class="far fa-user"></i>
                             <p>Jessica Stephens</p>
@@ -107,9 +107,9 @@
                     </div>
               </div>
               <div class="blog-flower__slide__item">
-                    <div class="post-card -box-text -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/slide/2.png" alt="How to name, save and export a finish template"/></a>
+                    <div class="post-card -box-text -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/slide/2.png" alt="How to name, save and export a finish template"/></a>
                       <div class="card__content">
-                        <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="post_standard.ftl">How to name, save and export a finish template</a>
+                        <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="../post_standard.ftl">How to name, save and export a finish template</a>
                         <div class="card__content-info">
                           <div class="info__time info__author"><i class="far fa-user"></i>
                             <p>Jessica Stephens</p>
@@ -125,9 +125,9 @@
                     </div>
               </div>
               <div class="blog-flower__slide__item">
-                    <div class="post-card -box-text -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/slide/3.png" alt="I want to create a logo with illustrator hacker"/></a>
+                    <div class="post-card -box-text -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/slide/3.png" alt="I want to create a logo with illustrator hacker"/></a>
                       <div class="card__content">
-                        <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                        <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                         <div class="card__content-info">
                           <div class="info__time info__author"><i class="far fa-user"></i>
                             <p>Jessica Stephens</p>
@@ -143,9 +143,9 @@
                     </div>
               </div>
               <div class="blog-flower__slide__item">
-                    <div class="post-card -box-text -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/slide/4.png" alt="where I can found the sound in this video template?"/></a>
+                    <div class="post-card -box-text -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/slide/4.png" alt="where I can found the sound in this video template?"/></a>
                       <div class="card__content">
-                        <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                        <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
                         <div class="card__content-info">
                           <div class="info__time info__author"><i class="far fa-user"></i>
                             <p>Jessica Stephens</p>
@@ -185,9 +185,9 @@
                     <div class="center-line-title"> 
                       <h5>Feature post</h5>
                     </div>
-                        <div class="post-card -tiny -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/1.png" alt="Looking for some feedback for this rejected track"/></a>
+                        <div class="post-card -tiny -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/1.png" alt="Looking for some feedback for this rejected track"/></a>
                           <div class="card__content">
-                            <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                            <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                             <div class="card__content-info">
                               <div class="info__time"><i class="far fa-clock"></i>
                                 <p>Clock  Wed 02, 2019</p>
@@ -195,9 +195,9 @@
                             </div>
                           </div>
                         </div>
-                        <div class="post-card -tiny -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/2.png" alt="How to name, save and export a finish template"/></a>
+                        <div class="post-card -tiny -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/2.png" alt="How to name, save and export a finish template"/></a>
                           <div class="card__content">
-                            <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="post_standard.ftl">How to name, save and export a finish template</a>
+                            <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="../post_standard.ftl">How to name, save and export a finish template</a>
                             <div class="card__content-info">
                               <div class="info__time"><i class="far fa-clock"></i>
                                 <p>Clock  Wed 02, 2019</p>
@@ -205,9 +205,9 @@
                             </div>
                           </div>
                         </div>
-                        <div class="post-card -tiny -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/3.png" alt="I want to create a logo with illustrator hacker"/></a>
+                        <div class="post-card -tiny -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/3.png" alt="I want to create a logo with illustrator hacker"/></a>
                           <div class="card__content">
-                            <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                            <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                             <div class="card__content-info">
                               <div class="info__time"><i class="far fa-clock"></i>
                                 <p>Clock  Wed 02, 2019</p>
@@ -220,16 +220,16 @@
                     <div class="center-line-title"> 
                       <h5>Categories</h5>
                     </div>
-                    <div class="category-block"><a class="category -square -theme--violet" href="blog_category_grid.ftl">
+                    <div class="category-block"><a class="category -square -theme--violet" href="../blog_category_grid.ftl">
                             <div class="category__background" style="background-image: url(./assets/images/backgrounds/flower/1.png)"></div>
                             <h5 class="title">Design</h5>
-                            <h5 class="quantity">12</h5></a><a class="category -square -theme--violet" href="blog_category_grid.ftl">
+                            <h5 class="quantity">12</h5></a><a class="category -square -theme--violet" href="../blog_category_grid.ftl">
                             <div class="category__background" style="background-image: url(./assets/images/backgrounds/flower/2.png)"></div>
                             <h5 class="title">Graphic</h5>
-                            <h5 class="quantity">6</h5></a><a class="category -square -theme--violet" href="blog_category_grid.ftl">
+                            <h5 class="quantity">6</h5></a><a class="category -square -theme--violet" href="../blog_category_grid.ftl">
                             <div class="category__background" style="background-image: url(./assets/images/backgrounds/flower/3.png)"></div>
                             <h5 class="title">Illustrator</h5>
-                            <h5 class="quantity">15</h5></a><a class="category -square -theme--violet" href="blog_category_grid.ftl">
+                            <h5 class="quantity">15</h5></a><a class="category -square -theme--violet" href="../blog_category_grid.ftl">
                             <div class="category__background" style="background-image: url(./assets/images/backgrounds/flower/4.png)"></div>
                             <h5 class="title">Typography</h5>
                             <h5 class="quantity">8</h5></a>
@@ -257,9 +257,9 @@
                         <div class="news-block__content__slide">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-1.png" alt="Looking for some feedback for this rejected track"/></a>
+                                  <div class="post-card -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-1.png" alt="Looking for some feedback for this rejected track"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -274,9 +274,9 @@
                             <div class="col-12">
                               <div class="row">
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/1.png" alt="How to name, save and export a finish template"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/1.png" alt="How to name, save and export a finish template"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="post_standard.ftl">How to name, save and export a finish template</a>
+                                          <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="../post_standard.ftl">How to name, save and export a finish template</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -289,9 +289,9 @@
                                       </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/2.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/2.png" alt="I want to create a logo with illustrator hacker"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -306,9 +306,9 @@
                               </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-2.png" alt="Looking for some feedback for this rejected track"/></a>
+                                  <div class="post-card -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-2.png" alt="Looking for some feedback for this rejected track"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -323,9 +323,9 @@
                             <div class="col-12">
                               <div class="row">
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/3.png" alt="How to name, save and export a finish template"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/3.png" alt="How to name, save and export a finish template"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="post_standard.ftl">How to name, save and export a finish template</a>
+                                          <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="../post_standard.ftl">How to name, save and export a finish template</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -338,111 +338,9 @@
                                       </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/4.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/4.png" alt="I want to create a logo with illustrator hacker"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
-                                          <div class="card__content-info">
-                                            <div class="info__time"><i class="far fa-clock"></i>
-                                              <p>Clock  Wed 02, 2019</p>
-                                            </div>
-                                            <div class="info__comment"><i class="far fa-comment"></i>
-                                              <p>3</p>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="news-block__content__slide">
-                          <div class="row">
-                            <div class="col-12">
-                                  <div class="post-card -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-1.png" alt="Looking for some feedback for this rejected track"/></a>
-                                    <div class="card__content">
-                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
-                                      <div class="card__content-info">
-                                        <div class="info__time"><i class="far fa-clock"></i>
-                                          <p>Clock  Wed 02, 2019</p>
-                                        </div>
-                                        <div class="info__comment"><i class="far fa-comment"></i>
-                                          <p>3</p>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                            </div>
-                            <div class="col-12">
-                              <div class="row">
-                                <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/1.png" alt="I want to create a logo with illustrator hacker"/></a>
-                                        <div class="card__content">
-                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
-                                          <div class="card__content-info">
-                                            <div class="info__time"><i class="far fa-clock"></i>
-                                              <p>Clock  Wed 02, 2019</p>
-                                            </div>
-                                            <div class="info__comment"><i class="far fa-comment"></i>
-                                              <p>3</p>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/2.png" alt="where I can found the sound in this video template?"/></a>
-                                        <div class="card__content">
-                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
-                                          <div class="card__content-info">
-                                            <div class="info__time"><i class="far fa-clock"></i>
-                                              <p>Clock  Wed 02, 2019</p>
-                                            </div>
-                                            <div class="info__comment"><i class="far fa-comment"></i>
-                                              <p>3</p>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-12">
-                                  <div class="post-card -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-2.png" alt="Looking for some feedback for this rejected track"/></a>
-                                    <div class="card__content">
-                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
-                                      <div class="card__content-info">
-                                        <div class="info__time"><i class="far fa-clock"></i>
-                                          <p>Clock  Wed 02, 2019</p>
-                                        </div>
-                                        <div class="info__comment"><i class="far fa-comment"></i>
-                                          <p>3</p>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                            </div>
-                            <div class="col-12">
-                              <div class="row">
-                                <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/3.png" alt="I want to create a logo with illustrator hacker"/></a>
-                                        <div class="card__content">
-                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
-                                          <div class="card__content-info">
-                                            <div class="info__time"><i class="far fa-clock"></i>
-                                              <p>Clock  Wed 02, 2019</p>
-                                            </div>
-                                            <div class="info__comment"><i class="far fa-comment"></i>
-                                              <p>3</p>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/4.png" alt="where I can found the sound in this video template?"/></a>
-                                        <div class="card__content">
-                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -461,9 +359,9 @@
                         <div class="news-block__content__slide">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-1.png" alt="Looking for some feedback for this rejected track"/></a>
+                                  <div class="post-card -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-1.png" alt="Looking for some feedback for this rejected track"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -478,9 +376,9 @@
                             <div class="col-12">
                               <div class="row">
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/1.png" alt="where I can found the sound in this video template?"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/1.png" alt="I want to create a logo with illustrator hacker"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -493,9 +391,9 @@
                                       </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/2.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/2.png" alt="where I can found the sound in this video template?"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -510,9 +408,9 @@
                               </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-2.png" alt="Looking for some feedback for this rejected track"/></a>
+                                  <div class="post-card -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-2.png" alt="Looking for some feedback for this rejected track"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -527,9 +425,9 @@
                             <div class="col-12">
                               <div class="row">
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/3.png" alt="where I can found the sound in this video template?"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/3.png" alt="I want to create a logo with illustrator hacker"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -542,9 +440,111 @@
                                       </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/4.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/4.png" alt="where I can found the sound in this video template?"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
+                                          <div class="card__content-info">
+                                            <div class="info__time"><i class="far fa-clock"></i>
+                                              <p>Clock  Wed 02, 2019</p>
+                                            </div>
+                                            <div class="info__comment"><i class="far fa-comment"></i>
+                                              <p>3</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="news-block__content__slide">
+                          <div class="row">
+                            <div class="col-12">
+                                  <div class="post-card -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-1.png" alt="Looking for some feedback for this rejected track"/></a>
+                                    <div class="card__content">
+                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                      <div class="card__content-info">
+                                        <div class="info__time"><i class="far fa-clock"></i>
+                                          <p>Clock  Wed 02, 2019</p>
+                                        </div>
+                                        <div class="info__comment"><i class="far fa-comment"></i>
+                                          <p>3</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col-12">
+                              <div class="row">
+                                <div class="col-12 col-sm-6">
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/1.png" alt="where I can found the sound in this video template?"/></a>
+                                        <div class="card__content">
+                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
+                                          <div class="card__content-info">
+                                            <div class="info__time"><i class="far fa-clock"></i>
+                                              <p>Clock  Wed 02, 2019</p>
+                                            </div>
+                                            <div class="info__comment"><i class="far fa-comment"></i>
+                                              <p>3</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/2.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                        <div class="card__content">
+                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                          <div class="card__content-info">
+                                            <div class="info__time"><i class="far fa-clock"></i>
+                                              <p>Clock  Wed 02, 2019</p>
+                                            </div>
+                                            <div class="info__comment"><i class="far fa-comment"></i>
+                                              <p>3</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-12">
+                                  <div class="post-card -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-2.png" alt="Looking for some feedback for this rejected track"/></a>
+                                    <div class="card__content">
+                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                      <div class="card__content-info">
+                                        <div class="info__time"><i class="far fa-clock"></i>
+                                          <p>Clock  Wed 02, 2019</p>
+                                        </div>
+                                        <div class="info__comment"><i class="far fa-comment"></i>
+                                          <p>3</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col-12">
+                              <div class="row">
+                                <div class="col-12 col-sm-6">
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/3.png" alt="where I can found the sound in this video template?"/></a>
+                                        <div class="card__content">
+                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
+                                          <div class="card__content-info">
+                                            <div class="info__time"><i class="far fa-clock"></i>
+                                              <p>Clock  Wed 02, 2019</p>
+                                            </div>
+                                            <div class="info__comment"><i class="far fa-comment"></i>
+                                              <p>3</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/4.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                        <div class="card__content">
+                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -567,9 +567,9 @@
                         <div class="news-block__content__slide">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-1.png" alt="Looking for some feedback for this rejected track"/></a>
+                                  <div class="post-card -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-1.png" alt="Looking for some feedback for this rejected track"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -584,9 +584,9 @@
                             <div class="col-12">
                               <div class="row">
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/1.png" alt="How to name, save and export a finish template"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/1.png" alt="How to name, save and export a finish template"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="post_standard.ftl">How to name, save and export a finish template</a>
+                                          <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="../post_standard.ftl">How to name, save and export a finish template</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -599,9 +599,9 @@
                                       </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/2.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/2.png" alt="I want to create a logo with illustrator hacker"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -616,9 +616,9 @@
                               </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-2.png" alt="Looking for some feedback for this rejected track"/></a>
+                                  <div class="post-card -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-2.png" alt="Looking for some feedback for this rejected track"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -633,9 +633,9 @@
                             <div class="col-12">
                               <div class="row">
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/3.png" alt="How to name, save and export a finish template"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/3.png" alt="How to name, save and export a finish template"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="post_standard.ftl">How to name, save and export a finish template</a>
+                                          <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="../post_standard.ftl">How to name, save and export a finish template</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -648,111 +648,9 @@
                                       </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/4.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/4.png" alt="I want to create a logo with illustrator hacker"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
-                                          <div class="card__content-info">
-                                            <div class="info__time"><i class="far fa-clock"></i>
-                                              <p>Clock  Wed 02, 2019</p>
-                                            </div>
-                                            <div class="info__comment"><i class="far fa-comment"></i>
-                                              <p>3</p>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="news-block__content__slide">
-                          <div class="row">
-                            <div class="col-12">
-                                  <div class="post-card -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-1.png" alt="Looking for some feedback for this rejected track"/></a>
-                                    <div class="card__content">
-                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
-                                      <div class="card__content-info">
-                                        <div class="info__time"><i class="far fa-clock"></i>
-                                          <p>Clock  Wed 02, 2019</p>
-                                        </div>
-                                        <div class="info__comment"><i class="far fa-comment"></i>
-                                          <p>3</p>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                            </div>
-                            <div class="col-12">
-                              <div class="row">
-                                <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/1.png" alt="I want to create a logo with illustrator hacker"/></a>
-                                        <div class="card__content">
-                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
-                                          <div class="card__content-info">
-                                            <div class="info__time"><i class="far fa-clock"></i>
-                                              <p>Clock  Wed 02, 2019</p>
-                                            </div>
-                                            <div class="info__comment"><i class="far fa-comment"></i>
-                                              <p>3</p>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/2.png" alt="where I can found the sound in this video template?"/></a>
-                                        <div class="card__content">
-                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
-                                          <div class="card__content-info">
-                                            <div class="info__time"><i class="far fa-clock"></i>
-                                              <p>Clock  Wed 02, 2019</p>
-                                            </div>
-                                            <div class="info__comment"><i class="far fa-comment"></i>
-                                              <p>3</p>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-12">
-                                  <div class="post-card -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-2.png" alt="Looking for some feedback for this rejected track"/></a>
-                                    <div class="card__content">
-                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
-                                      <div class="card__content-info">
-                                        <div class="info__time"><i class="far fa-clock"></i>
-                                          <p>Clock  Wed 02, 2019</p>
-                                        </div>
-                                        <div class="info__comment"><i class="far fa-comment"></i>
-                                          <p>3</p>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                            </div>
-                            <div class="col-12">
-                              <div class="row">
-                                <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/3.png" alt="I want to create a logo with illustrator hacker"/></a>
-                                        <div class="card__content">
-                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
-                                          <div class="card__content-info">
-                                            <div class="info__time"><i class="far fa-clock"></i>
-                                              <p>Clock  Wed 02, 2019</p>
-                                            </div>
-                                            <div class="info__comment"><i class="far fa-comment"></i>
-                                              <p>3</p>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/4.png" alt="where I can found the sound in this video template?"/></a>
-                                        <div class="card__content">
-                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -771,9 +669,9 @@
                         <div class="news-block__content__slide">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-1.png" alt="Looking for some feedback for this rejected track"/></a>
+                                  <div class="post-card -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-1.png" alt="Looking for some feedback for this rejected track"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -788,9 +686,9 @@
                             <div class="col-12">
                               <div class="row">
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/1.png" alt="where I can found the sound in this video template?"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/1.png" alt="I want to create a logo with illustrator hacker"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -803,9 +701,9 @@
                                       </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/2.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/2.png" alt="where I can found the sound in this video template?"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -820,9 +718,9 @@
                               </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-2.png" alt="Looking for some feedback for this rejected track"/></a>
+                                  <div class="post-card -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-2.png" alt="Looking for some feedback for this rejected track"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -837,9 +735,9 @@
                             <div class="col-12">
                               <div class="row">
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/3.png" alt="where I can found the sound in this video template?"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/3.png" alt="I want to create a logo with illustrator hacker"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -852,9 +750,111 @@
                                       </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/4.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/4.png" alt="where I can found the sound in this video template?"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
+                                          <div class="card__content-info">
+                                            <div class="info__time"><i class="far fa-clock"></i>
+                                              <p>Clock  Wed 02, 2019</p>
+                                            </div>
+                                            <div class="info__comment"><i class="far fa-comment"></i>
+                                              <p>3</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="news-block__content__slide">
+                          <div class="row">
+                            <div class="col-12">
+                                  <div class="post-card -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-1.png" alt="Looking for some feedback for this rejected track"/></a>
+                                    <div class="card__content">
+                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                      <div class="card__content-info">
+                                        <div class="info__time"><i class="far fa-clock"></i>
+                                          <p>Clock  Wed 02, 2019</p>
+                                        </div>
+                                        <div class="info__comment"><i class="far fa-comment"></i>
+                                          <p>3</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col-12">
+                              <div class="row">
+                                <div class="col-12 col-sm-6">
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/1.png" alt="where I can found the sound in this video template?"/></a>
+                                        <div class="card__content">
+                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
+                                          <div class="card__content-info">
+                                            <div class="info__time"><i class="far fa-clock"></i>
+                                              <p>Clock  Wed 02, 2019</p>
+                                            </div>
+                                            <div class="info__comment"><i class="far fa-comment"></i>
+                                              <p>3</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/2.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                        <div class="card__content">
+                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                          <div class="card__content-info">
+                                            <div class="info__time"><i class="far fa-clock"></i>
+                                              <p>Clock  Wed 02, 2019</p>
+                                            </div>
+                                            <div class="info__comment"><i class="far fa-comment"></i>
+                                              <p>3</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-12">
+                                  <div class="post-card -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-2.png" alt="Looking for some feedback for this rejected track"/></a>
+                                    <div class="card__content">
+                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                      <div class="card__content-info">
+                                        <div class="info__time"><i class="far fa-clock"></i>
+                                          <p>Clock  Wed 02, 2019</p>
+                                        </div>
+                                        <div class="info__comment"><i class="far fa-comment"></i>
+                                          <p>3</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col-12">
+                              <div class="row">
+                                <div class="col-12 col-sm-6">
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/3.png" alt="where I can found the sound in this video template?"/></a>
+                                        <div class="card__content">
+                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
+                                          <div class="card__content-info">
+                                            <div class="info__time"><i class="far fa-clock"></i>
+                                              <p>Clock  Wed 02, 2019</p>
+                                            </div>
+                                            <div class="info__comment"><i class="far fa-comment"></i>
+                                              <p>3</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/4.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                        <div class="card__content">
+                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -877,9 +877,9 @@
                         <div class="news-block__content__slide">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-1.png" alt="Looking for some feedback for this rejected track"/></a>
+                                  <div class="post-card -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-1.png" alt="Looking for some feedback for this rejected track"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -894,9 +894,9 @@
                             <div class="col-12">
                               <div class="row">
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/1.png" alt="How to name, save and export a finish template"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/1.png" alt="How to name, save and export a finish template"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="post_standard.ftl">How to name, save and export a finish template</a>
+                                          <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="../post_standard.ftl">How to name, save and export a finish template</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -909,9 +909,9 @@
                                       </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/2.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/2.png" alt="I want to create a logo with illustrator hacker"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -926,9 +926,9 @@
                               </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-2.png" alt="Looking for some feedback for this rejected track"/></a>
+                                  <div class="post-card -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-2.png" alt="Looking for some feedback for this rejected track"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -943,9 +943,9 @@
                             <div class="col-12">
                               <div class="row">
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/3.png" alt="How to name, save and export a finish template"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/3.png" alt="How to name, save and export a finish template"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="post_standard.ftl">How to name, save and export a finish template</a>
+                                          <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="../post_standard.ftl">How to name, save and export a finish template</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -958,111 +958,9 @@
                                       </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/4.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/4.png" alt="I want to create a logo with illustrator hacker"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
-                                          <div class="card__content-info">
-                                            <div class="info__time"><i class="far fa-clock"></i>
-                                              <p>Clock  Wed 02, 2019</p>
-                                            </div>
-                                            <div class="info__comment"><i class="far fa-comment"></i>
-                                              <p>3</p>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="news-block__content__slide">
-                          <div class="row">
-                            <div class="col-12">
-                                  <div class="post-card -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-1.png" alt="Looking for some feedback for this rejected track"/></a>
-                                    <div class="card__content">
-                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
-                                      <div class="card__content-info">
-                                        <div class="info__time"><i class="far fa-clock"></i>
-                                          <p>Clock  Wed 02, 2019</p>
-                                        </div>
-                                        <div class="info__comment"><i class="far fa-comment"></i>
-                                          <p>3</p>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                            </div>
-                            <div class="col-12">
-                              <div class="row">
-                                <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/1.png" alt="I want to create a logo with illustrator hacker"/></a>
-                                        <div class="card__content">
-                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
-                                          <div class="card__content-info">
-                                            <div class="info__time"><i class="far fa-clock"></i>
-                                              <p>Clock  Wed 02, 2019</p>
-                                            </div>
-                                            <div class="info__comment"><i class="far fa-comment"></i>
-                                              <p>3</p>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/2.png" alt="where I can found the sound in this video template?"/></a>
-                                        <div class="card__content">
-                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
-                                          <div class="card__content-info">
-                                            <div class="info__time"><i class="far fa-clock"></i>
-                                              <p>Clock  Wed 02, 2019</p>
-                                            </div>
-                                            <div class="info__comment"><i class="far fa-comment"></i>
-                                              <p>3</p>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-12">
-                                  <div class="post-card -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-2.png" alt="Looking for some feedback for this rejected track"/></a>
-                                    <div class="card__content">
-                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
-                                      <div class="card__content-info">
-                                        <div class="info__time"><i class="far fa-clock"></i>
-                                          <p>Clock  Wed 02, 2019</p>
-                                        </div>
-                                        <div class="info__comment"><i class="far fa-comment"></i>
-                                          <p>3</p>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                            </div>
-                            <div class="col-12">
-                              <div class="row">
-                                <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/3.png" alt="I want to create a logo with illustrator hacker"/></a>
-                                        <div class="card__content">
-                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
-                                          <div class="card__content-info">
-                                            <div class="info__time"><i class="far fa-clock"></i>
-                                              <p>Clock  Wed 02, 2019</p>
-                                            </div>
-                                            <div class="info__comment"><i class="far fa-comment"></i>
-                                              <p>3</p>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/4.png" alt="where I can found the sound in this video template?"/></a>
-                                        <div class="card__content">
-                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -1081,9 +979,9 @@
                         <div class="news-block__content__slide">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-1.png" alt="Looking for some feedback for this rejected track"/></a>
+                                  <div class="post-card -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-1.png" alt="Looking for some feedback for this rejected track"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -1098,9 +996,9 @@
                             <div class="col-12">
                               <div class="row">
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/1.png" alt="where I can found the sound in this video template?"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/1.png" alt="I want to create a logo with illustrator hacker"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -1113,9 +1011,9 @@
                                       </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/2.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/2.png" alt="where I can found the sound in this video template?"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -1130,9 +1028,9 @@
                               </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-2.png" alt="Looking for some feedback for this rejected track"/></a>
+                                  <div class="post-card -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-2.png" alt="Looking for some feedback for this rejected track"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -1147,9 +1045,9 @@
                             <div class="col-12">
                               <div class="row">
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/3.png" alt="where I can found the sound in this video template?"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/3.png" alt="I want to create a logo with illustrator hacker"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -1162,9 +1060,111 @@
                                       </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/4.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/4.png" alt="where I can found the sound in this video template?"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
+                                          <div class="card__content-info">
+                                            <div class="info__time"><i class="far fa-clock"></i>
+                                              <p>Clock  Wed 02, 2019</p>
+                                            </div>
+                                            <div class="info__comment"><i class="far fa-comment"></i>
+                                              <p>3</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="news-block__content__slide">
+                          <div class="row">
+                            <div class="col-12">
+                                  <div class="post-card -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-1.png" alt="Looking for some feedback for this rejected track"/></a>
+                                    <div class="card__content">
+                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                      <div class="card__content-info">
+                                        <div class="info__time"><i class="far fa-clock"></i>
+                                          <p>Clock  Wed 02, 2019</p>
+                                        </div>
+                                        <div class="info__comment"><i class="far fa-comment"></i>
+                                          <p>3</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col-12">
+                              <div class="row">
+                                <div class="col-12 col-sm-6">
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/1.png" alt="where I can found the sound in this video template?"/></a>
+                                        <div class="card__content">
+                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
+                                          <div class="card__content-info">
+                                            <div class="info__time"><i class="far fa-clock"></i>
+                                              <p>Clock  Wed 02, 2019</p>
+                                            </div>
+                                            <div class="info__comment"><i class="far fa-comment"></i>
+                                              <p>3</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/2.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                        <div class="card__content">
+                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                          <div class="card__content-info">
+                                            <div class="info__time"><i class="far fa-clock"></i>
+                                              <p>Clock  Wed 02, 2019</p>
+                                            </div>
+                                            <div class="info__comment"><i class="far fa-comment"></i>
+                                              <p>3</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-12">
+                                  <div class="post-card -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-2.png" alt="Looking for some feedback for this rejected track"/></a>
+                                    <div class="card__content">
+                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                      <div class="card__content-info">
+                                        <div class="info__time"><i class="far fa-clock"></i>
+                                          <p>Clock  Wed 02, 2019</p>
+                                        </div>
+                                        <div class="info__comment"><i class="far fa-comment"></i>
+                                          <p>3</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col-12">
+                              <div class="row">
+                                <div class="col-12 col-sm-6">
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/3.png" alt="where I can found the sound in this video template?"/></a>
+                                        <div class="card__content">
+                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
+                                          <div class="card__content-info">
+                                            <div class="info__time"><i class="far fa-clock"></i>
+                                              <p>Clock  Wed 02, 2019</p>
+                                            </div>
+                                            <div class="info__comment"><i class="far fa-comment"></i>
+                                              <p>3</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/4.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                        <div class="card__content">
+                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -1187,9 +1187,9 @@
                         <div class="news-block__content__slide">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-1.png" alt="Looking for some feedback for this rejected track"/></a>
+                                  <div class="post-card -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-1.png" alt="Looking for some feedback for this rejected track"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -1204,9 +1204,9 @@
                             <div class="col-12">
                               <div class="row">
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/1.png" alt="How to name, save and export a finish template"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/1.png" alt="How to name, save and export a finish template"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="post_standard.ftl">How to name, save and export a finish template</a>
+                                          <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="../post_standard.ftl">How to name, save and export a finish template</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -1219,9 +1219,9 @@
                                       </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/2.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/2.png" alt="I want to create a logo with illustrator hacker"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -1236,9 +1236,9 @@
                               </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-2.png" alt="Looking for some feedback for this rejected track"/></a>
+                                  <div class="post-card -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-2.png" alt="Looking for some feedback for this rejected track"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -1253,9 +1253,9 @@
                             <div class="col-12">
                               <div class="row">
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/3.png" alt="How to name, save and export a finish template"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/3.png" alt="How to name, save and export a finish template"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="post_standard.ftl">How to name, save and export a finish template</a>
+                                          <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="../post_standard.ftl">How to name, save and export a finish template</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -1268,111 +1268,9 @@
                                       </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/4.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/4.png" alt="I want to create a logo with illustrator hacker"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
-                                          <div class="card__content-info">
-                                            <div class="info__time"><i class="far fa-clock"></i>
-                                              <p>Clock  Wed 02, 2019</p>
-                                            </div>
-                                            <div class="info__comment"><i class="far fa-comment"></i>
-                                              <p>3</p>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="news-block__content__slide">
-                          <div class="row">
-                            <div class="col-12">
-                                  <div class="post-card -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-1.png" alt="Looking for some feedback for this rejected track"/></a>
-                                    <div class="card__content">
-                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
-                                      <div class="card__content-info">
-                                        <div class="info__time"><i class="far fa-clock"></i>
-                                          <p>Clock  Wed 02, 2019</p>
-                                        </div>
-                                        <div class="info__comment"><i class="far fa-comment"></i>
-                                          <p>3</p>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                            </div>
-                            <div class="col-12">
-                              <div class="row">
-                                <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/1.png" alt="I want to create a logo with illustrator hacker"/></a>
-                                        <div class="card__content">
-                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
-                                          <div class="card__content-info">
-                                            <div class="info__time"><i class="far fa-clock"></i>
-                                              <p>Clock  Wed 02, 2019</p>
-                                            </div>
-                                            <div class="info__comment"><i class="far fa-comment"></i>
-                                              <p>3</p>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/2.png" alt="where I can found the sound in this video template?"/></a>
-                                        <div class="card__content">
-                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
-                                          <div class="card__content-info">
-                                            <div class="info__time"><i class="far fa-clock"></i>
-                                              <p>Clock  Wed 02, 2019</p>
-                                            </div>
-                                            <div class="info__comment"><i class="far fa-comment"></i>
-                                              <p>3</p>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-12">
-                                  <div class="post-card -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-2.png" alt="Looking for some feedback for this rejected track"/></a>
-                                    <div class="card__content">
-                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
-                                      <div class="card__content-info">
-                                        <div class="info__time"><i class="far fa-clock"></i>
-                                          <p>Clock  Wed 02, 2019</p>
-                                        </div>
-                                        <div class="info__comment"><i class="far fa-comment"></i>
-                                          <p>3</p>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                            </div>
-                            <div class="col-12">
-                              <div class="row">
-                                <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/3.png" alt="I want to create a logo with illustrator hacker"/></a>
-                                        <div class="card__content">
-                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
-                                          <div class="card__content-info">
-                                            <div class="info__time"><i class="far fa-clock"></i>
-                                              <p>Clock  Wed 02, 2019</p>
-                                            </div>
-                                            <div class="info__comment"><i class="far fa-comment"></i>
-                                              <p>3</p>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/4.png" alt="where I can found the sound in this video template?"/></a>
-                                        <div class="card__content">
-                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -1391,9 +1289,9 @@
                         <div class="news-block__content__slide">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-1.png" alt="Looking for some feedback for this rejected track"/></a>
+                                  <div class="post-card -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-1.png" alt="Looking for some feedback for this rejected track"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -1408,9 +1306,9 @@
                             <div class="col-12">
                               <div class="row">
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/1.png" alt="where I can found the sound in this video template?"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/1.png" alt="I want to create a logo with illustrator hacker"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -1423,9 +1321,9 @@
                                       </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/2.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/2.png" alt="where I can found the sound in this video template?"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -1440,9 +1338,9 @@
                               </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-2.png" alt="Looking for some feedback for this rejected track"/></a>
+                                  <div class="post-card -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-2.png" alt="Looking for some feedback for this rejected track"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -1457,9 +1355,9 @@
                             <div class="col-12">
                               <div class="row">
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/3.png" alt="where I can found the sound in this video template?"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/3.png" alt="I want to create a logo with illustrator hacker"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -1472,9 +1370,111 @@
                                       </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/4.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/4.png" alt="where I can found the sound in this video template?"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
+                                          <div class="card__content-info">
+                                            <div class="info__time"><i class="far fa-clock"></i>
+                                              <p>Clock  Wed 02, 2019</p>
+                                            </div>
+                                            <div class="info__comment"><i class="far fa-comment"></i>
+                                              <p>3</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="news-block__content__slide">
+                          <div class="row">
+                            <div class="col-12">
+                                  <div class="post-card -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-1.png" alt="Looking for some feedback for this rejected track"/></a>
+                                    <div class="card__content">
+                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                      <div class="card__content-info">
+                                        <div class="info__time"><i class="far fa-clock"></i>
+                                          <p>Clock  Wed 02, 2019</p>
+                                        </div>
+                                        <div class="info__comment"><i class="far fa-comment"></i>
+                                          <p>3</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col-12">
+                              <div class="row">
+                                <div class="col-12 col-sm-6">
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/1.png" alt="where I can found the sound in this video template?"/></a>
+                                        <div class="card__content">
+                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
+                                          <div class="card__content-info">
+                                            <div class="info__time"><i class="far fa-clock"></i>
+                                              <p>Clock  Wed 02, 2019</p>
+                                            </div>
+                                            <div class="info__comment"><i class="far fa-comment"></i>
+                                              <p>3</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/2.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                        <div class="card__content">
+                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                          <div class="card__content-info">
+                                            <div class="info__time"><i class="far fa-clock"></i>
+                                              <p>Clock  Wed 02, 2019</p>
+                                            </div>
+                                            <div class="info__comment"><i class="far fa-comment"></i>
+                                              <p>3</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-12">
+                                  <div class="post-card -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-2.png" alt="Looking for some feedback for this rejected track"/></a>
+                                    <div class="card__content">
+                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                      <div class="card__content-info">
+                                        <div class="info__time"><i class="far fa-clock"></i>
+                                          <p>Clock  Wed 02, 2019</p>
+                                        </div>
+                                        <div class="info__comment"><i class="far fa-comment"></i>
+                                          <p>3</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col-12">
+                              <div class="row">
+                                <div class="col-12 col-sm-6">
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/3.png" alt="where I can found the sound in this video template?"/></a>
+                                        <div class="card__content">
+                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
+                                          <div class="card__content-info">
+                                            <div class="info__time"><i class="far fa-clock"></i>
+                                              <p>Clock  Wed 02, 2019</p>
+                                            </div>
+                                            <div class="info__comment"><i class="far fa-comment"></i>
+                                              <p>3</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/4.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                        <div class="card__content">
+                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -1497,9 +1497,9 @@
                         <div class="news-block__content__slide">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-1.png" alt="Looking for some feedback for this rejected track"/></a>
+                                  <div class="post-card -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-1.png" alt="Looking for some feedback for this rejected track"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -1514,9 +1514,9 @@
                             <div class="col-12">
                               <div class="row">
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/1.png" alt="How to name, save and export a finish template"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/1.png" alt="How to name, save and export a finish template"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="post_standard.ftl">How to name, save and export a finish template</a>
+                                          <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="../post_standard.ftl">How to name, save and export a finish template</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -1529,9 +1529,9 @@
                                       </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/2.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/2.png" alt="I want to create a logo with illustrator hacker"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -1546,9 +1546,9 @@
                               </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-2.png" alt="Looking for some feedback for this rejected track"/></a>
+                                  <div class="post-card -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-2.png" alt="Looking for some feedback for this rejected track"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -1563,9 +1563,9 @@
                             <div class="col-12">
                               <div class="row">
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/3.png" alt="How to name, save and export a finish template"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/3.png" alt="How to name, save and export a finish template"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="post_standard.ftl">How to name, save and export a finish template</a>
+                                          <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="../post_standard.ftl">How to name, save and export a finish template</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -1578,111 +1578,9 @@
                                       </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/4.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/4.png" alt="I want to create a logo with illustrator hacker"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
-                                          <div class="card__content-info">
-                                            <div class="info__time"><i class="far fa-clock"></i>
-                                              <p>Clock  Wed 02, 2019</p>
-                                            </div>
-                                            <div class="info__comment"><i class="far fa-comment"></i>
-                                              <p>3</p>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="news-block__content__slide">
-                          <div class="row">
-                            <div class="col-12">
-                                  <div class="post-card -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-1.png" alt="Looking for some feedback for this rejected track"/></a>
-                                    <div class="card__content">
-                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
-                                      <div class="card__content-info">
-                                        <div class="info__time"><i class="far fa-clock"></i>
-                                          <p>Clock  Wed 02, 2019</p>
-                                        </div>
-                                        <div class="info__comment"><i class="far fa-comment"></i>
-                                          <p>3</p>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                            </div>
-                            <div class="col-12">
-                              <div class="row">
-                                <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/1.png" alt="I want to create a logo with illustrator hacker"/></a>
-                                        <div class="card__content">
-                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
-                                          <div class="card__content-info">
-                                            <div class="info__time"><i class="far fa-clock"></i>
-                                              <p>Clock  Wed 02, 2019</p>
-                                            </div>
-                                            <div class="info__comment"><i class="far fa-comment"></i>
-                                              <p>3</p>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/2.png" alt="where I can found the sound in this video template?"/></a>
-                                        <div class="card__content">
-                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
-                                          <div class="card__content-info">
-                                            <div class="info__time"><i class="far fa-clock"></i>
-                                              <p>Clock  Wed 02, 2019</p>
-                                            </div>
-                                            <div class="info__comment"><i class="far fa-comment"></i>
-                                              <p>3</p>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-12">
-                                  <div class="post-card -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-2.png" alt="Looking for some feedback for this rejected track"/></a>
-                                    <div class="card__content">
-                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
-                                      <div class="card__content-info">
-                                        <div class="info__time"><i class="far fa-clock"></i>
-                                          <p>Clock  Wed 02, 2019</p>
-                                        </div>
-                                        <div class="info__comment"><i class="far fa-comment"></i>
-                                          <p>3</p>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                            </div>
-                            <div class="col-12">
-                              <div class="row">
-                                <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/3.png" alt="I want to create a logo with illustrator hacker"/></a>
-                                        <div class="card__content">
-                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
-                                          <div class="card__content-info">
-                                            <div class="info__time"><i class="far fa-clock"></i>
-                                              <p>Clock  Wed 02, 2019</p>
-                                            </div>
-                                            <div class="info__comment"><i class="far fa-comment"></i>
-                                              <p>3</p>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/4.png" alt="where I can found the sound in this video template?"/></a>
-                                        <div class="card__content">
-                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -1701,9 +1599,9 @@
                         <div class="news-block__content__slide">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-1.png" alt="Looking for some feedback for this rejected track"/></a>
+                                  <div class="post-card -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-1.png" alt="Looking for some feedback for this rejected track"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -1718,9 +1616,9 @@
                             <div class="col-12">
                               <div class="row">
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/1.png" alt="where I can found the sound in this video template?"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/1.png" alt="I want to create a logo with illustrator hacker"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -1733,9 +1631,9 @@
                                       </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/2.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/2.png" alt="where I can found the sound in this video template?"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -1750,9 +1648,9 @@
                               </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-2.png" alt="Looking for some feedback for this rejected track"/></a>
+                                  <div class="post-card -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-2.png" alt="Looking for some feedback for this rejected track"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -1767,9 +1665,9 @@
                             <div class="col-12">
                               <div class="row">
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/3.png" alt="where I can found the sound in this video template?"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/3.png" alt="I want to create a logo with illustrator hacker"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -1782,9 +1680,111 @@
                                       </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/flower/lastest/4.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/4.png" alt="where I can found the sound in this video template?"/></a>
                                         <div class="card__content">
-                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
+                                          <div class="card__content-info">
+                                            <div class="info__time"><i class="far fa-clock"></i>
+                                              <p>Clock  Wed 02, 2019</p>
+                                            </div>
+                                            <div class="info__comment"><i class="far fa-comment"></i>
+                                              <p>3</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="news-block__content__slide">
+                          <div class="row">
+                            <div class="col-12">
+                                  <div class="post-card -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-1.png" alt="Looking for some feedback for this rejected track"/></a>
+                                    <div class="card__content">
+                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                      <div class="card__content-info">
+                                        <div class="info__time"><i class="far fa-clock"></i>
+                                          <p>Clock  Wed 02, 2019</p>
+                                        </div>
+                                        <div class="info__comment"><i class="far fa-comment"></i>
+                                          <p>3</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col-12">
+                              <div class="row">
+                                <div class="col-12 col-sm-6">
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/1.png" alt="where I can found the sound in this video template?"/></a>
+                                        <div class="card__content">
+                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
+                                          <div class="card__content-info">
+                                            <div class="info__time"><i class="far fa-clock"></i>
+                                              <p>Clock  Wed 02, 2019</p>
+                                            </div>
+                                            <div class="info__comment"><i class="far fa-comment"></i>
+                                              <p>3</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/2.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                        <div class="card__content">
+                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                          <div class="card__content-info">
+                                            <div class="info__time"><i class="far fa-clock"></i>
+                                              <p>Clock  Wed 02, 2019</p>
+                                            </div>
+                                            <div class="info__comment"><i class="far fa-comment"></i>
+                                              <p>3</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-12">
+                                  <div class="post-card -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/big-2.png" alt="Looking for some feedback for this rejected track"/></a>
+                                    <div class="card__content">
+                                      <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                      <div class="card__content-info">
+                                        <div class="info__time"><i class="far fa-clock"></i>
+                                          <p>Clock  Wed 02, 2019</p>
+                                        </div>
+                                        <div class="info__comment"><i class="far fa-comment"></i>
+                                          <p>3</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col-12">
+                              <div class="row">
+                                <div class="col-12 col-sm-6">
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/3.png" alt="where I can found the sound in this video template?"/></a>
+                                        <div class="card__content">
+                                          <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
+                                          <div class="card__content-info">
+                                            <div class="info__time"><i class="far fa-clock"></i>
+                                              <p>Clock  Wed 02, 2019</p>
+                                            </div>
+                                            <div class="info__comment"><i class="far fa-comment"></i>
+                                              <p>3</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                      <div class="post-card -small -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/flower/lastest/4.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                        <div class="card__content">
+                                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                           <div class="card__content-info">
                                             <div class="info__time"><i class="far fa-clock"></i>
                                               <p>Clock  Wed 02, 2019</p>
@@ -1827,35 +1827,35 @@
                 <div class="active news-block__tab__item" data-tab-name="all">
                   <div class="news-block__content-multi -default">
                     <div class="news-block__content__slide">
-                      <div class="video-container"><a href="post_standard.ftl">Looking for Music &amp; Sounds for my new Android</a>
+                      <div class="video-container"><a href="../post_standard.ftl">Looking for Music &amp; Sounds for my new Android</a>
                         <div class="video-9x16 plyr__video-embed">
                           <iframe src="https://player.vimeo.com/video/25323516" style="position:absolute;top:0;left:0;width:100%;height:100%;" allowfullscreen=""></iframe>
                         </div>
                       </div>
                     </div>
                     <div class="news-block__content__slide">
-                      <div class="video-container"><a href="post_standard.ftl">10 Best Travel Yoga Mats On Amazon, Based On...</a>
+                      <div class="video-container"><a href="../post_standard.ftl">10 Best Travel Yoga Mats On Amazon, Based On...</a>
                         <div class="video-9x16 plyr__video-embed">
                           <iframe src="https://player.vimeo.com/video/113893889" style="position:absolute;top:0;left:0;width:100%;height:100%;" allowfullscreen=""></iframe>
                         </div>
                       </div>
                     </div>
                     <div class="news-block__content__slide">
-                      <div class="video-container"><a href="post_standard.ftl">Looking for Music &amp; Sounds for my new Android</a>
+                      <div class="video-container"><a href="../post_standard.ftl">Looking for Music &amp; Sounds for my new Android</a>
                         <div class="video-9x16 plyr__video-embed">
                           <iframe src="https://player.vimeo.com/video/39050404" style="position:absolute;top:0;left:0;width:100%;height:100%;" allowfullscreen=""></iframe>
                         </div>
                       </div>
                     </div>
                     <div class="news-block__content__slide">
-                      <div class="video-container"><a href="post_standard.ftl">The Truth About Ocean Is About To Be Revealed.</a>
+                      <div class="video-container"><a href="../post_standard.ftl">The Truth About Ocean Is About To Be Revealed.</a>
                         <div class="video-9x16 plyr__video-embed">
                           <iframe src="https://player.vimeo.com/video/140985904" style="position:absolute;top:0;left:0;width:100%;height:100%;" allowfullscreen=""></iframe>
                         </div>
                       </div>
                     </div>
                     <div class="news-block__content__slide">
-                      <div class="video-container"><a href="post_standard.ftl">How Ocean Is Going To Change Your Business Strategies.</a>
+                      <div class="video-container"><a href="../post_standard.ftl">How Ocean Is Going To Change Your Business Strategies.</a>
                         <div class="video-9x16 plyr__video-embed">
                           <iframe src="https://player.vimeo.com/video/360175280" style="position:absolute;top:0;left:0;width:100%;height:100%;" allowfullscreen=""></iframe>
                         </div>
@@ -1888,9 +1888,9 @@
                     <div class="news-block__content__slide">
                       <div class="row">
                         <div class="col-12 col-md-6 col-md-12 col-lg-6 order-lg-2">
-                              <div class="post-card -large -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/big.png" alt="Looking for some feedback for this rejected track"/></a>
+                              <div class="post-card -large -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/big.png" alt="Looking for some feedback for this rejected track"/></a>
                                 <div class="card__content">
-                                  <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                  <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                   <div class="card__content-info">
                                     <div class="info__time info__author"><i class="far fa-user"></i>
                                       <p>Jessica Stephens</p>
@@ -1909,9 +1909,9 @@
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3 order-md-1">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/1.png" alt="How to name, save and export a finish template"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/1.png" alt="How to name, save and export a finish template"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="post_standard.ftl">How to name, save and export a finish template</a>
+                                      <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="../post_standard.ftl">How to name, save and export a finish template</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -1924,9 +1924,9 @@
                                   </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/2.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/2.png" alt="I want to create a logo with illustrator hacker"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -1943,9 +1943,9 @@
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3 order-md-3">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/3.png" alt="How to name, save and export a finish template"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/3.png" alt="How to name, save and export a finish template"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="post_standard.ftl">How to name, save and export a finish template</a>
+                                      <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="../post_standard.ftl">How to name, save and export a finish template</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -1958,9 +1958,9 @@
                                   </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/4.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/4.png" alt="I want to create a logo with illustrator hacker"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -1979,9 +1979,9 @@
                     <div class="news-block__content__slide">
                       <div class="row">
                         <div class="col-12 col-md-6 col-md-12 col-lg-6 order-lg-2">
-                              <div class="post-card -large -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/big.png" alt="Looking for some feedback for this rejected track"/></a>
+                              <div class="post-card -large -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/big.png" alt="Looking for some feedback for this rejected track"/></a>
                                 <div class="card__content">
-                                  <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                  <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                   <div class="card__content-info">
                                     <div class="info__time info__author"><i class="far fa-user"></i>
                                       <p>Jessica Stephens</p>
@@ -2000,9 +2000,9 @@
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3 order-md-1">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/1.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/1.png" alt="I want to create a logo with illustrator hacker"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2015,9 +2015,9 @@
                                   </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/2.png" alt="where I can found the sound in this video template?"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/2.png" alt="where I can found the sound in this video template?"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2034,9 +2034,9 @@
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3 order-md-3">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/3.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/3.png" alt="I want to create a logo with illustrator hacker"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2049,9 +2049,9 @@
                                   </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/4.png" alt="where I can found the sound in this video template?"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/4.png" alt="where I can found the sound in this video template?"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2070,9 +2070,9 @@
                     <div class="news-block__content__slide">
                       <div class="row">
                         <div class="col-12 col-md-6 col-md-12 col-lg-6 order-lg-2">
-                              <div class="post-card -large -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/big.png" alt="Looking for some feedback for this rejected track"/></a>
+                              <div class="post-card -large -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/big.png" alt="Looking for some feedback for this rejected track"/></a>
                                 <div class="card__content">
-                                  <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                  <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                   <div class="card__content-info">
                                     <div class="info__time info__author"><i class="far fa-user"></i>
                                       <p>Jessica Stephens</p>
@@ -2091,9 +2091,9 @@
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3 order-md-1">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/1.png" alt="where I can found the sound in this video template?"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/1.png" alt="where I can found the sound in this video template?"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2106,9 +2106,9 @@
                                   </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/2.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/2.png" alt="I want to create a logo with illustrator hacker"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2125,9 +2125,9 @@
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3 order-md-3">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/3.png" alt="where I can found the sound in this video template?"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/3.png" alt="where I can found the sound in this video template?"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2140,9 +2140,9 @@
                                   </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/4.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/4.png" alt="I want to create a logo with illustrator hacker"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2165,9 +2165,9 @@
                     <div class="news-block__content__slide">
                       <div class="row">
                         <div class="col-12 col-md-6 col-md-12 col-lg-6 order-lg-2">
-                              <div class="post-card -large -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/big.png" alt="Looking for some feedback for this rejected track"/></a>
+                              <div class="post-card -large -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/big.png" alt="Looking for some feedback for this rejected track"/></a>
                                 <div class="card__content">
-                                  <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                  <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                   <div class="card__content-info">
                                     <div class="info__time info__author"><i class="far fa-user"></i>
                                       <p>Jessica Stephens</p>
@@ -2186,9 +2186,9 @@
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3 order-md-1">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/1.png" alt="How to name, save and export a finish template"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/1.png" alt="How to name, save and export a finish template"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="post_standard.ftl">How to name, save and export a finish template</a>
+                                      <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="../post_standard.ftl">How to name, save and export a finish template</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2201,9 +2201,9 @@
                                   </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/2.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/2.png" alt="I want to create a logo with illustrator hacker"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2220,9 +2220,9 @@
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3 order-md-3">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/3.png" alt="How to name, save and export a finish template"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/3.png" alt="How to name, save and export a finish template"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="post_standard.ftl">How to name, save and export a finish template</a>
+                                      <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="../post_standard.ftl">How to name, save and export a finish template</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2235,9 +2235,9 @@
                                   </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/4.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/4.png" alt="I want to create a logo with illustrator hacker"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2256,9 +2256,9 @@
                     <div class="news-block__content__slide">
                       <div class="row">
                         <div class="col-12 col-md-6 col-md-12 col-lg-6 order-lg-2">
-                              <div class="post-card -large -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/big.png" alt="Looking for some feedback for this rejected track"/></a>
+                              <div class="post-card -large -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/big.png" alt="Looking for some feedback for this rejected track"/></a>
                                 <div class="card__content">
-                                  <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                  <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                   <div class="card__content-info">
                                     <div class="info__time info__author"><i class="far fa-user"></i>
                                       <p>Jessica Stephens</p>
@@ -2277,9 +2277,9 @@
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3 order-md-1">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/1.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/1.png" alt="I want to create a logo with illustrator hacker"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2292,9 +2292,9 @@
                                   </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/2.png" alt="where I can found the sound in this video template?"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/2.png" alt="where I can found the sound in this video template?"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2311,9 +2311,9 @@
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3 order-md-3">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/3.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/3.png" alt="I want to create a logo with illustrator hacker"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2326,9 +2326,9 @@
                                   </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/4.png" alt="where I can found the sound in this video template?"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/4.png" alt="where I can found the sound in this video template?"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2347,9 +2347,9 @@
                     <div class="news-block__content__slide">
                       <div class="row">
                         <div class="col-12 col-md-6 col-md-12 col-lg-6 order-lg-2">
-                              <div class="post-card -large -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/big.png" alt="Looking for some feedback for this rejected track"/></a>
+                              <div class="post-card -large -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/big.png" alt="Looking for some feedback for this rejected track"/></a>
                                 <div class="card__content">
-                                  <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                  <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                   <div class="card__content-info">
                                     <div class="info__time info__author"><i class="far fa-user"></i>
                                       <p>Jessica Stephens</p>
@@ -2368,9 +2368,9 @@
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3 order-md-1">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/1.png" alt="where I can found the sound in this video template?"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/1.png" alt="where I can found the sound in this video template?"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2383,9 +2383,9 @@
                                   </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/2.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/2.png" alt="I want to create a logo with illustrator hacker"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2402,9 +2402,9 @@
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3 order-md-3">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/3.png" alt="where I can found the sound in this video template?"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/3.png" alt="where I can found the sound in this video template?"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2417,9 +2417,9 @@
                                   </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/4.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/4.png" alt="I want to create a logo with illustrator hacker"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2442,9 +2442,9 @@
                     <div class="news-block__content__slide">
                       <div class="row">
                         <div class="col-12 col-md-6 col-md-12 col-lg-6 order-lg-2">
-                              <div class="post-card -large -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/big.png" alt="Looking for some feedback for this rejected track"/></a>
+                              <div class="post-card -large -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/big.png" alt="Looking for some feedback for this rejected track"/></a>
                                 <div class="card__content">
-                                  <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                  <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                   <div class="card__content-info">
                                     <div class="info__time info__author"><i class="far fa-user"></i>
                                       <p>Jessica Stephens</p>
@@ -2463,9 +2463,9 @@
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3 order-md-1">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/1.png" alt="How to name, save and export a finish template"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/1.png" alt="How to name, save and export a finish template"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="post_standard.ftl">How to name, save and export a finish template</a>
+                                      <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="../post_standard.ftl">How to name, save and export a finish template</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2478,9 +2478,9 @@
                                   </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/2.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/2.png" alt="I want to create a logo with illustrator hacker"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2497,9 +2497,9 @@
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3 order-md-3">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/3.png" alt="How to name, save and export a finish template"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/3.png" alt="How to name, save and export a finish template"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="post_standard.ftl">How to name, save and export a finish template</a>
+                                      <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="../post_standard.ftl">How to name, save and export a finish template</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2512,9 +2512,9 @@
                                   </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/4.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/4.png" alt="I want to create a logo with illustrator hacker"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2533,9 +2533,9 @@
                     <div class="news-block__content__slide">
                       <div class="row">
                         <div class="col-12 col-md-6 col-md-12 col-lg-6 order-lg-2">
-                              <div class="post-card -large -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/big.png" alt="Looking for some feedback for this rejected track"/></a>
+                              <div class="post-card -large -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/big.png" alt="Looking for some feedback for this rejected track"/></a>
                                 <div class="card__content">
-                                  <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                  <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                   <div class="card__content-info">
                                     <div class="info__time info__author"><i class="far fa-user"></i>
                                       <p>Jessica Stephens</p>
@@ -2554,9 +2554,9 @@
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3 order-md-1">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/1.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/1.png" alt="I want to create a logo with illustrator hacker"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2569,9 +2569,9 @@
                                   </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/2.png" alt="where I can found the sound in this video template?"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/2.png" alt="where I can found the sound in this video template?"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2588,9 +2588,9 @@
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3 order-md-3">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/3.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/3.png" alt="I want to create a logo with illustrator hacker"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2603,9 +2603,9 @@
                                   </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/4.png" alt="where I can found the sound in this video template?"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/4.png" alt="where I can found the sound in this video template?"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2624,9 +2624,9 @@
                     <div class="news-block__content__slide">
                       <div class="row">
                         <div class="col-12 col-md-6 col-md-12 col-lg-6 order-lg-2">
-                              <div class="post-card -large -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/big.png" alt="Looking for some feedback for this rejected track"/></a>
+                              <div class="post-card -large -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/big.png" alt="Looking for some feedback for this rejected track"/></a>
                                 <div class="card__content">
-                                  <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                  <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                   <div class="card__content-info">
                                     <div class="info__time info__author"><i class="far fa-user"></i>
                                       <p>Jessica Stephens</p>
@@ -2645,9 +2645,9 @@
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3 order-md-1">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/1.png" alt="where I can found the sound in this video template?"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/1.png" alt="where I can found the sound in this video template?"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2660,9 +2660,9 @@
                                   </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/2.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/2.png" alt="I want to create a logo with illustrator hacker"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2679,9 +2679,9 @@
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3 order-md-3">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/3.png" alt="where I can found the sound in this video template?"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/3.png" alt="where I can found the sound in this video template?"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2694,9 +2694,9 @@
                                   </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/4.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/4.png" alt="I want to create a logo with illustrator hacker"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2719,9 +2719,9 @@
                     <div class="news-block__content__slide">
                       <div class="row">
                         <div class="col-12 col-md-6 col-md-12 col-lg-6 order-lg-2">
-                              <div class="post-card -large -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/big.png" alt="Looking for some feedback for this rejected track"/></a>
+                              <div class="post-card -large -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/big.png" alt="Looking for some feedback for this rejected track"/></a>
                                 <div class="card__content">
-                                  <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                  <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                   <div class="card__content-info">
                                     <div class="info__time info__author"><i class="far fa-user"></i>
                                       <p>Jessica Stephens</p>
@@ -2740,9 +2740,9 @@
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3 order-md-1">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/1.png" alt="How to name, save and export a finish template"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/1.png" alt="How to name, save and export a finish template"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="post_standard.ftl">How to name, save and export a finish template</a>
+                                      <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="../post_standard.ftl">How to name, save and export a finish template</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2755,9 +2755,9 @@
                                   </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/2.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/2.png" alt="I want to create a logo with illustrator hacker"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2774,9 +2774,9 @@
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3 order-md-3">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/3.png" alt="How to name, save and export a finish template"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/3.png" alt="How to name, save and export a finish template"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="post_standard.ftl">How to name, save and export a finish template</a>
+                                      <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="../post_standard.ftl">How to name, save and export a finish template</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2789,9 +2789,9 @@
                                   </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/4.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/4.png" alt="I want to create a logo with illustrator hacker"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2810,9 +2810,9 @@
                     <div class="news-block__content__slide">
                       <div class="row">
                         <div class="col-12 col-md-6 col-md-12 col-lg-6 order-lg-2">
-                              <div class="post-card -large -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/big.png" alt="Looking for some feedback for this rejected track"/></a>
+                              <div class="post-card -large -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/big.png" alt="Looking for some feedback for this rejected track"/></a>
                                 <div class="card__content">
-                                  <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                  <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                   <div class="card__content-info">
                                     <div class="info__time info__author"><i class="far fa-user"></i>
                                       <p>Jessica Stephens</p>
@@ -2831,9 +2831,9 @@
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3 order-md-1">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/1.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/1.png" alt="I want to create a logo with illustrator hacker"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2846,9 +2846,9 @@
                                   </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/2.png" alt="where I can found the sound in this video template?"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/2.png" alt="where I can found the sound in this video template?"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2865,9 +2865,9 @@
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3 order-md-3">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/3.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/3.png" alt="I want to create a logo with illustrator hacker"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2880,9 +2880,9 @@
                                   </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/4.png" alt="where I can found the sound in this video template?"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/4.png" alt="where I can found the sound in this video template?"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2901,9 +2901,9 @@
                     <div class="news-block__content__slide">
                       <div class="row">
                         <div class="col-12 col-md-6 col-md-12 col-lg-6 order-lg-2">
-                              <div class="post-card -large -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/big.png" alt="Looking for some feedback for this rejected track"/></a>
+                              <div class="post-card -large -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/big.png" alt="Looking for some feedback for this rejected track"/></a>
                                 <div class="card__content">
-                                  <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                  <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                   <div class="card__content-info">
                                     <div class="info__time info__author"><i class="far fa-user"></i>
                                       <p>Jessica Stephens</p>
@@ -2922,9 +2922,9 @@
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3 order-md-1">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/1.png" alt="where I can found the sound in this video template?"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/1.png" alt="where I can found the sound in this video template?"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2937,9 +2937,9 @@
                                   </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/2.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/2.png" alt="I want to create a logo with illustrator hacker"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2956,9 +2956,9 @@
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3 order-md-3">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/3.png" alt="where I can found the sound in this video template?"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/3.png" alt="where I can found the sound in this video template?"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2971,9 +2971,9 @@
                                   </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/4.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/4.png" alt="I want to create a logo with illustrator hacker"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -2996,9 +2996,9 @@
                     <div class="news-block__content__slide">
                       <div class="row">
                         <div class="col-12 col-md-6 col-md-12 col-lg-6 order-lg-2">
-                              <div class="post-card -large -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/big.png" alt="Looking for some feedback for this rejected track"/></a>
+                              <div class="post-card -large -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/big.png" alt="Looking for some feedback for this rejected track"/></a>
                                 <div class="card__content">
-                                  <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                  <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                   <div class="card__content-info">
                                     <div class="info__time info__author"><i class="far fa-user"></i>
                                       <p>Jessica Stephens</p>
@@ -3017,9 +3017,9 @@
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3 order-md-1">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/1.png" alt="How to name, save and export a finish template"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/1.png" alt="How to name, save and export a finish template"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="post_standard.ftl">How to name, save and export a finish template</a>
+                                      <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="../post_standard.ftl">How to name, save and export a finish template</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -3032,9 +3032,9 @@
                                   </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/2.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/2.png" alt="I want to create a logo with illustrator hacker"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -3051,9 +3051,9 @@
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3 order-md-3">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/3.png" alt="How to name, save and export a finish template"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/3.png" alt="How to name, save and export a finish template"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="post_standard.ftl">How to name, save and export a finish template</a>
+                                      <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="../post_standard.ftl">How to name, save and export a finish template</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -3066,9 +3066,9 @@
                                   </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/4.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/4.png" alt="I want to create a logo with illustrator hacker"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -3087,9 +3087,9 @@
                     <div class="news-block__content__slide">
                       <div class="row">
                         <div class="col-12 col-md-6 col-md-12 col-lg-6 order-lg-2">
-                              <div class="post-card -large -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/big.png" alt="Looking for some feedback for this rejected track"/></a>
+                              <div class="post-card -large -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/big.png" alt="Looking for some feedback for this rejected track"/></a>
                                 <div class="card__content">
-                                  <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                  <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                   <div class="card__content-info">
                                     <div class="info__time info__author"><i class="far fa-user"></i>
                                       <p>Jessica Stephens</p>
@@ -3108,9 +3108,9 @@
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3 order-md-1">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/1.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/1.png" alt="I want to create a logo with illustrator hacker"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -3123,9 +3123,9 @@
                                   </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/2.png" alt="where I can found the sound in this video template?"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/2.png" alt="where I can found the sound in this video template?"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -3142,9 +3142,9 @@
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3 order-md-3">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/3.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/3.png" alt="I want to create a logo with illustrator hacker"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -3157,9 +3157,9 @@
                                   </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/4.png" alt="where I can found the sound in this video template?"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/4.png" alt="where I can found the sound in this video template?"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -3178,9 +3178,9 @@
                     <div class="news-block__content__slide">
                       <div class="row">
                         <div class="col-12 col-md-6 col-md-12 col-lg-6 order-lg-2">
-                              <div class="post-card -large -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/big.png" alt="Looking for some feedback for this rejected track"/></a>
+                              <div class="post-card -large -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/big.png" alt="Looking for some feedback for this rejected track"/></a>
                                 <div class="card__content">
-                                  <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                                  <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                                   <div class="card__content-info">
                                     <div class="info__time info__author"><i class="far fa-user"></i>
                                       <p>Jessica Stephens</p>
@@ -3199,9 +3199,9 @@
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3 order-md-1">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/1.png" alt="where I can found the sound in this video template?"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/1.png" alt="where I can found the sound in this video template?"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -3214,9 +3214,9 @@
                                   </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/2.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/2.png" alt="I want to create a logo with illustrator hacker"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -3233,9 +3233,9 @@
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3 order-md-3">
                           <div class="row">
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/3.png" alt="where I can found the sound in this video template?"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/3.png" alt="where I can found the sound in this video template?"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="post_standard.ftl">where I can found the sound in this video template?</a>
+                                      <h5 class="card__content-category">Design</h5><a class="card__content-title" href="../post_standard.ftl">where I can found the sound in this video template?</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -3248,9 +3248,9 @@
                                   </div>
                             </div>
                             <div class="col-12">
-                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="post_standard.ftl"><img src="./assets/images/posts/flower/trending/4.png" alt="I want to create a logo with illustrator hacker"/></a>
+                                  <div class="post-card -small -center -theme--violet"><a class="card__cover" href="../post_standard.ftl"><img src="./assets/images/posts/flower/trending/4.png" alt="I want to create a logo with illustrator hacker"/></a>
                                     <div class="card__content">
-                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                                      <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                                       <div class="card__content-info">
                                         <div class="info__time"><i class="far fa-clock"></i>
                                           <p>Clock  Wed 02, 2019</p>
@@ -3325,9 +3325,9 @@
                   <h5>Feature posts</h5>
                 </div>
                 <div class="feature-post-block">
-                      <div class="post-card -tiny"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/1.png" alt="Looking for some feedback for this rejected track"/></a>
+                      <div class="post-card -tiny"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/1.png" alt="Looking for some feedback for this rejected track"/></a>
                         <div class="card__content">
-                          <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl">Looking for some feedback for this rejected track</a>
+                          <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
                           <div class="card__content-info">
                             <div class="info__time"><i class="far fa-clock"></i>
                               <p>Clock  Wed 02, 2019</p>
@@ -3335,9 +3335,9 @@
                           </div>
                         </div>
                       </div>
-                      <div class="post-card -tiny"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/2.png" alt="How to name, save and export a finish template"/></a>
+                      <div class="post-card -tiny"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/2.png" alt="How to name, save and export a finish template"/></a>
                         <div class="card__content">
-                          <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="post_standard.ftl">How to name, save and export a finish template</a>
+                          <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="../post_standard.ftl">How to name, save and export a finish template</a>
                           <div class="card__content-info">
                             <div class="info__time"><i class="far fa-clock"></i>
                               <p>Clock  Wed 02, 2019</p>
@@ -3345,9 +3345,9 @@
                           </div>
                         </div>
                       </div>
-                      <div class="post-card -tiny"><a class="card__cover" href="post_standard.ftl"><img src="assets/images/posts/3.png" alt="I want to create a logo with illustrator hacker"/></a>
+                      <div class="post-card -tiny"><a class="card__cover" href="../post_standard.ftl"><img src="assets/images/posts/3.png" alt="I want to create a logo with illustrator hacker"/></a>
                         <div class="card__content">
-                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="post_standard.ftl">I want to create a logo with illustrator hacker</a>
+                          <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
                           <div class="card__content-info">
                             <div class="info__time"><i class="far fa-clock"></i>
                               <p>Clock  Wed 02, 2019</p>
@@ -3365,7 +3365,7 @@
                     <div class="center-line-title"> 
                       <h5>Tag clouds</h5>
                     </div>
-                    <div class="tags-group"><a class="tag-btn" href="blog_category_grid.ftl">Gutenews</a><a class="tag-btn" href="blog_category_grid.ftl">Lifestyle</a><a class="tag-btn" href="blog_category_grid.ftl">Fashion</a><a class="tag-btn" href="blog_category_grid.ftl">Technology</a><a class="tag-btn" href="blog_category_grid.ftl">Food</a><a class="tag-btn" href="blog_category_grid.ftl">Travel</a>
+                    <div class="tags-group"><a class="tag-btn" href="../blog_category_grid.ftl">Gutenews</a><a class="tag-btn" href="../blog_category_grid.ftl">Lifestyle</a><a class="tag-btn" href="../blog_category_grid.ftl">Fashion</a><a class="tag-btn" href="../blog_category_grid.ftl">Technology</a><a class="tag-btn" href="../blog_category_grid.ftl">Food</a><a class="tag-btn" href="../blog_category_grid.ftl">Travel</a>
                     </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-12">
