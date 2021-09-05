@@ -12,7 +12,11 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
+    defaults:
+      run:
+        shell: bash
+        working-directory: BE
 
     steps:
     - uses: actions/checkout@v2
@@ -22,15 +26,6 @@ jobs:
         java-version: '8'
         distribution: 'adopt'
         cache: maven
-
-    # Caching dependencies
-#    - name: Cache Maven packages
-#      uses: actions/cache@v2
-#      with:
-#        path: ~/.m2
-#        key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-#        restore-keys: ${{ runner.os }}-m2
-
 
     - name: Build with Maven
       run: mvn -DskipTests=true package --file pom.xml
