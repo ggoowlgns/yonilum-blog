@@ -12,4 +12,6 @@ yonilum project 의 blog app 소스입니다.
 
 
 ### REF
-* OAuth2.0 : https://ozofweird.tistory.com/entry/Spring-Boot-Spring-Boot-JWT-OAuth2-2
+* OAuth2.0 ref
+    * https://ozofweird.tistory.com/entry/Spring-Boot-Spring-Boot-JWT-OAuth2-2
+    * https://zkdlu.tistory.com/12
