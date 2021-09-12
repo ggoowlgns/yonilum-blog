@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<#include "/header/default-css.ftl">
+<#include "header/default-css.ftl">
 <body>
-<#include "/header/default.ftl">
+<#include "header/default.ftl">
     <div class="no-pd" id="content">
       <div class="container">
             <div class="breadcrumb">

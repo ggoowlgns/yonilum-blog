@@ -45,7 +45,28 @@
                 </ul>
             </nav>
             <div class="header__icon-group"><a href="#" id="search"><i class="fas fa-search"></i></a>
-                <div class="social"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-dribbble"></i></a><a id="mobile-menu-controller" href="#"><i class="fas fa-bars"></i></a></div>
+                <div class="social">
+                    <#--<a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>-->
+                    <a id="mobile-menu-controller" href="#"><i class="fas fa-bars"></i></a>
+                    <#if user.id == 99999>
+                        <a href="/oauth2/authorize/kakao?redirect_uri=http://localhost:8080/"><img src="/assets/images/icons/kakao/kakao_login_medium_narrow.png"></a>
+                    <#else >
+                        <div class="card__content-title" style="height: 50px; width: 200px; vertical-align: middle; display: flex">
+
+                            <img src="${user.imageUrl}" style="height: 100%; width: auto; float: left">
+                            <br>
+                            <div style="align-items: center; display: flex; float: right">
+                                welcome '${user.name}'
+                            </div>
+
+
+                        </div>
+
+                    </#if>
+                </div>
             </div>
         </div>
     </div>

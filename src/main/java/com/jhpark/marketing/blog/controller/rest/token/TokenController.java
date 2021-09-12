@@ -9,14 +9,19 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * 일단 사용x
+ */
 @RequiredArgsConstructor
 @RestController
+@Deprecated
 public class TokenController {
   private final TokenService tokenService;
 
   @GetMapping("/token/expired")
   public String auth() {
-    throw new RuntimeException();
+    return "Login Page";
+//    throw new RuntimeException();
   }
 
   @GetMapping("/token/refresh")
