@@ -13,16 +13,17 @@ import java.time.LocalDateTime;
 @Table(name = "tb_posting_comment",
     uniqueConstraints = {
         @UniqueConstraint(columnNames = {"posting_id", "comment_index"}),
-    })
+    }
+    )
 public class PostingComment {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;
 
-  @Column(nullable = false)
+  @Column(name = "posting_id",nullable = false)
   private long postingId;
 
-  @Column(nullable = false)
+  @Column(name = "comment_index",nullable = false)
   private int commentIndex;
 
   @Column(nullable = false)

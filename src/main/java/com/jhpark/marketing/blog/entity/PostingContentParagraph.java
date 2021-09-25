@@ -17,7 +17,8 @@ import java.time.LocalDateTime;
     uniqueConstraints = {
         @UniqueConstraint(columnNames = {"posting_id", "paragraph_index"}),
 //        @UniqueConstraint(columnNames = {"posting_id", "paragraph_index"})
-    })
+    }
+    )
 @NoArgsConstructor
 @ToString
 public class PostingContentParagraph {
@@ -25,10 +26,10 @@ public class PostingContentParagraph {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;
 
-  @Column(nullable = false)
+  @Column(name = "posting_id",nullable = false)
   private long postingId;
 
-  @Column(nullable = false)
+  @Column(name = "paragraph_index",nullable = false)
   private int paragraphIndex;
 
   private String content;
