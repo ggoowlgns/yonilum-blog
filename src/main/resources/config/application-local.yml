@@ -3,3 +3,12 @@ spring:
     url: jdbc:mysql://3.38.88.54:3306/blog?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
     username: root
     password: Qlalflek12{*
+
+
+  security:
+    oauth2:
+      client:
+        # 나만의 Setting
+        registration:
+          kakao:
+            redirect-uri: http://localhost:8080/login/oauth2/code/kakao

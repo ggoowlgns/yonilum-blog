@@ -1,7 +1,7 @@
 package com.jhpark.marketing.blog.controller.rest.auth;
 
 import com.jhpark.marketing.blog.domain.AuthProvider;
-import com.jhpark.marketing.blog.domain.User;
+import com.jhpark.marketing.blog.entity.User;
 import com.jhpark.marketing.blog.exception.BadRequestException;
 import com.jhpark.marketing.blog.payload.request.LoginRequest;
 import com.jhpark.marketing.blog.payload.request.SignUpRequest;

@@ -1,6 +1,6 @@
 package com.jhpark.marketing.blog.controller.rest.auth;
 
-import com.jhpark.marketing.blog.domain.User;
+import com.jhpark.marketing.blog.entity.User;
 import com.jhpark.marketing.blog.exception.ResourceNotFoundException;
 import com.jhpark.marketing.blog.repository.UserRepository;
 import com.jhpark.marketing.blog.security.CurrentUser;

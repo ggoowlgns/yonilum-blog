@@ -1,7 +1,7 @@
 package com.jhpark.marketing.blog.controller.view.posting;
 
 import com.jhpark.marketing.blog.controller.view.BaseViewController;
-import com.jhpark.marketing.blog.domain.User;
+import com.jhpark.marketing.blog.entity.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;

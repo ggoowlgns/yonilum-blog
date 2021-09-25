@@ -1,6 +1,6 @@
 package com.jhpark.marketing.blog.security;
 
-import com.jhpark.marketing.blog.domain.User;
+import com.jhpark.marketing.blog.entity.User;
 import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

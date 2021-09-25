@@ -1,6 +1,6 @@
 package com.jhpark.marketing.blog.repository;
 
-import com.jhpark.marketing.blog.domain.User;
+import com.jhpark.marketing.blog.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

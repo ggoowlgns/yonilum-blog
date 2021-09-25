@@ -1,7 +1,7 @@
 package com.jhpark.marketing.blog.controller.view.blog;
 
 import com.jhpark.marketing.blog.controller.view.BaseViewController;
-import com.jhpark.marketing.blog.domain.User;
+import com.jhpark.marketing.blog.entity.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;

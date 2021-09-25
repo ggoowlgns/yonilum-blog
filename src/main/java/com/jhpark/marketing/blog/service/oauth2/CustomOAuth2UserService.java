@@ -1,7 +1,7 @@
 package com.jhpark.marketing.blog.service.oauth2;
 
 import com.jhpark.marketing.blog.domain.AuthProvider;
-import com.jhpark.marketing.blog.domain.User;
+import com.jhpark.marketing.blog.entity.User;
 import com.jhpark.marketing.blog.exception.OAuth2AuthenticationProcessingException;
 import com.jhpark.marketing.blog.repository.UserRepository;
 import com.jhpark.marketing.blog.security.UserPrincipal;

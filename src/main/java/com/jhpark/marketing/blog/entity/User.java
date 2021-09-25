@@ -1,12 +1,16 @@
-package com.jhpark.marketing.blog.domain;
+package com.jhpark.marketing.blog.entity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.jhpark.marketing.blog.domain.AuthProvider;
 import com.sun.istack.NotNull;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Getter
 @Entity
@@ -40,8 +44,14 @@ public class User {
 
   private String providerId;
 
+  @CreationTimestamp
+  private LocalDateTime createdDatetime;
+
+  @UpdateTimestamp
+  private LocalDateTime updateDatetime;
+
   @Builder
-  public User(Long id, String name, String email, String imageUrl, Boolean emailVerified, String password, AuthProvider provider, String providerId) {
+  public User(Long id, String name, String email, String imageUrl, Boolean emailVerified, String password, AuthProvider provider, String providerId, LocalDateTime createdDatetime, LocalDateTime updateDatetime) {
     this.id = id;
     this.name = name;
     this.email = email;
@@ -50,6 +60,8 @@ public class User {
     this.password = password;
     this.provider = provider;
     this.providerId = providerId;
+    this.createdDatetime = createdDatetime;
+    this.updateDatetime = updateDatetime;
   }
 
   public User update(String name, String imageUrl) {
