@@ -1,6 +1,6 @@
 package com.jhpark.marketing.blog.controller.view.blog;
 
-import com.jhpark.marketing.blog.controller.view.BaseViewController;
+import com.jhpark.marketing.blog.controller.BaseController;
 import com.jhpark.marketing.blog.entity.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping(path = "/blog")
-public class BlogViewController extends BaseViewController {
+public class BlogViewController extends BaseController {
 
   @RequestMapping
   public String home(ModelMap modelMap, User user) {

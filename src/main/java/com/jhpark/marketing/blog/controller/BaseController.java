@@ -1,4 +1,4 @@
-package com.jhpark.marketing.blog.controller.view;
+package com.jhpark.marketing.blog.controller;
 
 import com.jhpark.marketing.blog.entity.User;
 import org.slf4j.Logger;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 
 import javax.servlet.http.HttpServletRequest;
 
-public class BaseViewController {
-  private final Logger LOG = LoggerFactory.getLogger(BaseViewController.class);
+public class BaseController {
+  private final Logger LOG = LoggerFactory.getLogger(BaseController.class);
 
   @ModelAttribute("user")
   public User getUser(HttpServletRequest request, ModelMap modelMap) {

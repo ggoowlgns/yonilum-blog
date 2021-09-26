@@ -1,5 +1,6 @@
 package com.jhpark.marketing.blog.controller.rest.posting;
 
+import com.jhpark.marketing.blog.controller.BaseController;
 import com.jhpark.marketing.blog.entity.Posting;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "/posting", consumes = "application/json", produces = "application/json")
-public class PostingRestController {
+public class PostingRestController extends BaseController {
   Logger LOG = LoggerFactory.getLogger(PostingRestController.class);
 
   @RequestMapping(path = "/{postingId}", method = RequestMethod.GET)

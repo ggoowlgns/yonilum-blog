@@ -1,6 +1,6 @@
 package com.jhpark.marketing.blog.controller.view.posting;
 
-import com.jhpark.marketing.blog.controller.view.BaseViewController;
+import com.jhpark.marketing.blog.controller.BaseController;
 import com.jhpark.marketing.blog.entity.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @RequestMapping(path = "/posting")
-public class PostingViewController extends BaseViewController {
+public class PostingViewController extends BaseController {
   Logger LOG = LoggerFactory.getLogger(PostingViewController.class);
 
   @RequestMapping(path = "/{postingNum}", method = RequestMethod.GET)

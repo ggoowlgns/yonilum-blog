@@ -83,6 +83,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             .antMatchers("/api/**").hasAnyRole(Role.GUEST.name(), Role.USER.name(), Role.ADMIN.name())
             .antMatchers("/auth/**", "/oauth2/**").permitAll()
             .antMatchers("/login/oauth2/**").permitAll()
+            .antMatchers("/swagger-resources/**").permitAll() //for swagger
+
             .anyRequest().authenticated()
 
         .and()
