@@ -31,8 +31,8 @@ public class Posting {
    * 등록한 column 명은 땡겨오는 대상 entity의 PK 즉, tb_user 의 user_id 속성 그대로 가져와서
    * tb_posting 의 column으로 박아넣음
    */
-  @ManyToOne(targetEntity = User.class, fetch = FetchType.LAZY, optional = false)
-  @JoinColumn(name = "user_id")
+  @ManyToOne(targetEntity = User.class, fetch = FetchType.EAGER, optional = false)
+  @JoinColumn(name = "user_id", nullable = false)
   private User user;
 
   @Column(nullable = false)
@@ -68,7 +68,6 @@ public class Posting {
   private LocalDateTime updateDatetime;
 
   @Builder
-
   public Posting(long postingId, User user, String category, String title, String thumbnailUrl, Set<PostingImage> postingImages, Set<PostingContentParagraph> postingContentParagraphs, Set<PostingComment> postingComments, char postingType, LocalDateTime createdDatetime, LocalDateTime updateDatetime) {
     this.postingId = postingId;
     this.user = user;

@@ -47,7 +47,6 @@ public class PostingComment {
   private LocalDateTime updateDatetime;
 
   @Builder
-
   public PostingComment(long postingCommentId, Posting postingId, int commentIndex, User user, String content, LocalDateTime createdDatetime, LocalDateTime updateDatetime) {
     this.postingCommentId = postingCommentId;
     this.postingId = postingId;
