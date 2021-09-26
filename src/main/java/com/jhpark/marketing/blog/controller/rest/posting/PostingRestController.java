@@ -2,6 +2,8 @@ package com.jhpark.marketing.blog.controller.rest.posting;
 
 import com.jhpark.marketing.blog.controller.BaseController;
 import com.jhpark.marketing.blog.entity.Posting;
+import com.jhpark.marketing.blog.service.posting.PostingService;
+import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -12,9 +14,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "/posting", consumes = "application/json", produces = "application/json")
+@RequestMapping(path = "/posting", produces = "application/json")
+@RequiredArgsConstructor
 public class PostingRestController extends BaseController {
   Logger LOG = LoggerFactory.getLogger(PostingRestController.class);
+  private final PostingService postingService;
 
   @RequestMapping(path = "/{postingId}", method = RequestMethod.GET)
   public Posting detail(@PathVariable("postingId") long postingId) {
@@ -28,6 +32,7 @@ public class PostingRestController extends BaseController {
     List<Posting> postings = new ArrayList();
     if (category.equals("")) {
       //TODO : posting 전체 list
+      postings = postingService.getAllPosting();
     } else {
       //TODO : posting list by category
     }

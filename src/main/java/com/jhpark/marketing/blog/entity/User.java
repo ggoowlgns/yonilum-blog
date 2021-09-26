@@ -22,7 +22,8 @@ import java.time.LocalDateTime;
 public class User {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+  @JoinColumn(name = "user_id")
+  private Long userId;
 
   @Column(nullable = false)
   private String name;
@@ -51,8 +52,8 @@ public class User {
   private LocalDateTime updateDatetime;
 
   @Builder
-  public User(Long id, String name, String email, String imageUrl, Boolean emailVerified, String password, AuthProvider provider, String providerId, LocalDateTime createdDatetime, LocalDateTime updateDatetime) {
-    this.id = id;
+  public User(Long userId, String name, String email, String imageUrl, Boolean emailVerified, String password, AuthProvider provider, String providerId, LocalDateTime createdDatetime, LocalDateTime updateDatetime) {
+    this.userId = userId;
     this.name = name;
     this.email = email;
     this.imageUrl = imageUrl;

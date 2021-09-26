@@ -51,7 +51,7 @@
                     <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-dribbble"></i></a>-->
                     <a id="mobile-menu-controller" href="#"><i class="fas fa-bars"></i></a>
-                    <#if user.id == 99999>
+                    <#if user.userId == 99999>
                         <a href="/oauth2/authorize/kakao?redirect_uri=http://localhost:8080/"><img src="/assets/images/icons/kakao/kakao_login_medium_narrow.png"></a>
                     <#else >
                         <div class="card__content-title" style="height: 50px; width: 200px; vertical-align: middle; display: flex">

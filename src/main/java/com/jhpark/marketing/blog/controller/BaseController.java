@@ -18,7 +18,7 @@ public class BaseController {
 
     if (attribute == null) {
       userInfo = User.builder()
-          .id(99999L)
+          .userId(99999L)
           .email("guest")
           .name("guest")
           .emailVerified(true)

@@ -1,7 +1,10 @@
 package com.jhpark.marketing.blog.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -14,20 +17,26 @@ import java.time.LocalDateTime;
     uniqueConstraints = {
         @UniqueConstraint(columnNames = {"posting_id", "comment_index"}),
     }
-    )
+)
+@NoArgsConstructor
+@ToString
+@Builder
 public class PostingComment {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private long id;
+  private long postingCommentId;
 
-  @Column(name = "posting_id",nullable = false)
-  private long postingId;
+  @ManyToOne(targetEntity = Posting.class, fetch = FetchType.LAZY)
+  @JoinColumn(name = "posting_id", nullable = false)
+  @JsonBackReference
+  private Posting postingId;
 
   @Column(name = "comment_index",nullable = false)
   private int commentIndex;
 
-  @Column(nullable = false)
-  private long userId;
+  @ManyToOne(targetEntity = User.class, fetch = FetchType.LAZY, optional = false)
+  @JoinColumn(name = "user_id", nullable = false)
+  private User user;
 
   private String content;
 
@@ -38,11 +47,12 @@ public class PostingComment {
   private LocalDateTime updateDatetime;
 
   @Builder
-  public PostingComment(long id, long postingId, int commentIndex, long userId, String content, LocalDateTime createdDatetime, LocalDateTime updateDatetime) {
-    this.id = id;
+
+  public PostingComment(long postingCommentId, Posting postingId, int commentIndex, User user, String content, LocalDateTime createdDatetime, LocalDateTime updateDatetime) {
+    this.postingCommentId = postingCommentId;
     this.postingId = postingId;
     this.commentIndex = commentIndex;
-    this.userId = userId;
+    this.user = user;
     this.content = content;
     this.createdDatetime = createdDatetime;
     this.updateDatetime = updateDatetime;

@@ -1,5 +1,6 @@
 package com.jhpark.marketing.blog.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,13 +22,17 @@ import java.time.LocalDateTime;
     )
 @NoArgsConstructor
 @ToString
+@Builder
 public class PostingContentParagraph {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private long id;
+  private long PostingContentParagraphId;
 
-  @Column(name = "posting_id",nullable = false)
-  private long postingId;
+
+  @ManyToOne(targetEntity = Posting.class, fetch = FetchType.LAZY)
+  @JoinColumn(name = "posting_id", nullable = false)
+  @JsonBackReference
+  private Posting postingId;
 
   @Column(name = "paragraph_index",nullable = false)
   private int paragraphIndex;
@@ -41,10 +46,13 @@ public class PostingContentParagraph {
   private LocalDateTime updateDatetime;
 
   @Builder
-  public PostingContentParagraph(long id, long postingId, int paragraphIndex, String content) {
-    this.id = id;
+
+  public PostingContentParagraph(long PostingContentParagraphId, Posting postingId, int paragraphIndex, String content, LocalDateTime createdDatetime, LocalDateTime updateDatetime) {
+    this.PostingContentParagraphId = PostingContentParagraphId;
     this.postingId = postingId;
     this.paragraphIndex = paragraphIndex;
     this.content = content;
+    this.createdDatetime = createdDatetime;
+    this.updateDatetime = updateDatetime;
   }
 }
