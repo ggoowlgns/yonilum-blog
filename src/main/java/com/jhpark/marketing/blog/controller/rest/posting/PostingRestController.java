@@ -1,25 +1,72 @@
 package com.jhpark.marketing.blog.controller.rest.posting;
 
-import com.jhpark.marketing.blog.domain.Posting;
+import com.jhpark.marketing.blog.entity.Posting;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
-@RequestMapping(path = "/posting")
+@RequestMapping(path = "/posting", consumes = "application/json", produces = "application/json")
 public class PostingRestController {
   Logger LOG = LoggerFactory.getLogger(PostingRestController.class);
 
-  @RequestMapping(path = "/create", method = RequestMethod.POST)
-  public String create(@RequestBody Posting posting,
+  @RequestMapping(path = "/{postingId}", method = RequestMethod.GET)
+  public Posting detail(@PathVariable("postingId") long postingId) {
+    Posting posting = new Posting();
+    //TODO : postingId 에 대한 posting 정보
+    return posting;
+  }
+
+  @RequestMapping(path = "/list", method = RequestMethod.GET)
+  public List<Posting> list(@RequestParam(value = "category", required = false, defaultValue = "") String category) {
+    List<Posting> postings = new ArrayList();
+    if (category.equals("")) {
+      //TODO : posting 전체 list
+    } else {
+      //TODO : posting list by category
+    }
+    return postings;
+  }
+
+  @RequestMapping(path = "/categoryList", method = RequestMethod.GET)
+  public List<String> categoryList() {
+    List<String> categories = new ArrayList<>();
+    //TODO : get category list
+    return categories;
+  }
+
+  @RequestMapping(path = "/top", method = RequestMethod.GET)
+  public List<Posting> top(@RequestParam(value = "count", required = false, defaultValue = "10") int count) {
+    List<Posting> postings = new ArrayList<>();
+    //TODO : count 값 만큼의 top posting 가져오기
+    return postings;
+  }
+
+
+
+  @RequestMapping(path = "", method = RequestMethod.POST)
+  public Posting add(@RequestBody Posting posting,
                        HttpServletResponse response) {
-    response.setHeader("Location", "/posting/123");
     LOG.info("posting : {}", posting);
-    return "";
+    //TODO : add posting & return postingId
+    int postingId = 0;
+
+    response.setStatus(HttpStatus.CREATED.value());
+    response.setHeader("Location", "/posting/" + postingId);
+
+    return posting;
+  }
+
+  @RequestMapping(path = "/{postingId}", method = RequestMethod.PUT)
+  public Posting edit(@RequestBody Posting posting) {
+    LOG.info("posting : {}", posting);
+    //TODO : edit posting
+
+    return posting;
   }
 }
