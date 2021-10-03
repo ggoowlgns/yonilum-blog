@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping(path = "/view/posting")
+@RequestMapping(path = "/posting")
 @RequiredArgsConstructor
 public class PostingViewController extends BaseController {
   Logger LOG = LoggerFactory.getLogger(PostingViewController.class);

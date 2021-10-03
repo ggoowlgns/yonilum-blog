@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "/posting", produces = "application/json")
+@RequestMapping(path = "/api/posting", produces = "application/json")
 @RequiredArgsConstructor
 public class PostingRestController extends BaseController {
   Logger LOG = LoggerFactory.getLogger(PostingRestController.class);
