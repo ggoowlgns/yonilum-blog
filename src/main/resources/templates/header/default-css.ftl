@@ -1,3 +1,5 @@
+<script rel="script/javascript" src="/assets/js/jquery.min.js"></script>
+<script rel="script/javascript" src="/assets/js/yonilum/rest-client.js"></script>
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>

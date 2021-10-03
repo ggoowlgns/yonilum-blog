@@ -22,8 +22,7 @@ public class PostingRestController extends BaseController {
 
   @RequestMapping(path = "/{postingId}", method = RequestMethod.GET)
   public Posting detail(@PathVariable("postingId") long postingId) {
-    Posting posting = new Posting();
-    //TODO : postingId 에 대한 posting 정보
+    Posting posting = postingService.getPosting(postingId);
     return posting;
   }
 
