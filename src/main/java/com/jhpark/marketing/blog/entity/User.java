@@ -45,6 +45,8 @@ public class User {
 
   private String providerId;
 
+  private String introduction;
+
   @CreationTimestamp
   private LocalDateTime createdDatetime;
 
@@ -52,7 +54,7 @@ public class User {
   private LocalDateTime updateDatetime;
 
   @Builder
-  public User(Long userId, String name, String email, String imageUrl, Boolean emailVerified, String password, AuthProvider provider, String providerId, LocalDateTime createdDatetime, LocalDateTime updateDatetime) {
+  public User(Long userId, String name, String email, String imageUrl, Boolean emailVerified, String password, AuthProvider provider, String providerId, String introduction, LocalDateTime createdDatetime, LocalDateTime updateDatetime) {
     this.userId = userId;
     this.name = name;
     this.email = email;
@@ -61,6 +63,7 @@ public class User {
     this.password = password;
     this.provider = provider;
     this.providerId = providerId;
+    this.introduction = introduction;
     this.createdDatetime = createdDatetime;
     this.updateDatetime = updateDatetime;
   }
@@ -70,4 +73,5 @@ public class User {
     this.imageUrl = imageUrl;
     return this;
   }
+
 }

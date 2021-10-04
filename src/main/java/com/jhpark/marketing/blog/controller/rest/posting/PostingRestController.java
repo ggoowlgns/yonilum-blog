@@ -2,6 +2,7 @@ package com.jhpark.marketing.blog.controller.rest.posting;
 
 import com.jhpark.marketing.blog.controller.BaseController;
 import com.jhpark.marketing.blog.entity.Posting;
+import com.jhpark.marketing.blog.payload.response.CategoryListElementResponse;
 import com.jhpark.marketing.blog.service.posting.PostingService;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
@@ -39,9 +40,9 @@ public class PostingRestController extends BaseController {
   }
 
   @RequestMapping(path = "/categoryList", method = RequestMethod.GET)
-  public List<String> categoryList() {
-    List<String> categories = new ArrayList<>();
-    //TODO : get category list
+  public List<CategoryListElementResponse> categoryList() {
+    List<CategoryListElementResponse> categories = new ArrayList<>();
+    categories = postingService.getCategoryGroupByCount();
     return categories;
   }
 

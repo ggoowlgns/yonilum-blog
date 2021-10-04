@@ -36,9 +36,6 @@ public class Posting {
   private User user;
 
   @Column(nullable = false)
-  private String category;
-
-  @Column(nullable = false)
   private String title;
 
   @Column(nullable = false)
@@ -58,6 +55,9 @@ public class Posting {
   @OneToMany(mappedBy = "postingId", fetch = FetchType.LAZY)
   private Set<PostingComment> postingComments = new LinkedHashSet<>();
 
+  @OneToMany(mappedBy = "postingId", fetch = FetchType.LAZY)
+  private Set<Category> postingCategories = new LinkedHashSet<>();
+
   @Column(nullable = false)
   private char postingType;
 
@@ -68,15 +68,15 @@ public class Posting {
   private LocalDateTime updateDatetime;
 
   @Builder
-  public Posting(long postingId, User user, String category, String title, String thumbnailUrl, Set<PostingImage> postingImages, Set<PostingContentParagraph> postingContentParagraphs, Set<PostingComment> postingComments, char postingType, LocalDateTime createdDatetime, LocalDateTime updateDatetime) {
+  public Posting(long postingId, User user, String title, String thumbnailUrl, Set<PostingImage> postingImages, Set<PostingContentParagraph> postingContentParagraphs, Set<PostingComment> postingComments, Set<Category> postingCategories, char postingType, LocalDateTime createdDatetime, LocalDateTime updateDatetime) {
     this.postingId = postingId;
     this.user = user;
-    this.category = category;
     this.title = title;
     this.thumbnailUrl = thumbnailUrl;
     this.postingImages = postingImages;
     this.postingContentParagraphs = postingContentParagraphs;
     this.postingComments = postingComments;
+    this.postingCategories = postingCategories;
     this.postingType = postingType;
     this.createdDatetime = createdDatetime;
     this.updateDatetime = updateDatetime;

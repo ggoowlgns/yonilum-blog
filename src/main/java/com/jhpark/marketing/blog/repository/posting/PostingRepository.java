@@ -1,5 +1,6 @@
 package com.jhpark.marketing.blog.repository.posting;
 
+import com.jhpark.marketing.blog.entity.Category;
 import com.jhpark.marketing.blog.entity.Posting;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
