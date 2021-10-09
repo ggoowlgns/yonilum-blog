@@ -13,7 +13,10 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.util.Optional;
 
 @Controller
 @RequestMapping(path = "/posting")
@@ -33,5 +36,21 @@ public class PostingViewController extends BaseController {
     modelMap.put("postingId", postingId);
 
     return "posting/post_gallery";
+  }
+
+  @RequestMapping(path = "/editor", method = RequestMethod.GET)
+  public String editor(@RequestParam(value = "postingId", required = false) Optional<Long> postingId,
+                       ModelMap modelMap, User user) {
+    LOG.info("editor : {}", postingId.orElse(null));
+
+    if (!postingId.isPresent()) {
+      LOG.info("NEW POSTING");
+    } else {
+      LOG.info("EDIT POSTING : {}", postingId.get());
+      modelMap.put("postingId", postingId.get());
+    }
+    modelMap.put("user", user);
+
+    return "posting/post_editor";
   }
 }

@@ -1,5 +1,10 @@
 <script rel="script/javascript" src="/assets/js/jquery.min.js"></script>
+<script rel="script/javascript" src="/assets/js/file-uploader/fine-uploader.js"></script>
+<script rel="script/javascript" src="/assets/js/file-uploader/fine-uploader.core.js"></script>
+<script rel="script/javascript" src="/assets/js/file-uploader/jquery.fine-uploader.js"></script>
+<script rel="script/javascript" src="/assets/js/file-uploader/dnd.js"></script>
 <script rel="script/javascript" src="/assets/js/yonilum/rest-client.js"></script>
+
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
@@ -14,5 +19,10 @@
     <link rel="stylesheet" type="text/css" href="/assets/css/slick.css"/>
     <link rel="stylesheet" type="text/css" href="/assets/css/plyr.min.css"/>
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/file-uploader/fine-uploader.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/css/file-uploader/fine-uploader-gallery.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/css/file-uploader/fine-uploader-new.css"/>
+
     <!--endbuild-->
 </head>
