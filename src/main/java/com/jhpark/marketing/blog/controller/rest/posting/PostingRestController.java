@@ -41,15 +41,13 @@ public class PostingRestController extends BaseController {
 
   @RequestMapping(path = "/categoryList", method = RequestMethod.GET)
   public List<CategoryListElementResponse> categoryList() {
-    List<CategoryListElementResponse> categories = new ArrayList<>();
-    categories = postingService.getCategoryGroupByCount();
+    List<CategoryListElementResponse> categories = postingService.getCategoryGroupByCount();
     return categories;
   }
 
   @RequestMapping(path = "/top", method = RequestMethod.GET)
   public List<Posting> top(@RequestParam(value = "count", required = false, defaultValue = "10") int count) {
-    List<Posting> postings = new ArrayList<>();
-    //TODO : count 값 만큼의 top posting 가져오기
+    List<Posting> postings = postingService.getTopPosting(count);
     return postings;
   }
 

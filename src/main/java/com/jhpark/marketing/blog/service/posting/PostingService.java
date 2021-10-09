@@ -5,6 +5,7 @@ import com.jhpark.marketing.blog.payload.response.CategoryListElementResponse;
 import com.jhpark.marketing.blog.repository.posting.CategoryRepository;
 import com.jhpark.marketing.blog.repository.posting.PostingRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,6 +18,10 @@ public class PostingService {
 
   public List<Posting> getAllPosting() {
     return postingRepository.findAll();
+  }
+
+  public List<Posting> getTopPosting(int limit) {
+    return postingRepository.findAllByOrderByViewsDesc(PageRequest.of(0, limit));
   }
 
   public Posting getPosting(long postingId) {

@@ -61,6 +61,9 @@ public class Posting {
   @Column(nullable = false)
   private char postingType;
 
+  @Column(nullable = false)
+  private int views;
+
   @CreationTimestamp
   private LocalDateTime createdDatetime;
 
@@ -68,7 +71,7 @@ public class Posting {
   private LocalDateTime updateDatetime;
 
   @Builder
-  public Posting(long postingId, User user, String title, String thumbnailUrl, Set<PostingImage> postingImages, Set<PostingContentParagraph> postingContentParagraphs, Set<PostingComment> postingComments, Set<Category> postingCategories, char postingType, LocalDateTime createdDatetime, LocalDateTime updateDatetime) {
+  public Posting(long postingId, User user, String title, String thumbnailUrl, Set<PostingImage> postingImages, Set<PostingContentParagraph> postingContentParagraphs, Set<PostingComment> postingComments, Set<Category> postingCategories, char postingType, int views, LocalDateTime createdDatetime, LocalDateTime updateDatetime) {
     this.postingId = postingId;
     this.user = user;
     this.title = title;
@@ -78,6 +81,7 @@ public class Posting {
     this.postingComments = postingComments;
     this.postingCategories = postingCategories;
     this.postingType = postingType;
+    this.views = views;
     this.createdDatetime = createdDatetime;
     this.updateDatetime = updateDatetime;
   }

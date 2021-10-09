@@ -6,6 +6,13 @@
         var categoriesDom = $('#posting-categories');
         addCategory(data, categoriesDom)
       })
+      var trendingPostRequest = RestClient.GET('/api/posting/top' + '?count=5');
+      trendingPostRequest.done(function (data) {
+        console.log(data);
+        var trendingPostDom = $('#posting-trending-post');
+        addTrendingPost(data, trendingPostDom)
+      })
+
 
       function addCategory(categories, categoriesDom) {
         for (var category of categories) {
@@ -15,6 +22,23 @@
             '<h5 class="quantity">'+category.categoryCount+'</h5>' +
             '</a>'
           categoriesDom.append(categoryDom)
+        }
+      }
+
+      function addTrendingPost(trendingPosts, trendingPostDom) {
+        for (var postingIndex in trendingPosts) {
+          var postingDom = '<div class="trending-post">'+
+            '<div class="trending-post_image">' +
+            '<div class="rank">'+(Number(postingIndex)+1)+'</div><img src="/assets/images/backgrounds/trending-post-1.png" alt="Shifting to Vegan Diets May Cause Brain Nutrient..."/>' +
+            '</div>' +
+            '<div class="trending-post_content">' +
+              '<h5>'+trendingPosts[postingIndex].postingCategories[0].category+'</h5><a href="/posting/'+trendingPosts[postingIndex].postingId+'">'+trendingPosts[postingIndex].title+'</a>' +
+              '<div class="info__time"><i class="far fa-clock"></i>' +
+                '<p>'+trendingPosts[postingIndex].createdDatetime+'</p>' +
+              '</div>' +
+            '</div>' +
+          '</div>'
+          trendingPostDom.append(postingDom)
         }
       }
     </script>
@@ -31,11 +55,11 @@
     </a>-->
   </div>
 
-  <div class="blog-sidebar-section -trending-post">
+  <div id="posting-trending-post" class="blog-sidebar-section -trending-post">
     <div class="center-line-title">
       <h5>Trending post</h5>
     </div>
-    <div class="trending-post">
+    <#--<div class="trending-post">
       <div class="trending-post_image">
         <div class="rank">1</div><img src="/assets/images/backgrounds/trending-post-1.png" alt="Shifting to Vegan Diets May Cause Brain Nutrient..."/>
       </div>
@@ -45,51 +69,7 @@
           <p>Seb 27, 2019</p>
         </div>
       </div>
-    </div>
-    <div class="trending-post">
-      <div class="trending-post_image">
-        <div class="rank">2</div><img src="/assets/images/backgrounds/trending-post-2.png" alt="The GQ Men Of The Year Awards 2019: Hrithik..."/>
-      </div>
-      <div class="trending-post_content">
-        <h5>Design</h5><a href="../post_standard.ftl">The GQ Men Of The Year Awards 2019: Hrithik...</a>
-        <div class="info__time"><i class="far fa-clock"></i>
-          <p>Seb 27, 2019</p>
-        </div>
-      </div>
-    </div>
-    <div class="trending-post">
-      <div class="trending-post_image">
-        <div class="rank">3</div><img src="/assets/images/backgrounds/trending-post-3.png" alt="Here's How Your Diet Can Help Yo Excel in Exams"/>
-      </div>
-      <div class="trending-post_content">
-        <h5>Illustrator</h5><a href="../post_standard.ftl">Here's How Your Diet Can Help Yo Excel in Exams</a>
-        <div class="info__time"><i class="far fa-clock"></i>
-          <p>Seb 27, 2019</p>
-        </div>
-      </div>
-    </div>
-    <div class="trending-post">
-      <div class="trending-post_image">
-        <div class="rank">4</div><img src="/assets/images/backgrounds/trending-post-4.png" alt="why others accept while AudioJungle..."/>
-      </div>
-      <div class="trending-post_content">
-        <h5>Graphic</h5><a href="../post_standard.ftl">why others accept while AudioJungle...</a>
-        <div class="info__time"><i class="far fa-clock"></i>
-          <p>Seb 27, 2019</p>
-        </div>
-      </div>
-    </div>Feature posts
-    <div class="trending-post">
-      <div class="trending-post_image">
-        <div class="rank">5</div><img src="/assets/images/backgrounds/trending-post-5.png" alt="Podcast audio episode with YouTube license question"/>
-      </div>
-      <div class="trending-post_content">
-        <h5>Typography</h5><a href="../post_standard.ftl">Podcast audio episode with YouTube license question</a>
-        <div class="info__time"><i class="far fa-clock"></i>
-          <p>Seb 27, 2019</p>
-        </div>
-      </div>
-    </div>
+    </div>-->
   </div>
 <#--  <form class="subcribe-box subcribe-box" action="/" method="POST">
     <h5>Subcribe</h5>
