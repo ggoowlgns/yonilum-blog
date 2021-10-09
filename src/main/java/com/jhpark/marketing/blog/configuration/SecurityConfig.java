@@ -62,10 +62,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
           .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 
         .and()
-          .exceptionHandling()
-            .authenticationEntryPoint(new RestAuthenticationEntryPoint())
-
-        .and()
           .authorizeRequests()
             .antMatchers("/",
                 "/error",
@@ -78,14 +74,19 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 "/**/*.css",
                 "/**/*.js")
             .permitAll()
+            .antMatchers("/about").permitAll()
             .antMatchers("/category", "/category/**").permitAll()
             .antMatchers("/posting", "/posting/**").permitAll()
-            .antMatchers("/api/**").hasAnyRole(Role.GUEST.name(), Role.USER.name(), Role.ADMIN.name())
+//            .antMatchers("/api/**").hasAnyRole(Role.GUEST.name(), Role.USER.name(), Role.ADMIN.name())
+            .antMatchers("/api/**").permitAll()
             .antMatchers("/auth/**", "/oauth2/**").permitAll()
             .antMatchers("/login/oauth2/**").permitAll()
             .antMatchers("/swagger-resources/**").permitAll() //for swagger
 
             .anyRequest().authenticated()
+//        .and()
+//          .exceptionHandling()
+//            .authenticationEntryPoint(new RestAuthenticationEntryPoint())
 
         .and()
           .oauth2Login()

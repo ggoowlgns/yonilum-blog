@@ -1,4 +1,4 @@
-package com.jhpark.marketing.blog.controller.view.blog;
+package com.jhpark.marketing.blog.controller.view.category;
 
 import com.jhpark.marketing.blog.controller.BaseController;
 import com.jhpark.marketing.blog.entity.User;
@@ -12,8 +12,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping(path = "/category")
 public class CategoryViewController extends BaseController {
 
+  @RequestMapping(method = RequestMethod.GET)
+  public String list(ModelMap modelMap, User user) {
+    modelMap.put("user", user);
+    return "category/blog-category-list";
+  }
+
   @RequestMapping(path = "/{categoryName}",method = RequestMethod.GET)
-  public String list(@PathVariable("categoryName") String categoryName,
+  public String listCategory(@PathVariable(value = "categoryName") String categoryName,
                      ModelMap modelMap, User user) {
     modelMap.put("user", user);
     modelMap.put("categoryName", categoryName);

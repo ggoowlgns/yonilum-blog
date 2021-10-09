@@ -20,14 +20,30 @@
                         <li class="nav-item"><a href="/">Home</a></li>
                         <li class="nav-item active"><a href="/category">Category</a></li>
                         <li class="nav-item"><a href="/about">About</a></li>
+                        <#if user.userId != 99999>
+                            <li class="nav-item"><a href="/posting/editor">Add Posting</a></li>
+                        </#if>
                     <#elseif springMacroRequestContext.requestUri?contains("/about")>
                         <li class="nav-item"><a href="/">Home</a></li>
                         <li class="nav-item"><a href="/category">Category</a></li>
                         <li class="nav-item active"><a href="/about">About</a></li>
+                        <#if user.userId != 99999>
+                            <li class="nav-item"><a href="/posting/editor">Add Posting</a></li>
+                        </#if>
+                    <#elseif springMacroRequestContext.requestUri?contains("/posting/editor")>
+                        <li class="nav-item"><a href="/">Home</a></li>
+                        <li class="nav-item"><a href="/category">Category</a></li>
+                        <li class="nav-item"><a href="/about">About</a></li>
+                        <#if user.userId != 99999>
+                            <li class="nav-item active"><a href="/posting/editor">Add Posting</a></li>
+                        </#if>
                     <#else>
                         <li class="nav-item active"><a href="/">Home</a></li>
                         <li class="nav-item"><a href="/category">Category</a></li>
                         <li class="nav-item"><a href="/about">About</a></li>
+                        <#if user.userId != 99999>
+                            <li class="nav-item"><a href="/posting/editor">Add Posting</a></li>
+                        </#if>
                     </#if>
 
 <#--                    <li class="nav-item"><a href="#">Pages</a>
@@ -52,19 +68,17 @@
                     <a href="#"><i class="fab fa-dribbble"></i></a>-->
                     <a id="mobile-menu-controller" href="#"><i class="fas fa-bars"></i></a>
                     <#if user.userId == 99999>
-                        <a href="/oauth2/authorize/kakao?redirect_uri=http://localhost:8080/"><img src="/assets/images/icons/kakao/kakao_login_medium_narrow.png"></a>
+                        <a href="/oauth2/authorize/kakao?redirect_uri=http://localhost:8080/">
+                            <img src="/assets/images/icons/kakao/kakao_login_medium_narrow.png">
+                        </a>
                     <#else >
                         <div class="card__content-title" style="height: 50px; width: 200px; vertical-align: middle; display: flex">
-
                             <img src="${user.imageUrl}" style="height: 100%; width: auto; float: left">
                             <br>
                             <div style="align-items: center; display: flex; float: right">
                                 welcome '${user.name}'
                             </div>
-
-
                         </div>
-
                     </#if>
                 </div>
             </div>
