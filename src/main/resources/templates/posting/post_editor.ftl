@@ -4,7 +4,6 @@
 <body>
 <#include "/header/default.ftl">
 
-
 <script>
   // Add New Posting || Edit Existing Posting
   var userId = ${user.userId};
@@ -26,7 +25,29 @@
         return -1;
       } return 0;
     })
+    data.postingContentParagraphs.sort(function (a, b) {
+      if (a.paragraphIndex > b.paragraphIndex) {
+        return 1;
+      } else if (a.paragraphIndex < b.paragraphIndex) {
+        return -1;
+      } return 0;
+    })
     var categoryList = data.postingCategories;
+    var categoriesStr = "";
+    for (var category of categoryList) {
+      categoriesStr += category.category+",";
+    }
+
+    var contentParagraphList = data.postingContentParagraphs;
+    var contentStr = "";
+    for (var paragraph of contentParagraphList) {
+      contentStr += paragraph.content + "\n\n";
+    }
+
+    $("#posting-category").val(categoriesStr);
+    $("#posting-title").val(data.title);
+    $("#posting-editor-container").children('.ql-editor').text(contentStr);
+
     var imageList = data.postingImages;
   });
   </#if>
@@ -40,10 +61,6 @@
 
   }
 
-  function resize(obj) {
-    obj.style.height = "1px";
-    obj.style.height = (12+obj.scrollHeight)+"px";
-  }
 </script>
 
 <script type="text/template" id="qq-template-gallery">
@@ -122,28 +139,31 @@
     </dialog>
   </div>
 </script>
+
+
 <div id="content">
     <div class="post">
         <div class="container">
             <div class="post-standard -slide">
                 <div class="row">
-                    <div class="post-footer">
+                    <div class="post-footer" style="width: 70%">
                         <h3 class="comment-title"> <span>Posting Editor Page</span></h3>
                         <div class="post-footer__comment__form">
-                            <form action="/api/posting">
-                              <div class="row">
+<#--                            <form action="/api/posting">-->
+                            <form >
+                              <div class="row form-group">
                                 <div class="col-12 col-sm-12">
-                                  <input type="text" placeholder="Category" name="category"/>
+                                  <input id="posting-category" type="text" placeholder="Category" name="category" style="max-width: 500px"/>
                                 </div>
                               </div>
-                              <div class="row">
+                              <div class="row form-group">
                                 <div class="col-12 col-sm-12">
-                                  <input type="text" placeholder="Title" name="title"/>
+                                  <input id="posting-title" type="text" placeholder="Title" name="title" style="max-width: 500px"/>
                                 </div>
                               </div>
 
-                              <div id="posting-image-upload" class="row">
-                                <div id="fine-uploader-gallery"></div>
+                              <div id="posting-image-upload" class="row form-group">
+                                <div id="fine-uploader-gallery" style="width: 70%"></div>
                                 <script>
                                   $('#fine-uploader-gallery').fineUploader({
                                     template: 'qq-template-gallery',
@@ -163,7 +183,7 @@
                                 </script>
                               </div>
 
-                              <div id="" class="row">
+                              <#--<div id="" class="row">
                                 <div class="col-12 col-sm-4">
                                     <input type="text" placeholder="Name" name="name"/>
                                 </div>
@@ -173,21 +193,24 @@
                                 <div class="col-12 col-sm-4">
                                     <input type="text" placeholder="Webiste" name="website"/>
                                 </div>
+                              </div>-->
+                              <div id="posting-content" class="row form-group" style="margin-bottom: 100px">
+                                <div class="col-12 col-xm-12">
+                                  <div id="posting-editor-container"></div>
+                                </div>
                               </div>
 
-                              <div id="posting-content" class="row">
-                                <textarea cols="12" rows="5" placeholder="Pragraph" name="paragraph" onkeydown="resize(this)" onkeyup="resize(this)"></textarea>
-                              </div>
 
 
                             </form>
-                            <div class="center">
+                          <div class="row center">
                               <#if postingId??>
-                                <button class="btn -normal">Update Posting</button>
+                                <button id="posting-update-btn" class="btn -normal btn-primary" onclick="updatePosting()">Update Posting</button>
                               <#else >
-                                <button class="btn -normal">Add Posting</button>
+                                <button id="posting-add-btn" class="btn -normal btn-primary" onclick="addPosting()">Add Posting</button>
                               </#if>
-                            </div>
+                          </div>
+
                         </div>
 
                     </div>
@@ -196,6 +219,36 @@
         </div>
     </div>
 </div>
+
 <#include "/footer/default.ftl">
 </body>
+
+
+<script>
+  var quill = new Quill('#posting-editor-container', {
+    modules: {
+      toolbar: [
+        [{ header: [1, 2, 3, false] }],
+        ['bold', 'italic'],
+        ['link', 'blockquote', 'code-block', 'image'],
+        [{ list: 'ordered' }, { list: 'bullet' }]
+      ]
+    },
+    placeholder: 'Compose an epic...',
+    theme: 'snow'
+  });
+
+  function addPosting() {
+    var categoryList = $("#posting-category").innerText.split(",");
+    var title = $("#posting-title").innerText;
+    var imageList = $("posting")
+    var content = JSON.stringify(quill.getContents());
+
+
+  }
+
+  function updatePosting() {
+
+  }
+</script>
 </html>

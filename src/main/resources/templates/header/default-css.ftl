@@ -3,6 +3,11 @@
 <script rel="script/javascript" src="/assets/js/file-uploader/fine-uploader.core.js"></script>
 <script rel="script/javascript" src="/assets/js/file-uploader/jquery.fine-uploader.js"></script>
 <script rel="script/javascript" src="/assets/js/file-uploader/dnd.js"></script>
+
+<!-- Main Quill library -->
+<link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+<script src="//cdn.quilljs.com/1.3.6/quill.js"></script>
+
 <script rel="script/javascript" src="/assets/js/yonilum/rest-client.js"></script>
 
 <head>
@@ -23,6 +28,8 @@
     <link rel="stylesheet" type="text/css" href="/assets/css/file-uploader/fine-uploader.css"/>
     <link rel="stylesheet" type="text/css" href="/assets/css/file-uploader/fine-uploader-gallery.css"/>
     <link rel="stylesheet" type="text/css" href="/assets/css/file-uploader/fine-uploader-new.css"/>
+
+    <!-- Theme included stylesheets -->
 
     <!--endbuild-->
 </head>
