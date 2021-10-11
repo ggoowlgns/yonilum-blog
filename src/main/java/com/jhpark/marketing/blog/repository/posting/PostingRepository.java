@@ -14,4 +14,6 @@ public interface PostingRepository extends JpaRepository<Posting, Long> {
   List<Posting> findAll();
   List<Posting> findAllByOrderByViewsDesc(Pageable pageable);
   Posting findPostingByPostingId(long postingId);
+
+
 }

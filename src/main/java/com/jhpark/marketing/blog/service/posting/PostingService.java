@@ -1,6 +1,7 @@
 package com.jhpark.marketing.blog.service.posting;
 
 import com.jhpark.marketing.blog.entity.Posting;
+import com.jhpark.marketing.blog.payload.request.PostingRequest;
 import com.jhpark.marketing.blog.payload.response.CategoryListElementResponse;
 import com.jhpark.marketing.blog.repository.posting.CategoryRepository;
 import com.jhpark.marketing.blog.repository.posting.PostingRepository;
@@ -30,5 +31,14 @@ public class PostingService {
 
   public List<CategoryListElementResponse> getCategoryGroupByCount() {
     return categoryRepository.findGroupByCategoryWithJPQL();
+  }
+
+  public int addPosting(PostingRequest request) {
+    int result = 0;
+    // TODO : postingRepository 에서 posting insert
+
+    //TODO : tb_posting, image, paragraph, category
+
+    return result;
   }
 }

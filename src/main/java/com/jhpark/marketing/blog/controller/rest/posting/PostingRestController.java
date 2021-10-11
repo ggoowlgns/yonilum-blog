@@ -2,6 +2,7 @@ package com.jhpark.marketing.blog.controller.rest.posting;
 
 import com.jhpark.marketing.blog.controller.BaseController;
 import com.jhpark.marketing.blog.entity.Posting;
+import com.jhpark.marketing.blog.payload.request.PostingRequest;
 import com.jhpark.marketing.blog.payload.response.CategoryListElementResponse;
 import com.jhpark.marketing.blog.service.posting.PostingService;
 import lombok.RequiredArgsConstructor;
@@ -54,16 +55,15 @@ public class PostingRestController extends BaseController {
 
 
   @RequestMapping(path = "", method = RequestMethod.POST)
-  public Posting add(@RequestBody Posting posting,
+  public void add(@RequestBody PostingRequest postingRequest,
                        HttpServletResponse response) {
-    LOG.info("posting : {}", posting);
-    //TODO : add posting & return postingId
-    int postingId = 0;
+    LOG.info("posting : {}", postingRequest);
+    //TODO : add posting with postingRequest & return postingId
+
+    int postingId = postingService.addPosting(postingRequest);
 
     response.setStatus(HttpStatus.CREATED.value());
     response.setHeader("Location", "/posting/" + postingId);
-
-    return posting;
   }
 
   @RequestMapping(path = "/{postingId}", method = RequestMethod.PUT)

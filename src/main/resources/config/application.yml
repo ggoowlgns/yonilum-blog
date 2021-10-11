@@ -6,6 +6,8 @@ server:
     whitelabel:
       enabled: true
   port: 8080
+  tomcat:
+    basedir: /home/ec2-user/blog/
 
 
 spring:
