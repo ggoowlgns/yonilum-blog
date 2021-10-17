@@ -272,7 +272,7 @@
       'title' : title,
       'userId' : userId,
       'thumbnailUrl' : imagePaths[0],
-      'postingType' : 0,
+      'postingType' : '0',
       'categories' : categoryList,
       'images' : imagePaths,
       'paragraphs' : contentParagraphs

@@ -9,7 +9,7 @@ import java.util.List;
 @ToString
 public class PostingRequest {
   private long userId;
-  private int postingType;
+  private char postingType;
   private String thumbnailUrl;
   private String title;
 
@@ -17,7 +17,7 @@ public class PostingRequest {
   private List<String> images;
   private List<String> paragraphs;
 
-  public PostingRequest(long userId, int postingType, String thumbnailUrl, String title, List<String> categories, List<String> images, List<String> paragraphs) {
+  public PostingRequest(long userId, char postingType, String thumbnailUrl, String title, List<String> categories, List<String> images, List<String> paragraphs) {
     this.userId = userId;
     this.postingType = postingType;
     this.thumbnailUrl = thumbnailUrl;
