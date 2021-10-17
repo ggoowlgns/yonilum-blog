@@ -23,6 +23,9 @@ public class FileHandler {
   @Value("${server.tomcat.basedir}")
   String baseDir;
 
+  @Value("${yonilum.base.url}")
+  String baseUrl;
+
   public String storeAndGetPath(
       MultipartFile multipartFile
   ) throws Exception {
@@ -88,6 +91,13 @@ public class FileHandler {
       LOG.info("file upload complete : {}", tempPath);
     }
 
-    return tempPath;
+    return getUrlFromFilePath(tempPath);
+  }
+
+  private String getUrlFromFilePath(String filePath) {
+    String url = "";
+    url = filePath.replaceAll("/home/ec2-user/blog", baseUrl);
+    LOG.info("getUrlFromFilePath url : {}", url);
+    return url;
   }
 }

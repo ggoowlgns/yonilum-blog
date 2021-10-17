@@ -44,9 +44,6 @@ public class PostingService {
 
   @Transactional
   public int addPosting(PostingRequest request) {
-    int result = 0;
-    // TODO : postingRepository 에서 posting insert
-
     // insert tb_posting
     long postingId = postingRepository.save(Posting.builder()
         .user(User.builder().userId(request.getUserId()).build())
@@ -56,7 +53,6 @@ public class PostingService {
         .build()).getPostingId();
     LOG.info("posting insert success, postingId : {}", postingId);
 
-    //TODO :image, paragraph, category
     List<PostingImage> postingImages = new ArrayList<>();
     for (String imageUrl : request.getImages()) {
       postingImages.add(PostingImage.builder()
@@ -95,6 +91,6 @@ public class PostingService {
     categoryRepository.saveAll(categories);
     LOG.info("tb_category insert success");
 
-    return result;
+    return (int) postingId;
   }
 }

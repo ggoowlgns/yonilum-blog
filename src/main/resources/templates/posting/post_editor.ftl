@@ -281,8 +281,15 @@
     RestClient.POST(
       '/api/posting',
       requestBody,
-    ).done(function (data) {
+    ).done(function (data, textStatus, request) {
       console.log(data);
+      var createdPostingPath = request.getResponseHeader('Location')
+      window.location.replace(
+        window.location.protocol + "//" +
+        window.location.hostname +
+        createdPostingPath
+      )
+
     })
   }
 
