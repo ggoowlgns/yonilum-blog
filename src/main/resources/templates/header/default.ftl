@@ -16,34 +16,17 @@
         <div class="header-wrapper"><a class="header__logo" href="/"><img src="/assets/images/logo.png" alt="Logo"/></a>
             <nav>
                 <ul>
-                    <#if springMacroRequestContext.requestUri?contains("/category")>
-                        <li class="nav-item"><a href="/">Home</a></li>
-                        <li class="nav-item active"><a href="/category">Category</a></li>
-                        <li class="nav-item"><a href="/about">About</a></li>
-                        <#if user.userId != 99999>
-                            <li class="nav-item"><a href="/posting/editor">Add Posting</a></li>
-                        </#if>
-                    <#elseif springMacroRequestContext.requestUri?contains("/about")>
-                        <li class="nav-item"><a href="/">Home</a></li>
-                        <li class="nav-item"><a href="/category">Category</a></li>
-                        <li class="nav-item active"><a href="/about">About</a></li>
-                        <#if user.userId != 99999>
-                            <li class="nav-item"><a href="/posting/editor">Add Posting</a></li>
-                        </#if>
-                    <#elseif springMacroRequestContext.requestUri?contains("/posting/editor")>
-                        <li class="nav-item"><a href="/">Home</a></li>
-                        <li class="nav-item"><a href="/category">Category</a></li>
-                        <li class="nav-item"><a href="/about">About</a></li>
-                        <#if user.userId != 99999>
-                            <li class="nav-item active"><a href="/posting/editor">Add Posting</a></li>
-                        </#if>
-                    <#else>
-                        <li class="nav-item active"><a href="/">Home</a></li>
-                        <li class="nav-item"><a href="/category">Category</a></li>
-                        <li class="nav-item"><a href="/about">About</a></li>
-                        <#if user.userId != 99999>
-                            <li class="nav-item"><a href="/posting/editor">Add Posting</a></li>
-                        </#if>
+                    <li class="nav-item <#if !springMacroRequestContext.requestUri?contains("/category")
+                                            && !springMacroRequestContext.requestUri?contains("/about")
+                                            && !springMacroRequestContext.requestUri?contains("/posting/editor")> active</#if>">
+                        <a href="/">Home</a></li>
+                    <li class="nav-item <#if springMacroRequestContext.requestUri?contains("/category")> active</#if>">
+                        <a href="/category">Category</a></li>
+                    <li class="nav-item <#if springMacroRequestContext.requestUri?contains("/about")> active</#if>">
+                        <a href="/about">About</a></li>
+                    <#if user.userId != 99999>
+                    <li class="nav-item <#if springMacroRequestContext.requestUri?contains("/posting/editor")> active</#if>">
+                            <a href="/posting/editor">Add Posting</a></li>
                     </#if>
 
 <#--                    <li class="nav-item"><a href="#">Pages</a>
