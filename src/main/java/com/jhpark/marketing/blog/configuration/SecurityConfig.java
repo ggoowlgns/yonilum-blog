@@ -2,7 +2,6 @@ package com.jhpark.marketing.blog.configuration;
 
 import com.jhpark.marketing.blog.component.handler.OAuth2AuthenticationFailureHandler;
 import com.jhpark.marketing.blog.component.handler.OAuth2AuthenticationSuccessHandler;
-import com.jhpark.marketing.blog.domain.Role;
 import com.jhpark.marketing.blog.filter.TokenAuthenticationFilter;
 import com.jhpark.marketing.blog.repository.HttpCookieOAuth2AuthorizationRequestRepository;
 
