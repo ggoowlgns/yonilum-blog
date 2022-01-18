@@ -13,10 +13,6 @@ jobs:
   build:
 
     runs-on: ubuntu-18.04
-    defaults:
-      run:
-        shell: bash
-        working-directory: BE
 
     steps:
     - name: Check Out
