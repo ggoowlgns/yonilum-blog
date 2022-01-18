@@ -161,6 +161,11 @@
                                   <input id="posting-title" type="text" placeholder="Title" name="title" style="max-width: 500px"/>
                                 </div>
                               </div>
+                              <div id="posting-content" class="row form-group" style="margin-bottom: 100px">
+                                <div class="col-12 col-xm-12">
+                                  <div id="posting-editor-container"></div>
+                                </div>
+                              </div>
 
                               <div class="row">
                                 <div class="col-md-6 col-sm-12">
@@ -214,11 +219,7 @@
                                     <input type="text" placeholder="Webiste" name="website"/>
                                 </div>
                               </div>-->
-                              <div id="posting-content" class="row form-group" style="margin-bottom: 100px">
-                                <div class="col-12 col-xm-12">
-                                  <div id="posting-editor-container"></div>
-                                </div>
-                              </div>
+
 
 
 
