@@ -1,3 +1,7 @@
+<script>
+    var user = {}
+    user.id = ${user.userId};
+</script>
 <div id="load">
     <div class="load__content">
         <div class="load__icon"><img src="/assets/images/icons/load.gif" alt="Loading icon"/></div>

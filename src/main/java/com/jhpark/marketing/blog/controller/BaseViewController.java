@@ -28,6 +28,7 @@ public class BaseViewController {
       userInfo = (User) attribute;
     }
 
+    LOG.debug("user : {}", userInfo);
     modelMap.put("user", userInfo);
 
     return (User) userInfo;

@@ -1,8 +1,21 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <#include "header/default-css.ftl">
   <body>
     <#include "header/default.ftl">
+<script>
+  var postings = []
+  <#list postings as posting>
+  var posting = {}
+  posting.id = ${posting.postingId}
+  postings.push(posting);
+  </#list>
+
+  console.log("user : " + user)
+  console.log("posting : " + postings)
+</script>
+
     <div id="content">
       <div class="container">
         <div class="blog-imageless">
