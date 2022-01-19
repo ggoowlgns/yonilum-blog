@@ -1,6 +1,6 @@
 package com.jhpark.marketing.blog.controller.rest.posting;
 
-import com.jhpark.marketing.blog.controller.BaseController;
+import com.jhpark.marketing.blog.controller.BaseViewController;
 import com.jhpark.marketing.blog.entity.Posting;
 import com.jhpark.marketing.blog.payload.request.PostingRequest;
 import com.jhpark.marketing.blog.payload.response.CategoryListElementResponse;
@@ -18,7 +18,7 @@ import java.util.List;
 @RestController
 @RequestMapping(path = "/api/posting", produces = "application/json")
 @RequiredArgsConstructor
-public class PostingRestController extends BaseController {
+public class PostingRestController extends BaseViewController {
   Logger LOG = LoggerFactory.getLogger(PostingRestController.class);
   private final PostingService postingService;
 
