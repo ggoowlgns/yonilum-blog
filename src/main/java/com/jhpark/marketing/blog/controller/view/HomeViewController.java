@@ -7,6 +7,8 @@ import com.jhpark.marketing.blog.service.posting.PostingService;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Slice;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,11 +24,9 @@ public class HomeViewController extends BaseViewController {
 
   @RequestMapping(path = "/", method = RequestMethod.GET)
   public String home(ModelMap modelMap, User user) {
-    List<Posting> topPostings = postingService.getTopPosting(5);
 
     LOG.info("User : {}", user);
     modelMap.put("user", user);
-    modelMap.put("postings", topPostings);
 
     return "index";
   }

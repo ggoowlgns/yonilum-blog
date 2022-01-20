@@ -8,6 +8,7 @@ import com.jhpark.marketing.blog.service.posting.PostingService;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.Slice;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -46,9 +47,15 @@ public class PostingRestController extends BaseViewController {
     return categories;
   }
 
+  @RequestMapping(path = "/latest", method = RequestMethod.GET)
+  public Slice<Posting> latest(@RequestParam(value = "count", required = false, defaultValue = "5") int count) {
+    Slice<Posting> latestPosting = postingService.getLatestPosting(count);
+    return latestPosting;
+  }
+
   @RequestMapping(path = "/top", method = RequestMethod.GET)
   public List<Posting> top(@RequestParam(value = "count", required = false, defaultValue = "10") int count) {
-    List<Posting> postings = postingService.getTopPosting(count);
+    List<Posting> postings = postingService.getTopViewsPosting(count);
     return postings;
   }
 

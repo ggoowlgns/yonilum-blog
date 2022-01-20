@@ -8,6 +8,7 @@ import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Slice;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -30,7 +31,11 @@ public class PostingService {
     return postingRepository.findAll();
   }
 
-  public List<Posting> getTopPosting(int limit) {
+  public Slice<Posting> getLatestPosting(int limit) {
+    return postingRepository.findAllByOrderByCreatedDatetimeDesc(PageRequest.of(0,limit));
+  }
+
+  public List<Posting> getTopViewsPosting(int limit) {
     return postingRepository.findAllByOrderByViewsDesc(PageRequest.of(0, limit));
   }
 

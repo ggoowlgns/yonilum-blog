@@ -1,6 +1,9 @@
 <script>
     var user = {}
-    user.id = ${user.userId};
+    user['id'] = ${user.userId};
+    user['name'] = '${user.name}';
+    user['email'] = '${user.email}';
+    console.log('user : ' + JSON.stringify(user))
 </script>
 <div id="load">
     <div class="load__content">

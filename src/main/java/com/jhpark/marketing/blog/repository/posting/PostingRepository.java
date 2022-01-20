@@ -1,10 +1,8 @@
 package com.jhpark.marketing.blog.repository.posting;
 
-import com.jhpark.marketing.blog.entity.Category;
 import com.jhpark.marketing.blog.entity.Posting;
-import com.jhpark.marketing.blog.service.posting.PostingService;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Slice;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -13,6 +11,7 @@ import java.util.List;
 @Repository
 public interface PostingRepository extends JpaRepository<Posting, Long> {
   List<Posting> findAll();
+  Slice<Posting> findAllByOrderByCreatedDatetimeDesc(Pageable pageable);
   List<Posting> findAllByOrderByViewsDesc(Pageable pageable);
   Posting findPostingByPostingId(long postingId);
 
