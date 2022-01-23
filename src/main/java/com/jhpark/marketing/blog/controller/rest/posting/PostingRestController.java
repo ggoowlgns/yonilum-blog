@@ -48,8 +48,15 @@ public class PostingRestController extends BaseViewController {
   }
 
   @RequestMapping(path = "/latest", method = RequestMethod.GET)
-  public Slice<Posting> latest(@RequestParam(value = "count", required = false, defaultValue = "5") int count) {
-    Slice<Posting> latestPosting = postingService.getLatestPosting(count);
+  public Slice<Posting> latest(@RequestParam(value = "start", required = false, defaultValue = "0") int start,
+          @RequestParam(value = "end", required = false, defaultValue = "5") int end) {
+    Slice<Posting> latestPosting = postingService.getLatestPosting(start, end);
+    return latestPosting;
+  }
+
+  @RequestMapping(path = "/latestFrom", method = RequestMethod.GET)
+  public Slice<Posting> latestFromPosting(@RequestParam(value = "postingId", required = true) int postingId) {
+    Slice<Posting> latestPosting = postingService.getLatestPostingFrom(postingId);
     return latestPosting;
   }
 

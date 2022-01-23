@@ -12,6 +12,8 @@ import java.util.List;
 public interface PostingRepository extends JpaRepository<Posting, Long> {
   List<Posting> findAll();
   Slice<Posting> findAllByOrderByCreatedDatetimeDesc(Pageable pageable);
+  Slice<Posting> findAllByPostingIdIsLessThanOrderByCreatedDatetimeDesc(long postingId, Pageable pageable);
+
   List<Posting> findAllByOrderByViewsDesc(Pageable pageable);
   Posting findPostingByPostingId(long postingId);
 

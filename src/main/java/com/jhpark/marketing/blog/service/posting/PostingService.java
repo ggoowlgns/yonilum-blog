@@ -31,8 +31,12 @@ public class PostingService {
     return postingRepository.findAll();
   }
 
-  public Slice<Posting> getLatestPosting(int limit) {
-    return postingRepository.findAllByOrderByCreatedDatetimeDesc(PageRequest.of(0,limit));
+  public Slice<Posting> getLatestPosting(int start, int end) {
+    return postingRepository.findAllByOrderByCreatedDatetimeDesc(PageRequest.of(start,end));
+  }
+
+  public Slice<Posting> getLatestPostingFrom(long postingId) {
+    return postingRepository.findAllByPostingIdIsLessThanOrderByCreatedDatetimeDesc(postingId, PageRequest.of(0,4));
   }
 
   public List<Posting> getTopViewsPosting(int limit) {
