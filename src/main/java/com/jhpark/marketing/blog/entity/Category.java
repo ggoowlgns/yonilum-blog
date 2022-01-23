@@ -22,9 +22,8 @@ public class Category {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long categoryId;
 
-  @ManyToOne(targetEntity = Posting.class, fetch = FetchType.LAZY)
+  @ManyToOne(targetEntity = Posting.class, fetch = FetchType.EAGER, optional = false)
   @JoinColumn(name = "posting_id", nullable = false)
-  @JsonBackReference
   private Posting postingId;
 
   private int categoryIndex;

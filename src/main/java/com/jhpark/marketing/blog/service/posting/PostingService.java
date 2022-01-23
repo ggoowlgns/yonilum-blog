@@ -3,6 +3,7 @@ package com.jhpark.marketing.blog.service.posting;
 import com.jhpark.marketing.blog.entity.*;
 import com.jhpark.marketing.blog.payload.request.PostingRequest;
 import com.jhpark.marketing.blog.payload.response.CategoryListElementResponse;
+import com.jhpark.marketing.blog.repository.category.CategoryRepository;
 import com.jhpark.marketing.blog.repository.posting.*;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
@@ -48,7 +49,7 @@ public class PostingService {
   }
 
   public List<CategoryListElementResponse> getCategoryGroupByCount() {
-    return categoryRepository.findGroupByCategoryWithJPQL();
+    return categoryRepository.findGroupByCategoryOrderByCategoryCountWithJPQL();
   }
 
   @Transactional

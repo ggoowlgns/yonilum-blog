@@ -41,12 +41,6 @@ public class PostingRestController extends BaseViewController {
     return postings;
   }
 
-  @RequestMapping(path = "/categoryList", method = RequestMethod.GET)
-  public List<CategoryListElementResponse> categoryList() {
-    List<CategoryListElementResponse> categories = postingService.getCategoryGroupByCount();
-    return categories;
-  }
-
   @RequestMapping(path = "/latest", method = RequestMethod.GET)
   public Slice<Posting> latest(@RequestParam(value = "start", required = false, defaultValue = "0") int start,
           @RequestParam(value = "end", required = false, defaultValue = "5") int end) {

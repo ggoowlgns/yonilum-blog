@@ -66,7 +66,7 @@
     }
 
     function addCategoryTags(tag, tagsDom) {
-      var tagDom = '<a class="tag-btn" href="/category/'+tag+'">'+
+      var tagDom = '<a class="tag-btn" href="/category?categoryName='+tag+'">'+
               tag
               +'</a>';
       tagsDom.append(tagDom);

@@ -3,6 +3,27 @@
 <#include "../header/default-css.ftl">
 <body>
 <#include "../header/default.ftl">
+  <script>
+    var postings = []
+    var userId = ${user.userId};
+    var category = '${categoryName}'
+    //TODO : get podstings by categoryName
+    var postingRequest = RestClient.GET('/api/category');
+    if (category !== "default") postingRequest = RestClient.GET('/api/category?categoryName='+category);
+
+    var posting_content_dom = $("#posting-content");
+
+    postingRequest.done(function (data) {
+        for (var posting_index in data) {
+            console.log(data[posting_index])
+        }
+    });
+
+
+    //TODO : get trendPosting
+    //TODO : get categories
+
+  </script>
     <div class="no-pd" id="content">
       <div class="container">
             <div class="breadcrumb">
