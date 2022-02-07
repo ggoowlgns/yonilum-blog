@@ -1,5 +1,6 @@
 package com.jhpark.marketing.blog.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.sun.istack.NotNull;
 import lombok.Builder;
 import lombok.Getter;
@@ -56,6 +57,7 @@ public class Posting {
   private Set<PostingComment> postingComments = new LinkedHashSet<>();
 
   @OneToMany(mappedBy = "postingId", fetch = FetchType.LAZY)
+  @JsonBackReference
   private Set<Category> postingCategories = new LinkedHashSet<>();
 
   @Column(nullable = false)

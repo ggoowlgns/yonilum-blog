@@ -1,6 +1,7 @@
 package com.jhpark.marketing.blog.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -24,6 +25,7 @@ public class Category {
 
   @ManyToOne(targetEntity = Posting.class, fetch = FetchType.EAGER, optional = false)
   @JoinColumn(name = "posting_id", nullable = false)
+  @JsonManagedReference
   private Posting postingId;
 
   private int categoryIndex;
