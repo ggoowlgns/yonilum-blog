@@ -24,7 +24,7 @@ public class CategoryViewController extends BaseViewController {
                      ModelMap modelMap, User user) {
     modelMap.put("user", user);
     if (categoryName.isPresent()) modelMap.put("categoryName", categoryName.get());
-    else modelMap.put("categoryName", "default");
+    else modelMap.put("categoryName", "All");
 
     return "category/blog-category-list";
   }

@@ -7,22 +7,112 @@
     var postings = []
     var userId = ${user.userId};
     var category = '${categoryName}'
-    //TODO : get podstings by categoryName
-    var postingRequest = RestClient.GET('/api/category');
-    if (category !== "default") postingRequest = RestClient.GET('/api/category?categoryName='+category);
+
+    var postingRequest = RestClient.GET('/api/posting/list');
+    if (category !== "All") postingRequest = RestClient.GET('/api/posting/list?category='+category);
 
     var posting_content_dom = $("#posting-content");
 
     postingRequest.done(function (data) {
+        var postings = []
         for (var posting_index in data) {
             console.log(data[posting_index])
+            let temp_posting = data[posting_index]
+            var result_posting = {}
+            result_posting['image'] = temp_posting.thumbnailUrl;
+            result_posting['category'] = temp_posting.postingCategories.join(", ");
+            result_posting['title'] = temp_posting.title;
+            result_posting['date'] = temp_posting.createdDatetime;
+            result_posting['comment'] = temp_posting.postingComments.length;
+          postings.push(result_posting)
         }
+        categoryGenerator(postings);
     });
 
 
     //TODO : get trendPosting
     //TODO : get categories
 
+    function categoryGenerator(data) {
+        function getLayout() {
+            let $activeCategoryItem = $(".category__header__filter__item.active");
+            let $categoryContent = $(".category_content");
+            const currentLayout = $activeCategoryItem.data("layout");
+            let content = "";
+            if (currentCategoryLayout === currentLayout) {
+                return;
+            }
+            currentCategoryLayout = currentLayout;
+            if (currentCategoryLayout === "grid") {
+                data.forEach((item, index) => {
+                    content += `
+                      <div class="post-card -center"><a class="card__cover" href="post_standard.ftl"><img src="`+item.image+`" alt="`+item.title+`"></a>
+                        <div class="card__content">
+                        <h5 class="card__content-category">`+item.category+`</h5><a class="card__content-title" href="post_standard.ftl">`+item.title+`</a>
+                        <div class="card__content-info">
+                          <div class="info__time"><i class="far fa-clock"></i>
+                            <p>`+item.date+`</p>
+                          </div>
+                          <div class="info__comment"><i class="far fa-comment"></i>
+                            <p>`+item.comment+`</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    `;
+                });
+
+                $categoryContent
+                    .empty()
+                    .addClass("-grid")
+                    .removeClass("-list")
+                    .prepend(content);
+                let $masonryBeauty = $categoryContent.masonry({
+                    itemSelector: ".post-card",
+                    gutter: 20,
+                });
+                $masonryBeauty.imagesLoaded().progress(function () {
+                    $masonryBeauty.masonry("layout");
+                });
+            } else {
+                $categoryContent.masonry("destroy");
+                data.forEach((item, index) => {
+                    content += `
+                    <div class="col-12">
+                      <div class="post-card -small -horizontal"><a class="card__cover" href="post_standard.ftl" tabindex="0"><img src="`+item.image+`" alt="`+item.title+`"></a>
+                        <div class="card__content">
+                          <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl" tabindex="0">`+item.title+`</a>
+                          <div class="card__content-info">
+                            <div class="info__time"><i class="far fa-clock"></i>
+                              <p>Clock  Wed 02, 2019</p>
+                            </div>
+                            <div class="info__comment"><i class="far fa-comment"></i>
+                              <p>3</p>
+                            </div>
+                          </div>
+                          <p class="card__content-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                        </div>
+                      </div>
+                    </div>`;
+                });
+                content = `<div class="row">` + content + `</div>`;
+                $categoryContent
+                    .empty()
+                    .addClass("-list")
+                    .removeClass("-grid")
+                    .prepend(content);
+            }
+        }
+
+        getLayout();
+
+        $(".category__header__filter__item").on("click", function (e) {
+            e.preventDefault();
+            $(".category__header__filter__item").removeClass("active");
+            $(this).addClass("active");
+            getLayout();
+        });
+    }
   </script>
     <div class="no-pd" id="content">
       <div class="container">
@@ -35,6 +125,8 @@
             </div>
         <div class="category">
           <div class="row">
+
+<#--            Side Content-->
             <div class="col-12 col-md-5 col-lg-4 order-md-2">
               <div class="blog-sidebar">
                 <div class="blog-sidebar-section -category">
@@ -58,73 +150,71 @@
                   <div class="center-line-title"> 
                     <h5>Trending post</h5>
                   </div>
-                                <div class="trending-post">
-                                  <div class="trending-post_image">
-                                    <div class="rank">1</div><img src="/assets/images/backgrounds/trending-post-1.png" alt="Shifting to Vegan Diets May Cause Brain Nutrient..."/>
-                                  </div>
-                                  <div class="trending-post_content">
-                                    <h5>Illustrator</h5><a href="../deprecated/post_standard.ftl">Shifting to Vegan Diets May Cause Brain Nutrient...</a>
-                                    <div class="info__time"><i class="far fa-clock"></i>
-                                      <p>Seb 27, 2019</p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="trending-post">
-                                  <div class="trending-post_image">
-                                    <div class="rank">2</div><img src="/assets/images/backgrounds/trending-post-2.png" alt="The GQ Men Of The Year Awards 2019: Hrithik..."/>
-                                  </div>
-                                  <div class="trending-post_content">
-                                    <h5>Design</h5><a href="../deprecated/post_standard.ftl">The GQ Men Of The Year Awards 2019: Hrithik...</a>
-                                    <div class="info__time"><i class="far fa-clock"></i>
-                                      <p>Seb 27, 2019</p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="trending-post">
-                                  <div class="trending-post_image">
-                                    <div class="rank">3</div><img src="/assets/images/backgrounds/trending-post-3.png" alt="Here's How Your Diet Can Help Yo Excel in Exams"/>
-                                  </div>
-                                  <div class="trending-post_content">
-                                    <h5>Illustrator</h5><a href="../deprecated/post_standard.ftl">Here's How Your Diet Can Help Yo Excel in Exams</a>
-                                    <div class="info__time"><i class="far fa-clock"></i>
-                                      <p>Seb 27, 2019</p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="trending-post">
-                                  <div class="trending-post_image">
-                                    <div class="rank">4</div><img src="/assets/images/backgrounds/trending-post-4.png" alt="why others accept while AudioJungle..."/>
-                                  </div>
-                                  <div class="trending-post_content">
-                                    <h5>Graphic</h5><a href="../deprecated/post_standard.ftl">why others accept while AudioJungle...</a>
-                                    <div class="info__time"><i class="far fa-clock"></i>
-                                      <p>Seb 27, 2019</p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="trending-post">
-                                  <div class="trending-post_image">
-                                    <div class="rank">5</div><img src="/assets/images/backgrounds/trending-post-5.png" alt="Podcast audio episode with YouTube license question"/>
-                                  </div>
-                                  <div class="trending-post_content">
-                                    <h5>Typography</h5><a href="../deprecated/post_standard.ftl">Podcast audio episode with YouTube license question</a>
-                                    <div class="info__time"><i class="far fa-clock"></i>
-                                      <p>Seb 27, 2019</p>
-                                    </div>
-                                  </div>
-                                </div>
+                  <div class="trending-post">
+                    <div class="trending-post_image">
+                      <div class="rank">1</div><img src="/assets/images/backgrounds/trending-post-1.png" alt="Shifting to Vegan Diets May Cause Brain Nutrient..."/>
+                    </div>
+                    <div class="trending-post_content">
+                      <h5>Illustrator</h5><a href="../deprecated/post_standard.ftl">Shifting to Vegan Diets May Cause Brain Nutrient...</a>
+                      <div class="info__time"><i class="far fa-clock"></i>
+                        <p>Seb 27, 2019</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="trending-post">
+                    <div class="trending-post_image">
+                      <div class="rank">2</div><img src="/assets/images/backgrounds/trending-post-2.png" alt="The GQ Men Of The Year Awards 2019: Hrithik..."/>
+                    </div>
+                    <div class="trending-post_content">
+                      <h5>Design</h5><a href="../deprecated/post_standard.ftl">The GQ Men Of The Year Awards 2019: Hrithik...</a>
+                      <div class="info__time"><i class="far fa-clock"></i>
+                        <p>Seb 27, 2019</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="trending-post">
+                    <div class="trending-post_image">
+                      <div class="rank">3</div><img src="/assets/images/backgrounds/trending-post-3.png" alt="Here's How Your Diet Can Help Yo Excel in Exams"/>
+                    </div>
+                    <div class="trending-post_content">
+                      <h5>Illustrator</h5><a href="../deprecated/post_standard.ftl">Here's How Your Diet Can Help Yo Excel in Exams</a>
+                      <div class="info__time"><i class="far fa-clock"></i>
+                        <p>Seb 27, 2019</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="trending-post">
+                    <div class="trending-post_image">
+                      <div class="rank">4</div><img src="/assets/images/backgrounds/trending-post-4.png" alt="why others accept while AudioJungle..."/>
+                    </div>
+                    <div class="trending-post_content">
+                      <h5>Graphic</h5><a href="../deprecated/post_standard.ftl">why others accept while AudioJungle...</a>
+                      <div class="info__time"><i class="far fa-clock"></i>
+                        <p>Seb 27, 2019</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="trending-post">
+                    <div class="trending-post_image">
+                      <div class="rank">5</div><img src="/assets/images/backgrounds/trending-post-5.png" alt="Podcast audio episode with YouTube license question"/>
+                    </div>
+                    <div class="trending-post_content">
+                      <h5>Typography</h5><a href="../deprecated/post_standard.ftl">Podcast audio episode with YouTube license question</a>
+                      <div class="info__time"><i class="far fa-clock"></i>
+                        <p>Seb 27, 2019</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <form class="subcribe-box subcribe-box" action="/" method="POST">
-                  <h5>Subcribe</h5>
-                  <p>Lorem ipsum dolor amet, consectetur adipiscing elit, sed tempor.</p>
-                  <input placeholder="Your email" name="email" type="email"/><a class="btn -normal" href="#">Subcribe</a>
-                </form>
               </div>
             </div>
+
+
+<#--            Main Content-->
             <div class="col-12 col-md-7 col-lg-8 order-md-1">
               <div class="category__header">
                 <div class="category__header__text">
-                  <h5>Categories:</h5><a href="#">Typography</a>
+                  <h5>Categories:</h5><a href="/category?categoryName=${categoryName}">${categoryName}</a>
                 </div>
                 <div class="category__header__filter"><a class="category__header__filter__item" href="javascript:void(0)" data-layout="grid"><i class="fas fa-th"></i></a><a class="category__header__filter__item active" href="javascript:void(0)" data-layout="list"><i class="fas fa-bars"></i></a></div>
               </div>
@@ -138,6 +228,8 @@
                     </ul>
                   </div>
             </div>
+
+
           </div>
         </div>
       </div>

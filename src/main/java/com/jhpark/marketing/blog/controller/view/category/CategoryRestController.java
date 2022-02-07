@@ -29,11 +29,4 @@ public class CategoryRestController {
     return categories;
   }
 
-  @RequestMapping(method = RequestMethod.GET)
-  public List<Posting> postingsByCategory(@RequestParam(value = "categoryName", required = false)Optional<String> categoryName) {
-    List<Posting> postings = new ArrayList<>();
-    if (categoryName.isPresent()) postings = categoryService.getPostingsByCategory(categoryName.get());
-    else postings = categoryService.getPostingsByCategory(null);
-    return postings;
-  }
 }

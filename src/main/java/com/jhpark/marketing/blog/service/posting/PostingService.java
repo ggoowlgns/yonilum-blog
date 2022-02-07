@@ -29,7 +29,7 @@ public class PostingService {
   private final CategoryRepository categoryRepository;
 
   public List<Posting> getAllPosting() {
-    return postingRepository.findAll();
+    return postingRepository.findAllByOrderByPostingIdDesc();
   }
 
   public Slice<Posting> getLatestPosting(int start, int end) {

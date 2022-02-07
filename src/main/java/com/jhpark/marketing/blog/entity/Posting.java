@@ -1,6 +1,8 @@
 package com.jhpark.marketing.blog.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import com.sun.istack.NotNull;
 import lombok.Builder;
 import lombok.Getter;
@@ -22,6 +24,7 @@ import java.util.Set;
 @NoArgsConstructor
 @ToString
 @Builder
+@JsonIdentityInfo(generator = ObjectIdGenerators.IntSequenceGenerator.class)
 public class Posting {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -57,7 +60,6 @@ public class Posting {
   private Set<PostingComment> postingComments = new LinkedHashSet<>();
 
   @OneToMany(mappedBy = "postingId", fetch = FetchType.LAZY)
-  @JsonBackReference
   private Set<Category> postingCategories = new LinkedHashSet<>();
 
   @Column(nullable = false)
