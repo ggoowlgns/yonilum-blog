@@ -16,14 +16,20 @@
     postingRequest.done(function (data) {
         var postings = []
         for (var posting_index in data) {
-            console.log(data[posting_index])
-            let temp_posting = data[posting_index]
-            var result_posting = {}
-            result_posting['image'] = temp_posting.thumbnailUrl;
-            result_posting['category'] = temp_posting.postingCategories.join(", ");
-            result_posting['title'] = temp_posting.title;
-            result_posting['date'] = temp_posting.createdDatetime;
-            result_posting['comment'] = temp_posting.postingComments.length;
+          console.log(data[posting_index])
+          let temp_posting = data[posting_index]
+          var result_posting = {}
+          result_posting['image'] = temp_posting.thumbnailUrl;
+          result_posting['category'] = temp_posting.postingCategories.map(e => e.category).join(", ");
+          result_posting['title'] = temp_posting.title;
+          result_posting['date'] = temp_posting.createdDatetime;
+          result_posting['comment'] = temp_posting.postingComments.length;
+          result_posting['postingId'] = temp_posting.postingId;
+          let temp_paragraph = temp_posting.postingContentParagraphs[0].content
+          const PARAGRAPH_LENGTH = 20;
+          result_posting['content'] = temp_paragraph.length > PARAGRAPH_LENGTH ?
+                                              temp_paragraph.substring(0, PARAGRAPH_LENGTH - 3) + "..." :
+                                              temp_paragraph;
           postings.push(result_posting)
         }
         categoryGenerator(postings);
@@ -46,9 +52,9 @@
             if (currentCategoryLayout === "grid") {
                 data.forEach((item, index) => {
                     content += `
-                      <div class="post-card -center"><a class="card__cover" href="post_standard.ftl"><img src="`+item.image+`" alt="`+item.title+`"></a>
+                      <div class="post-card -center"><a class="card__cover" href="/posting/`+item.postingId+`"><img src="`+item.image+`" alt="`+item.title+`"></a>
                         <div class="card__content">
-                        <h5 class="card__content-category">`+item.category+`</h5><a class="card__content-title" href="post_standard.ftl">`+item.title+`</a>
+                        <h5 class="card__content-category">`+item.category+`</h5><a class="card__content-title" href="/posting/`+item.postingId+`">`+item.title+`</a>
                         <div class="card__content-info">
                           <div class="info__time"><i class="far fa-clock"></i>
                             <p>`+item.date+`</p>
@@ -79,18 +85,18 @@
                 data.forEach((item, index) => {
                     content += `
                     <div class="col-12">
-                      <div class="post-card -small -horizontal"><a class="card__cover" href="post_standard.ftl" tabindex="0"><img src="`+item.image+`" alt="`+item.title+`"></a>
+                      <div class="post-card -small -horizontal"><a class="card__cover" href="/posting/`+item.postingId+`" tabindex="0"><img src="`+item.image+`" alt="`+item.title+`"></a>
                         <div class="card__content">
-                          <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl" tabindex="0">`+item.title+`</a>
+                          <h5 class="card__content-category">`+item.category+`</h5><a class="card__content-title" href="/posting/`+item.postingId+`" tabindex="0">`+item.title+`</a>
                           <div class="card__content-info">
                             <div class="info__time"><i class="far fa-clock"></i>
-                              <p>Clock  Wed 02, 2019</p>
+                              <p>`+item.date+`</p>
                             </div>
                             <div class="info__comment"><i class="far fa-comment"></i>
-                              <p>3</p>
+                              <p>`+item.comment+`</p>
                             </div>
                           </div>
-                          <p class="card__content-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                          <p class="card__content-description">`+item.content+`</p>
                         </div>
                       </div>
                     </div>`;
