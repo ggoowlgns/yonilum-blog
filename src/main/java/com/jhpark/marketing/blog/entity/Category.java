@@ -1,10 +1,10 @@
 package com.jhpark.marketing.blog.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -12,19 +12,20 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Getter
+@Setter
 @Entity
 @Table(name = "tb_category")
 @NoArgsConstructor
 @ToString
 @Builder
+@JsonIdentityInfo(generator = ObjectIdGenerators.IntSequenceGenerator.class)
 public class Category {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long categoryId;
 
-  @ManyToOne(targetEntity = Posting.class, fetch = FetchType.LAZY)
+  @ManyToOne(targetEntity = Posting.class, fetch = FetchType.EAGER, optional = false)
   @JoinColumn(name = "posting_id", nullable = false)
-  @JsonBackReference
   private Posting postingId;
 
   private int categoryIndex;

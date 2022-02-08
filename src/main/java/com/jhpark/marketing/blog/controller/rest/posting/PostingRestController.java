@@ -4,6 +4,7 @@ import com.jhpark.marketing.blog.controller.BaseViewController;
 import com.jhpark.marketing.blog.entity.Posting;
 import com.jhpark.marketing.blog.payload.request.PostingRequest;
 import com.jhpark.marketing.blog.payload.response.CategoryListElementResponse;
+import com.jhpark.marketing.blog.service.category.CategoryService;
 import com.jhpark.marketing.blog.service.posting.PostingService;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
@@ -22,6 +23,7 @@ import java.util.List;
 public class PostingRestController extends BaseViewController {
   Logger LOG = LoggerFactory.getLogger(PostingRestController.class);
   private final PostingService postingService;
+  private final CategoryService categoryService;
 
   @RequestMapping(path = "/{postingId}", method = RequestMethod.GET)
   public Posting detail(@PathVariable("postingId") long postingId) {
@@ -33,18 +35,11 @@ public class PostingRestController extends BaseViewController {
   public List<Posting> list(@RequestParam(value = "category", required = false, defaultValue = "") String category) {
     List<Posting> postings = new ArrayList();
     if (category.equals("")) {
-      //TODO : posting 전체 list
       postings = postingService.getAllPosting();
     } else {
-      //TODO : posting list by category
+      postings = categoryService.getPostingsByCategory(category);
     }
     return postings;
-  }
-
-  @RequestMapping(path = "/categoryList", method = RequestMethod.GET)
-  public List<CategoryListElementResponse> categoryList() {
-    List<CategoryListElementResponse> categories = postingService.getCategoryGroupByCount();
-    return categories;
   }
 
   @RequestMapping(path = "/latest", method = RequestMethod.GET)

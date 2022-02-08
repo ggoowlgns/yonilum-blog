@@ -1,6 +1,6 @@
 <div class="col-12 col-md-4 order-md-2">
     <script>
-      var categoryRequest = RestClient.GET('/api/posting/categoryList');
+      var categoryRequest = RestClient.GET('/api/category/list');
       categoryRequest.done(function (data) {
         console.log(data);
         var categoriesDom = $('#posting-categories');
@@ -16,7 +16,7 @@
 
       function addCategory(categories, categoriesDom) {
         for (var category of categories) {
-          var categoryDom = '<a class="category -bar " href="/category/'+ category.category+'">' +
+          var categoryDom = '<a class="category -bar " href="/category?categoryName'+ category.category+'">' +
             '<div class="category__background" style="background-image: url(/assets/images/backgrounds/category-1.png)"></div>' +
             '<h5 class="title">'+category.category+'</h5>' +
             '<h5 class="quantity">'+category.categoryCount+'</h5>' +

@@ -12,9 +12,9 @@ import javax.persistence.Id;
 @Getter
 public class CategoryListElementResponse {
 
-  private String category;
-  private long categoryCount;
-  private String categoryImageUrl;
+  public String category;
+  public long categoryCount;
+  public String categoryImageUrl;
 
   @Builder
   public CategoryListElementResponse(String category, long categoryCount, String categoryImageUrl) {

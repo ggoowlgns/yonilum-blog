@@ -10,7 +10,7 @@ import java.util.List;
 
 @Repository
 public interface PostingRepository extends JpaRepository<Posting, Long> {
-  List<Posting> findAll();
+  List<Posting> findAllByOrderByPostingIdDesc();
   Slice<Posting> findAllByOrderByCreatedDatetimeDesc(Pageable pageable);
   Slice<Posting> findAllByPostingIdIsLessThanOrderByCreatedDatetimeDesc(long postingId, Pageable pageable);
 
