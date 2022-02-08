@@ -3,11 +3,13 @@ package com.jhpark.marketing.blog.service.posting;
 import com.jhpark.marketing.blog.entity.*;
 import com.jhpark.marketing.blog.payload.request.PostingRequest;
 import com.jhpark.marketing.blog.payload.response.CategoryListElementResponse;
+import com.jhpark.marketing.blog.repository.category.CategoryRepository;
 import com.jhpark.marketing.blog.repository.posting.*;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Slice;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -27,10 +29,18 @@ public class PostingService {
   private final CategoryRepository categoryRepository;
 
   public List<Posting> getAllPosting() {
-    return postingRepository.findAll();
+    return postingRepository.findAllByOrderByPostingIdDesc();
   }
 
-  public List<Posting> getTopPosting(int limit) {
+  public Slice<Posting> getLatestPosting(int start, int end) {
+    return postingRepository.findAllByOrderByCreatedDatetimeDesc(PageRequest.of(start,end));
+  }
+
+  public Slice<Posting> getLatestPostingFrom(long postingId) {
+    return postingRepository.findAllByPostingIdIsLessThanOrderByCreatedDatetimeDesc(postingId, PageRequest.of(0,4));
+  }
+
+  public List<Posting> getTopViewsPosting(int limit) {
     return postingRepository.findAllByOrderByViewsDesc(PageRequest.of(0, limit));
   }
 
@@ -39,7 +49,7 @@ public class PostingService {
   }
 
   public List<CategoryListElementResponse> getCategoryGroupByCount() {
-    return categoryRepository.findGroupByCategoryWithJPQL();
+    return categoryRepository.findGroupByCategoryOrderByCategoryCountWithJPQL();
   }
 
   @Transactional

@@ -1,4 +1,4 @@
-package com.jhpark.marketing.blog.repository.posting;
+package com.jhpark.marketing.blog.repository.category;
 
 import com.jhpark.marketing.blog.entity.Category;
 import com.jhpark.marketing.blog.payload.response.CategoryListElementResponse;
@@ -15,7 +15,9 @@ public interface CategoryRepository extends JpaRepository<Category, Long> {
     "SELECT " +
     " new com.jhpark.marketing.blog.payload.response.CategoryListElementResponse(c.category, COUNT(*), '')" +
     " FROM Category c " +
-    " GROUP BY c.category"
+    " GROUP BY c.category "
   )
-  List<CategoryListElementResponse> findGroupByCategoryWithJPQL();
+  List<CategoryListElementResponse> findGroupByCategoryOrderByCategoryCountWithJPQL();
+
+  List<Category> findAllByCategoryOrderByPostingIdDesc(String category);
 }

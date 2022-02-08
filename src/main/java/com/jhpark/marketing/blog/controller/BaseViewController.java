@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 
 import javax.servlet.http.HttpServletRequest;
 
-public class BaseController {
-  private final Logger LOG = LoggerFactory.getLogger(BaseController.class);
+public class BaseViewController {
+  private final Logger LOG = LoggerFactory.getLogger(BaseViewController.class);
 
   @ModelAttribute("user")
   public User getUser(HttpServletRequest request, ModelMap modelMap) {
@@ -28,6 +28,7 @@ public class BaseController {
       userInfo = (User) attribute;
     }
 
+    LOG.debug("user : {}", userInfo);
     modelMap.put("user", userInfo);
 
     return (User) userInfo;

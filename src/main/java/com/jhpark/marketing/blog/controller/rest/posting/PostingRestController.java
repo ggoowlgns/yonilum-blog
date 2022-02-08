@@ -1,13 +1,15 @@
 package com.jhpark.marketing.blog.controller.rest.posting;
 
-import com.jhpark.marketing.blog.controller.BaseController;
+import com.jhpark.marketing.blog.controller.BaseViewController;
 import com.jhpark.marketing.blog.entity.Posting;
 import com.jhpark.marketing.blog.payload.request.PostingRequest;
 import com.jhpark.marketing.blog.payload.response.CategoryListElementResponse;
+import com.jhpark.marketing.blog.service.category.CategoryService;
 import com.jhpark.marketing.blog.service.posting.PostingService;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.Slice;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,9 +20,10 @@ import java.util.List;
 @RestController
 @RequestMapping(path = "/api/posting", produces = "application/json")
 @RequiredArgsConstructor
-public class PostingRestController extends BaseController {
+public class PostingRestController extends BaseViewController {
   Logger LOG = LoggerFactory.getLogger(PostingRestController.class);
   private final PostingService postingService;
+  private final CategoryService categoryService;
 
   @RequestMapping(path = "/{postingId}", method = RequestMethod.GET)
   public Posting detail(@PathVariable("postingId") long postingId) {
@@ -32,23 +35,29 @@ public class PostingRestController extends BaseController {
   public List<Posting> list(@RequestParam(value = "category", required = false, defaultValue = "") String category) {
     List<Posting> postings = new ArrayList();
     if (category.equals("")) {
-      //TODO : posting 전체 list
       postings = postingService.getAllPosting();
     } else {
-      //TODO : posting list by category
+      postings = categoryService.getPostingsByCategory(category);
     }
     return postings;
   }
 
-  @RequestMapping(path = "/categoryList", method = RequestMethod.GET)
-  public List<CategoryListElementResponse> categoryList() {
-    List<CategoryListElementResponse> categories = postingService.getCategoryGroupByCount();
-    return categories;
+  @RequestMapping(path = "/latest", method = RequestMethod.GET)
+  public Slice<Posting> latest(@RequestParam(value = "start", required = false, defaultValue = "0") int start,
+          @RequestParam(value = "end", required = false, defaultValue = "5") int end) {
+    Slice<Posting> latestPosting = postingService.getLatestPosting(start, end);
+    return latestPosting;
+  }
+
+  @RequestMapping(path = "/latestFrom", method = RequestMethod.GET)
+  public Slice<Posting> latestFromPosting(@RequestParam(value = "postingId", required = true) int postingId) {
+    Slice<Posting> latestPosting = postingService.getLatestPostingFrom(postingId);
+    return latestPosting;
   }
 
   @RequestMapping(path = "/top", method = RequestMethod.GET)
   public List<Posting> top(@RequestParam(value = "count", required = false, defaultValue = "10") int count) {
-    List<Posting> postings = postingService.getTopPosting(count);
+    List<Posting> postings = postingService.getTopViewsPosting(count);
     return postings;
   }
 
