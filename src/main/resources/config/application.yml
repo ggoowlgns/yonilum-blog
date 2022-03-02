@@ -2,7 +2,6 @@ logging:
   config: classpath:logback-spring.xml
   level: debug
 
-
 yonilum:
   base:
     url: http://blog.yonilum.com
