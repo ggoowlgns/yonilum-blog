@@ -37,8 +37,8 @@ jobs:
     - name : check
       run: du -ah
     - name: CD-Copy Output
-      run: scp -i .github/workflows/key/jhpark-seoul.pem target/marketing-blog.jar ec2-user@ec2-3-38-88-54.ap-northeast-2.compute.amazonaws.com:blog/app/marketing-blog.jar
+      run: scp -i .github/workflows/key/jhpark-seoul.pem target/marketing-blog.jar ec2-user@3.38.88.54:blog/app/marketing-blog.jar
     - name: CD-Stop App
-      run: ssh -i .github/workflows/key/jhpark-seoul.pem ec2-user@ec2-3-38-88-54.ap-northeast-2.compute.amazonaws.com sudo service blog stop
+      run: ssh -i .github/workflows/key/jhpark-seoul.pem ec2-user@3.38.88.54 sudo service blog stop
     - name: CD-Start App
-      run: ssh -i .github/workflows/key/jhpark-seoul.pem ec2-user@ec2-3-38-88-54.ap-northeast-2.compute.amazonaws.com sudo service blog start
+      run: ssh -i .github/workflows/key/jhpark-seoul.pem ec2-user@3.38.88.54 sudo service blog start
