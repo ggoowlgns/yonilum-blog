@@ -23,6 +23,10 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
         cache: maven
+        host: ${{ secrets.REMOTE_IP }}
+        username: ${{ secrets.REMOTE_SSH_ID }}
+        key: ${{ secrets.REMOTE_SSH_KEY }}
+        port: ${{ secrets.REMOTE_SSH_PORT }}
     # Caching dependencies
     - name: Cache Maven packages
       uses: actions/cache@v2
