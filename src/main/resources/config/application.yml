@@ -1,6 +1,7 @@
 logging:
   config: classpath:logback-spring.xml
-  level: debug
+  level:
+    root: debug
 
 yonilum:
   base:
@@ -19,7 +20,7 @@ server:
 
 spring:
   freemarker:
-    cache: false
+    cache: true
     check-template-location: true
     prefix: /
     settings:

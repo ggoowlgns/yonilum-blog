@@ -7,4 +7,4 @@ logging:
 
 spring:
   profiles:
-    include: console-logging, file-logging, thread-logging
+    include: file-logging, thread-logging
