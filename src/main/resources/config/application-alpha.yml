@@ -2,8 +2,6 @@ logging:
   file:
     path: /home/ec2-user/blog/log/
 
-  level:
-    root: debug
 
 spring:
   profiles:
