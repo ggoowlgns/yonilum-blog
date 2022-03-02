@@ -32,12 +32,13 @@ jobs:
         restore-keys: ${{ runner.os }}-m2
     - name: Build with Maven
       run: mvn -DskipTests=true package --file pom.xml
-
+    - name: pwd
+      run: pwd
+    - name : check
+      run: du -ah
     - name: [ CD ] Copy Output
       run: scp -i .github/workflows/key/jhpark-seoul.pem target/marketing-blog.jar ec2-user@ec2-3-38-88-54.ap-northeast-2.compute.amazonaws.com:blog/app/marketing-blog.jar
-
     - name: [ CD ] Stop App
       run: ssh -i .github/workflows/key/jhpark-seoul.pem ec2-user@ec2-3-38-88-54.ap-northeast-2.compute.amazonaws.com sudo service blog stop
-
     - name: [ CD ] Start App
       run: ssh -i .github/workflows/key/jhpark-seoul.pem ec2-user@ec2-3-38-88-54.ap-northeast-2.compute.amazonaws.com sudo service blog start
