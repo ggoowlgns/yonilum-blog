@@ -1,0 +1,10 @@
+logging:
+  file:
+    path: /home/ec2-user/blog/log/
+
+  level:
+    root: debug
+
+spring:
+  profiles:
+    include: console-logging, file-logging, thread-logging
