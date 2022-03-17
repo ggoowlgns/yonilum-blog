@@ -8,12 +8,14 @@
     var userId = ${user.userId};
     var category = '${categoryName}'
 
-    var postingRequest = RestClient.GET('/api/posting/list?pageSize=7');
-    if (category !== "All") postingRequest = RestClient.GET('/api/posting/list?category='+category+'&pageSize=7');
+    var postingRequest = RestClient.GET('/api/posting/list?page=0&size=7');
+    if (category !== "All") postingRequest = RestClient.GET('/api/posting/list?category='+category+'&page=0&size=7');
 
     var posting_content_dom = $("#posting-content");
 
     postingRequest.done(function (data) {
+      console.log("/posting/list : " )
+      console.log(data)
         var postings = []
         for (var posting_index in data.content) {
           console.log(data[posting_index])
@@ -111,7 +113,6 @@
         }
 
         getLayout();
-
         $(".category__header__filter__item").on("click", function (e) {
             e.preventDefault();
             $(".category__header__filter__item").removeClass("active");

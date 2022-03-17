@@ -1,8 +1,9 @@
 <#--            Main Content-->
 
 <script>
+  <#--TODO : page button action function : page=0 의 쿼리파람 값만 변경해서 날려주기 : 데이터는 그대로 가져온다.-->
 
-
+  <#--TODO : totalPages 수에 따라 pageButton 만들기  -->
 </script>
 
 <div class="col-12 col-md-7 col-lg-8 order-md-1">
