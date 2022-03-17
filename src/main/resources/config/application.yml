@@ -1,3 +1,8 @@
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    root: debug
+
 yonilum:
   base:
     url: http://blog.yonilum.com
@@ -15,7 +20,7 @@ server:
 
 spring:
   freemarker:
-    cache: false
+    cache: true
     check-template-location: true
     prefix: /
     settings:

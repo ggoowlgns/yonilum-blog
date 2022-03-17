@@ -1,6 +1,8 @@
+<#--DEPRECATED-->
+<#--보관 차원으로 관리-->
 <div class="col-12 col-md-4 order-md-2">
     <script>
-      var categoryRequest = RestClient.GET('/api/category/list');
+      var categoryRequest = RestClient.GET('/api/category/top' + '?count=5');
       categoryRequest.done(function (data) {
         console.log(data);
         var categoriesDom = $('#posting-categories');

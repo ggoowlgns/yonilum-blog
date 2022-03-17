@@ -121,7 +121,7 @@
         <div class="container">
           <div class="post-standard -slide">
             <div class="row">
-              <#include "/posting/post_gallery_rights.ftl">
+              <#include "/common/common-rights.ftl">
               <#include "/posting/post_gallery_center.ftl">
             </div>
           </div>

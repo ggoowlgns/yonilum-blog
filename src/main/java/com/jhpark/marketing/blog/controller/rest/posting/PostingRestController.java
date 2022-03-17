@@ -37,7 +37,7 @@ public class PostingRestController extends BaseViewController {
     if (category.equals("")) {
       postings = postingService.getAllPosting();
     } else {
-      postings = categoryService.getPostingsByCategory(category);
+      postings = postingService.getPostingsByCategory(category);
     }
     return postings;
   }
@@ -56,8 +56,8 @@ public class PostingRestController extends BaseViewController {
   }
 
   @RequestMapping(path = "/top", method = RequestMethod.GET)
-  public List<Posting> top(@RequestParam(value = "count", required = false, defaultValue = "10") int count) {
-    List<Posting> postings = postingService.getTopViewsPosting(count);
+  public Slice<Posting> top(@RequestParam(value = "count", required = false, defaultValue = "10") int count) {
+    Slice<Posting> postings = postingService.getTopViewsPosting(count);
     return postings;
   }
 

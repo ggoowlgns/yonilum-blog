@@ -3,6 +3,7 @@ package com.jhpark.marketing.blog.payload.response;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.OrderBy;
 
 import javax.annotation.Nullable;
 import javax.persistence.Entity;

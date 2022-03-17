@@ -40,7 +40,7 @@ public class PostingService {
     return postingRepository.findAllByPostingIdIsLessThanOrderByCreatedDatetimeDesc(postingId, PageRequest.of(0,4));
   }
 
-  public List<Posting> getTopViewsPosting(int limit) {
+  public Slice<Posting> getTopViewsPosting(int limit) {
     return postingRepository.findAllByOrderByViewsDesc(PageRequest.of(0, limit));
   }
 
@@ -48,8 +48,15 @@ public class PostingService {
     return postingRepository.findPostingByPostingId(postingId);
   }
 
-  public List<CategoryListElementResponse> getCategoryGroupByCount() {
-    return categoryRepository.findGroupByCategoryOrderByCategoryCountWithJPQL();
+  public List<Posting> getPostingsByCategory(String categoryName) {
+    List<Posting> postings = new ArrayList<>();
+    List<Category> categories;
+
+    categories = categoryRepository.findAllByCategoryOrderByPostingIdDesc(categoryName);
+    categories.stream()
+        .forEach(category -> postings.add(category.getPostingId()));
+
+    return postings;
   }
 
   @Transactional

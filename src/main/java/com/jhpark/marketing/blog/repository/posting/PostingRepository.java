@@ -14,7 +14,7 @@ public interface PostingRepository extends JpaRepository<Posting, Long> {
   Slice<Posting> findAllByOrderByCreatedDatetimeDesc(Pageable pageable);
   Slice<Posting> findAllByPostingIdIsLessThanOrderByCreatedDatetimeDesc(long postingId, Pageable pageable);
 
-  List<Posting> findAllByOrderByViewsDesc(Pageable pageable);
+  Slice<Posting> findAllByOrderByViewsDesc(Pageable pageable);
   Posting findPostingByPostingId(long postingId);
 
 }

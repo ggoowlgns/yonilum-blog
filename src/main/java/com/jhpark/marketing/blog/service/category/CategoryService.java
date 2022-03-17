@@ -6,6 +6,8 @@ import com.jhpark.marketing.blog.payload.response.CategoryListElementResponse;
 import com.jhpark.marketing.blog.repository.category.CategoryRepository;
 import com.jhpark.marketing.blog.repository.posting.PostingRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Slice;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -16,15 +18,9 @@ import java.util.List;
 public class CategoryService {
   private final CategoryRepository categoryRepository;
 
-  public List<Posting> getPostingsByCategory(String categoryName) {
-    List<Posting> postings = new ArrayList<>();
-    List<Category> categories;
 
-    categories = categoryRepository.findAllByCategoryOrderByPostingIdDesc(categoryName);
-    categories.stream()
-        .forEach(category -> postings.add(category.getPostingId()));
-
-    return postings;
+  public Slice<CategoryListElementResponse> getTopCategoryByView(int count) {
+    return categoryRepository.findAllWithJPQL(PageRequest.of(0,count));
   }
 
 
