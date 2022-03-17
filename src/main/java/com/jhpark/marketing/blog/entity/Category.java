@@ -32,6 +32,8 @@ public class Category {
 
   private String category;
 
+  private String categoryImageUrl;
+
   @CreationTimestamp
   private LocalDateTime createdDatetime;
 
@@ -39,11 +41,12 @@ public class Category {
   private LocalDateTime updateDatetime;
 
   @Builder
-  public Category(long categoryId, Posting postingId, int categoryIndex, String category, LocalDateTime createdDatetime, LocalDateTime updateDatetime) {
+  public Category(long categoryId, Posting postingId, int categoryIndex, String category, String categoryImageUrl, LocalDateTime createdDatetime, LocalDateTime updateDatetime) {
     this.categoryId = categoryId;
     this.postingId = postingId;
     this.categoryIndex = categoryIndex;
     this.category = category;
+    this.categoryImageUrl = categoryImageUrl;
     this.createdDatetime = createdDatetime;
     this.updateDatetime = updateDatetime;
   }

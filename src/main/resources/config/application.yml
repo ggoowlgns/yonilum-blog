@@ -19,6 +19,8 @@ server:
 
 
 spring:
+  profiles:
+    include: console-logging
   freemarker:
     cache: true
     check-template-location: true
