@@ -1,4 +1,10 @@
 <#--            Main Content-->
+
+<script>
+
+
+</script>
+
 <div class="col-12 col-md-7 col-lg-8 order-md-1">
   <div class="category__header">
     <div class="category__header__text">

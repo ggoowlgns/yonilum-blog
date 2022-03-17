@@ -8,16 +8,16 @@
     var userId = ${user.userId};
     var category = '${categoryName}'
 
-    var postingRequest = RestClient.GET('/api/posting/list');
-    if (category !== "All") postingRequest = RestClient.GET('/api/posting/list?category='+category);
+    var postingRequest = RestClient.GET('/api/posting/list?pageSize=7');
+    if (category !== "All") postingRequest = RestClient.GET('/api/posting/list?category='+category+'&pageSize=7');
 
     var posting_content_dom = $("#posting-content");
 
     postingRequest.done(function (data) {
         var postings = []
-        for (var posting_index in data) {
+        for (var posting_index in data.content) {
           console.log(data[posting_index])
-          let temp_posting = data[posting_index]
+          let temp_posting = data.content[posting_index]
           var result_posting = {}
           result_posting['image'] = temp_posting.thumbnailUrl;
           result_posting['category'] = temp_posting.postingCategories.map(e => e.category).join(", ");
@@ -32,12 +32,12 @@
                                               temp_paragraph;
           postings.push(result_posting)
         }
+        let total_elements = data.totalElements
+        let pageCount = data.totalPages
+        let elementCountInPage = data.size
         categoryGenerator(postings);
     });
 
-
-    //TODO : get trendPosting
-    //TODO : get categories
 
     function categoryGenerator(data) {
         function getLayout() {

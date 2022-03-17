@@ -3,13 +3,12 @@ package com.jhpark.marketing.blog.controller.rest.posting;
 import com.jhpark.marketing.blog.controller.BaseViewController;
 import com.jhpark.marketing.blog.entity.Posting;
 import com.jhpark.marketing.blog.payload.request.PostingRequest;
-import com.jhpark.marketing.blog.payload.response.CategoryListElementResponse;
 import com.jhpark.marketing.blog.service.category.CategoryService;
 import com.jhpark.marketing.blog.service.posting.PostingService;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.data.domain.Slice;
+import org.springframework.data.domain.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,14 +31,17 @@ public class PostingRestController extends BaseViewController {
   }
 
   @RequestMapping(path = "/list", method = RequestMethod.GET)
-  public List<Posting> list(@RequestParam(value = "category", required = false, defaultValue = "") String category) {
+  public Page<Posting> list(@RequestParam(value = "category", required = false, defaultValue = "") String category,
+                            Pageable pageable) {
     List<Posting> postings = new ArrayList();
+    Page<Posting> pagePostings;
     if (category.equals("")) {
-      postings = postingService.getAllPosting();
+      pagePostings = postingService.getAllPosting(pageable);
     } else {
-      postings = postingService.getPostingsByCategory(category);
+      postings = postingService.getPostingsByCategory(pageable, category);
+      pagePostings = new PageImpl<>(postings, pageable, postings.size());
     }
-    return postings;
+    return pagePostings;
   }
 
   @RequestMapping(path = "/latest", method = RequestMethod.GET)

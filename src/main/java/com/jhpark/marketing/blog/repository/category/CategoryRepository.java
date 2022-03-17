@@ -3,6 +3,7 @@ package com.jhpark.marketing.blog.repository.category;
 import com.jhpark.marketing.blog.entity.Category;
 import com.jhpark.marketing.blog.payload.response.CategoryListElementResponse;
 import com.jhpark.marketing.blog.payload.response.CategoryWithUrlElement;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Slice;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -32,5 +33,5 @@ public interface CategoryRepository extends JpaRepository<Category, Long> {
   " WHERE category IN (:categories) AND c.categoryImageUrl IS NOT NULL")
   List<CategoryWithUrlElement> getCategoryImageUrlByCategoryName(@Param("categories") List<String> categories);
 
-  List<Category> findAllByCategoryOrderByPostingIdDesc(String category);
+  Page<Category> findAllByCategoryOrderByPostingIdDesc(Pageable pageable, String category);
 }
