@@ -5,7 +5,7 @@ name: CI CD
 
 on:
   push:
-    branches: [ master, alpha, features/posting_common ]
+    branches: [ master, alpha ]
   pull_request:
     branches: [ master, alpha ]
 
