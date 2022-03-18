@@ -64,7 +64,7 @@ const DUMMY_DATA = [
   },
 ];
 
-let currentCategoryLayout = "";
+
 
 //==========================================
 //  Utilities

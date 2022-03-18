@@ -2,13 +2,14 @@ package com.jhpark.marketing.blog.service.posting;
 
 import com.jhpark.marketing.blog.entity.*;
 import com.jhpark.marketing.blog.payload.request.PostingRequest;
-import com.jhpark.marketing.blog.payload.response.CategoryListElementResponse;
 import com.jhpark.marketing.blog.repository.category.CategoryRepository;
 import com.jhpark.marketing.blog.repository.posting.*;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Slice;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -32,6 +33,10 @@ public class PostingService {
     return postingRepository.findAllByOrderByPostingIdDesc();
   }
 
+  public Page<Posting> getAllPosting(Pageable pageable) {
+    return postingRepository.findAllByOrderByPostingIdDesc(pageable);
+  }
+
   public Slice<Posting> getLatestPosting(int start, int end) {
     return postingRepository.findAllByOrderByCreatedDatetimeDesc(PageRequest.of(start,end));
   }
@@ -48,12 +53,12 @@ public class PostingService {
     return postingRepository.findPostingByPostingId(postingId);
   }
 
-  public List<Posting> getPostingsByCategory(String categoryName) {
+  public List<Posting> getPostingsByCategory(Pageable pageable, String categoryName) {
     List<Posting> postings = new ArrayList<>();
-    List<Category> categories;
+    Page<Category> categories;
 
-    categories = categoryRepository.findAllByCategoryOrderByPostingIdDesc(categoryName);
-    categories.stream()
+    categories = categoryRepository.findAllByCategoryOrderByPostingIdDesc(pageable,categoryName);
+    categories.getContent().stream()
         .forEach(category -> postings.add(category.getPostingId()));
 
     return postings;

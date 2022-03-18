@@ -19,7 +19,7 @@
       function addCategory(categories, categoriesDom) {
           for (var category of categories.content) {
               var categoryDom = '<a class="category -bar " href="/category?categoryName='+ category.category+'">' +
-                  '<div class="category__background" style="background-image: url(/assets/images/backgrounds/category-1.png)"></div>' +
+                  '<div class="category__background" style="background-image: url('+category.categoryImageUrl+')"></div>' +
                   '<h5 class="title">'+category.category+'</h5>' +
                   '<h5 class="quantity">'+category.categoryCount+'</h5>' +
                   '</a>'
