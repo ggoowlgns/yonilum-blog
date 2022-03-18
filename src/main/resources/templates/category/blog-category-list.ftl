@@ -3,22 +3,35 @@
 <#include "../header/default-css.ftl">
 <body>
 <#include "../header/default.ftl">
+<script>
+  $(document).ready(function () {
+    $(".category__header__filter__item").on("click", function (e) {
+      e.preventDefault();
+      $(".category__header__filter__item").removeClass("active");
+      $(this).addClass("active");
+      setLayout();
+    });
+  })
+</script>
+
   <script>
     var postings = []
     var userId = ${user.userId};
     var category = '${categoryName}'
 
-    getAndSetPageList(category, 0)
+
     var posting_content_dom = $("#posting-content");
+    let currentCategoryLayout = "";
+
+    getAndSetPageList(category, 0)
+
 
     function getAndSetPageList(categoryName, pageNum) {
       var postingRequest = RestClient.GET('/api/posting/list?page='+pageNum+'&size=7');
+      var __this = this;
       if (category !== "All") postingRequest = RestClient.GET('/api/posting/list?category='+categoryName+'&page='+pageNum+'&size=7');
       postingRequest.done(function (data) {
 
-
-        console.log("/posting/list : " )
-        console.log(data)
         var postings = []
         for (var posting_index in data.content) {
           console.log(data[posting_index])
@@ -44,23 +57,32 @@
         if (pageNum === 0 ) {
           initPageBtns(pageCount)
         }
+
         setPostingList(postings);
+        __this.postings = postings;
       });
     }
 
     function setPostingList(data) {
-        function getLayout() {
-            let $activeCategoryItem = $(".category__header__filter__item.active");
-            let $categoryContent = $(".category_content");
-            const currentLayout = $activeCategoryItem.data("layout");
-            let content = "";
-            // if (currentCategoryLayout === currentLayout) {
-            //     return;
-            // }
-            currentCategoryLayout = currentLayout;
-            if (currentCategoryLayout === "grid") {
-                data.forEach((item, index) => {
-                    content += `
+        setLayout(data);
+    }
+
+    function setLayout(data) {
+      if (data === undefined) {
+        data = this.postings
+      }
+      let $activeCategoryItem = $(".category__header__filter__item.active");
+      let $categoryContent = $(".category_content");
+      $categoryContent.masonry("destroy");
+      const currentLayout = $activeCategoryItem.data("layout");
+      let content = "";
+      // if (currentCategoryLayout === currentLayout) {
+      //     return;
+      // }
+      currentCategoryLayout = currentLayout;
+      if (currentCategoryLayout === "grid") {
+        data.forEach((item, index) => {
+          content += `
                       <div class="post-card -center"><a class="card__cover" href="/posting/`+item.postingId+`"><img src="`+item.image+`" alt="`+item.title+`"></a>
                         <div class="card__content">
                         <h5 class="card__content-category">`+item.category+`</h5><a class="card__content-title" href="/posting/`+item.postingId+`">`+item.title+`</a>
@@ -75,24 +97,24 @@
                       </div>
                     </div>
                     `;
-                });
+        });
 
-                $categoryContent
-                    .empty()
-                    .addClass("-grid")
-                    .removeClass("-list")
-                    .prepend(content);
-                let $masonryBeauty = $categoryContent.masonry({
-                    itemSelector: ".post-card",
-                    gutter: 20,
-                });
-                $masonryBeauty.imagesLoaded().progress(function () {
-                    $masonryBeauty.masonry("layout");
-                });
-            } else {
-                $categoryContent.masonry("destroy");
-                data.forEach((item, index) => {
-                    content += `
+        $categoryContent
+          .empty()
+          .addClass("-grid")
+          .removeClass("-list")
+          .prepend(content);
+        /*masonry 를 쓰면 날라감 content 소속에서 빠짐*/
+        let $masonryBeauty = $categoryContent.masonry({
+          itemSelector: ".post-card",
+          // gutter: 20,
+        });
+        $masonryBeauty.imagesLoaded().progress(function () {
+          $masonryBeauty.masonry("layout");
+        });
+      } else {
+        data.forEach((item, index) => {
+          content += `
                     <div class="col-12">
                       <div class="post-card -small -horizontal"><a class="card__cover" href="/posting/`+item.postingId+`" tabindex="0"><img src="`+item.image+`" alt="`+item.title+`"></a>
                         <div class="card__content">
@@ -109,23 +131,14 @@
                         </div>
                       </div>
                     </div>`;
-                });
-                content = `<div class="row">` + content + `</div>`;
-                $categoryContent
-                    .empty()
-                    .addClass("-list")
-                    .removeClass("-grid")
-                    .prepend(content);
-            }
-        }
-
-        getLayout();
-        $(".category__header__filter__item").on("click", function (e) {
-            e.preventDefault();
-            $(".category__header__filter__item").removeClass("active");
-            $(this).addClass("active");
-            getLayout();
         });
+        content = `<div class="row">` + content + `</div>`;
+        $categoryContent
+          .empty()
+          .addClass("-list")
+          .removeClass("-grid")
+          .prepend(content);
+      }
     }
 
     function initPageBtns(pageCount) {
@@ -143,6 +156,7 @@
         .empty()
         .prepend(content);
     }
+
   </script>
     <div class="no-pd" id="content">
       <div class="container">

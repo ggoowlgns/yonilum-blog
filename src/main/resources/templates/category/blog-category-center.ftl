@@ -1,7 +1,6 @@
 <#--            Main Content-->
 
 <script>
-  <#--TODO : page button action function : page=0 의 쿼리파람 값만 변경해서 날려주기 : 데이터는 그대로 가져온다.-->
   function pageNumBtnClick(categoryName, pageNum, pageCount) {
     console.log("In pageNumBtnClick - categoryName : " + categoryName + " pageNum : " + pageNum)
     changeActivePageNumBtn(pageNum, pageCount);
