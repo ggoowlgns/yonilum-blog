@@ -8,14 +8,17 @@
     var userId = ${user.userId};
     var category = '${categoryName}'
 
-    var postingRequest = RestClient.GET('/api/posting/list?page=0&size=7');
-    if (category !== "All") postingRequest = RestClient.GET('/api/posting/list?category='+category+'&page=0&size=7');
-
+    getAndSetPageList(category, 0)
     var posting_content_dom = $("#posting-content");
 
-    postingRequest.done(function (data) {
-      console.log("/posting/list : " )
-      console.log(data)
+    function getAndSetPageList(categoryName, pageNum) {
+      var postingRequest = RestClient.GET('/api/posting/list?page='+pageNum+'&size=7');
+      if (category !== "All") postingRequest = RestClient.GET('/api/posting/list?category='+categoryName+'&page='+pageNum+'&size=7');
+      postingRequest.done(function (data) {
+
+
+        console.log("/posting/list : " )
+        console.log(data)
         var postings = []
         for (var posting_index in data.content) {
           console.log(data[posting_index])
@@ -30,26 +33,30 @@
           let temp_paragraph = temp_posting.postingContentParagraphs[0].content
           const PARAGRAPH_LENGTH = 20;
           result_posting['content'] = temp_paragraph.length > PARAGRAPH_LENGTH ?
-                                              temp_paragraph.substring(0, PARAGRAPH_LENGTH - 3) + "..." :
-                                              temp_paragraph;
+            temp_paragraph.substring(0, PARAGRAPH_LENGTH - 3) + "..." :
+            temp_paragraph;
           postings.push(result_posting)
         }
-        let total_elements = data.totalElements
-        let pageCount = data.totalPages
-        let elementCountInPage = data.size
-        categoryGenerator(postings);
-    });
 
+        let total_elements = data.totalElements;
+        let pageCount = data.totalPages;
+        let elementCountInPage = data.size;
+        if (pageNum === 0 ) {
+          initPageBtns(pageCount)
+        }
+        setPostingList(postings);
+      });
+    }
 
-    function categoryGenerator(data) {
+    function setPostingList(data) {
         function getLayout() {
             let $activeCategoryItem = $(".category__header__filter__item.active");
             let $categoryContent = $(".category_content");
             const currentLayout = $activeCategoryItem.data("layout");
             let content = "";
-            if (currentCategoryLayout === currentLayout) {
-                return;
-            }
+            // if (currentCategoryLayout === currentLayout) {
+            //     return;
+            // }
             currentCategoryLayout = currentLayout;
             if (currentCategoryLayout === "grid") {
                 data.forEach((item, index) => {
@@ -119,6 +126,22 @@
             $(this).addClass("active");
             getLayout();
         });
+    }
+
+    function initPageBtns(pageCount) {
+      let $categoryPagenum = $("#category_pagenum");
+      var content = '<ul>';
+      for (var i=0; i<pageCount; i++) {
+        if (i === 0) {
+          content +=  '<li id="page_num_'+i+'" class="active"><a href="javascript:pageNumBtnClick(\'${categoryName}\', '+i+', '+pageCount+')">'+(i+1)+'</a></li>'
+        } else {
+          content += '<li id="page_num_'+i+'" class="pagination__page-number"><a href="javascript:pageNumBtnClick(\'${categoryName}\', '+i+', '+pageCount+')">'+(i+1)+'</a></li>'
+        }
+      }
+      content += '</ul>';
+      $categoryPagenum
+        .empty()
+        .prepend(content);
     }
   </script>
     <div class="no-pd" id="content">
