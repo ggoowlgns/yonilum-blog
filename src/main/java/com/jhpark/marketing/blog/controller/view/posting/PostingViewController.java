@@ -50,4 +50,18 @@ public class PostingViewController extends BaseViewController {
 
     return "posting/post_editor";
   }
+
+  @RequestMapping(path = "/editorMD", method = RequestMethod.GET)
+  public String editorMarkdown(@RequestParam(value = "postingId", required = false) Optional<Long> postingId,
+                       ModelMap modelMap, User user) {
+    if (!postingId.isPresent()) {
+      LOG.info("NEW POSTING");
+    } else {
+      LOG.info("EDIT POSTING : {}", postingId.get());
+      modelMap.put("postingId", postingId.get());
+    }
+    modelMap.put("user", user);
+
+    return "posting/post_editor_markdown";
+  }
 }
