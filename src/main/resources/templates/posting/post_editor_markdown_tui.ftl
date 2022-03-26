@@ -1,3 +1,4 @@
+<#--Deprecated-->
 <head>
   <!-- Editor's Dependecy Style -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.css" />
@@ -13,7 +14,8 @@
 <script>
   const editor = new toastui.Editor({
     el: document.querySelector('#editor'),
-    previewStyle: 'vertical',
+    // previewStyle: 'vertical',
+    previewStyle: 'tab',
     height: '500px',
     initialValue: 'asdasd'
   });

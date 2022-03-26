@@ -1,66 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <#include "/header/default-css.ftl">
+<head>
+  <!-- Editor's Dependecy Style -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.css" />
+  <!-- Editor's Style -->
+  <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+</head>
 <body>
 <#include "/header/default.ftl">
 
+<div id="content">
+    <div class="post">
+        <div class="container">
+            <div class="post-standard -slide">
+                <div class="row">
+                    <div class="post-footer" style="width: 100%">
+                        <h3 class="comment-title"> <span>Posting Editor Page</span></h3>
+                        <div class="post-footer__comment__form">
+<#--                            <form action="/api/posting">-->
+                            <form>
+                              <div class="row form-group">
+                                <div class="col-12 col-sm-12">
+                                  <input id="posting-category" type="text" placeholder="Category" name="category" style="max-width: 500px"/>
+                                </div>
+                              </div>
+                              <div class="row form-group">
+                                <div class="col-12 col-sm-12">
+                                  <input id="posting-title" type="text" placeholder="Title" name="title" style="max-width: 500px"/>
+                                </div>
+                              </div>
+
+                              <#--Markdown Editor (TUI)-->
+                              <div class="row form-group" style="margin-bottom: 100px">
+                                <div class="col-12 col-xm-12">
+                                  <div id="tui-md-editor"></div>
+                                </div>
+                              </div>
+
+                              <#--Image Upload-->
+                              <div class="row">
+                                <!-- /uploader -->
+                                <div class="col-md-6 col-sm-12">
+                                  <!-- Our markup, the important part here! -->
+                                  <div id="drag-and-drop-zone" class="dm-uploader p-5">
+                                    <h3 class="mb-5 mt-5 text-muted">Drag &amp; drop files here</h3>
+                                    <div class="btn btn-primary btn-block mb-5">
+                                      <span>Open the file Browser</span>
+                                      <input type="file" title='Click to add Files' />
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!-- /file list -->
+                                <div class="col-md-6 col-sm-12">
+                                  <div class="card h-100">
+                                    <div class="card-header">
+                                      File List
+                                    </div>
+                                    <ul class="list-unstyled p-2 d-flex flex-column col" id="files">
+                                      <li class="text-muted text-center empty">No files uploaded.</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!--debug message-->
+                              <div class="row">
+                                <div class="col-12">
+                                  <div class="card h-100">
+                                    <div class="card-header">
+                                      Debug Messages
+                                    </div>
+                                    <ul class="list-group list-group-flush" id="debug">
+                                      <li class="list-group-item text-muted empty">Loading plugin....</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </form>
+                        </div>
+
+                        <#--Submit Button-->
+                        <div class="row center">
+                            <#if postingId??>
+                              <button id="posting-update-btn" class="btn -normal btn-primary" onclick="updatePosting()">Update Posting</button>
+                            <#else >
+                              <button id="posting-add-btn" class="btn -normal btn-primary" onclick="addPosting()">Add Posting</button>
+                            </#if>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<#include "/footer/default.ftl">
+</body>
+
 <script>
-  // Add New Posting || Edit Existing Posting
-  var userId = ${user.userId};
-  <#if postingId??>
-  var postingRequest = RestClient.GET('/api/posting/${postingId}');
-  postingRequest.done(function (data) {
-    console.log(data);
-    data.postingCategories.sort(function (a, b) {
-      if (a.categoryIndex > b.categoryIndex) {
-        return 1;
-      } else if (a.categoryIndex < b.categoryIndex) {
-        return -1;
-      } return 0;
+    // Add New Posting || Edit Existing Posting
+    var userId = ${user.userId};
+    <#if postingId??>
+    var postingRequest = RestClient.GET('/api/posting/${postingId}');
+    postingRequest.done(function (data) {
+        console.log(data);
+        data.postingCategories.sort(function (a, b) {
+            if (a.categoryIndex > b.categoryIndex) {
+                return 1;
+            } else if (a.categoryIndex < b.categoryIndex) {
+                return -1;
+            } return 0;
+        });
+        data.postingImages.sort(function (a, b) {
+            if (a.postingImageId > b.postingImageId) {
+                return 1;
+            } else if (a.postingImageId < b.postingImageId) {
+                return -1;
+            } return 0;
+        })
+        data.postingContentParagraphs.sort(function (a, b) {
+            if (a.paragraphIndex > b.paragraphIndex) {
+                return 1;
+            } else if (a.paragraphIndex < b.paragraphIndex) {
+                return -1;
+            } return 0;
+        })
+        var categoryList = data.postingCategories;
+        var categoriesStr = "";
+        for (var category of categoryList) {
+            categoriesStr += category.category+",";
+        }
+
+        var contentParagraphList = data.postingContentParagraphs;
+        var contentStr = "";
+        for (var paragraph of contentParagraphList) {
+            contentStr += paragraph.content + "\n\n";
+        }
+
+        $("#posting-category").val(categoriesStr);
+        $("#posting-title").val(data.title);
+        //TODO : 기존에 있던 content tui-md-editor 에 가져다 넣기
+
+        var imageList = data.postingImages;
     });
-    data.postingImages.sort(function (a, b) {
-      if (a.postingImageId > b.postingImageId) {
-        return 1;
-      } else if (a.postingImageId < b.postingImageId) {
-        return -1;
-      } return 0;
-    })
-    data.postingContentParagraphs.sort(function (a, b) {
-      if (a.paragraphIndex > b.paragraphIndex) {
-        return 1;
-      } else if (a.paragraphIndex < b.paragraphIndex) {
-        return -1;
-      } return 0;
-    })
-    var categoryList = data.postingCategories;
-    var categoriesStr = "";
-    for (var category of categoryList) {
-      categoriesStr += category.category+",";
+    </#if>
+
+
+    function addContentParagraph() {
+
     }
 
-    var contentParagraphList = data.postingContentParagraphs;
-    var contentStr = "";
-    for (var paragraph of contentParagraphList) {
-      contentStr += paragraph.content + "\n\n";
+    function addImage() {
+
     }
 
-    $("#posting-category").val(categoriesStr);
-    $("#posting-title").val(data.title);
-    $("#posting-editor-container").children('.ql-editor').text(contentStr);
+    function addPosting() {
+        var categoryList = $("#posting-category").val().split(",");
+        var title = $("#posting-title").val();
+        var imagePaths = []
+        for (var imageDom of $("#files").children(".media")) {
+            imagePaths.push(imageDom.path);
+        }
+        var contentParagraphs = quill.getContents().ops[0].insert.split('\n\n');
 
-    var imageList = data.postingImages;
-  });
-  </#if>
+        console.log(contentParagraphs)
 
+        var requestBody = {
+            'title' : title,
+            'userId' : userId,
+            'thumbnailUrl' : imagePaths[0],
+            'postingType' : '0',
+            'categories' : categoryList,
+            'images' : imagePaths,
+            'paragraphs' : contentParagraphs
+        };
 
-  function addContentParagraph() {
+        RestClient.POST(
+            '/api/posting',
+            requestBody,
+        ).done(function (data, textStatus, request) {
+            console.log(data);
+            var createdPostingPath = request.getResponseHeader('Location')
+            window.location.replace(
+                window.location.protocol + "//" +
+                window.location.hostname +
+                createdPostingPath
+            )
 
-  }
+        })
+    }
 
-  function addImage() {
+    function updatePosting() {
 
-  }
-
+    }
 </script>
 
 <script type="text/template" id="qq-template-gallery">
@@ -140,170 +274,11 @@
   </div>
 </script>
 
-
-<div id="content">
-    <div class="post">
-        <div class="container">
-            <div class="post-standard -slide">
-                <div class="row">
-                    <div class="post-footer" style="width: 70%">
-                        <h3 class="comment-title"> <span>Posting Editor Page</span></h3>
-                        <div class="post-footer__comment__form">
-<#--                            <form action="/api/posting">-->
-                            <form >
-                              <div class="row form-group">
-                                <div class="col-12 col-sm-12">
-                                  <input id="posting-category" type="text" placeholder="Category" name="category" style="max-width: 500px"/>
-                                </div>
-                              </div>
-                              <div class="row form-group">
-                                <div class="col-12 col-sm-12">
-                                  <input id="posting-title" type="text" placeholder="Title" name="title" style="max-width: 500px"/>
-                                </div>
-                              </div>
-                              <div id="posting-content" class="row form-group" style="margin-bottom: 100px">
-                                <div class="col-12 col-xm-12">
-                                  <div id="posting-editor-container"></div>
-                                </div>
-                              </div>
-
-                              <div class="row">
-                                <div class="col-md-6 col-sm-12">
-
-                                  <!-- Our markup, the important part here! -->
-                                  <div id="drag-and-drop-zone" class="dm-uploader p-5">
-                                    <h3 class="mb-5 mt-5 text-muted">Drag &amp; drop files here</h3>
-
-                                    <div class="btn btn-primary btn-block mb-5">
-                                      <span>Open the file Browser</span>
-                                      <input type="file" title='Click to add Files' />
-                                    </div>
-                                  </div><!-- /uploader -->
-
-                                </div>
-                                <div class="col-md-6 col-sm-12">
-                                  <div class="card h-100">
-                                    <div class="card-header">
-                                      File List
-                                    </div>
-
-                                    <ul class="list-unstyled p-2 d-flex flex-column col" id="files">
-                                      <li class="text-muted text-center empty">No files uploaded.</li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div><!-- /file list -->
-
-                              <div class="row">
-                                <div class="col-12">
-                                  <div class="card h-100">
-                                    <div class="card-header">
-                                      Debug Messages
-                                    </div>
-
-                                    <ul class="list-group list-group-flush" id="debug">
-                                      <li class="list-group-item text-muted empty">Loading plugin....</li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div> <!-- /debug -->
-
-                              <#--<div id="" class="row">
-                                <div class="col-12 col-sm-4">
-                                    <input type="text" placeholder="Name" name="name"/>
-                                </div>
-                                <div class="col-12 col-sm-4">
-                                    <input type="email" placeholder="Email" name="email"/>
-                                </div>
-                                <div class="col-12 col-sm-4">
-                                    <input type="text" placeholder="Webiste" name="website"/>
-                                </div>
-                              </div>-->
-
-
-
-
-                            </form>
-                          <div class="row center">
-                              <#if postingId??>
-                                <button id="posting-update-btn" class="btn -normal btn-primary" onclick="updatePosting()">Update Posting</button>
-                              <#else >
-                                <button id="posting-add-btn" class="btn -normal btn-primary" onclick="addPosting()">Add Posting</button>
-                              </#if>
-                          </div>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<#include "/footer/default.ftl">
-</body>
-
-<script>
-  var quill = new Quill('#posting-editor-container', {
-    modules: {
-      toolbar: [
-        [{ header: [1, 2, 3, false] }],
-        ['bold', 'italic'],
-        ['link', 'blockquote', 'code-block', 'image'],
-        [{ list: 'ordered' }, { list: 'bullet' }]
-      ]
-    },
-    placeholder: 'Compose an epic...',
-    theme: 'snow'
-  });
-
-  function addPosting() {
-    var categoryList = $("#posting-category").val().split(",");
-    var title = $("#posting-title").val();
-    var imagePaths = []
-    for (var imageDom of $("#files").children(".media")) {
-     imagePaths.push(imageDom.path);
-    }
-    var contentParagraphs = quill.getContents().ops[0].insert.split('\n\n');
-
-    console.log(contentParagraphs)
-
-    var requestBody = {
-      'title' : title,
-      'userId' : userId,
-      'thumbnailUrl' : imagePaths[0],
-      'postingType' : '0',
-      'categories' : categoryList,
-      'images' : imagePaths,
-      'paragraphs' : contentParagraphs
-    };
-
-    RestClient.POST(
-      '/api/posting',
-      requestBody,
-    ).done(function (data, textStatus, request) {
-      console.log(data);
-      var createdPostingPath = request.getResponseHeader('Location')
-      window.location.replace(
-        window.location.protocol + "//" +
-        window.location.hostname +
-        createdPostingPath
-      )
-
-    })
-  }
-
-  function updatePosting() {
-
-  }
-</script>
 <script type="text/html" id="debug-template">
   <li class="list-group-item text-%%color%%"><strong>%%date%%</strong>: %%message%%</li>
 </script>
 <script type="text/html" id="files-template">
   <li class="media" >
-
     <div class="media-body mb-1">
       <p class="mb-2">
         <strong>%%filename%%</strong> - Status: <span class="text-muted">Waiting</span>
@@ -319,5 +294,19 @@
       <hr class="mt-1 mb-1" />
     </div>
   </li>
+</script>
+
+<#--toast-ui -->
+<script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.js"></script>
+<script>
+    const editor = new toastui.Editor({
+        el: document.querySelector('#tui-md-editor'),
+        // previewStyle: 'vertical',
+        previewStyle: 'tab',
+        height: '500px',
+        initialValue: 'asdasd'
+    });
+
+    editor.getMarkdown();
 </script>
 </html>

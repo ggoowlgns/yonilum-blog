@@ -34,7 +34,7 @@
                     <#if user.userId != 99999>
                     <li class="nav-item <#if springMacroRequestContext.requestUri?contains("/posting/editor")> active</#if>">
 <#--                            <a href="/posting/editor">Add Posting</a></li>-->
-                            <a href="/posting/editorMD">Add Posting</a></li>
+                            <a href="/posting/editor">Add Posting</a></li>
                     </#if>
 
 <#--                    <li class="nav-item"><a href="#">Pages</a>
