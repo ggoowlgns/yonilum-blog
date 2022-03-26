@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<#include "../header/default-css.ftl">
+<#include "../header/default-meta.ftl">
 <body>
 <#include "../header/default.ftl">
 <script>

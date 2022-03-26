@@ -1,10 +1,10 @@
 <script rel="script/javascript" src="/assets/js/jquery.min.js"></script>
-
-<!-- Main Quill library -->
-<link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-<script src="//cdn.quilljs.com/1.3.6/quill.js"></script>
-
 <script rel="script/javascript" src="/assets/js/yonilum/rest-client.js"></script>
+
+<script src="/assets/js/file-uploader/jquery.dm-uploader.js"></script>
+<script src="/assets/js/file-uploader/ui-main.js"></script>
+<script src="/assets/js/file-uploader/ui-multiple.js"></script>
+<script src="/assets/js/file-uploader/basic.js"></script>
 
 <head>
     <meta charset="UTF-8"/>
@@ -27,10 +27,13 @@
     <!-- Theme included stylesheets -->
 
     <!--endbuild-->
+    <!-- Main Quill library -->
+    <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <script src="//cdn.quilljs.com/1.3.6/quill.js"></script>
+
+    <!-- Editor's Dependecy Style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.css" />
+    <!-- Editor's Style -->
+    <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+
 </head>
-
-
-<script src="/assets/js/file-uploader/jquery.dm-uploader.js"></script>
-<script src="/assets/js/file-uploader/ui-main.js"></script>
-<script src="/assets/js/file-uploader/ui-multiple.js"></script>
-<script src="/assets/js/file-uploader/basic.js"></script>

@@ -36,8 +36,8 @@
 
     <div class="post-footer">
         <#--Posting Tags-->
-        <div id="posting-tags" class="post-footer__tags center">
-            <div class="tags-group">
+        <div class="post-footer__tags center">
+            <div id="posting-tags" class="tags-group">
                 <#--<a class="tag-btn" href="/category/{categoryName}">{categoryName}</a>-->
             </div>
         </div>
