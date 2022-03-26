@@ -25,7 +25,7 @@
       }
       last_posting_id = posting.postingId;
     }
-    addLoadPosting();
+    addLoadPostingButton();
   });
 
 
@@ -69,7 +69,7 @@
     $("#posting-content").append(main_posting_dom)
   }
 
-  function addSubPosting(posting, loadPosting=false) {
+  function addSubPosting(posting, loadPostingOnClick=false) {
     let posting_id = posting.postingId
     let categorys = posting.postingCategories //array
     let category_str = ""
@@ -83,7 +83,7 @@
     let comment_count = posting.postingComments.length
     let thumbnail_url = posting.thumbnailUrl
 
-    var sub_posting_dom = '<div class="col-12 col-lg-6">' +
+    var sub_posting_dom = '<div class="col-12 col-lg-6 posting">' +
       '<div class="post-card -image-less">' +
               '<div class="category-icon"><img src="'+thumbnail_url+'" alt="'+category_str+'"/></div>' +
       '<div class="card__content">' +
@@ -102,23 +102,22 @@
       '</div>' +
     '</div>' +
     '</div>';
-    if (loadPosting) {
-      $(".col-lg-6").last().after(sub_posting_dom)
+    if (loadPostingOnClick) {
+      $(".col-lg-6.posting").last().after(sub_posting_dom)
     } else {
       $("#posting-content").append(sub_posting_dom);
     }
   }
 
-  function addLoadPosting() {
+  function addLoadPostingButton() {
     //TODO : 신규 포스팅 4개를 불러오고 다음 posting 이 있으면 계속 button 노출 & 없으면 노출x
     let load_more_posting = '<div id="load-posting-btn" class="col-12">' +
-            '<div class="center"><a class="btn -normal load-more-btn" onclick="loadPosting()">Load more posts</a></div>' +
+            '<div class="center"><a class="btn -normal load-more-btn" onclick="loadMorePostingOnClick()">Load more posts</a></div>' +
       '</div>'
     $("#posting-content").append(load_more_posting);
   }
 
-  function loadPosting() {
-    console.log("load posting start")
+  function loadMorePostingOnClick() {
     var loadPostingRequest = RestClient.GET('/api/posting/latestFrom?postingId='+last_posting_id);
     loadPostingRequest.done(function (data) {
       for (var posting_index in data.content) {
