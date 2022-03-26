@@ -11,11 +11,11 @@
     user['email'] = '${user.email}';
     console.log('user : ' + JSON.stringify(user))
 </script>
-<div id="load">
-    <div class="load__content">
-        <div class="load__icon"><img src="/assets/images/icons/load.gif" alt="Loading icon"/></div>
-    </div>
-</div>
+<#--<div id="load">-->
+<#--    <div class="load__content">-->
+<#--        <div class="load__icon"><img src="/assets/images/icons/load.gif" alt="Loading icon"/></div>-->
+<#--    </div>-->
+<#--</div>-->
 <header class="theme-default">
     <div id="search-box">
         <div class="container">
