@@ -4,10 +4,12 @@ logging:
   pattern:
     file: '%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n'
 
+
 spring:
-  profiles:
-    include:
-     - file-logging
+  config:
+    activate:
+      on-profile:
+        - file-logging
 
 app:
   oauth2:
