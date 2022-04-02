@@ -19,8 +19,6 @@
     var userId = ${user.userId};
     var category = '${categoryName}'
 
-
-    var posting_content_dom = $("#posting-content");
     let currentCategoryLayout = "";
 
     getAndSetPageList(category, 0)

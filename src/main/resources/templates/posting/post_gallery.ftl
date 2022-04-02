@@ -4,75 +4,89 @@
   <script>
     var postingRequest = RestClient.GET('/api/posting/${postingId}');
     var userId = ${user.userId};
-    postingRequest.done(function (data) {
-      console.log(data);
-      var user = data.user;
 
-      $('#posting-title').text(data.title);
-      data.postingCategories.sort(function (a, b) {
-        if (a.categoryIndex > b.categoryIndex) {
-          return 1;
-        } else if (a.categoryIndex < b.categoryIndex) {
-          return -1;
-        } return 0;
-      });
-      var categoryList = data.postingCategories;
-      $('#postig-category').text(categoryList[0].category);
-      $('#posting-author').text(user.name);
-      $('#posting-created-datetime').text(data.createdDatetime);
-      $('#posting-comment-count').text(data.postingComments.length);
+    var $contentDom = ""
+    var $cardImageDom = ""
+    var $tagsDom = ""
+    var $authorDom = ""
+    var $commentsDom = ""
+    $(document).ready(function (){
+        $contentDom = $('#posting-content')
+        $cardImageDom = $('#posting-card-images')
+        $tagsDom = $('#posting-tags')
+        $authorDom = $('#posting-footer-author');
+        $commentsDom = $('#posting-comment');
 
-      var cardImageDom = $('#posting-card-images')
-      for (var postingImage of data.postingImages) {
-        addCardImage(postingImage.imageUrl, cardImageDom);
-      }
+        postingRequest.done(function (data) {
+            console.log(data);
+            var user = data.user;
 
-      var contentDom = $('#posting-content')
-      data.postingContentParagraphs.sort(function (a, b) {
-        if (a.paragraphIndex > b.paragraphIndex) {
-          return 1;
-        } else if (a.paragraphIndex < b.paragraphIndex) {
-          return -1;
-        } return 0;
-      });
-      for (var paragraph of data.postingContentParagraphs) {
-        addParagraphToContent(paragraph.content,contentDom);
-      }
+            $('#posting-title').text(data.title);
+            data.postingCategories.sort(function (a, b) {
+                if (a.categoryIndex > b.categoryIndex) {
+                    return 1;
+                } else if (a.categoryIndex < b.categoryIndex) {
+                    return -1;
+                } return 0;
+            });
+            var categoryList = data.postingCategories;
+            $('#postig-category').text(categoryList[0].category);
+            $('#posting-author').text(user.name);
+            $('#posting-created-datetime').text(data.createdDatetime);
+            $('#posting-comment-count').text(data.postingComments.length);
 
-      var tagsDom = $('#posting-tags')
-      for (var tag of categoryList) {
-        addCategoryTags(tag.category, tagsDom)
-      }
+            addCardImages(data.postingImages)
+            addContent(data.postingContentParagraphs)
 
-      var authorDom = $('#posting-footer-author');
-      addUserInfo(data.user, authorDom)
+            for (var tag of categoryList) {
+                addCategoryTags(tag.category)
+            }
+            addUserInfo(data.user)
+            addCommentInfo(data.postingComments);
+        })
+    });
 
-      var commentsDom = $('#posting-comment');
-      addCommentInfo(data.postingComments, commentsDom);
-    })
+    function addCardImages(postingImages) {
+        for (var postingImage of postingImages) {
+            addCardImage(postingImage.imageUrl);
+        }
+    }
 
-    function addCardImage(imageUrl, cardDom) {
+    function addCardImage(imageUrl) {
       var imgTagDom = "<div class='card__cover__slide-item'><img src='"+
               imageUrl
               +"' alt=''/></div>"
-      cardDom.append(imgTagDom)
+      $cardImageDom.append(imgTagDom)
     }
 
-    function addParagraphToContent(paragraph, contentDom) {
+    function addContent(postingContentParagraphs) {
+        postingContentParagraphs.sort(function (a, b) {
+            if (a.paragraphIndex > b.paragraphIndex) {
+                return 1;
+            } else if (a.paragraphIndex < b.paragraphIndex) {
+                return -1;
+            } return 0;
+        });
+        for (var paragraph of postingContentParagraphs) {
+            addParagraphToContent(paragraph.content, $contentDom);
+        }
+    }
+
+    function addParagraphToContent(paragraph) {
       var paragraphDom = "<p class='paragraph'> " +
               paragraph
       + "</p>"
-      contentDom.append(paragraphDom)
+      $contentDom.append(paragraphDom)
     }
 
-    function addCategoryTags(tag, tagsDom) {
+    function addCategoryTags(tag) {
       var tagDom = '<a class="tag-btn" href="/category?categoryName='+tag+'">'+
               tag
               +'</a>';
-      tagsDom.append(tagDom);
+      $tagsDom.append(tagDom);
     }
 
-    function addUserInfo(user, authorDom) {
+    function addUserInfo(user) {
       var userImg = "<div class='author__avatar'>" +
               "<img src='"+ user.imageUrl +"'/>" +
               "</div>"
@@ -80,15 +94,15 @@
               '<h5>'+user.name+'</h5>' +
               '<p>'+user.introduction+'</p>' +
               '</div>'
-      authorDom.append(userImg);
-      authorDom.append(userSubInfo);
+      $authorDom.append(userImg);
+      $authorDom.append(userSubInfo);
     }
 
-    function addCommentInfo(comments, commentsDom) {
+    function addCommentInfo(comments) {
       var commentTitle = '<span>'+comments.length+' comment</span>'
-      commentsDom.children('.comment-title').append(commentTitle)
+      $commentsDom.children('.comment-title').append(commentTitle)
 
-      var commentsDomReal = commentsDom.children('.post-footer__comment__detail');
+      var commentsDomReal = $commentsDom.children('.post-footer__comment__detail');
       comments.sort(function (a,b) {
         if (a.commentIndex > b.commentIndex) return 1;
         else if (a.commentIndex < b.commentIndex) return -1;
@@ -114,6 +128,7 @@
       }
     }
   </script>
+
   <body>
   <#include "/header/default.ftl">
     <div id="content">
