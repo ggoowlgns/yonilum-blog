@@ -19,6 +19,8 @@ server:
 
 
 spring:
+  config:
+    use-legacy-processing: true
   profiles:
     include: console-logging
   freemarker:
