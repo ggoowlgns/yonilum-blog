@@ -1,6 +1,6 @@
 logging:
   file:
-    path: /home/ec2-user/blog/log/
+    path: /home/ec2-user/blog/log
 
 
 spring:
