@@ -6,7 +6,8 @@ logging:
 
 spring:
   profiles:
-    include: file-logging
+    include:
+     - file-logging
 
 app:
   oauth2:
