@@ -20,7 +20,7 @@ server:
 
 spring:
   profiles:
-    include: console-logging
+    include: file-logging
   freemarker:
     cache: true
     check-template-location: true
