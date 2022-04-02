@@ -5,4 +5,9 @@ logging:
 
 spring:
   profiles:
-    include: file-logging, thread-logging
+    include: file-logging
+
+app:
+  oauth2:
+    authorizedRedirectUris:
+      - http://blog.yonilum.com/oauth2/redirect
