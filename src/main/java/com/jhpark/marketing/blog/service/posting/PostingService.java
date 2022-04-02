@@ -25,7 +25,7 @@ public class PostingService {
   private final PostingRepository postingRepository;
   private final PostingImagesRepository postingImagesRepository;
   private final PostingCommentRepository postingCommentRepository;
-  private final PostingParagraphRepository postingParagraphRepository;
+  private final PostingContentRepository postingContentRepository;
 
   private final CategoryRepository categoryRepository;
 
@@ -85,23 +85,17 @@ public class PostingService {
     postingImagesRepository.saveAll(postingImages);
     LOG.info("posting_image insert success");
 
-    List<PostingContentParagraph> contentParagraphs = new ArrayList<>();
-    int index = 0;
-    for(String content : request.getParagraphs()) {
-      contentParagraphs.add(
-        PostingContentParagraph.builder()
-            .content(content)
-            .postingId(Posting.builder().postingId(postingId).build())
-            .paragraphIndex(index)
-            .build()
-      );
-      index++;
-    }
-    postingParagraphRepository.saveAll(contentParagraphs);
+
+
+    postingContentRepository.save(PostingContent.builder()
+        .content(request.getContent())
+        .postingId(Posting.builder().postingId(postingId).build())
+        .build());
     LOG.info("tb_posting_paragraph insert success");
 
+
+    int index = 0;
     List<Category> categories = new ArrayList<>();
-    index=0;
     for (String category : request.getCategories()) {
       categories.add(Category.builder()
           .category(category)

@@ -92,104 +92,6 @@
 </div>
 </body>
 
-<script>
-    // Add New Posting || Edit Existing Posting
-    var userId = ${user.userId};
-    <#if postingId??>
-    var postingRequest = RestClient.GET('/api/posting/${postingId}');
-    postingRequest.done(function (data) {
-        console.log(data);
-        data.postingCategories.sort(function (a, b) {
-            if (a.categoryIndex > b.categoryIndex) {
-                return 1;
-            } else if (a.categoryIndex < b.categoryIndex) {
-                return -1;
-            } return 0;
-        });
-        data.postingImages.sort(function (a, b) {
-            if (a.postingImageId > b.postingImageId) {
-                return 1;
-            } else if (a.postingImageId < b.postingImageId) {
-                return -1;
-            } return 0;
-        })
-        data.postingContentParagraphs.sort(function (a, b) {
-            if (a.paragraphIndex > b.paragraphIndex) {
-                return 1;
-            } else if (a.paragraphIndex < b.paragraphIndex) {
-                return -1;
-            } return 0;
-        })
-        var categoryList = data.postingCategories;
-        var categoriesStr = "";
-        for (var category of categoryList) {
-            categoriesStr += category.category+",";
-        }
-
-        var contentParagraphList = data.postingContentParagraphs;
-        var contentStr = "";
-        for (var paragraph of contentParagraphList) {
-            contentStr += paragraph.content + "\n\n";
-        }
-
-        $("#posting-category").val(categoriesStr);
-        $("#posting-title").val(data.title);
-        //TODO : 기존에 있던 content tui-md-editor 에 가져다 넣기
-
-        var imageList = data.postingImages;
-    });
-    </#if>
-
-
-    function addContentParagraph() {
-
-    }
-
-    function addImage() {
-
-    }
-
-    function addPosting() {
-        var categoryList = $("#posting-category").val().split(",");
-        var title = $("#posting-title").val();
-        var imagePaths = []
-        for (var imageDom of $("#files").children(".media")) {
-            imagePaths.push(imageDom.path);
-        }
-        var contentParagraphs = quill.getContents().ops[0].insert.split('\n\n');
-
-        console.log(contentParagraphs)
-
-        var requestBody = {
-            'title' : title,
-            'userId' : userId,
-            'thumbnailUrl' : imagePaths[0],
-            'postingType' : '0',
-            'categories' : categoryList,
-            'images' : imagePaths,
-            'paragraphs' : contentParagraphs
-        };
-
-        RestClient.POST(
-            '/api/posting',
-            requestBody,
-        ).done(function (data, textStatus, request) {
-            console.log(data);
-            var createdPostingPath = request.getResponseHeader('Location')
-            window.location.replace(
-                window.location.protocol + "//" +
-                window.location.hostname +
-                createdPostingPath
-            )
-
-        })
-    }
-
-    function updatePosting() {
-
-    }
-</script>
-
 <script type="text/template" id="qq-template-gallery">
   <div class="qq-uploader-selector qq-uploader qq-gallery" qq-drop-area-text="Drop files here">
     <div class="qq-total-progress-bar-container-selector qq-total-progress-bar-container">
@@ -266,7 +168,6 @@
     </dialog>
   </div>
 </script>
-
 <script type="text/html" id="debug-template">
   <li class="list-group-item text-%%color%%"><strong>%%date%%</strong>: %%message%%</li>
 </script>
@@ -292,14 +193,134 @@
 <#--toast-ui -->
 <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.js"></script>
 <script>
-    const editor = new toastui.Editor({
-        el: document.querySelector('#tui-md-editor'),
-        // previewStyle: 'vertical',
-        previewStyle: 'tab',
-        height: '500px',
-        initialValue: 'asdasd'
-    });
+    makeMdEditor();
 
-    editor.getMarkdown();
+    function makeMdEditor() {
+        const editor = new toastui.Editor({
+            el: document.querySelector('#tui-md-editor'),
+            // previewStyle: 'vertical',
+            previewStyle: 'tab',
+            height: '500px',
+            initialValue: 'asdasd'
+        });
+
+        editor.getMarkdown();
+    }
+</script>
+
+<script>
+    // Add New Posting || Edit Existing Posting
+    var userId = ${user.userId};
+    var $postingCategory;
+    var $postingTitle;
+    $(document).ready(function () {
+        $postingCategory = $("#posting-category");
+        $postingTitle = $("#posting-title");
+    })
+
+  <#if postingId??>
+    var postingRequest = RestClient.GET('/api/posting/${postingId}');
+
+    postingRequest.done(function (data) {
+        console.log(data);
+        setExistingPosting(data);
+    });
+  </#if>
+
+
+    function addContentParagraph() {
+
+    }
+
+    function addImage() {
+
+    }
+
+    function addPosting() {
+        var categoryList = $postingCategory.val().split(","); //애초에 입력할때 , 를 구분해서 넣어줘야함 (띄어쓰기 하지 말고)
+        var title = $postingTitle.val();
+        var imagePaths = []
+        for (var imageDom of $("#files").children(".media")) {
+            imagePaths.push(imageDom.path);
+        }
+        var content = getPostingMarkDownContentFromMDEditor();
+
+        var requestBody = {
+            'title' : title,
+            'userId' : userId,
+            'thumbnailUrl' : imagePaths[0],
+            'postingType' : '0',
+            'categories' : categoryList,
+            'images' : imagePaths,
+            'content' : content
+        };
+
+        postPosting('/api/posting', requestBody);
+    }
+
+    function getPostingMarkDownContentFromMDEditor() {
+
+    }
+
+    function updatePosting() {
+
+    }
+
+    function postPosting(path, requestBody) {
+        RestClient.POST(
+            path,
+            requestBody,
+        ).done(function (data, textStatus, request) {
+            console.log(data);
+            var createdPostingPath = request.getResponseHeader('Location')
+            window.location.replace(
+                window.location.protocol + "//" +
+                window.location.hostname +
+                createdPostingPath
+            )
+        })
+    }
+
+    function setExistingPosting (data) {
+        data.postingCategories.sort(function (a, b) {
+            if (a.categoryIndex > b.categoryIndex) {
+                return 1;
+            } else if (a.categoryIndex < b.categoryIndex) {
+                return -1;
+            } return 0;
+        });
+        data.postingImages.sort(function (a, b) {
+            if (a.postingImageId > b.postingImageId) {
+                return 1;
+            } else if (a.postingImageId < b.postingImageId) {
+                return -1;
+            } return 0;
+        })
+        data.postingContents.sort(function (a, b) {
+            if (a.paragraphIndex > b.paragraphIndex) {
+                return 1;
+            } else if (a.paragraphIndex < b.paragraphIndex) {
+                return -1;
+            } return 0;
+        })
+        var categoryList = data.postingCategories;
+        var categoriesStr = "";
+        for (var category of categoryList) {
+            categoriesStr += category.category+",";
+        }
+
+        var contentParagraphList = data.postingContents;
+        var contentStr = "";
+        for (var paragraph of contentParagraphList) {
+            contentStr += paragraph.content + "\n\n";
+        }
+
+        $postingCategory.val(categoriesStr);
+        $postingTitle.val(data.title);
+        //TODO : 기존에 있던 content tui-md-editor 에 가져다 넣기
+
+        var imageList = data.postingImages;
+        //TODO : 기존에 있던 Card Images 넣기
+    }
 </script>
 </html>

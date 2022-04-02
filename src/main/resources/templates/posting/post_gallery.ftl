@@ -98,11 +98,6 @@ You can create an instance with the following code and use \`getHtml()\` and \`g
 >    1. [x] React
 >    2. [x] Vue
 >    3. [ ] Ember`
-        }
-        addContentToMDViewer(content)
-    }
-
-    function addContentToMDViewer(content) {
         const viewer = new toastui.Editor.factory({
             el: document.querySelector('#tui-md-viewer'),
             viewer : true,
