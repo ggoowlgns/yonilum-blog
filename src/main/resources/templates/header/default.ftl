@@ -65,7 +65,7 @@
                     <a href="#"><i class="fab fa-dribbble"></i></a>-->
                     <a id="mobile-menu-controller" href="#"><i class="fas fa-bars"></i></a>
                     <#if user.userId == 99999>
-                        <a href="/oauth2/authorize/kakao?redirect_uri=http://localhost:8080/">
+                        <a href="/oauth2/authorize/kakao?redirect_uri=http://blog.yonilum.com/">
                             <img src="/assets/images/icons/kakao/kakao_login_medium_narrow.png">
                         </a>
                     <#else >
