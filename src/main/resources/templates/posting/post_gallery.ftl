@@ -100,9 +100,10 @@ You can create an instance with the following code and use \`getHtml()\` and \`g
 >    3. [ ] Ember`
         const viewer = new toastui.Editor.factory({
             el: document.querySelector('#tui-md-viewer'),
-            viewer : true,
+            viewer: true,
             initialValue: content
         });
+      }
     }
 
     function addParagraphToContent(paragraph) {
@@ -160,6 +161,7 @@ You can create an instance with the following code and use \`getHtml()\` and \`g
         commentsDomReal.append(comment);
       }
     }
+
   </script>
 
   <body>
