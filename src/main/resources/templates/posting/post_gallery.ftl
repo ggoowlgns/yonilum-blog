@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <#include "/header/default-meta.ftl">
+  <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.js"></script>
   <script>
     var postingRequest = RestClient.GET('/api/posting/${postingId}');
     var userId = ${user.userId};
@@ -36,7 +37,9 @@
             $('#posting-comment-count').text(data.postingComments.length);
 
             addCardImages(data.postingImages)
-            addContent(data.postingContentParagraphs)
+
+            //TODO : md 로 만들어준 결과물을 그대로 가져와서 arg 로 넣어주기
+            addContent()
 
             for (var tag of categoryList) {
                 addCategoryTags(tag.category)
@@ -59,17 +62,52 @@
       $cardImageDom.append(imgTagDom)
     }
 
-    function addContent(postingContentParagraphs) {
-        postingContentParagraphs.sort(function (a, b) {
-            if (a.paragraphIndex > b.paragraphIndex) {
-                return 1;
-            } else if (a.paragraphIndex < b.paragraphIndex) {
-                return -1;
-            } return 0;
-        });
-        for (var paragraph of postingContentParagraphs) {
-            addParagraphToContent(paragraph.content, $contentDom);
+    function addContent(content) {
+        if (content === undefined) {
+            content = `![image](https://uicdn.toast.com/toastui/img/tui-editor-bi.png)
+
+# Awesome Editor!
+
+It has been _released as opensource in 2018_ and has ~~continually~~ evolved to **receive 10k GitHub ⭐️ Stars**.
+
+## Create Instance
+
+You can create an instance with the following code and use \`getHtml()\` and \`getMarkdown()\` of the [Editor](https://github.com/nhn/tui.editor).
+
+
+> See the table below for default options
+> > More API information can be found in the document
+
+| name | type | description |
+| --- | --- | --- |
+| el | \`HTMLElement\` | container element |
+
+## Features
+
+* CommonMark + GFM Specifications
+   * Live Preview
+   * Scroll Sync
+   * Auto Indent
+   * Syntax Highlight
+        1. Markdown
+        2. Preview
+
+## Support Wrappers
+
+> * Wrappers
+>    1. [x] React
+>    2. [x] Vue
+>    3. [ ] Ember`
         }
+        addContentToMDViewer(content)
+    }
+
+    function addContentToMDViewer(content) {
+        const viewer = new toastui.Editor.factory({
+            el: document.querySelector('#tui-md-viewer'),
+            viewer : true,
+            initialValue: content
+        });
     }
 
     function addParagraphToContent(paragraph) {
