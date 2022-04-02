@@ -1,6 +1,7 @@
 logging:
   file:
     path: /home/ec2-user/blog/log
+    pattern: '%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n'
 
 
 spring:
