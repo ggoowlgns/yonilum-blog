@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <#include "/header/default-meta.ftl">
-  <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.js"></script>
+  <#include "/tui-markdown-editor/tui-md-editor-dependency.ftl">
   <script>
     var postingRequest = RestClient.GET('/api/posting/${postingId}');
     var userId = ${user.userId};
@@ -39,7 +39,7 @@
             addCardImages(data.postingImages)
 
             //TODO : md 로 만들어준 결과물을 그대로 가져와서 arg 로 넣어주기
-            addContent()
+            addContent(data.postingContents[0]['content'])
 
             for (var tag of categoryList) {
                 addCategoryTags(tag.category)
@@ -63,8 +63,9 @@
     }
 
     function addContent(content) {
+        console.log('content : ' + content)
         if (content === undefined) {
-            content = `![image](https://uicdn.toast.com/toastui/img/tui-editor-bi.png)
+          content = `![image](https://uicdn.toast.com/toastui/img/tui-editor-bi.png)
 
 # Awesome Editor!
 
@@ -98,12 +99,22 @@ You can create an instance with the following code and use \`getHtml()\` and \`g
 >    1. [x] React
 >    2. [x] Vue
 >    3. [ ] Ember`
-        const viewer = new toastui.Editor.factory({
-            el: document.querySelector('#tui-md-viewer'),
-            viewer: true,
-            initialValue: content
-        });
-      }
+        }
+      const { chart, codeSyntaxHighlight, colorSyntax, tableMergedCell, uml } = toastui.Editor.plugin;
+        const chartOptions = {
+          minWidth: 100,
+          maxWidth: 600,
+          minHeight: 100,
+          maxHeight: 300
+        };
+      const viewer = new toastui.Editor.factory({
+          el: document.querySelector('#tui-md-viewer'),
+          viewer: true,
+          initialValue: content,
+          plugins: [[chart, chartOptions], [codeSyntaxHighlight, { highlighter: Prism }], tableMergedCell, uml]
+      });
+      // viewer.setMarkdown(content)
+
     }
 
     function addParagraphToContent(paragraph) {

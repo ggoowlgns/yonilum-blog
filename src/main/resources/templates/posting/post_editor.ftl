@@ -79,9 +79,9 @@
                         <#--Submit Button-->
                         <div class="row center">
                             <#if postingId??>
-                              <button id="posting-update-btn" class="btn -normal btn-primary" onclick="updatePosting()">Update Posting</button>
+                              <button id="posting-update-btn" class="btn -normal btn-primary" onclick="addPostingOnClick()">Update Posting</button>
                             <#else >
-                              <button id="posting-add-btn" class="btn -normal btn-primary" onclick="addPosting()">Add Posting</button>
+                              <button id="posting-add-btn" class="btn -normal btn-primary" onclick="addPostingOnClick()">Add Posting</button>
                             </#if>
                         </div>
                     </div>
@@ -191,20 +191,29 @@
 </script>
 
 <#--toast-ui -->
-<script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.js"></script>
+<#include "/tui-markdown-editor/tui-md-editor-dependency.ftl">
 <script>
+    var tui_md_editor;
     makeMdEditor();
 
     function makeMdEditor() {
-        const editor = new toastui.Editor({
+        const { Editor } = toastui;
+        const { chart, codeSyntaxHighlight, colorSyntax, tableMergedCell, uml } = Editor.plugin;
+        const chartOptions = {
+          minWidth: 100,
+          maxWidth: 600,
+          minHeight: 100,
+          maxHeight: 300
+        };
+        tui_md_editor = new toastui.Editor({
             el: document.querySelector('#tui-md-editor'),
             // previewStyle: 'vertical',
             previewStyle: 'tab',
             height: '500px',
-            initialValue: 'asdasd'
+            initialValue: 'asdasd',
+            placeholder: 'Please enter text.',
+            plugins: [[chart, chartOptions], [codeSyntaxHighlight, { highlighter: Prism }], colorSyntax, tableMergedCell, uml]
         });
-
-        editor.getMarkdown();
     }
 </script>
 
@@ -220,23 +229,13 @@
 
   <#if postingId??>
     var postingRequest = RestClient.GET('/api/posting/${postingId}');
-
     postingRequest.done(function (data) {
         console.log(data);
         setExistingPosting(data);
     });
   </#if>
 
-
-    function addContentParagraph() {
-
-    }
-
-    function addImage() {
-
-    }
-
-    function addPosting() {
+    function addPostingOnClick() {
         var categoryList = $postingCategory.val().split(","); //애초에 입력할때 , 를 구분해서 넣어줘야함 (띄어쓰기 하지 말고)
         var title = $postingTitle.val();
         var imagePaths = []
@@ -259,26 +258,22 @@
     }
 
     function getPostingMarkDownContentFromMDEditor() {
-
-    }
-
-    function updatePosting() {
-
+      return tui_md_editor.getMarkdown()
     }
 
     function postPosting(path, requestBody) {
-        RestClient.POST(
-            path,
-            requestBody,
-        ).done(function (data, textStatus, request) {
-            console.log(data);
-            var createdPostingPath = request.getResponseHeader('Location')
-            window.location.replace(
-                window.location.protocol + "//" +
-                window.location.hostname +
-                createdPostingPath
-            )
-        })
+      RestClient.POST(
+          path,
+          requestBody,
+      ).done(function (data, textStatus, request) {
+          console.log(data);
+          var createdPostingPath = request.getResponseHeader('Location')
+          window.location.replace(
+              window.location.protocol + "//" +
+              window.location.hostname +
+              createdPostingPath
+          )
+      })
     }
 
     function setExistingPosting (data) {
