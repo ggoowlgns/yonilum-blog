@@ -34,6 +34,7 @@ public class PostingContent {
   private Posting postingId;
 
 
+  @Lob // FOR LONG TEXT
   private String content;
 
   @CreationTimestamp

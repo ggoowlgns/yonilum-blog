@@ -1,11 +1,12 @@
-<script src="https://uicdn.toast.com/tui-color-picker/latest/tui-color-picker.min.js"></script>
 <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.js"></script>
+<script src="https://uicdn.toast.com/tui-color-picker/latest/tui-color-picker.min.js"></script>
 <script src="https://uicdn.toast.com/editor-plugin-color-syntax/latest/toastui-editor-plugin-color-syntax.min.js"></script>
 
 
 <!-- Chart -->
 <script src="https://uicdn.toast.com/chart/latest/toastui-chart.min.js"></script>
 <!-- Editor's Plugin -->
+<script src="https://uicdn.toast.com/editor-plugin-chart/latest/toastui-editor-plugin-chart.min.js"></script>
 <script src="https://uicdn.toast.com/editor-plugin-chart/latest/toastui-editor-plugin-chart.min.js"></script>
 
 <!-- prismjs Languages -->
