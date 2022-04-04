@@ -26,7 +26,7 @@
         </div>
     </div>
     <div class="container">
-        <div class="header-wrapper"><a class="header__logo" href="/"><img src="/assets/images/logo.png" alt="Logo"/></a>
+        <div class="header-wrapper"><a href="/"><img src="/assets/images/logo-2.png" alt="Logo"/></a>
             <nav>
                 <ul>
                     <li class="nav-item <#if !springMacroRequestContext.requestUri?contains("/category")
