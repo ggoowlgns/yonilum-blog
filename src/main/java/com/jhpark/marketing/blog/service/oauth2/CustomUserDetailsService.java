@@ -3,7 +3,7 @@ package com.jhpark.marketing.blog.service.oauth2;
 
 import com.jhpark.marketing.blog.entity.User;
 import com.jhpark.marketing.blog.exception.ResourceNotFoundException;
-import com.jhpark.marketing.blog.repository.UserRepository;
+import com.jhpark.marketing.blog.repository.user.UserRepository;
 import com.jhpark.marketing.blog.security.UserPrincipal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

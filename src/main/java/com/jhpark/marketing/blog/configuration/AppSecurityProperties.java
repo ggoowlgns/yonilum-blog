@@ -11,8 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Getter
-@ConfigurationProperties(prefix = "app")
-public class AppProperties {
+@ConfigurationProperties(prefix = "app-security")
+public class AppSecurityProperties {
   private final Auth auth = new Auth();
   private final OAuth2 oauth2 = new OAuth2();
 

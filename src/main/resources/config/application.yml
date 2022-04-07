@@ -101,7 +101,7 @@ spring:
 
 
 # JWT 관련
-app:
+app-security:
   auth:
     tokenSecret: 926D96C90030DD58429D2751AC1BDBBC #JWT Token 을 Hash 할 때 사용하는 Secret Key
     tokenExpirationMsec: 864000000 # JWT Token의 유효기간

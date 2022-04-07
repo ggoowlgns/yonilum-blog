@@ -3,9 +3,8 @@ package com.jhpark.marketing.blog.configuration;
 import com.jhpark.marketing.blog.component.handler.OAuth2AuthenticationFailureHandler;
 import com.jhpark.marketing.blog.component.handler.OAuth2AuthenticationSuccessHandler;
 import com.jhpark.marketing.blog.filter.TokenAuthenticationFilter;
-import com.jhpark.marketing.blog.repository.HttpCookieOAuth2AuthorizationRequestRepository;
+import com.jhpark.marketing.blog.repository.oauth2.HttpCookieOAuth2AuthorizationRequestRepository;
 
-import com.jhpark.marketing.blog.security.RestAuthenticationEntryPoint;
 import com.jhpark.marketing.blog.service.TokenService;
 import com.jhpark.marketing.blog.service.oauth2.CustomOAuth2UserService;
 import com.jhpark.marketing.blog.service.oauth2.CustomUserDetailsService;
@@ -38,7 +37,8 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
     jsr250Enabled = true,
     prePostEnabled = true
 )
-public class SecurityConfig extends WebSecurityConfigurerAdapter {
+public class OAuth2LoginSecurityConfig extends WebSecurityConfigurerAdapter {
+
   private final CustomOAuth2UserService oAuth2UserService;
   private final CustomUserDetailsService userDetailService;
 
@@ -59,6 +59,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
           .formLogin().disable()
           //토큰 사용을 위해 session 비활성화
           .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+
 
         .and()
           .authorizeRequests()
