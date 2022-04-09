@@ -7,11 +7,13 @@ import java.util.Map;
 public class KakaoOAuth2UserInfo extends OAuth2UserInfo{
   private Map<String, Object> properties;
   private Map<String, Object> kakaoAccount;
+  private Map<String, Object> kakaoProfile;
 
   public KakaoOAuth2UserInfo(Map<String, Object> attributes) {
     super(attributes);
     this.properties = (Map<String, Object>) attributes.get("properties");
     this.kakaoAccount = (Map<String, Object>) attributes.get("kakao_account");
+    this.kakaoProfile = (Map<String, Object>) this.kakaoAccount.get("profile");
   }
 
   @Override
@@ -21,7 +23,7 @@ public class KakaoOAuth2UserInfo extends OAuth2UserInfo{
 
   @Override
   public String getName() {
-    return properties.get("nickname").toString();
+    return kakaoProfile.get("nickname").toString();
   }
 
   @Override
@@ -31,7 +33,7 @@ public class KakaoOAuth2UserInfo extends OAuth2UserInfo{
 
   @Override
   public String getImageUrl() {
-    return (properties.get("profile_image")).toString();
+    return (kakaoProfile.get("profile_image_url")).toString();
   }
 
   @Override

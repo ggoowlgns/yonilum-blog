@@ -7,6 +7,7 @@ import com.jhpark.marketing.blog.repository.user.UserRepository;
 import com.jhpark.marketing.blog.security.UserPrincipal;
 import com.jhpark.marketing.blog.domain.oauth2.OAuth2UserInfo;
 import com.jhpark.marketing.blog.domain.oauth2.OAuth2UserInfoFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,9 +22,9 @@ import org.springframework.util.StringUtils;
 
 import java.util.Optional;
 
+@Slf4j
 @Service
 public class CustomOAuth2UserService extends DefaultOAuth2UserService {
-  private final Logger LOG = LoggerFactory.getLogger(CustomOAuth2UserService.class);
 
   @Autowired
   private UserRepository userRepository;
@@ -37,7 +38,7 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
     } catch (AuthenticationException ex) {
       throw ex;
     } catch (Exception ex) {
-      LOG.error("loadUser() : ",ex);
+      log.error("loadUser() : ",ex);
       // Throwing an instance of AuthenticationException will trigger the OAuth2AuthenticationFailureHandler
       throw new InternalAuthenticationServiceException(ex.getMessage(), ex.getCause());
     }
@@ -50,6 +51,7 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
    * @return
    */
   private OAuth2User processOAuth2User(OAuth2UserRequest oAuth2UserRequest, OAuth2User oAuth2User) {
+    log.info("oAuth2User : {}", oAuth2User);
     OAuth2UserInfo oAuth2UserInfo = OAuth2UserInfoFactory.getOAuth2UserInfo(oAuth2UserRequest.getClientRegistration().getRegistrationId(), oAuth2User.getAttributes());
     if(StringUtils.isEmpty(oAuth2UserInfo.getEmail())) {
       throw new OAuth2AuthenticationProcessingException("Email not found from OAuth2 provider");
