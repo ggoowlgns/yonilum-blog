@@ -15,7 +15,7 @@ spring:
           kakao:
             redirect-uri: http://blog.yonilum.com/login/oauth2/code/kakao
 
-app:
+app-security:
   oauth2:
     authorizedRedirectUris:
       - http://blog.yonilum.com/oauth2/redirect
