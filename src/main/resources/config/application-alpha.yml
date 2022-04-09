@@ -8,6 +8,12 @@ logging:
 spring:
   profiles:
     include: file-logging
+  security:
+    oauth2:
+      client:
+        registration:
+          kakao:
+            redirect-uri: http://blog.yonilum.com/login/oauth2/code/kakao
 
 app:
   oauth2:
