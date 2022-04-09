@@ -43,7 +43,21 @@
                             <a href="/posting/editor">Add Posting</a></li>
                     </#if>
 
-
+                    <li class="nav-item" style="margin-left: 30px">
+                        <#if user.userId == 99999>
+                            <a href="/oauth2/authorize/kakao?redirect_uri=http://blog.yonilum.com/">
+                                <img src="/assets/images/icons/kakao/kakao_login_medium_narrow.png">
+                            </a>
+                        <#else >
+                            <div class="card__content-title" style="height: 50px; width: 200px; vertical-align: middle; display: flex">
+                                <img src="${user.imageUrl}" style="height: 100%; width: auto; float: left">
+                                <br>
+                                <div style="align-items: center; display: flex; float: right">
+                                    welcome '${user.name}'
+                                </div>
+                            </div>
+                        </#if>
+                    </li>
 <#--                    <li class="nav-item"><a href="#">Pages</a>
                         <ul class="dropdown-menu">
                             <li><a href="author.ftl">AUTHOR</a></li>
@@ -60,22 +74,6 @@
             </nav>
 
             <div class="header__icon-group">
-
-                <div style="margin-right: 30px">
-                <#if user.userId == 99999>
-                    <a href="/oauth2/authorize/kakao?redirect_uri=http://blog.yonilum.com/">
-                        <img src="/assets/images/icons/kakao/kakao_login_medium_narrow.png">
-                    </a>
-                <#else >
-                    <div class="card__content-title" style="height: 50px; width: 200px; vertical-align: middle; display: flex">
-                        <img src="${user.imageUrl}" style="height: 100%; width: auto; float: left">
-                        <br>
-                        <div style="align-items: center; display: flex; float: right">
-                            welcome '${user.name}'
-                        </div>
-                    </div>
-                </#if>
-                </div>
                 <a href="#" id="search"><i class="fas fa-search"></i></a>
                 <div class="social">
                     <#--<a href="#"><i class="fab fa-facebook-f"></i></a>
