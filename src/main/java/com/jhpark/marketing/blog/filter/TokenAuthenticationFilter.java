@@ -1,6 +1,6 @@
 package com.jhpark.marketing.blog.filter;
 
-import com.jhpark.marketing.blog.configuration.SecurityConfig;
+import com.jhpark.marketing.blog.configuration.OAuth2LoginSecurityConfig;
 import com.jhpark.marketing.blog.service.oauth2.TokenProvider;
 import com.jhpark.marketing.blog.service.oauth2.CustomUserDetailsService;
 import com.jhpark.marketing.blog.util.CookieUtils;
@@ -35,7 +35,6 @@ public class TokenAuthenticationFilter extends OncePerRequestFilter {
   protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
     try {
       String jwt = getJwtFromRequest(request);
-
       if (StringUtils.hasText(jwt) && tokenProvider.validateToken(jwt)) {
         Long userId = tokenProvider.getUserIdFromToken(jwt);
 
@@ -71,7 +70,7 @@ public class TokenAuthenticationFilter extends OncePerRequestFilter {
 //            return bearerToken.substring(7, bearerToken.length());
 //        }
 
-    String token = CookieUtils.getCookie(request, SecurityConfig.ACCESS_TOKEN)
+    String token = CookieUtils.getCookie(request, OAuth2LoginSecurityConfig.ACCESS_TOKEN)
         .map(Cookie::getValue)
         .orElse((null));;
     if (StringUtils.hasText(token)) {

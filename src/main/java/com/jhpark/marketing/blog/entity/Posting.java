@@ -1,9 +1,7 @@
 package com.jhpark.marketing.blog.entity;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-import com.sun.istack.NotNull;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,9 +11,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.LinkedHashSet;
-import java.util.List;
 import java.util.Set;
 
 @Getter
@@ -31,7 +27,7 @@ public class Posting {
   private long postingId;
 
   /**
-   * FK 로 entity 땡겨오는 상황 - N:1
+   * FK 로 entity 땡겨오는 상황 - N:1 (this 를 가지고 있는 애)
    * 등록한 column 명은 땡겨오는 대상 entity의 PK 즉, tb_user 의 user_id 속성 그대로 가져와서
    * tb_posting 의 column으로 박아넣음
    */
@@ -47,14 +43,14 @@ public class Posting {
 
 
   /**
-   * PK로 entity 떙겨오는 상황
+   * PK로 entity 떙겨오는 상황 : 1:N (this 가 가지고 있는 애들)
    * mappedBy로 들어가는 값은 땡겨오는 entity의 FK
    */
   @OneToMany(mappedBy = "postingId", fetch = FetchType.LAZY)
   private Set<PostingImage> postingImages = new LinkedHashSet<>();
 
   @OneToMany(mappedBy = "postingId", fetch = FetchType.LAZY)
-  private Set<PostingContentParagraph> postingContentParagraphs = new LinkedHashSet<>();
+  private Set<PostingContent> postingContents = new LinkedHashSet<>();
 
   @OneToMany(mappedBy = "postingId", fetch = FetchType.LAZY)
   private Set<PostingComment> postingComments = new LinkedHashSet<>();
@@ -75,13 +71,13 @@ public class Posting {
   private LocalDateTime updateDatetime;
 
   @Builder
-  public Posting(long postingId, User user, String title, String thumbnailUrl, Set<PostingImage> postingImages, Set<PostingContentParagraph> postingContentParagraphs, Set<PostingComment> postingComments, Set<Category> postingCategories, char postingType, int views, LocalDateTime createdDatetime, LocalDateTime updateDatetime) {
+  public Posting(long postingId, User user, String title, String thumbnailUrl, Set<PostingImage> postingImages, Set<PostingContent> postingContents, Set<PostingComment> postingComments, Set<Category> postingCategories, char postingType, int views, LocalDateTime createdDatetime, LocalDateTime updateDatetime) {
     this.postingId = postingId;
     this.user = user;
     this.title = title;
     this.thumbnailUrl = thumbnailUrl;
     this.postingImages = postingImages;
-    this.postingContentParagraphs = postingContentParagraphs;
+    this.postingContents = postingContents;
     this.postingComments = postingComments;
     this.postingCategories = postingCategories;
     this.postingType = postingType;

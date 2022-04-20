@@ -2,7 +2,7 @@ package com.jhpark.marketing.blog.controller.rest.auth;
 
 import com.jhpark.marketing.blog.entity.User;
 import com.jhpark.marketing.blog.exception.ResourceNotFoundException;
-import com.jhpark.marketing.blog.repository.UserRepository;
+import com.jhpark.marketing.blog.repository.user.UserRepository;
 import com.jhpark.marketing.blog.security.CurrentUser;
 import com.jhpark.marketing.blog.security.UserPrincipal;
 import lombok.RequiredArgsConstructor;

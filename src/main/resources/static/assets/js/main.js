@@ -746,6 +746,15 @@ function selectPaymentMethod() {
   checkChecked();
   $checkbox.on("click", checkChecked);
 }
+function preload() {
+  const $load = $("#load");
+  $(window).on("load", function () {
+    $load.fadeOut(300, function () {
+      $load.remove();
+    });
+  });
+}
+
 
 //Document ready
 $(document).ready(function () {
@@ -761,13 +770,6 @@ $(document).ready(function () {
   quantityController();
   selectPaymentMethod();
   //Preload
+  preload()
 });
 
-(function preload() {
-  const $load = $("#load");
-  $(window).on("load", function () {
-    $load.fadeOut(300, function () {
-      $load.remove();
-    });
-  });
-})();

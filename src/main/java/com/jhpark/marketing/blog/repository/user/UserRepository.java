@@ -1,4 +1,4 @@
-package com.jhpark.marketing.blog.repository;
+package com.jhpark.marketing.blog.repository.user;
 
 import com.jhpark.marketing.blog.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;

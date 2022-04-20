@@ -1,4 +1,4 @@
-package com.jhpark.marketing.blog.repository;
+package com.jhpark.marketing.blog.repository.oauth2;
 
 import com.jhpark.marketing.blog.util.CookieUtils;
 import com.nimbusds.oauth2.sdk.util.StringUtils;

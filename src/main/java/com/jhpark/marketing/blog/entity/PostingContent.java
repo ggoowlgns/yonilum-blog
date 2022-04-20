@@ -14,19 +14,18 @@ import java.time.LocalDateTime;
 
 @Getter
 @Entity
-@Table(name = "tb_posting_paragraph",
+@Table(name = "tb_posting_content"/*,
     uniqueConstraints = {
-        @UniqueConstraint(columnNames = {"posting_id", "paragraph_index"}),
-//        @UniqueConstraint(columnNames = {"posting_id", "paragraph_index"})
-    }
-    )
+        @UniqueConstraint(columnNames = {"posting_id", "paragraph_index"}), // 복합키
+    }*/
+)
 @NoArgsConstructor
 @ToString
 @Builder
-public class PostingContentParagraph {
+public class PostingContent {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private long PostingContentParagraphId;
+  private long PostingContentId;
 
 
   @ManyToOne(targetEntity = Posting.class, fetch = FetchType.LAZY)
@@ -34,9 +33,8 @@ public class PostingContentParagraph {
   @JsonBackReference
   private Posting postingId;
 
-  @Column(name = "paragraph_index",nullable = false)
-  private int paragraphIndex;
 
+  @Lob // FOR LONG TEXT
   private String content;
 
   @CreationTimestamp
@@ -46,11 +44,9 @@ public class PostingContentParagraph {
   private LocalDateTime updateDatetime;
 
   @Builder
-
-  public PostingContentParagraph(long PostingContentParagraphId, Posting postingId, int paragraphIndex, String content, LocalDateTime createdDatetime, LocalDateTime updateDatetime) {
-    this.PostingContentParagraphId = PostingContentParagraphId;
+  public PostingContent(long PostingContentId, Posting postingId, String content, LocalDateTime createdDatetime, LocalDateTime updateDatetime) {
+    this.PostingContentId = PostingContentId;
     this.postingId = postingId;
-    this.paragraphIndex = paragraphIndex;
     this.content = content;
     this.createdDatetime = createdDatetime;
     this.updateDatetime = updateDatetime;

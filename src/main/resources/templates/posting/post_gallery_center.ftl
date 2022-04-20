@@ -31,13 +31,17 @@
     <#--Posting Contents-->
     <div id="posting-content" class="post-standard__content">
         <#--<p class="paragraph">Sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqui.paragraphex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>-->
+        <div id="tui-md-viewer">
+            <strong>The example code can be slower than your environment because the code is transpiled by
+                babel-standalone in runtime.</strong>
+        </div>
     </div>
 
 
     <div class="post-footer">
         <#--Posting Tags-->
-        <div id="posting-tags" class="post-footer__tags center">
-            <div class="tags-group">
+        <div class="post-footer__tags center">
+            <div id="posting-tags" class="tags-group">
                 <#--<a class="tag-btn" href="/category/{categoryName}">{categoryName}</a>-->
             </div>
         </div>

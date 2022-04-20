@@ -1,7 +1,7 @@
 logging:
   config: classpath:logback-spring.xml
   level:
-    root: debug
+    root: info
 
 yonilum:
   base:
@@ -19,6 +19,8 @@ server:
 
 
 spring:
+  config:
+    use-legacy-processing: true
   profiles:
     include: console-logging
   freemarker:
@@ -42,15 +44,15 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.MySQL5Dialect
     generate-ddl: true
-    show-sql: true
+    show-sql: false
     hibernate:
       ddl-auto: update
       naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
     properties:
       hibernate:
-        show-sql: true
-        format-sql: true
-        use-sql-comments: true
+        show-sql: false
+        format-sql: false
+        use-sql-comments: false
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
 
 
@@ -63,7 +65,7 @@ spring:
             client-id: d34e659e3758a5d45c8a27764f537839
             client-secret: uP7rtfeWdwksjwgJ0bHgMFSUie0OyA6C
 #            redirect-uri: {baseUrl}/{action}/oauth2/code/{registrationId}
-            redirect-uri: http://blog.yonilum.com/login/oauth2/code/kakao
+#            redirect-uri: http://blog.yonilum.com/login/oauth2/code/kakao
             authorization-grant-type: authorization_code
             client-authentication-method: POST
             client-name: Kakao
@@ -99,7 +101,7 @@ spring:
 
 
 # JWT 관련
-app:
+app-security:
   auth:
     tokenSecret: 926D96C90030DD58429D2751AC1BDBBC #JWT Token 을 Hash 할 때 사용하는 Secret Key
     tokenExpirationMsec: 864000000 # JWT Token의 유효기간

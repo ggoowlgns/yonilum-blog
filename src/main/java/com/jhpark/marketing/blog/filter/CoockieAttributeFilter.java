@@ -15,7 +15,6 @@ class CookieAttributeFilter implements Filter {
       throws IOException, ServletException {
     HttpServletResponse httpServletResponse = (HttpServletResponse) response;
     chain.doFilter(request, response);
-    log.info("CookieAttributeFilter");
     addSameSite(httpServletResponse , "None");
   }
 

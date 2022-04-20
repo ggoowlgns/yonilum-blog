@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<#include "../header/default-css.ftl">
+<#include "../header/default-meta.ftl">
 <body>
 <#include "../header/default.ftl">
 <script>
@@ -19,8 +19,6 @@
     var userId = ${user.userId};
     var category = '${categoryName}'
 
-
-    var posting_content_dom = $("#posting-content");
     let currentCategoryLayout = "";
 
     getAndSetPageList(category, 0)
@@ -43,11 +41,15 @@
           result_posting['date'] = temp_posting.createdDatetime;
           result_posting['comment'] = temp_posting.postingComments.length;
           result_posting['postingId'] = temp_posting.postingId;
-          let temp_paragraph = temp_posting.postingContentParagraphs[0].content
-          const PARAGRAPH_LENGTH = 20;
-          result_posting['content'] = temp_paragraph.length > PARAGRAPH_LENGTH ?
-            temp_paragraph.substring(0, PARAGRAPH_LENGTH - 3) + "..." :
-            temp_paragraph;
+          if (temp_posting.postingContents.length > 0) {
+            //TODO : 썸네일 콘텐츠 추출
+            let temp_paragraph = temp_posting.postingContents[0].content
+            const PARAGRAPH_LENGTH = 20;
+            result_posting['content'] = temp_paragraph.length > PARAGRAPH_LENGTH ?
+                temp_paragraph.substring(0, PARAGRAPH_LENGTH - 3) + "..." :
+                temp_paragraph;
+          }
+
           postings.push(result_posting)
         }
 

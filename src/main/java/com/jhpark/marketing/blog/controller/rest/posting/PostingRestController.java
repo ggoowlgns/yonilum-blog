@@ -64,12 +64,15 @@ public class PostingRestController extends BaseViewController {
   }
 
 
-
+  /**
+   * add posting with postingRequest & return url with created postingId
+   * @param postingRequest
+   * @param response
+   */
   @RequestMapping(path = "", method = RequestMethod.POST)
   public void add(@RequestBody PostingRequest postingRequest,
                        HttpServletResponse response) {
     LOG.info("posting : {}", postingRequest);
-    //TODO : add posting with postingRequest & return postingId
 
     int postingId = postingService.addPosting(postingRequest);
 

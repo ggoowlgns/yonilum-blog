@@ -55,8 +55,7 @@
 <!--    </springProfile>-->
 
 
-    <springProfile name="thread-logging">
-        <!-- https://jira.nmn.io/browse/TAS-734 -->
+    <!--<springProfile name="thread-logging">
         <appender name="siftingThreadAppender" class="ch.qos.logback.classic.sift.SiftingAppender">
             <discriminator class="com.netmarble.tas.agent.component.logback.ThreadNameBasedDiscriminator"/>
             <sift>
@@ -76,7 +75,7 @@
                 </appender>
             </sift>
         </appender>
-    </springProfile>
+    </springProfile>-->
 
     <root>
         <springProfile name="console-logging">
@@ -85,9 +84,9 @@
         <springProfile name="file-logging">
             <appender-ref ref="dailyRollingFileAppender"/>
         </springProfile>
-        <springProfile name="thread-logging">
+        <!--<springProfile name="thread-logging">
             <appender-ref ref="siftingThreadAppender"/>
-        </springProfile>
+        </springProfile>-->
     </root>
 
 </configuration>

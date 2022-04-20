@@ -7,7 +7,7 @@ import com.jhpark.marketing.blog.payload.request.LoginRequest;
 import com.jhpark.marketing.blog.payload.request.SignUpRequest;
 import com.jhpark.marketing.blog.payload.response.ApiResponse;
 import com.jhpark.marketing.blog.payload.response.AuthResponse;
-import com.jhpark.marketing.blog.repository.UserRepository;
+import com.jhpark.marketing.blog.repository.user.UserRepository;
 import com.jhpark.marketing.blog.service.oauth2.TokenProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

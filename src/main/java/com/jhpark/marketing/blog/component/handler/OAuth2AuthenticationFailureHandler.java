@@ -1,6 +1,6 @@
 package com.jhpark.marketing.blog.component.handler;
 
-import com.jhpark.marketing.blog.repository.HttpCookieOAuth2AuthorizationRequestRepository;
+import com.jhpark.marketing.blog.repository.oauth2.HttpCookieOAuth2AuthorizationRequestRepository;
 import com.jhpark.marketing.blog.util.CookieUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.AuthenticationException;
@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static com.jhpark.marketing.blog.repository.HttpCookieOAuth2AuthorizationRequestRepository.REDIRECT_URI_PARAM_COOKIE_NAME;
+import static com.jhpark.marketing.blog.repository.oauth2.HttpCookieOAuth2AuthorizationRequestRepository.REDIRECT_URI_PARAM_COOKIE_NAME;
 
 
 /**
