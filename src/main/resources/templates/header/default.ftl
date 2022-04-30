@@ -45,7 +45,7 @@
 
                     <li class="nav-item" style="margin-left: 30px">
                         <#if user.userId == 99999>
-                            <a href="/oauth2/authorize/kakao?redirect_uri=http://blog.yonilum.com/">
+                            <a href="/oauth2/authorize/kakao?redirect_uri=${redirect_uri}">
                                 <img src="/assets/images/icons/kakao/kakao_login_medium_narrow.png">
                             </a>
                         <#else >
