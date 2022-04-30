@@ -224,7 +224,7 @@
              }
         });
         function uploadPostingImageAndGetPath(blob) {
-            var image_path = "${redirect_uri}";
+            var image_path = "";
             const formData = new FormData();
             formData.append("file", blob);
             $.ajax({
