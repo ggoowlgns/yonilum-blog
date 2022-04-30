@@ -22,7 +22,6 @@ import java.util.Optional;
 
 import static com.jhpark.marketing.blog.repository.oauth2.HttpCookieOAuth2AuthorizationRequestRepository.REDIRECT_URI_PARAM_COOKIE_NAME;
 
-
 /**
  * 인증이 성공하면 Spring Security 는 onAuthenticationSuccess()를 호출한다.
  */
