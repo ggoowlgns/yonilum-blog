@@ -31,6 +31,11 @@
                                   <div id="tui-md-editor"></div>
                                 </div>
                               </div>
+                              <div class="row form-group" style="margin-bottom: 100px">
+                                <div class="col-12 col-xm-12">
+                                  <div id="tui-image-editor"></div>
+                                </div>
+                              </div>
 
                               <#--Image Upload-->
                               <div class="row">
@@ -216,14 +221,21 @@
             plugins: [[chart, chartOptions], [codeSyntaxHighlight, { highlighter: Prism }], colorSyntax, tableMergedCell, uml],
             hooks : {
                 addImageBlobHook: function(blob, callback) {
-                    var uploadedImageURL = uploadPostingImageAndGetPath(blob);
+                    blob = editImageBeforeUpload(blob);
+                    var uploadedImageURL = uploadImageToServerAndGetPath(blob);
                     console.log("blob : " + blob);
                     console.log("uploadedImageURL : " + uploadedImageURL);
                     callback(uploadedImageURL, blob.name);
                 }
              }
         });
-        function uploadPostingImageAndGetPath(blob) {
+        function editImageBeforeUpload(imageFile) {
+            var editedFileImage;
+            //TODO : Image edit 하고 결과물을 upload 하기
+            return editedFileImage;
+        }
+
+        function uploadImageToServerAndGetPath(blob) {
             var image_path = "";
             const formData = new FormData();
             formData.append("file", blob);
@@ -248,6 +260,37 @@
             return image_path;
         }
     }
+
+</script>
+<#--Image Editor-->
+<link rel="stylesheet" href="https://uicdn.toast.com/tui-image-editor/latest/tui-image-editor.css"/>
+<script src="https://uicdn.toast.com/tui-image-editor/latest/tui-image-editor.js"></script>
+<script>
+    // const ImageEditor = require('tui-image-editor');
+    // const FileSaver = require('file-saver'); //to download edited image to local. Use after npm install file-saver
+    // const blackTheme = require('./js/theme/black-theme.js');
+
+    var imageEditor = new tui.ImageEditor('#tui-image-editor', {
+        usageStatistics: false,
+        includeUI: {
+            // loadImage: {
+            //     path: 'img/sampleImage.jpg',
+            //     name: 'SampleImage',
+            // },
+            // locale: locale_ru_RU,
+            // theme: blackTheme, // or whiteTheme
+            initMenu: 'filter',
+            menuBarPosition: 'bottom',
+        },
+        cssMaxWidth: 1000,
+        cssMaxHeight: 800,
+        selectionStyle: {
+            cornerSize: 20,
+            rotatingPointOffset: 70,
+        },
+    });
+
+
 </script>
 
 <script>
