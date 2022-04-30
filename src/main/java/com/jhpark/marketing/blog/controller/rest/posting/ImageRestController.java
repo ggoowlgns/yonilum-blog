@@ -12,6 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
+import org.springframework.web.server.ServerErrorException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -40,7 +41,7 @@ public class ImageRestController {
       return new ImageUploadResponse("OK", "Success Uploading File", path);
     } catch (Exception e) {
       LOG.error("upload faile : ", e);
-      return new ImageUploadResponse("FAIL", "Fail Uploading File", path);
+      throw new ServerErrorException("Image upload Fail");
     }
   }
 }

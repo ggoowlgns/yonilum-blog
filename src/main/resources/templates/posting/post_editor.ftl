@@ -205,6 +205,7 @@
           minHeight: 100,
           maxHeight: 300
         };
+
         tui_md_editor = new toastui.Editor({
             el: document.querySelector('#tui-md-editor'),
             // previewStyle: 'vertical',
@@ -212,8 +213,40 @@
             height: '500px',
             initialValue: 'asdasd',
             placeholder: 'Please enter text.',
-            plugins: [[chart, chartOptions], [codeSyntaxHighlight, { highlighter: Prism }], colorSyntax, tableMergedCell, uml]
+            plugins: [[chart, chartOptions], [codeSyntaxHighlight, { highlighter: Prism }], colorSyntax, tableMergedCell, uml],
+            hooks : {
+                addImageBlobHook: function(blob, callback) {
+                    var uploadedImageURL = uploadPostingImageAndGetPath(blob);
+                    console.log("blob : " + blob);
+                    console.log("uploadedImageURL : " + uploadedImageURL);
+                    callback(uploadedImageURL, blob.name);
+                }
+             }
         });
+        function uploadPostingImageAndGetPath(blob) {
+            var image_path = "${redirect_uri}";
+            const formData = new FormData();
+            formData.append("file", blob);
+            $.ajax({
+                async:false,
+                type:"POST",
+                url: "/api/image/uploads",
+                allowedTypes: "image/*",
+                extFilter: ['jpg', 'jpeg','png','gif'],
+                maxFileSize: 3000000, // 3 Megs
+                processData: false,
+                contentType: false,
+                data: formData,
+                success: function(rtn){
+                    console.log("upload success, response data : ", rtn)
+                    image_path += rtn.path;
+                },
+                err: function(err){
+                    console.error("err:", err)
+                }
+            })
+            return image_path;
+        }
     }
 </script>
 
