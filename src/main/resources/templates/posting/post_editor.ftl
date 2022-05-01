@@ -230,9 +230,8 @@
              }
         });
         function editImageBeforeUpload(imageFile) {
-            var editedFileImage;
             //TODO : Image edit 하고 결과물을 upload 하기
-            return editedFileImage;
+            return imageFile;
         }
 
         function uploadImageToServerAndGetPath(blob) {
