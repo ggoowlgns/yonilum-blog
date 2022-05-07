@@ -58,9 +58,9 @@
     });
 
   }
-  function editImageBeforeUpload(imageFile, mdEditorCallback) {
+  function editImageBeforeUpload(imageFile, mdEditorCallback, fileId) {
     tuiImageEditorModal.show()
-    var tui_image_editor = createImageEditor(mdEditorCallback);
+    var tui_image_editor = createImageEditor(mdEditorCallback, fileId);
     tui_image_editor.ui.activeMenuEvent();
     tui_image_editor.loadImageFromFile(imageFile, imageFile.name).then(result => {
       console.log('old : ' + result.oldWidth + ', ' + result.oldHeight);
@@ -103,7 +103,7 @@
   // const FileSaver = require('file-saver'); //to download edited image to local. Use after npm install file-saver
   // const blackTheme = require('./js/theme/black-theme.js');
   var tui_image_editor
-  function createImageEditor(mdEditorCallback) {
+  function createImageEditor(mdEditorCallback, fileId) {
     tui_image_editor = new tui.ImageEditor('#tui-image-editor', {
       usageStatistics: false,
       includeUI: {
@@ -133,8 +133,8 @@
       var uploadedImageURL = uploadImageToServerAndGetPath(blob);
       console.log("blob : " + blob);
 
-      if (mdEditorCallback instanceof FileReader) {
-
+      if (mdEditorCallback === 'read-image-uploader') {
+        $('#drag-and-drop-zone').dmUploader('start', fileId)
       } else {
         console.log("uploadedImageURL : " + uploadedImageURL);
         mdEditorCallback(uploadedImageURL, blob.name);

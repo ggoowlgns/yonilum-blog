@@ -144,7 +144,7 @@
           /* ToDo: do something with the img! */
           console.log("IN ONNEWFILE")
 
-          editImageBeforeUpload(file, reader)
+          editImageBeforeUpload(file, 'read-image-uploader', id)
           reader.readAsDataURL(file);
         }
       },
