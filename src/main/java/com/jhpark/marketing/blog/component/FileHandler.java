@@ -1,5 +1,6 @@
 package com.jhpark.marketing.blog.component;
 
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -16,10 +17,9 @@ import java.util.UUID;
  * https://velog.io/@pyo-sh/Spring-Boot-%ED%8C%8C%EC%9D%BC%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%97%85%EB%A1%9C%EB%93%9C-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0
  */
 
+@Slf4j
 @Component
 public class FileHandler {
-  Logger LOG = LoggerFactory.getLogger(FileHandler.class);
-
   @Value("${server.tomcat.basedir}")
   String baseDir;
 
@@ -33,7 +33,7 @@ public class FileHandler {
 
     // 파일이 빈 것이 들어오면 빈 것을 반환
     if (multipartFile.isEmpty()) {
-      LOG.error("multipartFile is empty");
+      log.error("multipartFile is empty");
       return null;
     }
 
@@ -61,7 +61,7 @@ public class FileHandler {
       String originalFileExtension = "";
       // 확장자 명이 없으면 이 파일은 잘 못 된 것이다
       if (ObjectUtils.isEmpty(contentType)) {
-        LOG.error("확장자명이 없음");
+        log.error("확장자명이 없음");
       } else {
         if (contentType.contains("image/jpeg")) {
           originalFileExtension = ".jpg";
@@ -72,7 +72,7 @@ public class FileHandler {
         }
         // 다른 파일 명이면 아무 일 하지 않는다
         else {
-          LOG.error("예측하지 못한 확장자");
+          log.error("예측하지 못한 확장자");
           return null;
         }
       }
@@ -88,7 +88,7 @@ public class FileHandler {
       multipartFile.transferTo(file);
 
       tempPath = file.getPath();
-      LOG.info("file upload complete : {}", tempPath);
+      log.info("file upload complete : {}", tempPath);
     }
 
     return getUrlFromFilePath(tempPath);
@@ -97,7 +97,7 @@ public class FileHandler {
   private String getUrlFromFilePath(String filePath) {
     String url = "";
     url = filePath.replaceAll("/home/ec2-user/blog", baseUrl);
-    LOG.info("getUrlFromFilePath url : {}", url);
+    log.info("getUrlFromFilePath url : {}", url);
     return url;
   }
 }

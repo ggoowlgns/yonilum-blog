@@ -3,6 +3,7 @@ package com.jhpark.marketing.blog.controller;
 import com.jhpark.marketing.blog.entity.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
@@ -10,6 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 
 public class BaseViewController {
   private final Logger LOG = LoggerFactory.getLogger(BaseViewController.class);
+
+  @Value("${yonilum.base.url}")
+  private String redirectUri;
 
   @ModelAttribute("user")
   public User getUser(HttpServletRequest request, ModelMap modelMap) {
@@ -32,6 +36,12 @@ public class BaseViewController {
     modelMap.put("user", userInfo);
 
     return (User) userInfo;
+  }
+
+  @ModelAttribute("redirectUri")
+  public String getRedirectUri(HttpServletRequest request, ModelMap modelMap) {
+    modelMap.put("redirect_uri", redirectUri);
+    return redirectUri;
   }
 
 }
