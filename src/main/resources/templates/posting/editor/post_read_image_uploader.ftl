@@ -143,11 +143,9 @@
           }
           /* ToDo: do something with the img! */
           console.log("IN ONNEWFILE")
-          var editedFile = null;
-          editImageBeforeUpload(file, reader, editedFile)
-          // reader.readAsDataURL(file);
 
-          file = editedFile;
+          editImageBeforeUpload(file, reader)
+          reader.readAsDataURL(file);
         }
       },
       onBeforeUpload: function(id){
@@ -188,7 +186,4 @@
     });
   });
 
-  function delay(time) {
-    return new Promise(resolve => setTimeout(resolve, time));
-  }
 </script>

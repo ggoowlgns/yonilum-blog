@@ -1,6 +1,6 @@
 <!-- Modal -->
 <div class="modal fade" id="tuiImageEditorModal" tabindex="-1" aria-labelledby="tuiImageEditorModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-fullscreen-xxl-down">
+  <div class="modal-dialog modal-fullscreen">
     <div class="modal-content">
         <#--      <div class="modal-header">-->
         <#--        <h5 class="modal-title" id="exampleModalLabel">Image Editor</h5>-->
@@ -45,8 +45,8 @@
       el: document.querySelector('#tui-md-editor'),
       // previewStyle: 'vertical',
       previewStyle: 'tab',
-      height: '500px',
-      initialValue: 'asdasd',
+      height: '700px',
+      initialValue: '',
       placeholder: 'Please enter text.',
       plugins: [[chart, chartOptions], [codeSyntaxHighlight, { highlighter: Prism }], colorSyntax, tableMergedCell, uml],
       hooks : {
@@ -57,20 +57,16 @@
       }
     });
 
-    function editImageBeforeUpload(imageFile, mdEditorCallback) {
-      tuiImageEditorModal.show()
-      var tui_image_editor = createImageEditor(mdEditorCallback);
-      tui_image_editor.ui.activeMenuEvent();
-      tui_image_editor.loadImageFromFile(imageFile, imageFile.name).then(result => {
-        console.log('old : ' + result.oldWidth + ', ' + result.oldHeight);
-        console.log('new : ' + result.newWidth + ', ' + result.newHeight);
-      });
-
-
-
-      //TODO : Image edit 하고 결과물을 upload 하기
-      return imageFile;
-    }
+  }
+  function editImageBeforeUpload(imageFile, mdEditorCallback) {
+    tuiImageEditorModal.show()
+    var tui_image_editor = createImageEditor(mdEditorCallback);
+    tui_image_editor.ui.activeMenuEvent();
+    tui_image_editor.loadImageFromFile(imageFile, imageFile.name).then(result => {
+      console.log('old : ' + result.oldWidth + ', ' + result.oldHeight);
+      console.log('new : ' + result.newWidth + ', ' + result.newHeight);
+    });
+    return imageFile;
   }
 
   function uploadImageToServerAndGetPath(blob) {
@@ -136,8 +132,13 @@
       var blob = convertBase64ToFile(resultBase64Image, imageName);
       var uploadedImageURL = uploadImageToServerAndGetPath(blob);
       console.log("blob : " + blob);
-      console.log("uploadedImageURL : " + uploadedImageURL);
-      mdEditorCallback(uploadedImageURL, blob.name);
+
+      if (mdEditorCallback instanceof FileReader) {
+
+      } else {
+        console.log("uploadedImageURL : " + uploadedImageURL);
+        mdEditorCallback(uploadedImageURL, blob.name);
+      }
       tuiImageEditorModal.hide();
     });
     return tui_image_editor;
