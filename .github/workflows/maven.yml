@@ -40,9 +40,9 @@ jobs:
       run: pwd
     - name : check
       run: du -ah
-    - name: CD-Copy Output
-      run: sudo scp -o StrictHostKeyChecking=no -i .github/workflows/key/jhpark-seoul.pem target/marketing-blog.jar ec2-user@3.38.88.54:blog/app/marketing-blog.jar
     - name: CD-Stop App
       run: sudo ssh -o StrictHostKeyChecking=no -i .github/workflows/key/jhpark-seoul.pem ec2-user@3.38.88.54 sudo service blog stop
+    - name: CD-Copy Output
+      run: sudo scp -o StrictHostKeyChecking=no -i .github/workflows/key/jhpark-seoul.pem target/marketing-blog.jar ec2-user@3.38.88.54:blog/app/marketing-blog.jar
     - name: CD-Start App
       run: sudo ssh -o StrictHostKeyChecking=no -i .github/workflows/key/jhpark-seoul.pem ec2-user@3.38.88.54 sudo service blog start
