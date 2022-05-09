@@ -84,7 +84,7 @@ public class KakaoPayService {
     multiValueMap.add("partner_user_id", "gorany");
     multiValueMap.add("item_name", "갤럭시S9");
     multiValueMap.add("quantity", "1");
-    multiValueMap.add("total_amount", "2100");
+    multiValueMap.add("total_amount", "810000");
     multiValueMap.add("tax_free_amount", "100");
     multiValueMap.add("approval_url", baseUrl+"/kakaopay/prepareSuccess");
     multiValueMap.add("cancel_url", baseUrl+"/kakaoPayCancel");
@@ -109,7 +109,7 @@ public class KakaoPayService {
     params.add("partner_order_id", "1001");
     params.add("partner_user_id", "gorany");
     params.add("pg_token", pgToken);
-    params.add("total_amount", "2100");
+    params.add("total_amount", "810000");
 
     HttpEntity<MultiValueMap<String, String>> body = new HttpEntity<MultiValueMap<String, String>>(params, headers);
 

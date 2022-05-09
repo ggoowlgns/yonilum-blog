@@ -20,7 +20,7 @@
               </a>
             </div>
             <div class="col-12 col-md-6">
-              <div class="about-us__content">
+              <div class="about-us__content" id="pay-content">
                 <h3>Thank you for visit out my website.</h3>
                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores sit amet vel facilisis beatae vitae dicta sunt.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus.</p>
@@ -58,6 +58,7 @@
   var approvalInfo = ""
   <#if approval??>
     approvalInfo = ${approval};
+    window.alert(approvalInfo)
   </#if>
 
   console.log("approvalInfo : " + approvalInfo);
