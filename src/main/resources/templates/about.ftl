@@ -15,7 +15,9 @@
         <div class="about-us">
           <div class="row align-items-center">
             <div class="col-12 col-sm-8 col-md-6 mx-auto">
-              <div class="about-us__image"><img src="assets/images/pages/about/1.png" alt="About us image"/></div>
+              <a href="/api/kakaopay/prepare">
+                <img src="assets/images/pay/payment_icon_yellow_large.png" alt="About us image"/>
+              </a>
             </div>
             <div class="col-12 col-md-6">
               <div class="about-us__content">
@@ -52,4 +54,12 @@
     </div>
     <#include "/footer/default.ftl">
   </body>
+<script>
+  var approvalInfo = ""
+  <#if approval??>
+    approvalInfo = ${approval};
+  </#if>
+
+  console.log("approvalInfo : " + approvalInfo);
+</script>
 </html>

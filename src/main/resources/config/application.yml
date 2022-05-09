@@ -3,9 +3,6 @@ logging:
   level:
     root: info
 
-yonilum:
-  base:
-    url: http://blog.yonilum.com
 server:
   error:
     include-exception: true
@@ -119,4 +116,12 @@ app-security:
 
 
 
-yonilum.access.token.key: YONITOKEN
+yonilum:
+  base:
+    url: http://blog.yonilum.com
+  access:
+    token:
+      key: YONITOKEN
+  kakao:
+    admin: cf9a648529e1fe8e5240e391a33979c3
+    cid: TC0ONETIME
