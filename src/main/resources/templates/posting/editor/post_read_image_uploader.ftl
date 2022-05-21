@@ -142,7 +142,6 @@
             img.attr('src', e.target.result);
           }
           /* ToDo: do something with the img! */
-          console.log("IN ONNEWFILE")
 
           editImageBeforeUpload(file, 'read-image-uploader', id)
           reader.readAsDataURL(file);
@@ -168,7 +167,7 @@
         ui_multi_update_file_progress(id, 100, 'success', false);
 
         // 들어감
-        $('#uploaderFile' + id).prop('path', data.path);
+        // $('#uploaderFile' + id).prop('path', data.path);
       },
 
       onUploadError: function(id, xhr, status, message){

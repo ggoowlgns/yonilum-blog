@@ -128,13 +128,13 @@
     document.querySelector('#tui-image-editor-save-btn').addEventListener('click', () => {
       const resultBase64Image = tui_image_editor.toDataURL();
       const imageName = tui_image_editor.getImageName();
-      console.log("resultBase64Image : " + resultBase64Image)
+      // console.log("resultBase64Image : " + resultBase64Image)
       var blob = convertBase64ToFile(resultBase64Image, imageName);
       var uploadedImageURL = uploadImageToServerAndGetPath(blob);
       console.log("blob : " + blob);
 
       if (mdEditorCallback === 'read-image-uploader') {
-        $('#drag-and-drop-zone').dmUploader('start', fileId)
+        $('#uploaderFile' + fileId).prop('path', uploadedImageURL);
       } else {
         console.log("uploadedImageURL : " + uploadedImageURL);
         mdEditorCallback(uploadedImageURL, blob.name);
