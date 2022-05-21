@@ -12,7 +12,6 @@
                     <div class="post-footer" style="width: 100%">
                         <h3 class="comment-title"> <span>Posting Editor Page</span></h3>
                         <div class="post-footer__comment__form">
-<#--                            <form action="/api/posting">-->
                             <form>
                               <div class="row form-group">
                                 <div class="col-12 col-sm-12">
@@ -25,6 +24,32 @@
                                 </div>
                               </div>
 
+                              <#--Post Card-->
+                              <div class="row form-group">
+                                <!-- /uploader -->
+                                <div class="col-md-3 col-sm-12">
+                                  <!-- Our markup, the important part here! -->
+                                  <div id="drag-and-drop-zone" class="dm-uploader p-2">
+                                    <h3 class="mb-5 mt-5 text-muted">Drag &amp; drop Read Images here</h3>
+                                    <div class="btn -normal tag-btn">
+                                      <span>Open the file Browser</span>
+                                      <input type="file" title='Click to add Files' />
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- /file list -->
+                                <div class="col-md-8 col-sm-12">
+                                  <div class="card h-100">
+                                    <div class="card-header">
+                                      Read Image List
+                                    </div>
+                                    <ul class="list-group p-2 d-flex flex-column col overflow-auto" id="files" style="overflow:scroll;">
+                                      <li class="text-muted text-center empty">No files uploaded.</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+
                               <#--Markdown Editor (TUI)-->
                               <div class="row form-group" style="margin-bottom: 100px">
                                 <div class="col-12 col-xm-12">
@@ -32,46 +57,6 @@
                                 </div>
                               </div>
 
-                              <#--Image Upload-->
-                              <div class="row">
-                                <!-- /uploader -->
-                                <div class="col-md-6 col-sm-12">
-                                  <!-- Our markup, the important part here! -->
-                                  <div id="drag-and-drop-zone" class="dm-uploader p-5">
-                                    <h3 class="mb-5 mt-5 text-muted">Drag &amp; drop files here</h3>
-                                    <div class="btn btn-primary btn-block mb-5">
-                                      <span>Open the file Browser</span>
-                                      <input type="file" title='Click to add Files' />
-                                    </div>
-                                  </div>
-                                </div>
-
-                                <!-- /file list -->
-                                <div class="col-md-6 col-sm-12">
-                                  <div class="card h-100">
-                                    <div class="card-header">
-                                      File List
-                                    </div>
-                                    <ul class="list-unstyled p-2 d-flex flex-column col" id="files">
-                                      <li class="text-muted text-center empty">No files uploaded.</li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <!--debug message-->
-                              <div class="row">
-                                <div class="col-12">
-                                  <div class="card h-100">
-                                    <div class="card-header">
-                                      Debug Messages
-                                    </div>
-                                    <ul class="list-group list-group-flush" id="debug">
-                                      <li class="list-group-item text-muted empty">Loading plugin....</li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
 
                             </form>
                         </div>
@@ -91,263 +76,9 @@
     </div>
 </div>
 </body>
-<!-- Modal -->
-<div class="modal fade" id="tuiImageEditorModal" tabindex="-1" aria-labelledby="tuiImageEditorModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-fullscreen-xxl-down">
-    <div class="modal-content">
-<#--      <div class="modal-header">-->
-<#--        <h5 class="modal-title" id="exampleModalLabel">Image Editor</h5>-->
-<#--        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
-<#--      </div>-->
-      <div class="modal-body">
-        <div id="tui-image-editor"></div>
-      </div>
-<#--      <div class="modal-footer">-->
-<#--        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
-<#--        <button type="button" class="btn btn-primary">Save changes</button>-->
-<#--      </div>-->
-    </div>
-  </div>
-</div>
+<#include "/posting/editor/post_content_editor.ftl">
+<#include "/posting/editor/post_read_image_uploader.ftl">
 
-
-<script type="text/template" id="qq-template-gallery">
-  <div class="qq-uploader-selector qq-uploader qq-gallery" qq-drop-area-text="Drop files here">
-    <div class="qq-total-progress-bar-container-selector qq-total-progress-bar-container">
-      <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" class="qq-total-progress-bar-selector qq-progress-bar qq-total-progress-bar"></div>
-    </div>
-    <div class="qq-upload-drop-area-selector qq-upload-drop-area" qq-hide-dropzone>
-      <span class="qq-upload-drop-area-text-selector"></span>
-    </div>
-    <div class="qq-upload-button-selector qq-upload-button">
-      <div>Upload a file</div>
-    </div>
-    <span class="qq-drop-processing-selector qq-drop-processing">
-                <span>Processing dropped files...</span>
-                <span class="qq-drop-processing-spinner-selector qq-drop-processing-spinner"></span>
-            </span>
-    <ul class="qq-upload-list-selector qq-upload-list" role="region" aria-live="polite" aria-relevant="additions removals">
-      <li>
-        <span role="status" class="qq-upload-status-text-selector qq-upload-status-text"></span>
-        <div class="qq-progress-bar-container-selector qq-progress-bar-container">
-          <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" class="qq-progress-bar-selector qq-progress-bar"></div>
-        </div>
-        <span class="qq-upload-spinner-selector qq-upload-spinner"></span>
-        <div class="qq-thumbnail-wrapper">
-          <img class="qq-thumbnail-selector" qq-max-size="120" qq-server-scale>
-        </div>
-        <button type="button" class="qq-upload-cancel-selector qq-upload-cancel">X</button>
-        <button type="button" class="qq-upload-retry-selector qq-upload-retry">
-          <span class="qq-btn qq-retry-icon" aria-label="Retry"></span>
-          Retry
-        </button>
-
-        <div class="qq-file-info">
-          <div class="qq-file-name">
-            <span class="qq-upload-file-selector qq-upload-file"></span>
-            <span class="qq-edit-filename-icon-selector qq-edit-filename-icon" aria-label="Edit filename"></span>
-          </div>
-          <input class="qq-edit-filename-selector qq-edit-filename" tabindex="0" type="text">
-          <span class="qq-upload-size-selector qq-upload-size"></span>
-          <button type="button" class="qq-btn qq-upload-delete-selector qq-upload-delete">
-            <span class="qq-btn qq-delete-icon" aria-label="Delete"></span>
-          </button>
-          <button type="button" class="qq-btn qq-upload-pause-selector qq-upload-pause">
-            <span class="qq-btn qq-pause-icon" aria-label="Pause"></span>
-          </button>
-          <button type="button" class="qq-btn qq-upload-continue-selector qq-upload-continue">
-            <span class="qq-btn qq-continue-icon" aria-label="Continue"></span>
-          </button>
-        </div>
-      </li>
-    </ul>
-
-    <dialog class="qq-alert-dialog-selector">
-      <div class="qq-dialog-message-selector"></div>
-      <div class="qq-dialog-buttons">
-        <button type="button" class="qq-cancel-button-selector">Close</button>
-      </div>
-    </dialog>
-
-    <dialog class="qq-confirm-dialog-selector">
-      <div class="qq-dialog-message-selector"></div>
-      <div class="qq-dialog-buttons">
-        <button type="button" class="qq-cancel-button-selector">No</button>
-        <button type="button" class="qq-ok-button-selector">Yes</button>
-      </div>
-    </dialog>
-
-    <dialog class="qq-prompt-dialog-selector">
-      <div class="qq-dialog-message-selector"></div>
-      <input type="text">
-      <div class="qq-dialog-buttons">
-        <button type="button" class="qq-cancel-button-selector">Cancel</button>
-        <button type="button" class="qq-ok-button-selector">Ok</button>
-      </div>
-    </dialog>
-  </div>
-</script>
-<script type="text/html" id="debug-template">
-  <li class="list-group-item text-%%color%%"><strong>%%date%%</strong>: %%message%%</li>
-</script>
-<script type="text/html" id="files-template">
-  <li class="media" >
-    <div class="media-body mb-1">
-      <p class="mb-2">
-        <strong>%%filename%%</strong> - Status: <span class="text-muted">Waiting</span>
-      </p>
-      <div class="progress mb-2">
-        <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
-             role="progressbar"
-             style="width: 0%"
-             aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-        </div>
-      </div>
-
-      <hr class="mt-1 mb-1" />
-    </div>
-  </li>
-</script>
-
-<#--toast-ui -->
-<#include "/tui-markdown-editor/tui-md-editor-dependency.ftl">
-<script>
-    var tuiImageEditorModal = new bootstrap.Modal(document.getElementById('tuiImageEditorModal'))
-    var tuiImageEditorEl = document.getElementById('tuiImageEditorModal')
-    tuiImageEditorEl.addEventListener('hidden.bs.modal', function (event) {
-        // do something...
-        console.log("destory tui_image_editor !")
-        tui_image_editor.destroy();
-    })
-    var tui_md_editor;
-    makeMdEditor();
-
-    function makeMdEditor() {
-        const { Editor } = toastui;
-        const { chart, codeSyntaxHighlight, colorSyntax, tableMergedCell, uml } = Editor.plugin;
-        const chartOptions = {
-          minWidth: 100,
-          maxWidth: 600,
-          minHeight: 100,
-          maxHeight: 300
-        };
-
-        tui_md_editor = new toastui.Editor({
-            el: document.querySelector('#tui-md-editor'),
-            // previewStyle: 'vertical',
-            previewStyle: 'tab',
-            height: '500px',
-            initialValue: 'asdasd',
-            placeholder: 'Please enter text.',
-            plugins: [[chart, chartOptions], [codeSyntaxHighlight, { highlighter: Prism }], colorSyntax, tableMergedCell, uml],
-            hooks : {
-                addImageBlobHook: function(blob, callback) {
-                    console.log("blob before edit : " + blob)
-                    blob = editImageBeforeUpload(blob, callback);
-                }
-             }
-        });
-
-        function editImageBeforeUpload(imageFile, mdEditorCallback) {
-            tuiImageEditorModal.show()
-            var tui_image_editor = createImageEditor(mdEditorCallback);
-            tui_image_editor.ui.activeMenuEvent();
-            tui_image_editor.loadImageFromFile(imageFile, imageFile.name).then(result => {
-                console.log('old : ' + result.oldWidth + ', ' + result.oldHeight);
-                console.log('new : ' + result.newWidth + ', ' + result.newHeight);
-            });
-
-
-
-            //TODO : Image edit 하고 결과물을 upload 하기
-            return imageFile;
-        }
-    }
-
-    function uploadImageToServerAndGetPath(blob) {
-        var image_path = "";
-        const formData = new FormData();
-        formData.append("file", blob);
-        $.ajax({
-            async:false,
-            type:"POST",
-            url: "/api/image/uploads",
-            allowedTypes: "image/*",
-            extFilter: ['jpg', 'jpeg','png','gif'],
-            maxFileSize: 10000000, // 3 Megs
-            processData: false,
-            contentType: false,
-            data: formData,
-            success: function(rtn){
-                console.log("upload success, response data : ", rtn)
-                image_path += rtn.path;
-            },
-            err: function(err){
-                console.error("err:", err)
-            }
-        })
-        return image_path;
-    }
-
-</script>
-<#--Image Editor-->
-<link rel="stylesheet" href="https://uicdn.toast.com/tui-image-editor/latest/tui-image-editor.css"/>
-<script src="https://uicdn.toast.com/tui-image-editor/latest/tui-image-editor.js"></script>
-<script>
-    // const ImageEditor = require('tui-image-editor');
-    // const FileSaver = require('file-saver'); //to download edited image to local. Use after npm install file-saver
-    // const blackTheme = require('./js/theme/black-theme.js');
-    var tui_image_editor
-    function createImageEditor(mdEditorCallback) {
-         tui_image_editor = new tui.ImageEditor('#tui-image-editor', {
-            usageStatistics: false,
-            includeUI: {
-                // loadImage: {
-                //     path: 'img/sampleImage.jpg',
-                //     name: 'SampleImage',
-                // },
-                // locale: locale_ru_RU,
-                // theme: blackTheme, // or whiteTheme
-                initMenu: 'filter',
-                menuBarPosition: 'bottom',
-            },
-            cssMaxWidth: 1000,
-            cssMaxHeight: 800,
-            selectionStyle: {
-                cornerSize: 20,
-                rotatingPointOffset: 70,
-            },
-        });
-        $('.tui-image-editor-header-buttons .tui-image-editor-download-btn').
-        replaceWith('<button id="tui-image-editor-save-btn" class="tui-image-editor-download-btn" >Save</button>')
-        document.querySelector('#tui-image-editor-save-btn').addEventListener('click', () => {
-            const resultBase64Image = tui_image_editor.toDataURL();
-            const imageName = tui_image_editor.getImageName();
-            console.log("resultBase64Image : " + resultBase64Image)
-            var blob = convertBase64ToFile(resultBase64Image, imageName);
-            var uploadedImageURL = uploadImageToServerAndGetPath(blob);
-            console.log("blob : " + blob);
-            console.log("uploadedImageURL : " + uploadedImageURL);
-            mdEditorCallback(uploadedImageURL, blob.name);
-            tuiImageEditorModal.hide();
-        });
-        return tui_image_editor;
-    }
-
-    function convertBase64ToFile(base64Image, imageName) {
-        var arr = base64Image.split(','),
-            mime = arr[0].match(/:(.*?);/)[1],
-            bstr = atob(arr[1]),
-            n = bstr.length,
-            u8arr = new Uint8Array(n);
-
-        while(n--){
-            u8arr[n] = bstr.charCodeAt(n);
-        }
-
-        return new File([u8arr], imageName, {type:mime});
-    }
-</script>
 
 <script>
     // Add New Posting || Edit Existing Posting
