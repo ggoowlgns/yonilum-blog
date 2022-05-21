@@ -135,8 +135,12 @@
 
     function getFirstImageUrlFromContent(content) {
         var imageSearchRegex = /!\[.*?\]\((.*?)\)/
+        if (content.match(imageSearchRegex) == null) alertWarning();
         return content.match(imageSearchRegex)[1];
         //ref : https://stackoverflow.com/questions/26024796/what-type-of-regexp-would-i-need-to-extract-image-url-from-markdown
+    }
+    function alertWarning() {
+        alert("card view 혹은 content 상에 image 가 필수적으로 존재해야 합니다.",{em:'Billible',title:'인사'})
     }
 
     function postPosting(path, requestBody) {
