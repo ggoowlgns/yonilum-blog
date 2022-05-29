@@ -23,6 +23,10 @@ spring:
     use-legacy-processing: true
   profiles:
     include: console-logging
+  servlet:
+    multipart:
+      max-request-size: 5MB #nginx 설정과 통일하자.
+      max-file-size: 5MB
   freemarker:
     cache: true
     check-template-location: true
