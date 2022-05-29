@@ -37,8 +37,8 @@
             $('#posting-comment-count').text(data.postingComments.length);
 
             addCardImages(data.postingImages)
+            ititalSlide(); //in main.js : card-image 변환
 
-            //TODO : md 로 만들어준 결과물을 그대로 가져와서 arg 로 넣어주기
             addContent(data.postingContents[0]['content'])
 
             for (var tag of categoryList) {
