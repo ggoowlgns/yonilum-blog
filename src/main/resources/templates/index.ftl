@@ -48,7 +48,7 @@
 
       var main_posting_dom = '<div class="col-12">' +
           '<div class="post-card -center -banner -inner-text">' +
-          '<a class="card__cover" href="/posting/'+posting_id+'">' +
+          '<a class="card__cover" style="max-height: 50vh" href="/posting/'+posting_id+'">' +
           '<img src="'+thumbnail_url+'"/>' +
           '</a>' +
           '<div class="card__content">' +
