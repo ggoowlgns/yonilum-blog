@@ -758,7 +758,7 @@ function preload() {
 
 //Document ready
 $(document).ready(function () {
-  ititalSlide();
+  // ititalSlide(); : image src 모두 load 가 완료되면 작동하는걸로 변경
   navDropdownHandle();
   menuScrollHandle();
   showSearchInput();

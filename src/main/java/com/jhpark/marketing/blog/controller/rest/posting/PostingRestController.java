@@ -2,6 +2,7 @@ package com.jhpark.marketing.blog.controller.rest.posting;
 
 import com.jhpark.marketing.blog.controller.BaseViewController;
 import com.jhpark.marketing.blog.entity.Posting;
+import com.jhpark.marketing.blog.entity.PostingImage;
 import com.jhpark.marketing.blog.payload.request.PostingRequest;
 import com.jhpark.marketing.blog.service.category.CategoryService;
 import com.jhpark.marketing.blog.service.posting.PostingService;
@@ -13,8 +14,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping(path = "/api/posting", produces = "application/json")
@@ -27,6 +28,10 @@ public class PostingRestController extends BaseViewController {
   @RequestMapping(path = "/{postingId}", method = RequestMethod.GET)
   public Posting detail(@PathVariable("postingId") long postingId) {
     Posting posting = postingService.getPosting(postingId);
+    LinkedHashSet<PostingImage> postingImagesOrdered = posting.getPostingImages().stream()
+        .sorted(Comparator.comparingLong(PostingImage::getPostingImageId))
+        .collect(Collectors.toCollection(()->new LinkedHashSet<>()));
+    posting.setPostingImages(postingImagesOrdered);;
     return posting;
   }
 

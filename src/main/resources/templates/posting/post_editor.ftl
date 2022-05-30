@@ -105,6 +105,8 @@
         for (var imageDom of $("#files").children(".media")) {
             imagePaths.push(imageDom.path);
         }
+        imagePaths = imagePaths.reverse();
+
         var content = getPostingMarkDownContentFromMDEditor();
 
         var requestBody = {
@@ -117,11 +119,30 @@
             'content' : content
         };
 
+        requestBody = checkIfThumbnailIsEmptyAndPutThumbnailFromContent(requestBody);
+
         postPosting('/api/posting', requestBody);
     }
 
+
     function getPostingMarkDownContentFromMDEditor() {
       return tui_md_editor.getMarkdown()
+    }
+
+    function checkIfThumbnailIsEmptyAndPutThumbnailFromContent(requestBody) {
+        if (requestBody['thumbnailUrl'] != undefined) return requestBody;
+        requestBody['thumbnailUrl'] = getFirstImageUrlFromContent(requestBody['content'])
+        return requestBody;
+    }
+
+    function getFirstImageUrlFromContent(content) {
+        var imageSearchRegex = /!\[.*?\]\((.*?)\)/
+        if (content.match(imageSearchRegex) == null) alertWarning();
+        return content.match(imageSearchRegex)[1];
+        //ref : https://stackoverflow.com/questions/26024796/what-type-of-regexp-would-i-need-to-extract-image-url-from-markdown
+    }
+    function alertWarning() {
+        alert("card view 혹은 content 상에 image 가 필수적으로 존재해야 합니다.",{em:'Billible',title:'인사'})
     }
 
     function postPosting(path, requestBody) {
