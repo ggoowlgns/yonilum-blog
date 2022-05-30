@@ -105,6 +105,8 @@
         for (var imageDom of $("#files").children(".media")) {
             imagePaths.push(imageDom.path);
         }
+        imagePaths = imagePaths.reverse();
+
         var content = getPostingMarkDownContentFromMDEditor();
 
         var requestBody = {
