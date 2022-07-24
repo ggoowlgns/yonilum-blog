@@ -5,20 +5,22 @@ logging:
 
 yonilum:
   base:
-    url: http://blog.yonilum.com
+    url: 'http://blog.yonilum.com'
 server:
   error:
     include-exception: true
     include-stacktrace: always
-    path: /error
+    path: '/error'
     whitelabel:
       enabled: true
   port: 8080
   tomcat:
-    basedir: /home/ec2-user/blog/
+    basedir: '/home/ec2-user/blog/'
 
 
 spring:
+  application:
+    name: yonilum
   config:
     use-legacy-processing: true
   profiles:
@@ -38,9 +40,11 @@ spring:
     template-loader-path: classpath:/templates
     resources:
       static-locations: classpath:/static
-
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
   datasource:
-    url: jdbc:mysql://localhost:3306/blog?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
+    url: 'jdbc:mysql://localhost:3306/blog?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false'
     username: root
     password: Qlalflek12{*
     driver-class-name: com.mysql.jdbc.Driver
@@ -93,9 +97,9 @@ spring:
 #                - email
         provider:
           kakao:
-            authorization-uri: https://kauth.kakao.com/oauth/authorize
-            token-uri: https://kauth.kakao.com/oauth/token
-            user-info-uri: https://kapi.kakao.com/v2/user/me
+            authorization-uri: 'https://kauth.kakao.com/oauth/authorize'
+            token-uri: 'https://kauth.kakao.com/oauth/token'
+            user-info-uri: 'https://kapi.kakao.com/v2/user/me'
             user-name-attribute: id
 #              naver:
 #                authorization-uri: https://nid.naver.com/oauth2.0/authorize
@@ -117,7 +121,7 @@ app-security:
 
     # 생성된 JWT Token을 response 할 uri
     authorizedRedirectUris:
-      - http://localhost:8080/oauth2/redirect
+      - 'http://localhost:8080/oauth2/redirect'
 #      - myandroidapp://oauth2/redirect
 #      - myiosapp://oauth2/redirect
 
