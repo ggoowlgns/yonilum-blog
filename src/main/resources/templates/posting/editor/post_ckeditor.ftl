@@ -18,10 +18,6 @@
     return CKSource.Editor
       .create( element, config )
       .then( editor => {
-
-
-
-
         return editor;
       } )
   } );
@@ -38,6 +34,7 @@
   watchdog
     .create( document.querySelector( '.editor' ), {
       licenseKey: '',
+      removePlugins: ['Title'],
     } )
     .catch( handleError );
 
