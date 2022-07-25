@@ -53,8 +53,10 @@
                               <#--Markdown Editor (TUI)-->
                               <div class="row form-group" style="margin-bottom: 100px">
                                 <div class="col-12 col-xm-12">
-                                  <div id="tui-md-editor"></div>
+<#--                                  <div id="tui-md-editor"></div>-->
+                                  <#include "/posting/editor/post_ckeditor.ftl">
                                 </div>
+
                               </div>
 
 

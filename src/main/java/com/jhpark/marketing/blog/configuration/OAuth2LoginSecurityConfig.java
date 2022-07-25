@@ -46,7 +46,7 @@ public class OAuth2LoginSecurityConfig extends WebSecurityConfigurerAdapter {
   private final OAuth2AuthenticationFailureHandler failureHandler;
 
   private final TokenService tokenService;
-
+  private final TokenAuthenticationFilter tokenAuthenticationFilter;
 
   public static String ACCESS_TOKEN;
 
@@ -102,7 +102,7 @@ public class OAuth2LoginSecurityConfig extends WebSecurityConfigurerAdapter {
             .failureHandler(failureHandler);
 
 
-    http.addFilterBefore(tokenAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class );
+    http.addFilterBefore(tokenAuthenticationFilter, UsernamePasswordAuthenticationFilter.class );
   }
 
 
@@ -114,11 +114,6 @@ public class OAuth2LoginSecurityConfig extends WebSecurityConfigurerAdapter {
   @Bean
   public HttpCookieOAuth2AuthorizationRequestRepository cookieAuthorizationRequestRepository() {
     return new HttpCookieOAuth2AuthorizationRequestRepository();
-  }
-
-  @Bean
-  public TokenAuthenticationFilter tokenAuthenticationFilter() {
-    return new TokenAuthenticationFilter();
   }
 
   /**

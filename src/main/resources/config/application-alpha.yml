@@ -1,6 +1,6 @@
 logging:
   file:
-    path: /home/ec2-user/blog/log/
+    path: '/home/ec2-user/blog/log/'
   pattern:
     file: '%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n'
 
@@ -13,9 +13,9 @@ spring:
       client:
         registration:
           kakao:
-            redirect-uri: http://blog.yonilum.com/login/oauth2/code/kakao
+            redirect-uri: 'http://blog.yonilum.com/login/oauth2/code/kakao'
 
 app-security:
   oauth2:
     authorizedRedirectUris:
-      - http://blog.yonilum.com/oauth2/redirect
+      - 'http://blog.yonilum.com/oauth2/redirect'

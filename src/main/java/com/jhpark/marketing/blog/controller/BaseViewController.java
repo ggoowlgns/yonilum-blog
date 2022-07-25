@@ -1,6 +1,7 @@
 package com.jhpark.marketing.blog.controller;
 
 import com.jhpark.marketing.blog.entity.User;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -9,9 +10,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 
 import javax.servlet.http.HttpServletRequest;
 
+@Slf4j
 public class BaseViewController {
-  private final Logger LOG = LoggerFactory.getLogger(BaseViewController.class);
-
   @Value("${yonilum.base.url}")
   private String redirectUri;
 
@@ -32,7 +32,7 @@ public class BaseViewController {
       userInfo = (User) attribute;
     }
 
-    LOG.debug("user : {}", userInfo);
+    log.debug("user : {}", userInfo);
     modelMap.put("user", userInfo);
 
     return (User) userInfo;
