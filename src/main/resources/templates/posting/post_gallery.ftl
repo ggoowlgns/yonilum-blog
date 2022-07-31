@@ -2,6 +2,7 @@
 <html lang="en">
   <#include "/header/default-meta.ftl">
   <#include "/tui-markdown-editor/tui-md-editor-dependency.ftl">
+  <script src="/assets/js/ckeditor/ckeditor.js"></script>
   <script>
     var postingRequest = RestClient.GET('/api/posting/${postingId}');
     var userId = ${user.userId};
@@ -68,8 +69,25 @@
           content = ``
         }
 
-      document.getElementById('tui-md-viewer').innerHTML = content;
-      // viewer.setMarkdown(content)
+        CKSource.Editor
+        .create( document.querySelector( '#tui-md-viewer' ), {
+        } )
+        .then( editor => {
+            const toolbarElement = editor.ui.view.toolbar.element;
+            editor.on( 'change:isReadOnly', ( evt, propertyName, isReadOnly ) => {
+                if ( isReadOnly ) {
+                    toolbarElement.style.display = 'none';
+                } else {
+                    toolbarElement.style.display = 'flex';
+                }
+            } );
+            editor.data.set(content)
+            editor.enableReadOnlyMode( 'my-feature-id' );
+        } )
+        .catch( error => {
+            console.log( error );
+        } );
+
 
     }
 

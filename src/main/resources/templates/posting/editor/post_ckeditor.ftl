@@ -25,9 +25,6 @@
   } );
 
   watchdog.setDestructor( editor => {
-
-
-
     return editor.destroy();
   } );
 
