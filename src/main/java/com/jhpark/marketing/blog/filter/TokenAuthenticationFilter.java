@@ -52,7 +52,7 @@ public class TokenAuthenticationFilter extends OncePerRequestFilter {
     }
 
     filterChain.doFilter(request, response);
-    log.info("http uri : {}", contentRequestWrapper.getRequestURI());
+//    log.info("http uri : {}", contentRequestWrapper.getRequestURI());
   }
 
   /**
