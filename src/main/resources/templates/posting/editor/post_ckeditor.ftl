@@ -11,14 +11,16 @@
 <script src="/assets/js/ckeditor/ckeditor.js"></script>
 <script>
   const watchdog = new CKSource.EditorWatchdog();
+  let ckeditor;
 
   window.watchdog = watchdog;
 
   watchdog.setCreator( ( element, config ) => {
     return CKSource.Editor
       .create( element, config )
-      .then( editor => {
-        return editor;
+      .then( newEditor => {
+          ckeditor = newEditor;
+          return newEditor;
       } )
   } );
 

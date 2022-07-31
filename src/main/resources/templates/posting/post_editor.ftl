@@ -109,7 +109,8 @@
         }
         imagePaths = imagePaths.reverse();
 
-        var content = getPostingMarkDownContentFromMDEditor();
+        // var content = getPostingMarkDownContentFromMDEditor();
+        var content = getpostingMarkDownContentFromCKEditor();
 
         var requestBody = {
             'title' : title,
@@ -126,6 +127,9 @@
         postPosting('/api/posting', requestBody);
     }
 
+    function getpostingMarkDownContentFromCKEditor() {
+        return ckeditor.getData();
+    }
 
     function getPostingMarkDownContentFromMDEditor() {
       return tui_md_editor.getMarkdown()
