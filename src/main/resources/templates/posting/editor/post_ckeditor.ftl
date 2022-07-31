@@ -54,7 +54,7 @@
   class MyUploadAdapter {
       constructor( loader ) {
           this.loader = loader;
-          this.url = 'http://localhost:8080/api/image/uploads';
+          this.url = '${redirect_uri}/api/image/uploads';
       }
 
       // Starts the upload process.
