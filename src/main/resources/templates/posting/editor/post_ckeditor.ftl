@@ -34,7 +34,7 @@
     .create( document.querySelector( '.editor' ), {
       extraPlugins: [ MyCustomUploadAdapterPlugin ],
       licenseKey: '',
-      removePlugins: ['Title'],
+      removePlugins: ['Title','Markdown'],
     } )
     .catch( handleError );
 

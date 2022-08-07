@@ -68,8 +68,9 @@
         if (content === undefined) {
           content = ``
         }
+        $('#tui-md-viewer').html(content)
 
-        CKSource.Editor
+        /*CKSource.Editor
         .create( document.querySelector( '#tui-md-viewer' ), {
         } )
         .then( editor => {
@@ -86,7 +87,7 @@
         } )
         .catch( error => {
             console.log( error );
-        } );
+        } );*/
 
 
     }
