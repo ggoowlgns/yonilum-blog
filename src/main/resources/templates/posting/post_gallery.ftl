@@ -68,7 +68,7 @@
         if (content === undefined) {
           content = ``
         }
-        $('#tui-md-viewer').html(content)
+        $('#posting-content').html(content)
 
         /*CKSource.Editor
         .create( document.querySelector( '#tui-md-viewer' ), {
