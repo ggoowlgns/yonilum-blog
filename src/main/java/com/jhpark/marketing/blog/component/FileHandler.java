@@ -32,7 +32,7 @@ public class FileHandler {
     String path = "";
 
     // 파일이 빈 것이 들어오면 빈 것을 반환
-    if (multipartFile.isEmpty()) {
+    if (multipartFile == null || multipartFile.isEmpty()) {
       log.error("multipartFile is empty");
       return null;
     }

@@ -2,6 +2,7 @@
 <html lang="en">
   <#include "/header/default-meta.ftl">
   <#include "/tui-markdown-editor/tui-md-editor-dependency.ftl">
+  <script src="/assets/js/ckeditor/ckeditor.js"></script>
   <script>
     var postingRequest = RestClient.GET('/api/posting/${postingId}');
     var userId = ${user.userId};
@@ -65,55 +66,29 @@
     function addContent(content) {
         console.log('content : ' + content)
         if (content === undefined) {
-          content = `![image](https://uicdn.toast.com/toastui/img/tui-editor-bi.png)
-
-# Awesome Editor!
-
-It has been _released as opensource in 2018_ and has ~~continually~~ evolved to **receive 10k GitHub ⭐️ Stars**.
-
-## Create Instance
-
-You can create an instance with the following code and use \`getHtml()\` and \`getMarkdown()\` of the [Editor](https://github.com/nhn/tui.editor).
-
-
-> See the table below for default options
-> > More API information can be found in the document
-
-| name | type | description |
-| --- | --- | --- |
-| el | \`HTMLElement\` | container element |
-
-## Features
-
-* CommonMark + GFM Specifications
-   * Live Preview
-   * Scroll Sync
-   * Auto Indent
-   * Syntax Highlight
-        1. Markdown
-        2. Preview
-
-## Support Wrappers
-
-> * Wrappers
->    1. [x] React
->    2. [x] Vue
->    3. [ ] Ember`
+          content = ``
         }
-      const { chart, codeSyntaxHighlight, colorSyntax, tableMergedCell, uml } = toastui.Editor.plugin;
-        const chartOptions = {
-          minWidth: 100,
-          maxWidth: 600,
-          minHeight: 100,
-          maxHeight: 300
-        };
-      const viewer = new toastui.Editor.factory({
-          el: document.querySelector('#tui-md-viewer'),
-          viewer: true,
-          initialValue: content,
-          plugins: [[chart, chartOptions], [codeSyntaxHighlight, { highlighter: Prism }], tableMergedCell, uml]
-      });
-      // viewer.setMarkdown(content)
+        $('#posting-content').html(content)
+
+        /*CKSource.Editor
+        .create( document.querySelector( '#tui-md-viewer' ), {
+        } )
+        .then( editor => {
+            const toolbarElement = editor.ui.view.toolbar.element;
+            editor.on( 'change:isReadOnly', ( evt, propertyName, isReadOnly ) => {
+                if ( isReadOnly ) {
+                    toolbarElement.style.display = 'none';
+                } else {
+                    toolbarElement.style.display = 'flex';
+                }
+            } );
+            editor.data.set(content)
+            editor.enableReadOnlyMode( 'my-feature-id' );
+        } )
+        .catch( error => {
+            console.log( error );
+        } );*/
+
 
     }
 

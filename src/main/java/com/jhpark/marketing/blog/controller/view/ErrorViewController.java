@@ -18,7 +18,6 @@ public class ErrorViewController extends BaseViewController implements ErrorCont
     return "error_404";
   }
 
-  @Override
   public String getErrorPath() {
     return null;
   }

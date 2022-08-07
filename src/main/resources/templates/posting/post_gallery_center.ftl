@@ -21,20 +21,15 @@
     <#--Posting Images-->
     <div class="post-card -center">
         <div id="posting-card-images" class="card__cover -slide">
-            <#--<div class="card__cover__slide-item">
-                <img src="/assets/images/posts/hi-res-1.png" alt="How to name, save and export a finish template"/>
-            </div>-->
         </div>
     </div>
 
 
     <#--Posting Contents-->
-    <div id="posting-content" class="post-standard__content">
-        <#--<p class="paragraph">Sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqui.paragraphex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>-->
-        <div id="tui-md-viewer">
-            <strong>The example code can be slower than your environment because the code is transpiled by
-                babel-standalone in runtime.</strong>
-        </div>
+    <header>
+        <link rel="stylesheet" type="text/css" href="/assets/css/ckeditor/styles.css">
+    </header>
+    <div id="posting-content" class="ck-content">
     </div>
 
 
@@ -48,42 +43,7 @@
 
         <#--Posting 작성자-->
         <div id="posting-footer-author" class="post-footer__author">
-<#--            <div class="author__avatar">
-            </div>
-            <div class="author__info">
-&lt;#&ndash;                <div class="social-media">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-dribbble"></i></a>
-                </div>&ndash;&gt;
-            </div>-->
         </div>
-
-        <#--이전, 다음 Posting-->
-        <#--<div class="post-footer__related">
-            <div class="post-footer__related__item -prev"><a href="../post_standard.ftl"> <i class="fas fa-chevron-left"></i>Previous posts</a>
-                <div class="post-footer__related__item__content"><img src="/assets/images/posts/2.png" alt="Relate news image"/>
-                    <div class="post-card ">
-                        <div></div>
-                        <div class="card__content">
-                            <h5 class="card__content-category">Typography</h5><a class="card__content-title" href="../post_standard.ftl">How to name, save and export a finish template</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="post-footer__related__item -next"><a href="../post_standard.ftl">
-                    Next posts<i class="fas fa-chevron-right"></i></a>
-                <div class="post-footer__related__item__content">
-                    <div class="post-card -right">
-                        <div></div>
-                        <div class="card__content">
-                            <h5 class="card__content-category">Graphic</h5><a class="card__content-title" href="../post_standard.ftl">I want to create a logo with illustrator hacker</a>
-                        </div>
-                    </div><img src="/assets/images/posts/3.png" alt="Relate news image"/>
-                </div>
-            </div>
-        </div>-->
 
         <#--댓글-->
         <div id="posting-comment" class="post-footer__comment">

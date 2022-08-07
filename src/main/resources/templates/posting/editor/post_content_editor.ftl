@@ -18,6 +18,7 @@
 </div>
 
 
+
 <#--toast-ui -->
 <#include "/tui-markdown-editor/tui-md-editor-dependency.ftl">
 <script>
@@ -29,7 +30,7 @@
     tui_image_editor.destroy();
   })
   var tui_md_editor;
-  makeMdEditor();
+  // makeMdEditor();
 
   function makeMdEditor() {
     const { Editor } = toastui;

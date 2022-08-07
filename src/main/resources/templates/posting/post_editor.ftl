@@ -53,8 +53,10 @@
                               <#--Markdown Editor (TUI)-->
                               <div class="row form-group" style="margin-bottom: 100px">
                                 <div class="col-12 col-xm-12">
-                                  <div id="tui-md-editor"></div>
+<#--                                  <div id="tui-md-editor"></div>-->
+                                  <#include "/posting/editor/post_ckeditor.ftl">
                                 </div>
+
                               </div>
 
 
@@ -107,7 +109,8 @@
         }
         imagePaths = imagePaths.reverse();
 
-        var content = getPostingMarkDownContentFromMDEditor();
+        // var content = getPostingMarkDownContentFromMDEditor();
+        var content = getpostingMarkDownContentFromCKEditor();
 
         var requestBody = {
             'title' : title,
@@ -124,6 +127,9 @@
         postPosting('/api/posting', requestBody);
     }
 
+    function getpostingMarkDownContentFromCKEditor() {
+        return ckeditor.getData();
+    }
 
     function getPostingMarkDownContentFromMDEditor() {
       return tui_md_editor.getMarkdown()
