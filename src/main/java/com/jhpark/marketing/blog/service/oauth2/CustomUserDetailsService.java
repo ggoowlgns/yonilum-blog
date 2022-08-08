@@ -5,6 +5,7 @@ import com.jhpark.marketing.blog.entity.User;
 import com.jhpark.marketing.blog.exception.ResourceNotFoundException;
 import com.jhpark.marketing.blog.repository.user.UserRepository;
 import com.jhpark.marketing.blog.security.UserPrincipal;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -16,11 +17,12 @@ import org.springframework.transaction.annotation.Transactional;
  * Created by rajeevkumarsingh on 02/08/17.
  */
 
+@RequiredArgsConstructor
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
 
-    @Autowired
-    UserRepository userRepository;
+
+    private final UserRepository userRepository;
 
     @Override
     @Transactional

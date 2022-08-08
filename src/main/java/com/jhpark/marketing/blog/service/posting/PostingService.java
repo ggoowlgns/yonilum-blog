@@ -1,10 +1,12 @@
 package com.jhpark.marketing.blog.service.posting;
 
 import com.jhpark.marketing.blog.entity.*;
+import com.jhpark.marketing.blog.exception.PostingNotAuthorizedException;
 import com.jhpark.marketing.blog.payload.request.PostingRequest;
 import com.jhpark.marketing.blog.repository.category.CategoryRepository;
 import com.jhpark.marketing.blog.repository.posting.*;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
@@ -17,10 +19,10 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class PostingService {
-  Logger LOG = LoggerFactory.getLogger(PostingService.class);
 
   private final PostingRepository postingRepository;
   private final PostingImagesRepository postingImagesRepository;
@@ -66,47 +68,89 @@ public class PostingService {
 
   @Transactional
   public int addPosting(PostingRequest request) {
+    savePostingAndSetPostingId(request);
+    savePostingImages(request);
+    savePostingContent(request);
+    saveCategory(request);
+    return (int)request.getPostingId();
+  }
+
+  private void savePostingAndSetPostingId(PostingRequest postingRequest) {
     // insert tb_posting
     long postingId = postingRepository.save(Posting.builder()
-        .user(User.builder().userId(request.getUserId()).build())
-        .title(request.getTitle())
-        .thumbnailUrl(request.getThumbnailUrl())
-        .postingType(request.getPostingType())
+        .user(User.builder().userId(postingRequest.getUserId()).build())
+        .title(postingRequest.getTitle())
+        .thumbnailUrl(postingRequest.getThumbnailUrl())
+        .postingType(postingRequest.getPostingType())
         .build()).getPostingId();
-    LOG.info("posting insert success, postingId : {}", postingId);
+    postingRequest.setPostingId(postingId);
+    log.info("posting insert success, posting : {}", postingRequest);
+  }
 
+  private void savePostingImages(PostingRequest postingRequest) {
     List<PostingImage> postingImages = new ArrayList<>();
-    for (String imageUrl : request.getImages()) {
+    for (String imageUrl : postingRequest.getImages()) {
       postingImages.add(PostingImage.builder()
-          .postingId(Posting.builder().postingId(postingId).build())
+          .postingId(Posting.builder().postingId(postingRequest.getPostingId()).build())
           .imageUrl(imageUrl)
           .build());
     }
     postingImagesRepository.saveAll(postingImages);
-    LOG.info("posting_image insert success");
+    log.info("posting_image insert success postingImages : {}", postingImages);
+  }
 
+  private void savePostingContent(PostingRequest postingRequest) {
+    PostingContent postingContent = PostingContent.builder()
+        .content(postingRequest.getContent())
+        .postingId(Posting.builder().postingId(postingRequest.getPostingId()).build())
+        .build();
+    postingContentRepository.save(postingContent);
+    log.info("tb_posting_paragraph insert success - postingContent : {}", postingContent);
+  }
 
-
-    postingContentRepository.save(PostingContent.builder()
-        .content(request.getContent())
-        .postingId(Posting.builder().postingId(postingId).build())
-        .build());
-    LOG.info("tb_posting_paragraph insert success");
-
-
+  private void saveCategory(PostingRequest postingRequest) {
     int index = 0;
     List<Category> categories = new ArrayList<>();
-    for (String category : request.getCategories()) {
+    for (String category : postingRequest.getCategories()) {
       categories.add(Category.builder()
           .category(category)
           .categoryIndex(index)
-          .postingId(Posting.builder().postingId(postingId).build())
+          .postingId(Posting.builder().postingId(postingRequest.getPostingId()).build())
           .build());
       index++;
     }
     categoryRepository.saveAll(categories);
-    LOG.info("tb_category insert success");
+    log.info("tb_category insert success - categories : {}", categories);
+  }
 
-    return (int) postingId;
+  @Transactional
+  public void updatePosting(PostingRequest postingRequest, User user) throws PostingNotAuthorizedException {
+    checkPostingAuthorization(postingRequest.getPostingId(), user);
+    savePostingWithPostingId(postingRequest);
+
+    //TODO : 새로 들어가고 있다. : 기존에 있으면 update 하는식으로 수정 필요
+    savePostingImages(postingRequest);
+    savePostingContent(postingRequest);
+    saveCategory(postingRequest);
+  }
+
+  private void savePostingWithPostingId(PostingRequest postingRequest) {
+    postingRepository.save(Posting.builder()
+            .postingId(postingRequest.getPostingId())
+            .user(User.builder().userId(postingRequest.getUserId()).build())
+            .title(postingRequest.getTitle())
+            .thumbnailUrl(postingRequest.getThumbnailUrl())
+            .postingType(postingRequest.getPostingType())
+            .build());
+    log.info("savePostingWithPostingId PostingRequest : {}", postingRequest );
+  }
+
+  private void checkPostingAuthorization(long postingId, User user) throws PostingNotAuthorizedException{
+    if (!user.getAuthGrade().equals(new Character('M')) &&
+        postingRepository.findPostingByPostingId(postingId)
+        .getUser().getUserId() != user.getUserId()) {
+      throw new PostingNotAuthorizedException("checkPostingAuthorization - postingId : " + postingId + "User : " + user);
+    }
+
   }
 }

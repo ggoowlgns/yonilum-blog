@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+import org.hibernate.type.descriptor.sql.TinyIntTypeDescriptor;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -53,8 +54,11 @@ public class User {
   @UpdateTimestamp
   private LocalDateTime updateDatetime;
 
+  @Column(columnDefinition = "char(1) default 'U'")
+  private Character authGrade;
+
   @Builder
-  public User(Long userId, String name, String email, String imageUrl, Boolean emailVerified, String password, AuthProvider provider, String providerId, String introduction, LocalDateTime createdDatetime, LocalDateTime updateDatetime) {
+  public User(Long userId, String name, String email, String imageUrl, Boolean emailVerified, String password, AuthProvider provider, String providerId, String introduction, LocalDateTime createdDatetime, LocalDateTime updateDatetime,Character authGrade) {
     this.userId = userId;
     this.name = name;
     this.email = email;
@@ -66,6 +70,7 @@ public class User {
     this.introduction = introduction;
     this.createdDatetime = createdDatetime;
     this.updateDatetime = updateDatetime;
+    this.authGrade = authGrade;
   }
 
   public User update(String name, String imageUrl) {

@@ -3,6 +3,7 @@ package com.jhpark.marketing.blog.controller.rest.posting;
 import com.jhpark.marketing.blog.controller.BaseViewController;
 import com.jhpark.marketing.blog.entity.Posting;
 import com.jhpark.marketing.blog.entity.PostingImage;
+import com.jhpark.marketing.blog.entity.User;
 import com.jhpark.marketing.blog.payload.request.PostingRequest;
 import com.jhpark.marketing.blog.service.category.CategoryService;
 import com.jhpark.marketing.blog.service.posting.PostingService;
@@ -85,11 +86,13 @@ public class PostingRestController extends BaseViewController {
     response.setHeader("Location", "/posting/" + postingId);
   }
 
-  @RequestMapping(path = "/{postingId}", method = RequestMethod.PUT)
-  public Posting edit(@RequestBody Posting posting) {
-    LOG.info("posting : {}", posting);
-    //TODO : edit posting
+  @RequestMapping(path = "", method = RequestMethod.PUT)
+  public void edit(@RequestBody PostingRequest postingRequest,
+                      User user,
+                      HttpServletResponse response) {
+    LOG.info("posting : {}", postingRequest);
 
-    return posting;
+    postingService.updatePosting(postingRequest, user);
+    response.setHeader("Location", "/posting/" + postingRequest.getPostingId());
   }
 }

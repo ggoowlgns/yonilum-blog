@@ -56,19 +56,16 @@
 <#--                                  <div id="tui-md-editor"></div>-->
                                   <#include "/posting/editor/post_ckeditor.ftl">
                                 </div>
-
                               </div>
-
-
                             </form>
                         </div>
 
                         <#--Submit Button-->
                         <div class="row center">
                             <#if postingId??>
-                              <button id="posting-update-btn" class="btn -normal btn-primary" onclick="addPostingOnClick()">Update Posting</button>
+                              <button id="posting-update-btn" class="btn -normal btn-primary" onclick="upsertPostingOnClick(${postingId})">Update Posting</button>
                             <#else >
-                              <button id="posting-add-btn" class="btn -normal btn-primary" onclick="addPostingOnClick()">Add Posting</button>
+                              <button id="posting-add-btn" class="btn -normal btn-primary" onclick="upsertPostingOnClick()">Add Posting</button>
                             </#if>
                         </div>
                     </div>
@@ -99,8 +96,7 @@
         setExistingPosting(data);
     });
   </#if>
-
-    function addPostingOnClick() {
+    function upsertPostingOnClick(postingId) {
         var categoryList = $postingCategory.val().split(","); //애초에 입력할때 , 를 구분해서 넣어줘야함 (띄어쓰기 하지 말고)
         var title = $postingTitle.val();
         var imagePaths = []
@@ -123,8 +119,11 @@
         };
 
         requestBody = checkIfThumbnailIsEmptyAndPutThumbnailFromContent(requestBody);
-
-        postPosting('/api/posting', requestBody);
+        if (postingId === undefined) postPosting('/api/posting', requestBody);
+        else {
+            requestBody['postingId'] = postingId;
+            putPosting('/api/posting', requestBody);
+        }
     }
 
     function getpostingMarkDownContentFromCKEditor() {
@@ -166,6 +165,22 @@
       })
     }
 
+    function putPosting(path, requestBody) {
+        RestClient.PUT(
+            path,
+            requestBody,
+        ).done(function (data, textStatus, request) {
+            console.log("posting sucessfully updated : requestBody" + requestBody);
+            var createdPostingPath = request.getResponseHeader('Location')
+            window.location.replace(
+                window.location.protocol + "//" +
+                window.location.hostname +
+                createdPostingPath
+            )
+        })
+    }
+
+    //TODO : 불러온 data 를 editor 빈칸에 넣어주자
     function setExistingPosting (data) {
         data.postingCategories.sort(function (a, b) {
             if (a.categoryIndex > b.categoryIndex) {
