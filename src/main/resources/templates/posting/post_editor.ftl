@@ -118,7 +118,7 @@
             'content' : content
         };
 
-        requestBody = checkIfThumbnailIsEmptyAndPutThumbnailFromContent(requestBody);
+        requestBody = checkIfThumbnailIsEmptyAndPutThumbnailFromContent(requestBody, postingId === undefined);
         if (postingId === undefined) postPosting('/api/posting', requestBody);
         else {
             requestBody['postingId'] = postingId;
@@ -134,8 +134,8 @@
       return tui_md_editor.getMarkdown()
     }
 
-    function checkIfThumbnailIsEmptyAndPutThumbnailFromContent(requestBody) {
-        if (requestBody['thumbnailUrl'] != undefined) return requestBody;
+    function checkIfThumbnailIsEmptyAndPutThumbnailFromContent(requestBody, isPostingNew) {
+        if (!isPostingNew || requestBody['thumbnailUrl'] != undefined) return requestBody;
         requestBody['thumbnailUrl'] = getFirstImageUrlFromContent(requestBody['content'])
         return requestBody;
     }
