@@ -4,7 +4,7 @@
         <div class="card__content">
             <h5 id="postig-category" class="card__content-category">Technology</h5>
             <a id="posting-title" class="card__content-title" href="../post_standard.ftl">Looking for some feedback for this rejected track</a>
-            <div class="card__content-info">
+            <div id="posting-content-info" class="card__content-info">
                 <div class="info__time info__author"><i class="far fa-user"></i>
                     <p id="posting-author">Jessica Stephens</p>
                 </div>

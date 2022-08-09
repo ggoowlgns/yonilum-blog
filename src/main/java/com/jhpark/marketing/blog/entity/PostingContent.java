@@ -1,10 +1,8 @@
 package com.jhpark.marketing.blog.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
+import org.checkerframework.common.aliasing.qual.Unique;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -21,6 +19,7 @@ import java.time.LocalDateTime;
 )
 @NoArgsConstructor
 @ToString
+@Setter
 @Builder
 public class PostingContent {
   @Id
@@ -29,7 +28,7 @@ public class PostingContent {
 
 
   @ManyToOne(targetEntity = Posting.class, fetch = FetchType.LAZY)
-  @JoinColumn(name = "posting_id", nullable = false)
+  @JoinColumn(name = "posting_id", nullable = false, unique = true)
   @JsonBackReference
   private Posting postingId;
 

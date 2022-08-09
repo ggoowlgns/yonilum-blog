@@ -180,7 +180,6 @@
         })
     }
 
-    //TODO : 불러온 data 를 editor 빈칸에 넣어주자
     function setExistingPosting (data) {
         data.postingCategories.sort(function (a, b) {
             if (a.categoryIndex > b.categoryIndex) {
@@ -203,24 +202,25 @@
                 return -1;
             } return 0;
         })
-        var categoryList = data.postingCategories;
-        var categoriesStr = "";
-        for (var category of categoryList) {
-            categoriesStr += category.category+",";
-        }
 
-        var contentParagraphList = data.postingContents;
-        var contentStr = "";
-        for (var paragraph of contentParagraphList) {
-            contentStr += paragraph.content + "\n\n";
-        }
-
+        var categoriesStr = data.postingCategories
+                                  .map(category => category.category).join(",");
         $postingCategory.val(categoriesStr);
         $postingTitle.val(data.title);
-        //TODO : 기존에 있던 content tui-md-editor 에 가져다 넣기
+
+        setExistingHtmlContentToCkeditor(data.postingContents[0].content)
 
         var imageList = data.postingImages;
         //TODO : 기존에 있던 Card Images 넣기
+
     }
+
+    function setExistingHtmlContentToCkeditor(content) {
+        const viewFragment = ckeditor.data.processor.toView( content );
+        const modelFragment = ckeditor.data.toModel( viewFragment );
+
+        ckeditor.model.insertContent( modelFragment );
+    }
+
 </script>
 </html>

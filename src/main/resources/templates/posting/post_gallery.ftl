@@ -7,21 +7,25 @@
     var postingRequest = RestClient.GET('/api/posting/${postingId}');
     var userId = ${user.userId};
 
+    var $postingContentInfoDom = ""
     var $contentDom = ""
     var $cardImageDom = ""
     var $tagsDom = ""
     var $authorDom = ""
     var $commentsDom = ""
+
     $(document).ready(function (){
-        $contentDom = $('#posting-content')
-        $cardImageDom = $('#posting-card-images')
-        $tagsDom = $('#posting-tags')
+        $postingContentInfoDom = $('#posting-content-info');
+        $contentDom = $('#posting-content');
+        $cardImageDom = $('#posting-card-images');
+        $tagsDom = $('#posting-tags');
         $authorDom = $('#posting-footer-author');
         $commentsDom = $('#posting-comment');
 
         postingRequest.done(function (data) {
             console.log(data);
             var user = data.user;
+            addEditPostingButtonIfAuthorized(data.postingId, user);
 
             $('#posting-title').text(data.title);
             data.postingCategories.sort(function (a, b) {
@@ -88,8 +92,12 @@
         .catch( error => {
             console.log( error );
         } );*/
-
-
+    }
+    function addEditPostingButtonIfAuthorized(postingId, postingAuthor) {
+      var editPostingButtonDom = '<a class="tag-btn" href="/posting/editor?postingId='+postingId+'">'+
+          '수정 하기'
+          +'</a>';
+      if (userId == postingAuthor.userId) $postingContentInfoDom.append(editPostingButtonDom)
     }
 
     function addParagraphToContent(paragraph) {

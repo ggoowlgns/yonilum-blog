@@ -100,10 +100,16 @@ public class PostingService {
   }
 
   private void savePostingContent(PostingRequest postingRequest) {
+    PostingContent existingPostingContent = postingContentRepository.findPostingContentByPostingId(Posting.builder().postingId(postingRequest.getPostingId()).build());
     PostingContent postingContent = PostingContent.builder()
         .content(postingRequest.getContent())
         .postingId(Posting.builder().postingId(postingRequest.getPostingId()).build())
         .build();
+    if (existingPostingContent != null) {
+      log.info("PostingContent exists for this postingId : {}, existingPostingContent : {}", postingRequest.getPostingId(), existingPostingContent);
+      postingContent.setPostingContentId(existingPostingContent.getPostingContentId());
+      postingContent.setCreatedDatetime(existingPostingContent.getCreatedDatetime());
+    }
     postingContentRepository.save(postingContent);
     log.info("tb_posting_paragraph insert success - postingContent : {}", postingContent);
   }
@@ -111,12 +117,18 @@ public class PostingService {
   private void saveCategory(PostingRequest postingRequest) {
     int index = 0;
     List<Category> categories = new ArrayList<>();
-    for (String category : postingRequest.getCategories()) {
-      categories.add(Category.builder()
-          .category(category)
+    for (String categoryName : postingRequest.getCategories()) {
+      Category category = Category.builder()
+          .category(categoryName)
           .categoryIndex(index)
           .postingId(Posting.builder().postingId(postingRequest.getPostingId()).build())
-          .build());
+          .build();
+      Category existingCategory = categoryRepository.findCategoryByPostingIdAndCategoryIndex(
+          Posting.builder().postingId(postingRequest.getPostingId()).build(), index);
+      if (existingCategory != null) {
+        category.setCategoryId(existingCategory.getCategoryId());
+      }
+      categories.add(category);
       index++;
     }
     categoryRepository.saveAll(categories);
@@ -129,18 +141,21 @@ public class PostingService {
     savePostingWithPostingId(postingRequest);
 
     //TODO : 새로 들어가고 있다. : 기존에 있으면 update 하는식으로 수정 필요
-    savePostingImages(postingRequest);
+//    savePostingImages(postingRequest);
     savePostingContent(postingRequest);
     saveCategory(postingRequest);
   }
 
   private void savePostingWithPostingId(PostingRequest postingRequest) {
+    Posting existingPosting = postingRepository.findPostingByPostingId(postingRequest.getPostingId());
     postingRepository.save(Posting.builder()
             .postingId(postingRequest.getPostingId())
-            .user(User.builder().userId(postingRequest.getUserId()).build())
             .title(postingRequest.getTitle())
-            .thumbnailUrl(postingRequest.getThumbnailUrl())
             .postingType(postingRequest.getPostingType())
+            // 변경되지 않는 정보들
+            .user(existingPosting.getUser())
+            .thumbnailUrl(existingPosting.getThumbnailUrl())
+            .createdDatetime(existingPosting.getCreatedDatetime())
             .build());
     log.info("savePostingWithPostingId PostingRequest : {}", postingRequest );
   }

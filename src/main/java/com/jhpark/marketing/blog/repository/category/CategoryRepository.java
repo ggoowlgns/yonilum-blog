@@ -1,6 +1,7 @@
 package com.jhpark.marketing.blog.repository.category;
 
 import com.jhpark.marketing.blog.entity.Category;
+import com.jhpark.marketing.blog.entity.Posting;
 import com.jhpark.marketing.blog.payload.response.CategoryListElementResponse;
 import com.jhpark.marketing.blog.payload.response.CategoryWithUrlElement;
 import org.springframework.data.domain.Page;
@@ -34,4 +35,6 @@ public interface CategoryRepository extends JpaRepository<Category, Long> {
   List<CategoryWithUrlElement> getCategoryImageUrlByCategoryName(@Param("categories") List<String> categories);
 
   Page<Category> findAllByCategoryOrderByPostingIdDesc(Pageable pageable, String category);
+
+  Category findCategoryByPostingIdAndCategoryIndex(Posting postingId, int categoryIndex);
 }
