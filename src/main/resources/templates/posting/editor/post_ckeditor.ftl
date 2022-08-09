@@ -32,6 +32,9 @@
 
   watchdog
     .create( document.querySelector( '.editor' ), {
+      mediaEmbed: {
+          previewsInData:true
+      },
       extraPlugins: [ MyCustomUploadAdapterPlugin ],
       licenseKey: '',
       removePlugins: ['Title','Markdown'],
