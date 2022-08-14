@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <include resource="org/springframework/boot/logging/logback/defaults.xml" />
-
-<!--    <springProperty name="heimdallLabelsZone" source="heimdall.labels.zone"/>-->
-<!--    <springProperty name="heimdallServerGroup" source="heimdall.server.group"/>-->
-<!--    <springProperty name="heimdallServerGroupVersion" source="heimdall.server.group.version"/>-->
-
     <springProfile name="console-logging">
         <include resource="org/springframework/boot/logging/logback/console-appender.xml" />
     </springProfile>
@@ -25,58 +20,7 @@
             </rollingPolicy>
         </appender>
 
-<!--        <appender name="lineworksLogbackAppender" class="component.logback.LineworksLogbackAppender">-->
-<!--            <host>${host}</host>-->
-<!--        </appender>-->
     </springProfile>
-
-<!--    <springProfile name="heimdall-console-logging">-->
-<!--        <appender name="consoleLogForHeimdallAppender" class="ch.qos.logback.core.ConsoleAppender">-->
-<!--            <filter class="ch.qos.logback.classic.filter.ThresholdFilter">-->
-<!--                <level>INFO</level>-->
-<!--            </filter>-->
-<!--            <encoder class="CustomEcsEncoder">-->
-<!--                <serviceName>${heimdallServerGroup}</serviceName>-->
-<!--                <stackTraceAsArray>true</stackTraceAsArray>-->
-<!--                <additionalField>-->
-<!--                    <key>labels.zone</key>-->
-<!--                    <value>${heimdallLabelsZone}</value>-->
-<!--                </additionalField>-->
-<!--                <additionalField>-->
-<!--                    <key>labels.serverGroup</key>-->
-<!--                    <value>${heimdallServerGroup}</value>-->
-<!--                </additionalField>-->
-<!--                <additionalField>-->
-<!--                    <key>labels.serverGroupVersion</key>-->
-<!--                    <value>${heimdallServerGroupVersion}</value>-->
-<!--                </additionalField>-->
-<!--            </encoder>-->
-<!--        </appender>-->
-<!--    </springProfile>-->
-
-
-    <!--<springProfile name="thread-logging">
-        <appender name="siftingThreadAppender" class="ch.qos.logback.classic.sift.SiftingAppender">
-            <discriminator class="com.netmarble.tas.agent.component.logback.ThreadNameBasedDiscriminator"/>
-            <sift>
-                <appender name="SIFT-THREAD-${threadName}" class="ch.qos.logback.core.rolling.RollingFileAppender">
-                    <prudent>false</prudent>
-                    <file>${LOG_PATH}/thread/${threadName}.log</file>
-                    <layout class="ch.qos.logback.classic.PatternLayout">
-                        <pattern>%d [%thread] %level %mdc %logger{35} - %msg%n</pattern>
-                    </layout>
-                    <append>true</append>
-
-                    <rollingPolicy
-                            class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-                        <fileNamePattern>${LOG_PATH}/thread/${threadName}.%d{yyyy-MM-dd}.log</fileNamePattern>
-                        <maxHistory>2</maxHistory>
-                    </rollingPolicy>
-                </appender>
-            </sift>
-        </appender>
-    </springProfile>-->
-
     <root>
         <springProfile name="console-logging">
             <appender-ref ref="CONSOLE"/>
@@ -84,9 +28,6 @@
         <springProfile name="file-logging">
             <appender-ref ref="dailyRollingFileAppender"/>
         </springProfile>
-        <!--<springProfile name="thread-logging">
-            <appender-ref ref="siftingThreadAppender"/>
-        </springProfile>-->
     </root>
 
 </configuration>
