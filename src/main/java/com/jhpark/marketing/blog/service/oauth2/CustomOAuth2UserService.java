@@ -82,6 +82,7 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
    */
   private User registerNewUser(OAuth2UserRequest oAuth2UserRequest, OAuth2UserInfo oAuth2UserInfo) {
     User user;
+    log.info("CustomOAuth2UserService::registerNewUser - oAuth2UserRequest : {},  oAuth2UserInfo : {}", oAuth2UserRequest, oAuth2UserInfo);
     try {
       user = User.builder()
           .name(oAuth2UserInfo.getName())

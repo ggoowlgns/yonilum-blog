@@ -21,7 +21,7 @@ public class KakaoOAuth2UserInfo extends OAuth2UserInfo{
 
   @Override
   public String getId() {
-    return ((Long) super.attributes.get("id")).toString();
+    return ((Integer) super.attributes.get("id")).toString();
   }
 
   @Override
