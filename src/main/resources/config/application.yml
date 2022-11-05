@@ -15,7 +15,7 @@ server:
       enabled: true
   port: 8080
   tomcat:
-    basedir: '/home/ubuntu/blog/'
+    basedir: '/home/jhpark/yonilum/blog/'
 
 
 spring:
