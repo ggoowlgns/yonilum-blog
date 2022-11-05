@@ -44,9 +44,9 @@ spring:
     pathmatch:
       matching-strategy: ant_path_matcher
   datasource:
-    url: 'jdbc:mysql://localhost:3306/blog?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false'
-    username: root
-    password: Qlalflek12{*
+    url: 'jdbc:mysql://localhost:3306/yonilum-blog?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false'
+    username: yonilum-blog
+    password: yonilum
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:

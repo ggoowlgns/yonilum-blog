@@ -92,6 +92,7 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
           .providerId(oAuth2UserInfo.getId())
           .build();
     } catch (Exception e) {
+      log.error("");
       throw new BuildDataFailException("registerNewUser() oAuth2UserInfo : "+ oAuth2UserInfo);
     }
 
