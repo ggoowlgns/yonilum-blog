@@ -41,8 +41,8 @@ jobs:
     - name : check
       run: du -ah
     - name: CD-Stop App
-      run: sudo ssh -o StrictHostKeyChecking=no -i .github/workflows/key/jhpark-seoul.pem jhpark@222.112.145.56 sudo systemctl stop blog
+      run: sudo ssh -o StrictHostKeyChecking=no -i .github/workflows/key/jhpark-nuc-ssh jhpark@222.112.145.56 sudo systemctl stop blog
     - name: CD-Copy Output
-      run: sudo scp -o StrictHostKeyChecking=no -i .github/workflows/key/jhpark-seoul.pem target/marketing-blog.jar jhpark@222.112.145.56:yonilum/blog/app/marketing-blog.jar
+      run: sudo scp -o StrictHostKeyChecking=no -i .github/workflows/key/jhpark-nuc-ssh target/marketing-blog.jar jhpark@222.112.145.56:yonilum/blog/app/marketing-blog.jar
     - name: CD-Start App
-      run: sudo ssh -o StrictHostKeyChecking=no -i .github/workflows/key/jhpark-seoul.pem jhpark@222.112.145.56 sudo systemctl start blog
+      run: sudo ssh -o StrictHostKeyChecking=no -i .github/workflows/key/jhpark-nuc-ssh jhpark@222.112.145.56 sudo systemctl start blog
