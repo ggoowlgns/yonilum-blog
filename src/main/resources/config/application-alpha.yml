@@ -3,7 +3,7 @@ server:
 
 logging:
   file:
-    path: '/home/ec2-user/blog/log/'
+    path: '/home/ubuntu/blog/log/'
   pattern:
     file: '%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n'
 

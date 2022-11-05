@@ -15,7 +15,7 @@ server:
       enabled: true
   port: 8080
   tomcat:
-    basedir: '/home/ec2-user/blog/'
+    basedir: '/home/ubuntu/blog/'
 
 
 spring:

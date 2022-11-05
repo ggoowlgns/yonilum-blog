@@ -96,7 +96,7 @@ public class FileHandler {
 
   private String getUrlFromFilePath(String filePath) {
     String url = "";
-    url = filePath.replaceAll("/home/ec2-user/blog", baseUrl);
+    url = filePath.replaceAll("/home/ubuntu/blog", baseUrl);
     log.info("getUrlFromFilePath url : {}", url);
     return url;
   }

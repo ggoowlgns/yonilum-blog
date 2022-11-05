@@ -45,4 +45,4 @@ jobs:
     - name: CD-Copy Output
       run: sudo scp -o StrictHostKeyChecking=no -i .github/workflows/key/jhpark-seoul.pem target/marketing-blog.jar jhpark@222.112.145.56:yonilum/blog/app/marketing-blog.jar
     - name: CD-Start App
-      run: sudo ssh -o StrictHostKeyChecking=no -i .github/workflows/key/jhpark-seoul.pem jhpark@222.112.145.56 sudo service blog start
+      run: sudo ssh -o StrictHostKeyChecking=no -i .github/workflows/key/jhpark-seoul.pem jhpark@222.112.145.56 sudo systemctl start blog
