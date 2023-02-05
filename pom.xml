@@ -28,7 +28,7 @@
 	</dependencyManagement>
 	<groupId>com.jhpark.marketing</groupId>
 	<artifactId>marketing-blog</artifactId>
-	<version>0.1.2</version>
+	<version>0.2.0</version>
 	<name>blog</name>
 	<description>Marketing Blog</description>
 
