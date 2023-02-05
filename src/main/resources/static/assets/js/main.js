@@ -64,7 +64,7 @@ const DUMMY_DATA = [
   },
 ];
 
-let currentCategoryLayout = "";
+
 
 //==========================================
 //  Utilities
@@ -93,90 +93,6 @@ function clickOutSideElm(elm, callback) {
   });
 }
 //==========================================
-//==========================================
-
-//Category post generator
-function categoryGenerator() {
-  function getLayout() {
-    let $activeCategoryItem = $(".category__header__filter__item.active");
-    let $categoryContent = $(".category_content");
-    const currentLayout = $activeCategoryItem.data("layout");
-    let content = "";
-    if (currentCategoryLayout === currentLayout) {
-      return;
-    }
-    currentCategoryLayout = currentLayout;
-    if (currentCategoryLayout === "grid") {
-      DUMMY_DATA.forEach((item, index) => {
-        content += `
-          <div class="post-card -center"><a class="card__cover" href="post_standard.ftl"><img src="${item.image}" alt="${item.title}"></a>
-            <div class="card__content">
-            <h5 class="card__content-category">${item.category}</h5><a class="card__content-title" href="post_standard.ftl">${item.title}</a>
-            <div class="card__content-info">
-              <div class="info__time"><i class="far fa-clock"></i>
-                <p>${item.date}</p>
-              </div>
-              <div class="info__comment"><i class="far fa-comment"></i>
-                <p>${item.comment}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        `;
-      });
-
-      $categoryContent
-        .empty()
-        .addClass("-grid")
-        .removeClass("-list")
-        .prepend(content);
-      let $masonryBeauty = $categoryContent.masonry({
-        itemSelector: ".post-card",
-        gutter: 20,
-      });
-      $masonryBeauty.imagesLoaded().progress(function () {
-        $masonryBeauty.masonry("layout");
-      });
-    } else {
-      $categoryContent.masonry("destroy");
-      DUMMY_DATA.forEach((item, index) => {
-        content += `
-        <div class="col-12">
-          <div class="post-card -small -horizontal"><a class="card__cover" href="post_standard.ftl" tabindex="0"><img src="${item.image}" alt="${item.title}"></a>
-            <div class="card__content">
-              <h5 class="card__content-category">Technology</h5><a class="card__content-title" href="post_standard.ftl" tabindex="0">${item.title}</a>
-              <div class="card__content-info">
-                <div class="info__time"><i class="far fa-clock"></i>
-                  <p>Clock  Wed 02, 2019</p>
-                </div>
-                <div class="info__comment"><i class="far fa-comment"></i>
-                  <p>3</p>
-                </div>
-              </div>
-              <p class="card__content-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
-            </div>
-          </div>
-        </div>`;
-      });
-      content = `<div class="row">${content}</div>`;
-      $categoryContent
-        .empty()
-        .addClass("-list")
-        .removeClass("-grid")
-        .prepend(content);
-    }
-  }
-
-  getLayout();
-
-  $(".category__header__filter__item").on("click", function (e) {
-    e.preventDefault();
-    $(".category__header__filter__item").removeClass("active");
-    $(this).addClass("active");
-    getLayout();
-  });
-}
-
 //Nav dropdown handle
 function navDropdownHandle() {
   let header = $("header");
@@ -830,28 +746,30 @@ function selectPaymentMethod() {
   checkChecked();
   $checkbox.on("click", checkChecked);
 }
-
-//Document ready
-$(document).ready(function () {
-  ititalSlide();
-  navDropdownHandle();
-  menuScrollHandle();
-  showSearchInput();
-  plyrInit();
-  masonry();
-  tab();
-  categoryGenerator();
-  renderStar();
-  quantityController();
-  selectPaymentMethod();
-  //Preload
-});
-
-(function preload() {
+function preload() {
   const $load = $("#load");
   $(window).on("load", function () {
     $load.fadeOut(300, function () {
       $load.remove();
     });
   });
-})();
+}
+
+
+//Document ready
+$(document).ready(function () {
+  // ititalSlide(); : image src 모두 load 가 완료되면 작동하는걸로 변경
+  navDropdownHandle();
+  menuScrollHandle();
+  showSearchInput();
+  plyrInit();
+  masonry();
+  tab();
+  // categoryGenerator();
+  renderStar();
+  quantityController();
+  selectPaymentMethod();
+  //Preload
+  preload()
+});
+

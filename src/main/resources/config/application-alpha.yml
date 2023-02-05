@@ -1,0 +1,24 @@
+server:
+  port: 8100
+
+logging:
+  file:
+    path: '/home/jhpark/yonilum/blog/log/'
+  pattern:
+    file: '%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n'
+
+
+spring:
+  profiles:
+    include: file-logging
+  security:
+    oauth2:
+      client:
+        registration:
+          kakao:
+            redirect-uri: 'http://blog.yonilum.com/login/oauth2/code/kakao'
+
+app-security:
+  oauth2:
+    authorizedRedirectUris:
+      - 'http://blog.yonilum.com/oauth2/redirect'

@@ -85,13 +85,8 @@ time,
 mark,
 audio,
 video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font-family: "DM Sans", sans-serif;
-  vertical-align: baseline;
-  font-weight: 500; }
+  /*font-size: 100%;*/
+  font-family: "DM Sans", sans-serif;}
 
 :focus {
   outline: 0; }
@@ -112,9 +107,7 @@ section {
 body {
   line-height: 1; }
 
-ol,
-ul {
-  list-style: none; }
+
 
 blockquote,
 q {
@@ -397,7 +390,7 @@ header {
   z-index: 100;
   background-color: #fff; }
   header .header-wrapper {
-    padding: 25px 0;
+    padding: 15px 0;
     -webkit-transition: 0.2s ease-in-out;
     -moz-transition: 0.2s ease-in-out;
     -ms-transition: 0.2s ease-in-out;
@@ -525,7 +518,7 @@ header {
     header {
       font-size: 13px; } }
   header.scroll-down .header-wrapper {
-    padding: 20px 0; }
+    padding: 5px 0; }
   header.is-mobile {
     font-size: 15px;
     z-index: 100; }
